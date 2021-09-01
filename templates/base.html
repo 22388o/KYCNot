@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../static/css/bulma-dark.min.css"
+    />
+    <link href="../static/fa/css/all.css" rel="stylesheet" />
+    <title>KYC? Not me!</title>
+  </head>
+  <body>
+    <div class="links-container">
+      <div class="nav-menu">
+        <a class="link-item" href="/">Exchanges</a>
+        <a class="link-item" href="/services">Services</a>
+        <a class="link-item" href="/about">About</a>
+      </div>
+    </div>
+
+    <section class="section title-section">
+      <div class="container title-container">
+        <h1 class="title">
+          <strong> {{title | safe}} </strong>
+        </h1>
+        <p class="subtitle">{{subtitle | safe}}</p>
+      </div>
+    </section>
+
+    {% block content %}{% endblock %}
+
+    <div class="links-container">
+      <a
+        class="link-item"
+        href="https://codeberg.org/pluja/kycnot.me"
+        target="_blank"
+        ><i class="fas fa-code"></i
+      ></a>
+      <a class="link-item" href="/about#support"
+        ><i class="fas fa-heart"></i
+      ></a>
+    </div>
+  </body>
+
+  <style>
+    .title-section {
+      margin-bottom: 3px;
+      padding-bottom: 2px;
+    }
+
+    .title-container {
+      place-items: center;
+      display: grid;
+    }
+
+    .nav-menu {
+      text-align: center;
+      border-bottom: 0.5px rgba(211, 211, 211, 0.535) solid;
+      padding: 0px !important;
+      margin-bottom: 1px;
+      width: 25vw;
+    }
+
+    .nav-menu > a {
+      color: rgba(211, 211, 211, 0.535) !important;
+    }
+
+    .nav-menu > a:hover {
+      color: rgba(124, 124, 124, 0.535) !important;
+    }
+
+    .links-container {
+      display: flex;
+      justify-content: center;
+      font-size: large;
+      padding-top: 10px;
+    }
+
+    .link-item {
+      margin: 5px;
+    }
+  </style>
+</html>

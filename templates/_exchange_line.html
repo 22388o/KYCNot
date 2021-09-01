@@ -1,0 +1,11 @@
+<a href="/exchange/{{exchange['name'] | replace(' ', '') | lower}}">
+  <article class="leaderboard__profile">
+    <img
+      src="../static/img/{{ exchange['name'] | replace(' ', '') | lower }}.jpeg"
+      alt="{{exchange['name']}}"
+      class="leaderboard__picture"
+    />
+    <span class="leaderboard__name">{{exchange['name']}}</span>
+    <span class="leaderboard__value">{{exchange['score']}}<span>KS</span></span>
+  </article>
+</a>

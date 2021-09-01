@@ -1,0 +1,3 @@
+[console_scripts]
+petname = petname.__main__:main
+

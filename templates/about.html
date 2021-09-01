@@ -1,0 +1,166 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="content">
+  <div class="text-container">
+    <h1><u>KYCNOT.ME FAQ</u></h1>
+    <p>
+      KYCNOT.ME is a page where you can find a curated list of <strong>non-kyc crypto services</strong>. The list and the page is
+      maintained by <strong>Pluja</strong> alone. The page provides with lists of exchanges and services with a review for each service
+      and some automated checks to help users choose the best option for their needs without having to face a KYC or AML process.
+    </p>
+
+    <h2>Table of contents</h2>
+    <ul>
+      <li><a href="#why">Why this?</a></li>
+      <li><a href="#btcxmr">Why only Bitcoin and Monero?</a></li>
+      <li><a href="#funded">How is KYCNOT.ME funded?</a></li>
+      <li><a href="#listings">Why is "X" not listed?</a></li>
+      <li><a href="#features">Will "X" feature be implemented?</a></li>
+      <li><a href="#js"> Javascript and the project </a></li>
+      <li><a href="#opensource"> Why Open Source? </a></li>
+      <li><a href="#trackers">Website has trackers?</a></li>
+      <li><a href="#fyi"> I'm not a web developer! </a></li>
+      <li><a href="#criteria"> Listing criteria and evaluations </a>
+        <ul>
+          <li><a href="#check"> What is the KYCNOT.ME check? </a></li>
+          <li><a href="#score"> What is the KYCNOT.ME score?</a></li>
+        </ul>
+      </li>
+      <li><a href="#support">Support and donations</a></li>
+    </ul>
+
+    <h2 id="why">Why this?</h2>
+    <p>
+      Cryptocurrencies are meant to make a change on the way we pay and exchange goods. They are made to untie the dependency between the users (customers) and the centralized entities that are in control (law enforced) of our economy (e.g. Banks, FED, etc.).
+    </p>
+    <p>
+      KYC and AML exchanges are the most common nowadays, they act exactly like a bank when using their wallets (most newbies or “traders” do so). You (usually) don't own any private key, so the funds aren't fully yours, they own your keys (if there are any keys that belong to you). They also require you to identify yourself in order to operate there (e.g. photo of your ID). All of this together goes against the most valuable benefits of cryptocurrencies.
+    </p>
+    <p>
+      With KYCNOT.ME I want to make it easier for people to find trustworthy ways to buy, exchange, trade and use cryptos without needing to identify themselves, and preserving the decentralized and self-governed essence of Cryptocurrencies.
+    </p>
+
+    <h2 id="btcxmr">Why only Bitcoin and Monero?</h2>
+    <p>
+      Bitcoin because is the biggest, with the most market cap, most adoption and most used among all cryptos. Monero because it is the true digital money, the only one that preserves privacy by design and brings true fungibility.
+    </p>
+    <p>
+      I am considering adding Nano too.
+    </p>
+
+    <h2 id="funded">How is KYCNOT.ME funded?</h2>
+    <p>
+      I pay for everything myself and I dedicated a lot of my free-time on this project. If you find this useful you can contribute by <a href="#support">donating</a> or helping the project :)
+    </p>
+
+    <h2 id="listings">Why is "X" not listed?</h2>
+    <p>
+      There may be many answers to this question. For now, I'm alone with this project and my time is limited and before adding a Exchange/Merchant/Service I need to make some investigation in order to be sure that it compiles with the KYCNOT.ME requirements. So one of the reasons, if it was suggested is that maybe I haven't had the time to investigate on it. If you're patient I promise I will be investigating all the suggestions I recieve.
+    </p>
+
+    <h2 id="features">Will <i>X feature</i> be implemented?  </h2>
+    <p>
+      Again, I'm alone with this. I would love to be implementing a lot of thing I have in mind but time is limited and I am not fulltime on this, in fact I have a job and several personal projects at the moment. The time I am dedicating to kycnot.me is limited and I would really like to be able to dedicate it much more time.
+    </p>
+    <p>
+      As I will always say, contributors are very welcome.
+    </p>
+
+    <h2 id="js">Javascript and the project</h2>
+    <p>
+      I don't want to use Javascript at all. If I ever use it, the website will always be available for anti-javascript users. Any suggestions must take this into account in order to be added to the project.
+    </p>
+
+    <h2 id="opensource">Why Open Source?</h2>
+    <p>
+      Well, it's not a very big service / project (maybe in the future will grow) but I really believe in Open Source. I want people to be able to contribute with it, request features, to make suggestions and I want as well to interact with them. I am not a company, I'm a individual who wants to make the usage of cryptos fairer and try to preserve its good characteristics.
+    </p>
+
+    <h2 id="trackers">Website has trackers?</h2>
+    <p>
+      No, and never will. I don't want to know anything from anyone who visits this site. You can even visit this site without Javascript activated and it will fully work.
+    </p>
+
+    <h2 id="fyi">FYI: I'm not a web developer!</h2>
+    <p>
+      Although I know how to create a website and all, I am not a web developer. The website may not be sufficiently efficient or it may have some errors on the way things are done. If you notice something you can fix it and create a PR and I will merge it!
+    </p>
+  </div>
+</div>
+
+<div class="content">
+  <div class="text-container">
+    <h1 id="criteria"><u>The listing criteria and service evaluations</u></h1>
+    <p>
+      There's not (yet) a well established criteria on the decision-making process. But the following are points which I think I really value (not the only ones, nor the decisive ones) when choosing a service to be listed:
+    </p>
+    <ul>
+      <li>No KYC (of course)</li>
+      <li>No tracking of suspicious transactions</li>
+      <li>No registration needed</li>
+      <li>Ammout of personal data if required to register</li>
+      <li>Tor mirrors</li>
+      <li>Good reviews, active on social networks, support team...</li>
+      <li>Clear and readable Terms of Service</li>
+      <li>Decentralization</li>
+      <li>Open Source-ness</li>
+    </ul>
+  
+    <h2 id="check">What is the KYCNOT.ME check?</h2>
+    <p>
+      It is an automated review of the ToS of each service. It searches for potential-KYC-enforcement words on the ToS page and if there is sufficient evidence the service will not pass the check. This is to notify users if a ToS have changed and the service is still listed, or if the service is listed but it has KYC-enforcement for some cases.
+    </p>
+  
+    <h2 id="score">What is the KYCNOT.ME score?</h2>
+    <p>
+      It is an automatic score that is given to every listed service. It is based on the ponderation of the above mentioned criteria.
+    </p>
+  </div>
+</div>
+
+<div class="content">
+  <div class="text-container">
+    <h1><u>You are the only one responsible for your actions</u></h1>
+
+    <p>
+      This page provides a list of services that allow users to interact without KYC.
+
+      KYCNOT.ME is not responsible for a service turning out fraudulent, a service disappearing without any notice or any loss of funds.
+      You must know that bad things can happen and there is bad people out there, so please make your own investigation and
+      check twice before anything.
+    </p>
+  </div>
+</div>
+
+<div class="content">
+  <div class="text-container">
+    <h1 id="support"><u>Support</u></h1>
+    <p>
+      Contributions of any kind are very welcome. Suggestions, recommendations, corrections, ideas... Just open an issue or send me a mail and I'll fix it as quick as I can.
+      Also, note that I am alone with this project and my time is limited!
+    </p>
+
+    <p>You can also make a donation to help supporting this project :)</p>
+    <p>You can donate with crypto:</p>
+    <pre>Monero: {{support['xmr']}}</pre>
+    <pre>Bitcoin: {{support['btc']}}</pre>
+    <pre>Nano: {{support['nano']}}</pre>
+
+    <p>Or you can donate with FIAT too: <a href="{{support['liberapay']}}">Liberapay</a></p>    
+  </div>
+</div>
+
+<style>
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-container{
+    width: 70vw;
+    padding: 15px;
+  }
+</style>
+
+{% endblock %}

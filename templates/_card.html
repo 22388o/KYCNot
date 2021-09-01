@@ -1,0 +1,63 @@
+<div class="column">
+    <div class="card"> <!--Start Card-->
+        <!--<div class="card-image" style="padding: 0.5rem;">
+        <figure class="image is-4by2">
+
+            <svg height="20%" width="100%">
+                <rect fill="rgb({{exchange['rgb-color']}})" x="0" y="0" width="100%" height="100%"></rect>
+                <text font-size="2rem" x="50%" y="50%" font-family="mono" font-weight="bold" fill="white" text-anchor="middle" alignment-baseline="central">{{exchange['name']}}</text>
+            </svg>
+
+            <img src="https://i2.wp.com/www.bitcoinproductreview.com/wp-content/uploads/2019/02/logo_bisq_splash.png?fit=684%2C286&ssl=1" alt="Exchange logo">
+        </figure>
+        </div>-->
+        <div class="card-content">
+
+        <div class="media">
+            <div class="media-content">
+                <p class="title is-3">{{exchange['name']}}</p>
+                <div class="tags has-addons">
+                    <span class="tag is-black">KYC-Check</span>
+                    {% if exchange['kyc-check'] == true %}
+                    <span class="tag is-success">OK</span>
+                    {% else %}
+                    <span class="tag is-danger">Need Review</span>
+                    {%endif%}
+              </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="tags">
+                {% for tag in exchange['tags'] %}
+                    {% if tag['value'] %}
+                        <span class="tag is-rounded {{tag['value']}}">{{tag['name']}}</span>
+                    {%endif%}
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="media">
+            <div class="media-content">
+                
+            </div>
+        </div>
+
+        <div class="media">
+            <div class="media-content">
+                <p class="is-6">{{exchange['description']}}</p>
+                <ul>
+                    {% for comment in exchange['comments'] %}
+                        <li style="color: grey;">* {{comment}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        
+        <div class="content">
+            <a href="{{exchange['tos-url']}}" class="button is-outlined is-fullwidth is-small is-light">Terms of Service</a>
+        </div>
+        <a href="{{exchange['url']}}" class="button is-outlined is-link is-fullwidth is-small">Homepage</a>
+        </div>
+    </div> <!--End Card-->     
+</div>

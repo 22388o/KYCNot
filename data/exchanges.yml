@@ -1,0 +1,418 @@
+exchanges:
+- name: Bisq
+  btc: true
+  buy: true
+  cash: true
+  comment:
+  - Some sellers may require ID
+  custodial: false
+  exchange: true
+  kyc-check: true
+  long-description: Buy and sell bitcoin for fiat (or other cryptocurrencies) privately
+    and securely using Bisq's peer-to-peer network and open-source desktop software.
+    No registration required. Bisq is a peer-to-peer trading network, not a website
+    or "app" or other centralized service. It's software you run on your own hardware,
+    which connects to other people running the Bisq software to facilitate trades.
+    It's open-source and community-driven.
+  may-kyc: false
+  open-source: true
+  p2p: true
+  personal-info: false
+  refunds: false
+  registration: false
+  rgb-color: 0,213,36
+  score: 10.0
+  short-description: P2P exchange. Full privacy.
+  tor: true
+  tor-url: false
+  tos-urls:
+  - https://accounts.hodlhodl.com/pages/terms_of_service
+  url: https://bisq.network
+  verified: true
+  score-boost: 0
+  xmr: true
+
+- name: LocalCryptos
+  btc: true
+  buy: true
+  cash: true
+  comment:
+  - Some sellers may require ID
+  - Refunds may require KYC
+  custodial: false
+  exchange: true
+  kyc-check: true
+  long-description: LocalCryptos is a peer-to-peer marketplace. People from all walks
+    of life place ads on LocalCryptos to buy and sell crypto. When two people agree
+    on a sale, the buyer pays the fiat half directly to the seller—which is why LocalCryptos
+    is so fast. LocalEthereum became LocalCryptos in November 2019.
+  may-kyc: false
+  open-source: false
+  p2p: true
+  personal-info: false
+  refunds: false
+  registration: true
+  rgb-color: 243,187,1
+  score: 8.75
+  short-description: The non-custodial crypto marketplace.
+  tor: false
+  tor-url: false
+  tos-urls:
+  - https://localcryptos.com/terms/terms-of-use
+  - https://localcryptos.com/terms/service-terms
+  url: https://localcryptos.com/
+  verified: false
+  score-boost: 0
+  xmr: false
+
+- name: HodlHodl
+  btc: true
+  buy: true
+  cash: true
+  comment:
+  - Some sellers may require ID
+  - Refunds may require KYC
+  custodial: false
+  exchange: true
+  kyc-check: true
+  long-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+    culpa qui officia deserunt mollit anim id est laborum.
+  may-kyc: true
+  open-source: false
+  p2p: true
+  personal-info: false
+  refunds: false
+  registration: true
+  rgb-color: 0,149,213
+  score: 7.5
+  short-description: Exchange P2P worldwide.
+  tor: false
+  tor-url: false
+  tos-urls:
+  - https://accounts.hodlhodl.com/pages/terms_of_service
+  url: https://hodlhodl.com/
+  verified: true
+  score-boost: 0
+  xmr: false
+
+- name: Kilos Swap
+  btc: true
+  buy: false
+  cash: false
+  comment: None
+  custodial: false
+  exchange: true
+  kyc-check: true
+  long-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+    culpa qui officia deserunt mollit anim id est laborum.
+  may-kyc: false
+  open-source: false
+  p2p: false
+  personal-info: false
+  refunds: false
+  registration: false
+  rgb-color: 0,213,36
+  score: 8.5
+  short-description: Tor based full privacy exchange.
+  tor: true
+  tor-url: false
+  tos-urls:
+  - false
+  url: http://mlyusr6htlxsyc7t2f4z53wdxh3win7q3qpxcrbam6jf3dmua7tnzuyd.onion/coinswap
+  verified: true
+  score-boost: 0
+  xmr: true
+
+- name: AgoraDesk
+  btc: true
+  buy: true
+  cash: true
+  comment:
+  - Some sellers may require ID
+  custodial: true
+  exchange: true
+  kyc-check: true
+  long-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+    culpa qui officia deserunt mollit anim id est laborum.
+  may-kyc: false
+  open-source: false
+  p2p: true
+  personal-info: false
+  refunds: false
+  registration: true
+  rgb-color: 0,213,36
+  score: 8.0
+  short-description: Buy Crypto the private way.
+  tor: true
+  tor-url: false
+  tos-urls:
+  - https://agoradesk.com/terms
+  url: https://agoradesk.com/
+  verified: false
+  score-boost: 0
+  xmr: true
+
+- name: LocalMonero
+  short-description: Peer-to-peer Monero exchange.
+  long-description: A marketplace where users can buy and sell Monero to and from
+    each other. Localmonero provides you with a custodial web-wallet but you can withdraw
+    your funds to any wallet of your choice with no limits. A tor service is available.
+  btc: false
+  xmr: true
+  cash: false
+  exchange: true
+  buy: true
+  custodial: true
+  registration: true
+  personal-info: false
+  p2p: false
+  may-kyc: true
+  open-source: false
+  comment:
+  kyc-check: true
+  refunds: false
+  rgb-color: 0,213,36
+  score: 7.5
+  tor: true
+  tor-url: http://nehdddktmhvqklsnkjqcbpmb63htee2iznpcbs5tgzctipxykpj6yrid.onion/
+  tos-urls:
+  - https://localmonero.co/terms
+  url: https://localmonero.co/
+  verified: true
+  score-boost: 2
+
+- name: TradeOgre
+  btc: true
+  xmr: true
+  buy: false
+  cash: false
+  comment:
+  custodial: true
+  exchange: true
+  kyc-check: true
+  long-description: TradeOgre is a small exchange focused especially on privacy coins
+    in general. Deposits and withdrawals are done without identity verification. It
+    has no official support and the UI feels a bit outdated and may not fit the needs
+    of some users.
+  may-kyc: false
+  open-source: false
+  p2p: false
+  personal-info: false
+  refunds: false
+  registration: true
+  rgb-color: 0,213,36
+  score: 7.5
+  short-description: Anonymous small private exchange.
+  tor: false
+  tor-url: false
+  tos-urls:
+  - false
+  url: https://tradeogre.com/
+  verified: true
+  score-boost: 0
+
+- name: Boltz
+  short-description: Privacy first, account-free crypto exchange.
+  long-description: Boltz is a privacy first, account-free, lightning-friendly crypto
+    exchange that can't track its users. Boltz neither users any trackers nor log
+    any data that could potentially be traced back to the identity of the users.
+  btc: true
+  xmr: false
+  cash: false
+  exchange: true
+  buy: false
+  custodial: false
+  registration: false
+  personal-info: false
+  p2p: false
+  may-kyc: false
+  open-source: true
+  comment:
+  kyc-check: true
+  refunds: false
+  rgb-color: 0,213,36
+  score: 8.75
+  tor: true
+  tor-url: http://boltzzzbnus4m7mta3cxmflnps4fp7dueu2tgurstbvrbt6xswzcocyd.onion/
+  tos-urls:
+  - https://www.notion.so/Frequently-Asked-Questions-585328ae43944e2eba351050790d5eec
+  url: https://boltz.exchange/
+  verified: false
+  score-boost: 0
+
+- name: Sideshift.ai
+  short-description: No Sign Up Crypto Exchange.
+  long-description: SideShift.ai enables HUMANS and AI to shift between 30+ cryptocurrencies.
+    Swap between coins with fast and easy user experience, no sign-up required.
+  btc: true
+  xmr: true
+  cash: false
+  exchange: true
+  buy: false
+  custodial: false
+  registration: false
+  personal-info: false
+  p2p: false
+  may-kyc: false
+  open-source: false
+  comment:
+  kyc-check: true
+  refunds: false
+  rgb-color: 0,213,36
+  score: 8.25
+  tor: false
+  tor-url: false
+  tos-urls:
+  - https://sideshift.ai/legal
+  url: https://sideshift.ai/
+  verified: false
+  score-boost: 0
+
+- name: Morphtoken
+  btc: true
+  buy: false
+  cash: false
+  comment:
+  - May reject transactions at any time for any reason.
+  custodial: false
+  exchange: true
+  kyc-check:
+  - money laundering
+  - terrorist financing
+  - anti-money laundering
+  long-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+    culpa qui officia deserunt mollit anim id est laborum.
+  may-kyc: true
+  open-source: false
+  p2p: false
+  personal-info: false
+  refunds: false
+  registration: false
+  rgb-color:
+  score: 7.0
+  short-description: Exchange Crypto. Easily.
+  tor: false
+  tor-url: false
+  tos-urls:
+  - https://www.morphtoken.com/terms/
+  url: https://morphtoken.com/
+  verified: true
+  score-boost: 0
+  xmr: true
+
+- name: Fixedfloat
+  btc: true
+  xmr: true
+  buy: false
+  cash: false
+  comment:
+  custodial: false
+  exchange: true
+  kyc-check: true
+  long-description: FixedFloat.com is an instant, fully automated digital asset exchange
+    with lightning network, transparent fees, no registration and non custodial wallet.
+  may-kyc: false
+  open-source: false
+  p2p: false
+  personal-info: false
+  refunds: false
+  registration: false
+  rgb-color: 0,213,36
+  score: 8.25
+  short-description: Lightning cryptocurrency exchange
+  tor: false
+  tor-url: false
+  tos-urls:
+  - https://fixedfloat.com/terms-of-service
+  url: https://fixedfloat.com/
+  verified: false
+  score-boost: 0
+
+- name: ChangeNow
+  xmr: true
+  btc: true
+  buy: false
+  cash: false
+  comment:
+  custodial: false
+  exchange: true
+  kyc-check:
+  - kyc
+  - aml
+  - money laundering
+  - user identification
+  - AML/KYC
+  - KYC/AML
+  - verify your identity
+  - verify your identity
+  long-description: ChangeNOW is a non-custodial crypto-to-crypto exchange where you
+    can trade a large number of coins quickly, conveniently, registration-free, and
+    without any limits. Although it normally does not require KYC it could be that
+    one of your transactions is marked as suspicious and then they will require you
+    a KYC procedure. The suspicious transaction detection system is not public so
+    we can't know what may trigger this. You can get a refund to your address if you
+    don't want to provide your information (without KYC).
+  may-kyc: true
+  open-source: false
+  p2p: false
+  personal-info: false
+  refunds: true
+  registration: false
+  rgb-color: 0,213,36
+  score: 7.0
+  short-description: Fast Crypto Swaps, Free of Custody.
+  tor: false
+  tor-url: false
+  tos-urls:
+  - https://changenow.io/faq/kyc-aml-procedure
+  url: https://changenow.io/
+  verified: true
+  score-boost: 0
+
+- name: XCHANGE.ME
+  short-description: Exchange cryptocurrency. Anonymously.
+  long-description: Modern cryptocurrency exchange service that allows you to exchange
+    cryptocurrency through a fast, secure, and cheap process without registration.
+    Tor available.
+  btc: true
+  xmr: true
+  cash: false
+  exchange: true
+  buy: false
+  custodial: false
+  registration: false
+  personal-info: false
+  p2p: false
+  may-kyc: false
+  open-source: false
+  comment:
+  kyc-check:
+  - KYC/AML
+  refunds: false
+  rgb-color: 0,213,36
+  score: 8.5
+  tor: true
+  tor-url: http://aa7oyok6dxgyedeteldaumqjernm5ai7dnpqayy3p4q7solc6dxi5vad.onion/
+  tos-urls:
+  - https://xchange.me/terms-of-service
+  url: https://xchange.me/
+  verified: false
+  score-boost: 0
+
+last_check: 2021-08-01 03:02:55.866887

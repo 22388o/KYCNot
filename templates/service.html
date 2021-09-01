@@ -1,0 +1,303 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="title-container">
+  <h1 class="title is-2">
+    <a href="{{service['url']}}" target="_blank">
+      {{service['name']}} <i class="fas fa-external-link-alt"></i>
+    </a>
+  </h2>
+</div>
+
+<div class="section header-section">
+  <figure class="image is-128x128">
+    <img
+      class="is-rounded"
+      src="../static/img/{{service['name'] | replace(' ', '') | lower}}.jpeg"
+    />
+  </figure>
+</div>
+
+<div class="section short-description-section">
+  <div class="short-description">{{service['short-description']}}</div>
+</div>
+
+{%if tpinfo['score'] != False %}
+<div class="section trustpilot">
+  <div class="trustpilot-stats">
+    <h3 style="margin: 1px;" class="title is-5"> <a href="{{tpinfo['link']}}" target="_blank">Trustpilot</a> Stats </h3>
+    <i class="fas fa-star"></i> {{tpinfo['score']}} <i class="fas fa-grip-lines-vertical"></i> {{tpinfo['count']}} Reviews
+  </div>
+</div>
+{%endif%}
+
+<div class="section quick-info-panel">
+  <article class="panel is-info">
+    <p class="panel-heading">Quick Info</p>
+    <a class="panel-block">
+      <span class="panel-icon">
+        <i class="fab fa-bitcoin" aria-hidden="true"></i>
+      </span>
+      {% if service['btc'] %} BTC available {% else %}
+      <p style="color: rgb(209, 170, 42)">BTC not available</p>
+      {%endif%}
+    </a>
+    <a class="panel-block">
+      <span class="panel-icon">
+        <i class="fab fa-monero" aria-hidden="true"></i>
+      </span>
+      {% if service['xmr'] %} XMR available {% else %}
+      <p style="color: rgb(209, 170, 42)">XMR not available</p>
+      {%endif%}
+    </a>
+    <a class="panel-block">
+    {% if service['lnn'] %}
+      <span class="panel-icon">
+        <i class="fas fa-bolt" style="color: rgb(68, 68, 226);"></i>
+      </span>
+      Lightning network is available 
+      {% else %}
+      <span class="panel-icon">
+        <i class="fas fa-bolt"></i>
+      </span>
+      <p style="color: rgb(209, 170, 42)">Lightning network is not available</p>
+      {%endif%}
+    </a>
+    <a class="panel-block">
+      <span class="panel-icon">
+        <i class="fas fa-mask"></i>
+      </span>
+      {% if not service['registration'] %} No account needed {% else %}
+      <p style="color: rgb(209, 170, 42)">Registration needed</p>
+      {%endif%}
+    </a>
+
+    {% if service['tor'] %}
+      <a href="{{service['tor-url']}}" class="panel-block">
+        <span class="panel-icon">
+          <i class="fas fa-bullseye"></i>
+        </span>
+        Tor available
+      </a>
+    {%endif%}
+  </article>
+</div>
+
+<div class="section long-description-section">
+  <article class="message long-description">
+    <div class="message-header">
+      <p>Description</p>
+    </div>
+    <div class="message-body">{{service['long-description']}}</div>
+  </article>
+</div>
+
+<section class="detailed-info-section">
+  <article class="message long-description">
+    {% if service['verified'] == True %}
+    <div class="message-header green">
+      <p><i class="fas fa-user-check"></i> Verified</p>
+    </div>
+    {%else%}
+    <div class="message-header yellow">
+      <p><i class="fas fa-user-times"></i> Not verified</p>
+    </div>
+    {%endif%}
+    <div class="message-body">
+      {% if service['verified'] %} This is a trusted service. It has been
+      tested by KYCNOT.ME or it has a long-time good reputation. {%else%} This
+      service has not been tested by KYCNOT.ME or does not have it doesn't have
+      a long or old enough good-review history. {%endif%}
+    </div>
+  </article>
+
+  <article class="message long-description">
+    {% if service['may-kyc'] %}
+    <div class="message-header yellow">
+      <p><i class="fas fa-theater-masks"></i> May KYC</p>
+    </div>
+    {%else%}
+    <div class="message-header green">
+      <p><i class="fas fa-user-ninja"></i> No KYC</p>
+    </div>
+    {%endif%}
+    <div class="message-body">
+      {% if service['may-kyc'] %} This service may request a KYC verification
+      if it finds your movements suspicious. {%else%} The service ToS do not
+      mention requiring KYC verifications at all. {%endif%}
+    </div>
+  </article>
+
+  <article class="message long-description">
+    {% if service['open-source'] %}
+    <div class="message-header green">
+      <p><i class="fas fa-code"></i> Open Source</p>
+    </div>
+    {%else%}
+    <div class="message-header yellow">
+      <p><i class="fas fa-box"></i> Not Open Source</p>
+    </div>
+    {%endif%}
+    <div class="message-body">
+      {% if service['open-source'] %} This service code is available for study.
+      {%else%} This service's code is not available. {%endif%}
+    </div>
+  </article>
+
+  {% if service['refunds'] %}
+  <article class="message long-description">
+    {% if service['refunds'] %}
+    <div class="message-header green">
+      <p><i class="fas fa-hand-holding-usd"></i> Refunds without KYC</p>
+    </div>
+    {%else%}
+    <div class="message-header yellow">
+      <p><i class="fas fa-times"></i> No Refunds</p>
+    </div>
+    {%endif%}
+    <div class="message-body">
+      {% if service['refunds'] %} You can get a refund without KYC.
+      {%else%} You can't get refunds or refunds need KYC. {%endif%}
+    </div>
+  </article>
+  {%endif%}
+</section>
+
+{% if service['tor-url'] %}
+<div style="margin: 25px;" class="title-container">
+  <h5 style="padding: 9px; border: 1px solid #9d52e9; border-radius: 5px; width: 10rem;" class="subtitle is-5">
+      <a href="{{service['tor-url']}}"> <i class="fas fa-bullseye"></i> TOR ONION AVAILABLE </a>
+    </h5>
+  </div>
+{% endif %}
+
+<div style="padding-top: 20px; padding-bottom: 30px;" class="title-container">
+
+  <h3 class="title is-4">
+    <a href="{{service['tos-url']}}">
+      <i style="font-size: large;" class="far fa-file-alt"></i> Read service Terms and Conditions
+      <i class="fas fa-external-link-alt"></i
+    ></a>
+  </h3>
+</div>
+
+<style>
+
+  .trustpilot{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1px;
+    padding: 8px;
+  }
+
+  .trustpilot-stats{
+    border: 1px teal solid;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .title-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .title {
+    margin-bottom: 10px;
+  }
+
+  .detailed-info-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .message-header {
+    font-size: large;
+  }
+
+  .yellow {
+    background-color: rgb(182, 127, 8) !important;
+  }
+
+  .green {
+    background-color: rgb(7, 136, 0) !important;
+  }
+
+  .red {
+    background-color: rgb(182, 8, 8) !important;
+  }
+
+  .card-header-title {
+    border-radius: 5px;
+  }
+
+  .header-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3px;
+    padding-top: 3px;
+    margin-bottom: 3px;
+    padding-bottom: 3px;
+  }
+
+  .long-description-section {
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    padding-top: 2px;
+  }
+
+  .long-description {
+    width: 80vw;
+    max-width: 860px;
+    margin: 10px;
+  }
+
+  .short-description-section {
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 3px;
+  }
+
+  .short-description {
+    border-bottom: lightgrey solid 1px;
+    max-width: 60vw;
+  }
+
+  .score {
+    margin: 3vh;
+    max-width: 15vh;
+    max-height: 8vh;
+    text-align: center;
+  }
+
+  .quick-info-panel {
+    display: flex;
+    justify-content: center;
+  }
+
+  .panel-block {
+    text-align: center;
+  }
+
+  .panel {
+    width: 80vh;
+  }
+
+  .panel-icon {
+    font-size: x-large;
+  }
+
+  .fa-external-link-alt {
+    font-size: small;
+  }
+
+  .fa-file-alt {
+    font-size: xx-large;
+  }
+</style>
+
+{% endblock %}
