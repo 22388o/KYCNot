@@ -55,8 +55,8 @@ async def index(request):
     with open(f"{data_dir}/exchanges.yml", "r") as exchanges:
         data = yaml.load(exchanges)
         # Run check every 3 days
-        if (data['last_check'] + datetime.timedelta(days=3)) < datetime.datetime.today():
-            # await kyc_check()
+        if (data['last_check'] + datetime.timedelta(days=2)) < datetime.datetime.today():
+            await kyc_check()
             await compute_score()
         return html(template.render(data=data,
                                     title="KYC? Not me!",
