@@ -8,6 +8,8 @@ exchanges:
   custodial: false
   exchange: true
   kyc-check: true
+  suspicious-tos:
+  - false
   long-description: Buy and sell bitcoin for fiat (or other cryptocurrencies) privately
     and securely using Bisq's peer-to-peer network and open-source desktop software.
     No registration required. Bisq is a peer-to-peer trading network, not a website
@@ -41,6 +43,8 @@ exchanges:
   custodial: false
   exchange: true
   kyc-check: true
+  suspicious-tos:
+  - false
   long-description: LocalCryptos is a peer-to-peer marketplace. People from all walks
     of life place ads on LocalCryptos to buy and sell crypto. When two people agree
     on a sale, the buyer pays the fiat half directly to the seller—which is why LocalCryptos
@@ -63,38 +67,35 @@ exchanges:
   score-boost: 0
   xmr: false
 
-- name: HodlHodl
+- name: Boltz
+  short-description: Privacy first, account-free crypto exchange.
+  long-description: Boltz is a privacy first, account-free, lightning-friendly crypto
+    exchange that can't track its users. Boltz neither users any trackers nor log
+    any data that could potentially be traced back to the identity of the users.
   btc: true
-  buy: true
-  cash: true
-  comment:
-  - Some sellers may require ID
-  - Refunds may require KYC
-  custodial: false
-  exchange: true
-  kyc-check: true
-  long-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-    culpa qui officia deserunt mollit anim id est laborum.
-  may-kyc: true
-  open-source: false
-  p2p: true
-  personal-info: false
-  refunds: false
-  registration: true
-  score: 7.5
-  short-description: Exchange P2P worldwide.
-  tor: false
-  tor-url: false
-  tos-urls:
-  - https://accounts.hodlhodl.com/pages/terms_of_service
-  url: https://hodlhodl.com/
-  verified: true
-  score-boost: 0
   xmr: false
+  cash: false
+  exchange: true
+  buy: false
+  custodial: false
+  registration: false
+  personal-info: false
+  p2p: false
+  may-kyc: false
+  open-source: true
+  comment:
+  kyc-check: true
+  suspicious-tos:
+  - false
+  refunds: false
+  score: 8.75
+  tor: true
+  tor-url: http://boltzzzbnus4m7mta3cxmflnps4fp7dueu2tgurstbvrbt6xswzcocyd.onion/
+  tos-urls:
+  - https://www.notion.so/Frequently-Asked-Questions-585328ae43944e2eba351050790d5eec
+  url: https://boltz.exchange/
+  verified: false
+  score-boost: 0
 
 - name: Kilos Swap
   btc: true
@@ -104,6 +105,8 @@ exchanges:
   custodial: false
   exchange: true
   kyc-check: true
+  suspicious-tos:
+  - false
   long-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -127,6 +130,123 @@ exchanges:
   score-boost: 0
   xmr: true
 
+- name: XCHANGE.ME
+  short-description: Exchange cryptocurrency. Anonymously.
+  long-description: Modern cryptocurrency exchange service that allows you to exchange
+    cryptocurrency through a fast, secure, and cheap process without registration.
+    Tor available.
+  btc: true
+  xmr: true
+  cash: false
+  exchange: true
+  buy: false
+  custodial: false
+  registration: false
+  personal-info: false
+  p2p: false
+  may-kyc: false
+  open-source: false
+  comment:
+  kyc-check: true
+  suspicious-tos:
+  - false
+  refunds: false
+  score: 8.5
+  tor: true
+  tor-url: http://aa7oyok6dxgyedeteldaumqjernm5ai7dnpqayy3p4q7solc6dxi5vad.onion/
+  tos-urls:
+  - https://xchange.me/terms-of-service
+  url: https://xchange.me/
+  verified: false
+  score-boost: 0
+
+- name: Sideshift.ai
+  short-description: No Sign Up Crypto Exchange.
+  long-description: SideShift.ai enables HUMANS and AI to shift between 30+ cryptocurrencies.
+    Swap between coins with fast and easy user experience, no sign-up required.
+  btc: true
+  xmr: true
+  cash: false
+  exchange: true
+  buy: false
+  custodial: false
+  registration: false
+  personal-info: false
+  p2p: false
+  may-kyc: false
+  open-source: false
+  comment:
+  kyc-check: true
+  suspicious-tos:
+  - false
+  refunds: false
+  score: 8.25
+  tor: false
+  tor-url: false
+  tos-urls:
+  - https://sideshift.ai/legal
+  url: https://sideshift.ai/
+  verified: false
+  score-boost: 0
+
+- name: Coin Swap
+  short-description: What do you want to swap?
+  long-description: This swap is a simple and light swap page where you can swap various
+    cryptos. It is simple and fast.
+  btc: true
+  xmr: true
+  cash: false
+  exchange: true
+  buy: false
+  custodial: false
+  registration: false
+  personal-info: false
+  p2p: false
+  may-kyc: false
+  open-source: false
+  comment:
+  kyc-check: true
+  suspicious-tos:
+  - false
+  refunds: false
+  score: 8.25
+  tor: false
+  tor-url: false
+  tos-urls:
+  - https://swap.lightning-network.ro/faq/
+  url: https://swap.lightning-network.ro/
+  verified: true
+  score-boost: 0
+
+- name: Fixedfloat
+  btc: true
+  xmr: true
+  buy: false
+  cash: false
+  comment:
+  custodial: false
+  exchange: true
+  kyc-check: true
+  suspicious-tos:
+  - false
+  long-description: FixedFloat.com is an instant, fully automated digital asset exchange
+    with lightning network, transparent fees, no registration and non custodial wallet.
+  may-kyc: false
+  open-source: false
+  p2p: false
+  personal-info: false
+  refunds: false
+  registration: false
+  score: 8.25
+  short-description: Lightning cryptocurrency exchange
+  tor: false
+  tor-url: false
+  tos-urls:
+  - https://fixedfloat.com/terms-of-service
+  url: https://fixedfloat.com/
+  verified: false
+  score-boost: 0
+
 - name: AgoraDesk
   btc: true
   buy: true
@@ -136,6 +256,8 @@ exchanges:
   custodial: true
   exchange: true
   kyc-check: true
+  suspicious-tos:
+  - false
   long-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -159,6 +281,41 @@ exchanges:
   score-boost: 0
   xmr: true
 
+- name: HodlHodl
+  btc: true
+  buy: true
+  cash: true
+  comment:
+  - Some sellers may require ID
+  - Refunds may require KYC
+  custodial: false
+  exchange: true
+  kyc-check: true
+  suspicious-tos:
+  - false
+  long-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+    culpa qui officia deserunt mollit anim id est laborum.
+  may-kyc: true
+  open-source: false
+  p2p: true
+  personal-info: false
+  refunds: false
+  registration: true
+  score: 7.5
+  short-description: Exchange P2P worldwide.
+  tor: false
+  tor-url: false
+  tos-urls:
+  - https://accounts.hodlhodl.com/pages/terms_of_service
+  url: https://hodlhodl.com/
+  verified: true
+  score-boost: 0
+  xmr: false
+
 - name: LocalMonero
   short-description: Peer-to-peer Monero exchange.
   long-description: A marketplace where users can buy and sell Monero to and from
@@ -177,6 +334,8 @@ exchanges:
   open-source: false
   comment:
   kyc-check: true
+  suspicious-tos:
+  - false
   refunds: false
   score: 7.5
   tor: true
@@ -196,6 +355,8 @@ exchanges:
   custodial: true
   exchange: true
   kyc-check: true
+  suspicious-tos:
+  - false
   long-description: TradeOgre is a small exchange focused especially on privacy coins
     in general. Deposits and withdrawals are done without identity verification. It
     has no official support and the UI feels a bit outdated and may not fit the needs
@@ -216,168 +377,6 @@ exchanges:
   verified: true
   score-boost: 0
 
-- name: Boltz
-  short-description: Privacy first, account-free crypto exchange.
-  long-description: Boltz is a privacy first, account-free, lightning-friendly crypto
-    exchange that can't track its users. Boltz neither users any trackers nor log
-    any data that could potentially be traced back to the identity of the users.
-  btc: true
-  xmr: false
-  cash: false
-  exchange: true
-  buy: false
-  custodial: false
-  registration: false
-  personal-info: false
-  p2p: false
-  may-kyc: false
-  open-source: true
-  comment:
-  kyc-check: true
-  refunds: false
-  score: 8.75
-  tor: true
-  tor-url: http://boltzzzbnus4m7mta3cxmflnps4fp7dueu2tgurstbvrbt6xswzcocyd.onion/
-  tos-urls:
-  - https://www.notion.so/Frequently-Asked-Questions-585328ae43944e2eba351050790d5eec
-  url: https://boltz.exchange/
-  verified: false
-  score-boost: 0
-
-- name: Sideshift.ai
-  short-description: No Sign Up Crypto Exchange.
-  long-description: SideShift.ai enables HUMANS and AI to shift between 30+ cryptocurrencies.
-    Swap between coins with fast and easy user experience, no sign-up required.
-  btc: true
-  xmr: true
-  cash: false
-  exchange: true
-  buy: false
-  custodial: false
-  registration: false
-  personal-info: false
-  p2p: false
-  may-kyc: false
-  open-source: false
-  comment:
-  kyc-check: true
-  refunds: false
-  score: 8.25
-  tor: false
-  tor-url: false
-  tos-urls:
-  - https://sideshift.ai/legal
-  url: https://sideshift.ai/
-  verified: false
-  score-boost: 0
-
-- name: Coin Swap
-  short-description: What do you want to swap?
-  long-description: This swap is a simple and light swap page where you can swap various cryptos. It is simple and fast.
-  btc: True
-  xmr: True
-  cash: False
-  exchange: True
-  buy: False
-  custodial: False
-  registration: False
-  personal-info: False
-  p2p: False
-  may-kyc: false
-  open-source: False
-  comment:
-  kyc-check: false
-  refunds: false
-  score: 6
-  tor: False
-  tor-url: false
-  tos-urls:
-  - https://swap.lightning-network.ro/faq/
-  url: https://swap.lightning-network.ro/
-  verified: true
-  score-boost: 0
-
-- name: Mandala
-  short-description: Trade Cryptocurrency with Confidence.
-  long-description: Trade cryptocurrency with confidence on an industry-leading exchange platform with access to the largest liquidity pool in the world (Binance). While sourcing digital assets from our platform, we want our users to feel confident in the security of our custodial wallets. Through our commitment to compliance, we aim to push adoption of the digital economy with the leading regulatory bodies of the world. We intend to make Mandala a household name in the digital asset marketplace.
-  btc: True
-  xmr: True
-  cash: False
-  exchange: True
-  buy: False
-  custodial: True
-  registration: True
-  personal-info: False
-  p2p: False
-  may-kyc: false
-  open-source: False
-  comment:
-  kyc-check: false
-  refunds: false
-  score: 6
-  tor: False
-  tor-url: false
-  tos-urls:
-  - https://support.mandala.exchange/hc/en-us/articles/360055720074-Mandala-Exchange-Terms-and-Conditions
-  url: https://mandala.exchange/
-  verified: false
-  score-boost: 0
-
-- name: XCHANGE.ME
-  short-description: Exchange cryptocurrency. Anonymously.
-  long-description: Modern cryptocurrency exchange service that allows you to exchange
-    cryptocurrency through a fast, secure, and cheap process without registration.
-    Tor available.
-  btc: true
-  xmr: true
-  cash: false
-  exchange: true
-  buy: false
-  custodial: false
-  registration: false
-  personal-info: false
-  p2p: false
-  may-kyc: false
-  open-source: false
-  comment:
-  kyc-check:
-  - KYC/AML
-  refunds: false
-  score: 8.5
-  tor: true
-  tor-url: http://aa7oyok6dxgyedeteldaumqjernm5ai7dnpqayy3p4q7solc6dxi5vad.onion/
-  tos-urls:
-  - https://xchange.me/terms-of-service
-  url: https://xchange.me/
-  verified: false
-  score-boost: 0
-
-- name: Kucoin
-  short-description: Find the next crypto gem on KuCoin.
-  long-description: Launched back in 2017, KuCoin is a global crypto exchange that provides to its six million users. KuCoin claims to offer the most advanced level of security and a selection of nearly 400 cryptocurrencies.
-  btc: True
-  xmr: True
-  cash: False
-  exchange: True
-  buy: False
-  custodial: True
-  registration: True
-  personal-info: False
-  p2p: False
-  may-kyc: true
-  open-source: False
-  comment:
-  kyc-check: false
-  refunds: false
-  score: 6
-  tor: False
-  tor-url: false
-  tos-urls:
-  - https://www.kucoin.com/news/en-terms-of-use?lang=en_US
-  url: https://kucoin.com/
-  verified: true
-  score-boost: 0
-
 - name: Morphtoken
   btc: true
   buy: false
@@ -386,10 +385,9 @@ exchanges:
   - May reject transactions at any time for any reason.
   custodial: false
   exchange: true
-  kyc-check:
-  - money laundering
-  - terrorist financing
-  - anti-money laundering
+  kyc-check: true
+  suspicious-tos:
+  - false
   long-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -414,33 +412,6 @@ exchanges:
   score-boost: 0
   xmr: true
 
-- name: Fixedfloat
-  btc: true
-  xmr: true
-  buy: false
-  cash: false
-  comment:
-  custodial: false
-  exchange: true
-  kyc-check: true
-  long-description: FixedFloat.com is an instant, fully automated digital asset exchange
-    with lightning network, transparent fees, no registration and non custodial wallet.
-  may-kyc: false
-  open-source: false
-  p2p: false
-  personal-info: false
-  refunds: false
-  registration: false
-  score: 8.25
-  short-description: Lightning cryptocurrency exchange
-  tor: false
-  tor-url: false
-  tos-urls:
-  - https://fixedfloat.com/terms-of-service
-  url: https://fixedfloat.com/
-  verified: false
-  score-boost: 0
-
 - name: ChangeNow
   xmr: true
   btc: true
@@ -449,15 +420,113 @@ exchanges:
   comment:
   custodial: false
   exchange: true
+  suspicious-tos:
+  - <p class="collapse-panel--text">ChangeNOW strives to protect our clients from
+    any type of scams and fraudulent activities in the crypto world and complies to
+    all rules and regulations present at the moment, and one of the ways that enables
+    us to do so is the KYC/AML procedure.</p>
+  - <p class="collapse-panel--text">This procedure confirms the absolute legality
+    of the transaction carried out by you before the regulatory institutions. Thus,
+    you confirm that you are a law-abiding citizen and the state has no reason to
+    address any claims towards you.</p>
+  - <p class="collapse-panel--text">ChangeNOW’s AML/KYC procedure is supported by
+    an automated risk prevention system. If a transaction is marked suspicious by
+    this system, the exchange is put on hold and the customer in question is then
+    asked to confirm their identity.</p>
+  - <p class="collapse-panel--text">There is a certain set of criteria that the system
+    employs; however, they can’t be made public, otherwise there will be people who
+    will try to abuse those criteria in order to cheat the algorithm.</p>
+  - <p class="collapse-panel--text">This system has proven to be very useful against
+    money launderers and scammers, since the KYC process allows us to tell an honest
+    customer apart from a scammer very quickly and without any trouble.</p>
+  - <p class="collapse-panel--text">Each KYC case is handled individually. If a certain
+    client is eligible for the procedure since their transaction had been marked as
+    suspicious, they will have a special status update on the exchange page along
+    with a Verify button; the button will lead to our KYC provider SumSub’s verification
+    tool.</p>
+  - <p class="collapse-panel--text">ChangeNOW is partnered with a KYC provider called
+    SumSub. In order to get your identity verified, you will be offered to follow
+    SumSub’s link (it will be under the Verify button) and complete the verification
+    through a comfortable and smooth UI. You will have 3 days to complete the verification
+    procedure, and if you don’t want to pass KYC, you can refuse (in that case, please
+    shoot a message to <a href="/cdn-cgi/l/email-protection#96e5e3e6e6f9e4e2d6f5fef7f8f1f3f8f9e1b8fff9"><span
+    class="__cf_email__" data-cfemail="aad9dfdadac5d8deeac9c2cbc4cdcfc4c5dd84c3c5">[email protected]</span></a>)
+    and receive a refund.</p>
+  - <p class="collapse-panel--text">After ChangeNOW has received the confirmation
+    of you having passed the KYC procedure from SumSub, the exchange is completed,
+    and the exchanged funds are then sent to the specified recipient wallet address.</p>
+  - <p class="collapse-panel--text">We do everything in our power to maintain our
+    reputation as a legitimate, law-abiding exchange service that can be safe for
+    use by anyone, be it a regular person who doesn’t deal with crypto much or an
+    experienced trader or miner; therefore, ChangeNOW reserves the right to apply
+    the KYC/AML procedure to certain clients, wallet addresses and select assets.</p>
+  - <p class="collapse-panel--text">ChangeNOW doesn’t support any money-laundering
+    or other illegal activities; therefore, the service doesn’t enter any business
+    agreements with individuals or business entities involved or suspected in such
+    activities. Therefore, if a customer’s funds are suspected of illegal activities,
+    the KYC procedure will be a little different – in that case, our support team
+    will let you know.</p>
+  - <p class="collapse-panel--text">In case a client doesn’t wish to disclose their
+    identity for certain reasons and refuses to provide the documents, the KYC/AML
+    procedure is considered failed and the deposited funds are then refunded to the
+    address (or addresses) the deposit was made from, subtracting the network fees,
+    within 24 hours. Then, ChangeNOW reserves the right to blacklist this address
+    (or addresses), thus rendering it (or them) non-eligible for making deposits on
+    the service.</p>
+  - <p class="collapse-panel--text">In case a client submits a false set of documents,
+    the KYC/AML procedure is considered failed and the deposited funds are then refunded
+    to the address (or addresses) the deposit was made from, subtracting the network
+    fees, within 24 hours. Then, ChangeNOW reserves the right to blacklist this address
+    (or addresses), thus rendering it (or them) non-eligible for making deposits on
+    the service.</p>
+  - <p class="collapse-panel--text">Please bear in mind that ChangeNOW reserves the
+    right to submit all the received materials to legal authorities (Interpol, Europol,
+    and others) in case a corresponding request is received. You can read the official
+    ChangeNOW's Rules of Anti-Money Laundering and Combating The Financing Terrorism
+    compliance control <a href="/files/Rules_of_AML_CFT_compliance_ChangeNow.v1.2.pdf"
+    target="_blank">here</a>.</p>
+  - <p class="collapse-panel--text">In order to purchase crypto with USD or EUR, you
+    will need to enter your email address. It is a necessary step for user identification
+    required by our third-party partner, Simplex.</p>
+  - <p class="collapse-panel--text">To comply with Simplex's identification procedure,
+    we recommend to use the same email address together with a debit/credit card’s
+    information for each transaction.</p>
+  - <p class="collapse-panel--text">All the documents that you might provide during
+    ChangeNOW's KYC/AML procedures are encrypted and stored in specialized secure
+    storage as long as required by law. We guarantee that they won't be sold to or
+    shared with any kind of third party, excluding potential law enforcement requests.</p>
+  - <p class="collapse-panel--text">If you’re the victim of theft and you suspect
+    that stolen funds have been transferred to a ChangeNOW deposit address, you must
+    open a support ticket and provide us with the following information:</p>
+  - <p class="collapse-panel--text">If there is substantial evidence that suggests
+    the funds were indeed stolen, ChangeNOW will do its best to temporarily freeze
+    the assets. During the process, the police or Law Enforcement must provide us
+    with a report on the ongoing case within 14 days after you submitted a support
+    ticket.</p>
+  - <p class="collapse-panel--text">Kindly note that we will be able to return frozen
+    funds only per request of a Law Enforcement Authority. The request should have
+    a clear intent to return the funds and have the information about the transaction
+    in question.</p>
+  - '<p class="collapse-panel--text">The hard copy of the request should be sent to
+    our postal address: Amsterdam, Kraanspoor 50, 1033 SE, Netherlands. Please send
+    a digital copy of the request to <a href="/cdn-cgi/l/email-protection#dfacaaafafb0adab9fbcb7beb1b8bab1b0a8f1b6b0"><span
+    class="__cf_email__" data-cfemail="473432373728353307242f26292022292830692e28">[email protected]</span></a>
+    before sending the hard one.</p>'
+  - <p class="collapse-panel--text">Please note that the transaction might be stopped
+    after the trading stage, depending on the time the report about stolen funds was
+    received. In such cases, we will be able to return the funds in the asset to which
+    the exchange was made (to-currency).</p>
+  - <p class="collapse-panel--text">Yes, you can join our affiliate program and make
+    0.4% of the funds attracted by you. Here is the detailed <a href="https://medium.com/@changenow_io/changenow-has-launched-an-affiliate-program-you-are-welcome-to-join-71a5296caa41">instruction</a>.</p>
   kyc-check:
-  - kyc
-  - aml
-  - money laundering
-  - user identification
   - AML/KYC
   - KYC/AML
-  - verify your identity
-  - verify your identity
+  - AML/KYC
+  - KYC/AML
+  - KYC/AML
+  - KYC/AML
+  - user identification
+  - KYC/AML
   long-description: ChangeNOW is a non-custodial crypto-to-crypto exchange where you
     can trade a large number of coins quickly, conveniently, registration-free, and
     without any limits. Although it normally does not require KYC it could be that
@@ -480,5 +549,87 @@ exchanges:
   url: https://changenow.io/
   verified: true
   score-boost: 0
+- name: Mandala
+  short-description: Trade Cryptocurrency with Confidence.
+  long-description: Trade cryptocurrency with confidence on an industry-leading exchange
+    platform with access to the largest liquidity pool in the world (Binance). While
+    sourcing digital assets from our platform, we want our users to feel confident
+    in the security of our custodial wallets. Through our commitment to compliance,
+    we aim to push adoption of the digital economy with the leading regulatory bodies
+    of the world. We intend to make Mandala a household name in the digital asset
+    marketplace.
+  btc: true
+  xmr: true
+  cash: false
+  exchange: true
+  buy: false
+  custodial: true
+  registration: true
+  personal-info: false
+  p2p: false
+  may-kyc: false
+  open-source: false
+  comment:
+  kyc-check: true
+  suspicious-tos:
+  - false
+  refunds: false
+  score: 6.5
+  tor: false
+  tor-url: false
+  tos-urls:
+  - https://support.mandala.exchange/hc/en-us/articles/360055720074-Mandala-Exchange-Terms-and-Conditions
+  url: https://mandala.exchange/
+  verified: false
+  score-boost: 0
 
-last_check: 2021-08-01 03:02:55.866887
+- name: Kucoin
+  short-description: Find the next crypto gem on KuCoin.
+  long-description: Launched back in 2017, KuCoin is a global crypto exchange that
+    provides to its six million users. KuCoin claims to offer the most advanced level
+    of security and a selection of nearly 400 cryptocurrencies.
+  btc: true
+  xmr: true
+  cash: false
+  exchange: true
+  buy: false
+  custodial: true
+  registration: true
+  personal-info: false
+  p2p: false
+  may-kyc: true
+  open-source: false
+  comment:
+  kyc-check: false
+  suspicious-tos:
+  - 2.3. KuCoin maintains an anti-money laundering, countering the financing of terrorism
+    and know your customer compliance policy (the “AML/CFT Policy”). Pursuant to such
+    policy, KuCoin may, in its discretion, require identity verification and go through
+    other screening procedures with respect to you or transactions associated with
+    your KuCoin Account. You agree and undertake to provide KuCoin with any and all
+    information and documents that KuCoin may from time to time request or require
+    for the purposes of these Terms or in connection with your KuCoin Account (including,
+    but not limited to, your name, address, telephone number, email address, date
+    of birth, government-issued identification number, photograph of your government-issued
+    identity card or document or other photographic proof of your identity, and information
+    regarding your Digital Token Account). KuCoin will have no liability or responsibility
+    for any permanent or temporary inability to access or use any Services as a result
+    of any identity verification or other screening procedures.
+  - Further, pursuant to the AML/CFT Policy, KuCoin may, in its discretion, carry
+    out continuous monitoring of all KuCoin Accounts. If any unusually large or unusual
+    patterns of trades or any inexplicable or suspicious circumstances are observed,
+    KuCoin may, in its discretion, place an administrative hold on or freeze your
+    KuCoin Account. You agree that KuCoin will have no liability or responsibility
+    for any permanent or temporary inability to access or use any Service caused by
+    such action.
+  refunds: false
+  score: 3.5
+  tor: false
+  tor-url: false
+  tos-urls:
+  - https://www.kucoin.com/news/en-terms-of-use?lang=en_US
+  url: https://kucoin.com/
+  verified: true
+  score-boost: 0
+
+last_check: 2021-09-02 12:53:00.463858
