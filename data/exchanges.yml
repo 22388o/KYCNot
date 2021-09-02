@@ -20,7 +20,6 @@ exchanges:
   personal-info: false
   refunds: false
   registration: false
-  rgb-color: 0,213,36
   score: 10.0
   short-description: P2P exchange. Full privacy.
   tor: true
@@ -52,7 +51,6 @@ exchanges:
   personal-info: false
   refunds: false
   registration: true
-  rgb-color: 243,187,1
   score: 8.75
   short-description: The non-custodial crypto marketplace.
   tor: false
@@ -87,7 +85,6 @@ exchanges:
   personal-info: false
   refunds: false
   registration: true
-  rgb-color: 0,149,213
   score: 7.5
   short-description: Exchange P2P worldwide.
   tor: false
@@ -119,7 +116,6 @@ exchanges:
   personal-info: false
   refunds: false
   registration: false
-  rgb-color: 0,213,36
   score: 8.5
   short-description: Tor based full privacy exchange.
   tor: true
@@ -152,7 +148,6 @@ exchanges:
   personal-info: false
   refunds: false
   registration: true
-  rgb-color: 0,213,36
   score: 8.0
   short-description: Buy Crypto the private way.
   tor: true
@@ -183,7 +178,6 @@ exchanges:
   comment:
   kyc-check: true
   refunds: false
-  rgb-color: 0,213,36
   score: 7.5
   tor: true
   tor-url: http://nehdddktmhvqklsnkjqcbpmb63htee2iznpcbs5tgzctipxykpj6yrid.onion/
@@ -212,7 +206,6 @@ exchanges:
   personal-info: false
   refunds: false
   registration: true
-  rgb-color: 0,213,36
   score: 7.5
   short-description: Anonymous small private exchange.
   tor: false
@@ -242,7 +235,6 @@ exchanges:
   comment:
   kyc-check: true
   refunds: false
-  rgb-color: 0,213,36
   score: 8.75
   tor: true
   tor-url: http://boltzzzbnus4m7mta3cxmflnps4fp7dueu2tgurstbvrbt6xswzcocyd.onion/
@@ -270,7 +262,6 @@ exchanges:
   comment:
   kyc-check: true
   refunds: false
-  rgb-color: 0,213,36
   score: 8.25
   tor: false
   tor-url: false
@@ -278,6 +269,113 @@ exchanges:
   - https://sideshift.ai/legal
   url: https://sideshift.ai/
   verified: false
+  score-boost: 0
+
+- name: Coin Swap
+  short-description: What do you want to swap?
+  long-description: This swap is a simple and light swap page where you can swap various cryptos. It is simple and fast.
+  btc: True
+  xmr: True
+  cash: False
+  exchange: True
+  buy: False
+  custodial: False
+  registration: False
+  personal-info: False
+  p2p: False
+  may-kyc: false
+  open-source: False
+  comment:
+  kyc-check: false
+  refunds: false
+  score: 6
+  tor: False
+  tor-url: false
+  tos-urls:
+  - https://swap.lightning-network.ro/faq/
+  url: https://swap.lightning-network.ro/
+  verified: true
+  score-boost: 0
+
+- name: Mandala
+  short-description: Trade Cryptocurrency with Confidence.
+  long-description: Trade cryptocurrency with confidence on an industry-leading exchange platform with access to the largest liquidity pool in the world (Binance). While sourcing digital assets from our platform, we want our users to feel confident in the security of our custodial wallets. Through our commitment to compliance, we aim to push adoption of the digital economy with the leading regulatory bodies of the world. We intend to make Mandala a household name in the digital asset marketplace.
+  btc: True
+  xmr: True
+  cash: False
+  exchange: True
+  buy: False
+  custodial: True
+  registration: True
+  personal-info: False
+  p2p: False
+  may-kyc: false
+  open-source: False
+  comment:
+  kyc-check: false
+  refunds: false
+  score: 6
+  tor: False
+  tor-url: false
+  tos-urls:
+  - https://support.mandala.exchange/hc/en-us/articles/360055720074-Mandala-Exchange-Terms-and-Conditions
+  url: https://mandala.exchange/
+  verified: false
+  score-boost: 0
+
+- name: XCHANGE.ME
+  short-description: Exchange cryptocurrency. Anonymously.
+  long-description: Modern cryptocurrency exchange service that allows you to exchange
+    cryptocurrency through a fast, secure, and cheap process without registration.
+    Tor available.
+  btc: true
+  xmr: true
+  cash: false
+  exchange: true
+  buy: false
+  custodial: false
+  registration: false
+  personal-info: false
+  p2p: false
+  may-kyc: false
+  open-source: false
+  comment:
+  kyc-check:
+  - KYC/AML
+  refunds: false
+  score: 8.5
+  tor: true
+  tor-url: http://aa7oyok6dxgyedeteldaumqjernm5ai7dnpqayy3p4q7solc6dxi5vad.onion/
+  tos-urls:
+  - https://xchange.me/terms-of-service
+  url: https://xchange.me/
+  verified: false
+  score-boost: 0
+
+- name: Kucoin
+  short-description: Find the next crypto gem on KuCoin.
+  long-description: Launched back in 2017, KuCoin is a global crypto exchange that provides to its six million users. KuCoin claims to offer the most advanced level of security and a selection of nearly 400 cryptocurrencies.
+  btc: True
+  xmr: True
+  cash: False
+  exchange: True
+  buy: False
+  custodial: True
+  registration: True
+  personal-info: False
+  p2p: False
+  may-kyc: true
+  open-source: False
+  comment:
+  kyc-check: false
+  refunds: false
+  score: 6
+  tor: False
+  tor-url: false
+  tos-urls:
+  - https://support.mandala.exchange/hc/en-us/articles/360055720074-Mandala-Exchange-Terms-and-Conditions
+  url: https://kucoin.com/
+  verified: true
   score-boost: 0
 
 - name: Morphtoken
@@ -333,7 +431,6 @@ exchanges:
   personal-info: false
   refunds: false
   registration: false
-  rgb-color: 0,213,36
   score: 8.25
   short-description: Lightning cryptocurrency exchange
   tor: false
@@ -374,7 +471,6 @@ exchanges:
   personal-info: false
   refunds: true
   registration: false
-  rgb-color: 0,213,36
   score: 7.0
   short-description: Fast Crypto Swaps, Free of Custody.
   tor: false
@@ -383,36 +479,6 @@ exchanges:
   - https://changenow.io/faq/kyc-aml-procedure
   url: https://changenow.io/
   verified: true
-  score-boost: 0
-
-- name: XCHANGE.ME
-  short-description: Exchange cryptocurrency. Anonymously.
-  long-description: Modern cryptocurrency exchange service that allows you to exchange
-    cryptocurrency through a fast, secure, and cheap process without registration.
-    Tor available.
-  btc: true
-  xmr: true
-  cash: false
-  exchange: true
-  buy: false
-  custodial: false
-  registration: false
-  personal-info: false
-  p2p: false
-  may-kyc: false
-  open-source: false
-  comment:
-  kyc-check:
-  - KYC/AML
-  refunds: false
-  rgb-color: 0,213,36
-  score: 8.5
-  tor: true
-  tor-url: http://aa7oyok6dxgyedeteldaumqjernm5ai7dnpqayy3p4q7solc6dxi5vad.onion/
-  tos-urls:
-  - https://xchange.me/terms-of-service
-  url: https://xchange.me/
-  verified: false
   score-boost: 0
 
 last_check: 2021-08-01 03:02:55.866887
