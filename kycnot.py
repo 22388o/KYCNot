@@ -137,7 +137,6 @@ async def gne(request):
           comment:
           kyc-check: false
           refunds: false
-          rgb-color: 0,213,36
           score: 6
           tor: {args['tor'][0]}
           tor-url: {args['tor-url'][0]}
