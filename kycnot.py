@@ -54,10 +54,7 @@ async def index(request):
     template = env.get_template('index.html')
     with open(f"{data_dir}/exchanges.yml", "r") as exchanges:
         data = yaml.load(exchanges)
-        # Run check every 3 days
-        if (data['last_check'] + datetime.timedelta(days=2)) < datetime.datetime.today():
-            await kyc_check()
-            await compute_score()
+        data['exchanges'] = sorted(data['exchanges'], key=lambda k: k['score'], reverse=True)
         return html(template.render(data=data,
                                     title="KYC? Not me!",
                                     subtitle="Find best <strong>NON-KYC</strong> online services."))
@@ -178,86 +175,6 @@ async def gns(request):
     if(request.json):
         return text('POST request - {}'.format(request.json))
     return(html(template.render()))
-
-
-async def compute_score():
-    with open(f"{data_dir}/exchanges.yml", "r+") as exchanges:
-        data = yaml.load(exchanges)
-        for exchange in data['exchanges']:
-            score = 0
-            if not exchange['may-kyc']:
-                score += 2.25
-            if not exchange['custodial']:
-                score += 1.0
-            if not exchange['registration']:
-                score += 0.75
-            if not exchange['personal-info']:
-                score += 2.5
-            if exchange['kyc-check']:
-                score += 1.75
-            if exchange['p2p']:
-                score += 1.25
-            if exchange['open-source']:
-                score += 0.25
-            if exchange['tor']:
-                score += 0.25
-            if score < 7 and exchange['verified']:
-                score += 1
-            if score < 6 and exchange['refunds']:
-                score += 1
-            if score > 10:
-                exchange['score'] = 10.0
-            else:
-                exchange['score'] = score+exchange['score-boost']
-        exchanges.seek(0)
-        yaml.dump(data, exchanges)
-        exchanges.truncate()
-
-
-async def kyc_check():
-    keywords = ['kyc', 'aml', 'know your customer', 'money laundering', 'terrorist financing', 'identify user', 'user identification', 'User Identity Verification', 'identity verification', 'user identity', 'provide required personal information', 'provide personal information',
-                'KYC requirements', 'AML requirements', 'AML/KYC', 'KYC/AML', 'anti-money laundering', 'U.S. Bank Secrecy Act', 'BSA', '4th AML Directive', 'verify your identity', 'passport', "dirver's license", 'identity card', 'verify your identity', 'identity checks', 'mandatory identification', 'complete our ID verification process']
-    with open(f"{data_dir}/exchanges.yml", "r+") as exchanges:
-        data = yaml.load(exchanges)
-        for exchange in data['exchanges']:
-            if exchange['tos-urls'][0]:
-                for url in exchange['tos-urls']:
-                    r = httpx.get(url)
-                    pageString = str(BeautifulSoup(
-                        r.content, features="html.parser"))
-                    fw = []
-                    potential_kyc = False
-                    foundkw = 0
-                    for kw in keywords:
-                        if kw in pageString:
-                            foundkw += 1
-                            fw.append(kw)
-                    if foundkw >= 3:
-                        potential_kyc = True
-            else:
-                if ".onion" or "tradeogre" in exchange['url']:
-                    potential_kyc = False
-
-            if potential_kyc:
-                exchange['kyc-check'] = fw
-                exchanges.seek(0)
-                yaml.dump(data, exchanges)
-                exchanges.truncate()
-                print("------ WARNING ------")
-                print(
-                    f''' Potential KYC on {exchange['name']} ToS. Found words were: \n {fw}''')
-                print("---------------------")
-            else:
-                exchange['kyc-check'] = True
-                exchanges.seek(0)
-                yaml.dump(data, exchanges)
-                exchanges.truncate()
-
-        data['last_check'] = datetime.datetime.today()
-        exchanges.seek(0)
-        yaml.dump(data, exchanges)
-        exchanges.truncate()
-
 
 async def get_trustpilot_info(service):
     r = httpx.get(
