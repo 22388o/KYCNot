@@ -145,6 +145,7 @@ async def gne(request):
           - {args['tos'][0]}
           url: {args['url'][0]}
           verified: false</pre>
+          score-boost: 0
         """
         return(html(yamlString))
     template = env.get_template('generate-new-exchange.html')
