@@ -133,6 +133,7 @@ async def gne(request):
           open-source: {args['open-source'][0]}
           comment:
           kyc-check: false
+          suspicious-tos: false
           refunds: false
           score: 6
           tor: {args['tor'][0]}
