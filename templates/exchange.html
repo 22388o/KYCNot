@@ -145,10 +145,19 @@
     {%endif%}
     <div class="message-body">
       {% if exchange['kyc-check'] == True%} 
-      This exchange passes the automated KYCNOT.ME check. The ToS of this exchange seem <b>no-kyc</b> friendly. 
+      <p>This exchange passes the automated KYCNOT.ME check. The ToS of this exchange seem <b>no-kyc</b> friendly. </p>
       {%else%} 
-      The automated KYCNOT.ME check has failed for this exchange. The exchange may require KYC for some cases or ToS may have changed since
-      the listing and may need review. 
+      <p> The automated KYCNOT.ME check has failed for this exchange. The exchange may require KYC for some cases or ToS may have changed since
+      the listing and may need review. </p>
+      
+      <h3 class="title is-5" style="padding-top: 8px;"><strong> EXTRACTED SUSPICIOUS TOS: </strong></h3>
+      <article class="message">
+        <div class="message-body">
+          {% for part in exchange['suspicious-tos'] %}
+            <p style="margin: 10px;">{{part | safe}}</p>
+          {% endfor %}
+        </div>
+      </article>
       {%endif%}
     </div>
   </article>
