@@ -373,7 +373,7 @@ exchanges:
   tor: False
   tor-url: false
   tos-urls:
-  - https://support.mandala.exchange/hc/en-us/articles/360055720074-Mandala-Exchange-Terms-and-Conditions
+  - https://www.kucoin.com/news/en-terms-of-use?lang=en_US
   url: https://kucoin.com/
   verified: true
   score-boost: 0
