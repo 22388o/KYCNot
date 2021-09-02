@@ -4,13 +4,13 @@
     <header>
       <h1 class="leaderboard__title">
         <span class="leaderboard__title--top">Exchanges</span>
-        <span class="leaderboard__title--bottom"
-          >+ <b>K</b>YCNOT.ME <b>S</b>CORE</span
-        >
+        <span class="leaderboard__title--bottom"></span>
+          + <u>K</u>YCNOT.ME<u> S</u>CORE </span>
       </h1>
     </header>
 
     <main class="leaderboard__profiles">
+      <span class="tag is-dark score-indicator"> <a href="/about#score">SCORE</a></span>
       {% for exchange in data['exchanges'] %} {% include '_exchange_line.html'
       %} {% endfor %}
     </main>
@@ -22,6 +22,19 @@
     place-items: center;
     display: grid;
   }
+
+  .score-indicator{
+    justify-self: flex-end;
+    z-index: 6;
+    position: relative;
+    top: 25px;
+    margin: 0 !important;
+  }
+
+  .score-indicator a{
+    color: white;
+  }
+
   .leaderboard {
     max-width: 600px;
     width: 100%;
