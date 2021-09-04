@@ -170,8 +170,8 @@
   </div>
 {% endif %}
 
+{% if service['tos-url'] %}
 <div style="padding-top: 20px; padding-bottom: 30px;" class="title-container">
-
   <h3 class="title is-4">
     <a href="{{service['tos-url']}}">
       <i style="font-size: large;" class="far fa-file-alt"></i> Read service Terms and Conditions
@@ -179,6 +179,7 @@
     ></a>
   </h3>
 </div>
+{% endif %}
 
 <style>
 
