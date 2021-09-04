@@ -244,7 +244,7 @@ exchanges:
   verified: true
   score-boost: 0
 
-- name: Fixedfloat
+- name: FixedFloat
   btc: true
   xmr: true
   buy: false
@@ -256,7 +256,10 @@ exchanges:
   suspicious-tos:
   - false
   long-description: FixedFloat.com is an instant, fully automated digital asset exchange
-    with lightning network, transparent fees, no registration and non custodial wallet.
+    with lightning network, swift processing, favorable rates, and transparent fees.
+    No accounts, just scan the QR code in your wallet or enter it manually, and you
+    are set for all of your future deals. Say no to account holds on your assets and
+    get rid of the third parties that can compromise your trust.
   may-kyc: false
   open-source: false
   p2p: false
@@ -474,8 +477,8 @@ exchanges:
     SumSub’s link (it will be under the Verify button) and complete the verification
     through a comfortable and smooth UI. You will have 3 days to complete the verification
     procedure, and if you don’t want to pass KYC, you can refuse (in that case, please
-    shoot a message to <a href="/cdn-cgi/l/email-protection#3a494f4a4a55484e7a59525b545d5f54554d145355"><span
-    class="__cf_email__" data-cfemail="c2b1b7b2b2adb0b682a1aaa3aca5a7acadb5ecabad">[email protected]</span></a>)
+    shoot a message to <a href="/cdn-cgi/l/email-protection#9deee8ededf2efe9ddfef5fcf3faf8f3f2eab3f4f2"><span
+    class="__cf_email__" data-cfemail="b0c3c5c0c0dfc2c4f0d3d8d1ded7d5dedfc79ed9df">[email protected]</span></a>)
     and receive a refund.</p>
   - <p class="collapse-panel--text">After ChangeNOW has received the confirmation
     of you having passed the KYC procedure from SumSub, the exchange is completed,
@@ -534,8 +537,8 @@ exchanges:
     in question.</p>
   - '<p class="collapse-panel--text">The hard copy of the request should be sent to
     our postal address: Amsterdam, Kraanspoor 50, 1033 SE, Netherlands. Please send
-    a digital copy of the request to <a href="/cdn-cgi/l/email-protection#14676164647b666054777c757a73717a7b633a7d7b"><span
-    class="__cf_email__" data-cfemail="ee9d9b9e9e819c9aae8d868f80898b808199c08781">[email protected]</span></a>
+    a digital copy of the request to <a href="/cdn-cgi/l/email-protection#4f3c3a3f3f203d3b0f2c272e21282a212038612620"><span
+    class="__cf_email__" data-cfemail="7a090f0a0a15080e3a19121b141d1f14150d541315">[email protected]</span></a>
     before sending the hard one.</p>'
   - <p class="collapse-panel--text">Please note that the transaction might be stopped
     after the trading stage, depending on the time the report about stolen funds was
@@ -574,6 +577,7 @@ exchanges:
   url: https://changenow.io/
   verified: true
   score-boost: 0
+
 - name: Mandala
   short-description: Trade Cryptocurrency with Confidence.
   long-description: Trade cryptocurrency with confidence on an industry-leading exchange
