@@ -82,9 +82,8 @@ def site_check():
       print("EDITING LAST CHECK")
       
       for exchange in data['exchanges']:
-          if exchange['tos-urls'][0]:
+          if exchange['tos-urls'][0] and exchange['tos-urls'][0] != -1:
               print(f"Exchange: {exchange['name']}")
-              site = httpx.get(exchange['url'])
               for url in exchange['tos-urls']:
                   r = httpx.get(url)                                
                   soup = BeautifulSoup(r.content, features="html.parser")
@@ -101,7 +100,7 @@ def site_check():
                           suspicious_ptags.append(str(ptag))
                           potential_kyc = True
           else:
-              if exchange['tos'][0] == -1 or ".onion" in exchange['url']:
+              if exchange['tos-urls'][0] == -1 or ".onion" in exchange['url']:
                   potential_kyc = False
                   
           if exchange['name'] in dom_generated_tos_POTKYC_exchanges:
