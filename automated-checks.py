@@ -11,7 +11,9 @@ yaml = ruamel.yaml.YAML()
 
 def main():
   compute_score()
-  kyc_check()
+  #update_meta_descriptions()
+  site_check()
+  
 
 def compute_score():
   with open(f"{data_dir}/exchanges.yml", "r+") as exchanges:
@@ -46,7 +48,27 @@ def compute_score():
       yaml.dump(data, exchanges)
       exchanges.truncate()
 
-def kyc_check():    
+def update_meta_descriptions():
+    with open(f"{data_dir}/exchanges.yml", "r+") as exchanges:
+        data = yaml.load(exchanges)
+        for exchange in data['exchanges']:
+            print(f"Requesting {exchange['url']}")
+            if "onion" in exchange['url']:
+                continue
+            r = httpx.get(exchange['url'])
+            soup = BeautifulSoup(r.content, features="html.parser")
+            metas = soup.find_all('meta')
+            meta_description = [ meta.attrs['content'] for meta in metas if 'name' in meta.attrs and meta.attrs['name'] == 'description' ]
+            if meta_description and meta_description != exchange['short-description']:
+                exchange['short-description'] = meta_description[0]
+                
+        exchanges.seek(0)
+        yaml.dump(data, exchanges)
+        exchanges.truncate()
+        
+
+# Check ToS
+def site_check():    
   keywords = ['kyc', 'aml', 'know your customer', 'money laundering', 'terrorist financing', 'identify user', 'user identification', 'User Identity Verification', 'identity verification', 'user identity', 'provide required personal information', 'provide personal information',
               'KYC requirements', 'AML requirements', 'AML/KYC', 'KYC/AML', 'anti-money laundering', 'U.S. Bank Secrecy Act', 'BSA', '4th AML Directive', 'verify your identity', 'passport', "dirver's license", 'identity card', 'verify your identity', 'identity checks', 'mandatory identification', 'complete our ID verification process',
               'anti-money laundering', 'financing of terrorism', 'know your customer compliance', 'require identity verification']
@@ -62,9 +84,9 @@ def kyc_check():
       for exchange in data['exchanges']:
           if exchange['tos-urls'][0]:
               print(f"Exchange: {exchange['name']}")
+              site = httpx.get(exchange['url'])
               for url in exchange['tos-urls']:
-                  r = httpx.get(url)
-                  
+                  r = httpx.get(url)                                
                   soup = BeautifulSoup(r.content, features="html.parser")
                   found_words = []
                   suspicious_ptags = []
@@ -78,20 +100,8 @@ def kyc_check():
                       if len(found_words) >= 2:
                           suspicious_ptags.append(str(ptag))
                           potential_kyc = True
-                      
-                  '''
-                  pageString = str(BeautifulSoup(
-                      r.content, features="html.parser"))
-                  fw = []
-                  potential_kyc = False
-                  for kw in keywords:
-                      if kw in pageString:
-                          fw.append(kw)
-                  if len(fw) >= 2:
-                      potential_kyc = True
-                  '''
           else:
-              if exchange['name'] in kycnotme_compilant_exchanges_without_tos or ".onion" in exchange['url']:
+              if exchange['tos'][0] == -1 or ".onion" in exchange['url']:
                   potential_kyc = False
                   
           if exchange['name'] in dom_generated_tos_POTKYC_exchanges:
