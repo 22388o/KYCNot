@@ -64,6 +64,7 @@ For donations visit [this site](https://kycnot.me/about#support). Thank you very
 
 KYCNOT.me has been mentioned in:
 
+- [Monero Observer](https://www.monero.observer/kycnotme-rewrite-online/)
 - [decrypt.co](https://decrypt.co/32233/looking-for-bitcoin-with-no-kyc-this-new-site-has-you-covered)
 - [cointelegraph](https://cointelegraph.com/news/website-compiles-list-of-kyc-free-exchanges-along-with-some-warnings)
 - [James Lopp Twitter](https://nitter.net/lopp/status/1271417720018534400)
