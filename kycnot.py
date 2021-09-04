@@ -65,6 +65,7 @@ async def services(request):
     template = env.get_template('services.html')
     with open(f"{data_dir}/services.yml", "r") as services:
         data = yaml.load(services)
+        data['services'] = sorted(data['services'], key=lambda k: k['category'], reverse=True)
         return html(template.render(data=data,
                                     title="KYC? Not me!",
                                     subtitle="Find best <strong>NON-KYC</strong> online services."))
@@ -169,6 +170,7 @@ async def gns(request):
           tor-url: {args['tor-url'][0]}
           tos-url: {args['tos'][0]}
           url: {args['url'][0]}
+          category: {args['category'][0]}
           verified: false</pre>
         """
         return(html(yamlString))
