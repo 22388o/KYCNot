@@ -97,6 +97,36 @@ exchanges:
   verified: false
   score-boost: 0
 
+- name: LocalMonero
+  short-description: Peer-to-peer Monero exchange.
+  long-description: A marketplace where users can buy and sell Monero to and from
+    each other. Localmonero provides you with a custodial web-wallet but you can withdraw
+    your funds to any wallet of your choice with no limits. A tor service is available.
+  btc: false
+  xmr: true
+  cash: false
+  exchange: true
+  buy: true
+  custodial: true
+  registration: true
+  personal-info: false
+  p2p: true
+  may-kyc: true
+  open-source: false
+  comment:
+  kyc-check: true
+  suspicious-tos:
+  - false
+  refunds: false
+  score: 8.75
+  tor: true
+  tor-url: http://nehdddktmhvqklsnkjqcbpmb63htee2iznpcbs5tgzctipxykpj6yrid.onion/
+  tos-urls:
+  - https://localmonero.co/terms
+  url: https://localmonero.co/
+  verified: true
+  score-boost: 2
+
 - name: Kilos Swap
   btc: true
   buy: false
@@ -107,7 +137,8 @@ exchanges:
   kyc-check: true
   suspicious-tos:
   - false
-  long-description: This coin swap service is only available with Tor and guarantees full anonimity to users. 
+  long-description: This coin swap service is only available with Tor and guarantees
+    full anonimity to users.
   may-kyc: false
   open-source: false
   p2p: false
@@ -117,9 +148,9 @@ exchanges:
   score: 8.5
   short-description: Tor based full privacy exchange.
   tor: true
-  tor-url: false
+  tor-url: http://mlyusr6htlxsyc7t2f4z53wdxh3win7q3qpxcrbam6jf3dmua7tnzuyd.onion/coinswap
   tos-urls:
-  - false
+  - -1
   url: http://mlyusr6htlxsyc7t2f4z53wdxh3win7q3qpxcrbam6jf3dmua7tnzuyd.onion/coinswap
   verified: true
   score-boost: 0
@@ -276,6 +307,34 @@ exchanges:
   score-boost: 0
   xmr: true
 
+- name: BlockDX
+  short-description: Block DX offers completely decentralized and trust
+  long-description: A decentralized, non-custodial, 100% private and open-source exchange
+    using atomic-swaps between many cryptos. Monero not available.
+  btc: true
+  xmr: false
+  cash: false
+  exchange: true
+  buy: false
+  custodial: false
+  registration: false
+  personal-info: false
+  p2p: true
+  may-kyc: false
+  open-source: true
+  comment:
+  kyc-check: true
+  suspicious-tos: []
+  refunds: false
+  score: 9.75
+  tor: false
+  tor-url: false
+  tos-urls:
+  - -1
+  url: https://blockdx.com/
+  verified: false
+  score-boost: 0
+
 - name: HodlHodl
   btc: true
   buy: true
@@ -288,7 +347,13 @@ exchanges:
   kyc-check: true
   suspicious-tos:
   - false
-  long-description: Hodl Hodl is a global P2P Bitcoin trading platform, that allows users to trade directly with each other and it doesn't hold user’s funds — locking it in multisig escrow instead. This minimizes the possibility of Bitcoin assets theft and reduces trading time. Because Hodl Hodl does not hold any money (neither Bitcoin, nor fiat) it is not subject to complex compliance procedures. This allows trades to happen directly between users' wallets and without having to submit your identity to the trading platform.
+  long-description: Hodl Hodl is a global P2P Bitcoin trading platform, that allows
+    users to trade directly with each other and it doesn't hold user’s funds — locking
+    it in multisig escrow instead. This minimizes the possibility of Bitcoin assets
+    theft and reduces trading time. Because Hodl Hodl does not hold any money (neither
+    Bitcoin, nor fiat) it is not subject to complex compliance procedures. This allows
+    trades to happen directly between users' wallets and without having to submit
+    your identity to the trading platform.
   may-kyc: true
   open-source: false
   p2p: true
@@ -305,36 +370,6 @@ exchanges:
   verified: true
   score-boost: 0
   xmr: false
-
-- name: LocalMonero
-  short-description: Peer-to-peer Monero exchange.
-  long-description: A marketplace where users can buy and sell Monero to and from
-    each other. Localmonero provides you with a custodial web-wallet but you can withdraw
-    your funds to any wallet of your choice with no limits. A tor service is available.
-  btc: false
-  xmr: true
-  cash: false
-  exchange: true
-  buy: true
-  custodial: true
-  registration: true
-  personal-info: false
-  p2p: true
-  may-kyc: true
-  open-source: false
-  comment:
-  kyc-check: true
-  suspicious-tos:
-  - false
-  refunds: false
-  score: 7.5
-  tor: true
-  tor-url: http://nehdddktmhvqklsnkjqcbpmb63htee2iznpcbs5tgzctipxykpj6yrid.onion/
-  tos-urls:
-  - https://localmonero.co/terms
-  url: https://localmonero.co/
-  verified: true
-  score-boost: 2
 
 - name: TradeOgre
   btc: true
@@ -362,7 +397,7 @@ exchanges:
   tor: false
   tor-url: false
   tos-urls:
-  - false
+  - -1
   url: https://tradeogre.com/
   verified: true
   score-boost: 0
@@ -439,8 +474,8 @@ exchanges:
     SumSub’s link (it will be under the Verify button) and complete the verification
     through a comfortable and smooth UI. You will have 3 days to complete the verification
     procedure, and if you don’t want to pass KYC, you can refuse (in that case, please
-    shoot a message to <a href="/cdn-cgi/l/email-protection#96e5e3e6e6f9e4e2d6f5fef7f8f1f3f8f9e1b8fff9"><span
-    class="__cf_email__" data-cfemail="aad9dfdadac5d8deeac9c2cbc4cdcfc4c5dd84c3c5">[email protected]</span></a>)
+    shoot a message to <a href="/cdn-cgi/l/email-protection#3a494f4a4a55484e7a59525b545d5f54554d145355"><span
+    class="__cf_email__" data-cfemail="c2b1b7b2b2adb0b682a1aaa3aca5a7acadb5ecabad">[email protected]</span></a>)
     and receive a refund.</p>
   - <p class="collapse-panel--text">After ChangeNOW has received the confirmation
     of you having passed the KYC procedure from SumSub, the exchange is completed,
@@ -473,7 +508,7 @@ exchanges:
     right to submit all the received materials to legal authorities (Interpol, Europol,
     and others) in case a corresponding request is received. You can read the official
     ChangeNOW's Rules of Anti-Money Laundering and Combating The Financing Terrorism
-    compliance control <a href="/files/Rules_of_AML_CFT_compliance_ChangeNow.v1.2.pdf"
+    compliance control <a href="/files/Rules_of_AML_CFT_compliance_ChangeNow.v1.3.pdf"
     target="_blank">here</a>.</p>
   - <p class="collapse-panel--text">In order to purchase crypto with USD or EUR, you
     will need to enter your email address. It is a necessary step for user identification
@@ -499,8 +534,8 @@ exchanges:
     in question.</p>
   - '<p class="collapse-panel--text">The hard copy of the request should be sent to
     our postal address: Amsterdam, Kraanspoor 50, 1033 SE, Netherlands. Please send
-    a digital copy of the request to <a href="/cdn-cgi/l/email-protection#dfacaaafafb0adab9fbcb7beb1b8bab1b0a8f1b6b0"><span
-    class="__cf_email__" data-cfemail="473432373728353307242f26292022292830692e28">[email protected]</span></a>
+    a digital copy of the request to <a href="/cdn-cgi/l/email-protection#14676164647b666054777c757a73717a7b633a7d7b"><span
+    class="__cf_email__" data-cfemail="ee9d9b9e9e819c9aae8d868f80898b808199c08781">[email protected]</span></a>
     before sending the hard one.</p>'
   - <p class="collapse-panel--text">Please note that the transaction might be stopped
     after the trading stage, depending on the time the report about stolen funds was
@@ -622,4 +657,4 @@ exchanges:
   verified: true
   score-boost: 0
 
-last_check: 2021-09-02 12:53:00.463858
+last_check: 2021-09-04 22:40:46.168502
