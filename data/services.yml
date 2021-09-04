@@ -235,3 +235,51 @@ services:
     cash: False
     open-source: False
     category: LEND
+
+  - name: SMSPVA
+    short-description: SMS for online account verifications.
+    long-description: SMSPVA offers a large list of SMS verification numbers you can rent with BTC. Account does not need any personal information.
+    btc: True
+    xmr: False
+    cash: False
+    registration: True
+    personal-info: False
+    open-source: False
+    tor: False
+    tor-url: false
+    tos-url: http://smspva.com/help.html
+    url: http://smspva.com/
+    verified: false
+    category: SMS
+
+  - name: SMS4Sats
+    short-description: SMS phone numbers paid with Lightning.
+    long-description: SMS4Sats offers SMS verification numbers online and you can pay using the Lightning Network. Cheap, easy, fast and anonymous.
+    btc: True
+    xmr: False
+    cash: False
+    registration: False
+    personal-info: False
+    open-source: False
+    tor: False
+    tor-url: false
+    tos-url: -1
+    url: https://sms4sats.com/
+    verified: false
+    category: SMS
+
+  - name: Silent Link
+    short-description: eSIM global internet access.
+    long-description: Get global mobile 4G/5G Internet access and burner UK +44 SMS number instantly and privately on any modern eSIM-compatible smartphone.
+    btc: True
+    xmr: False
+    cash: False
+    registration: False
+    personal-info: False
+    open-source: False
+    tor: False
+    tor-url: false
+    tos-url: -https://silent.link/faq
+    url: https://silent.link/
+    category: SMS
+    verified: false
