@@ -1,6 +1,6 @@
 # KYC? Not me!
 
-KYCNOTME aims to gather all the non-kyc and anonymous crypto services and offer useful information about them. Read more on the site FAQ.
+### Please read the [about](https://kycnot.me/about) page :)
 
 ## CONTRIBUTING
 
