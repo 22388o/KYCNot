@@ -150,6 +150,7 @@
       <p> The automated KYCNOT.ME check has failed for this exchange. The exchange may require KYC for some cases or ToS may have changed since
       the listing and may need review. </p>
       
+      {% if exchange['suspicious-tos'] %}
       <h3 class="title is-5" style="padding-top: 8px;"><strong> EXTRACTED SUSPICIOUS TOS: </strong></h3>
       <article class="message">
         <div class="message-body">
@@ -158,6 +159,7 @@
           {% endfor %}
         </div>
       </article>
+      {% endif %}
       {%endif%}
     </div>
   </article>
