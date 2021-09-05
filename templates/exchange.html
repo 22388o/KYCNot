@@ -244,6 +244,7 @@
 
 <div style="padding-top: 20px; padding-bottom: 30px;" class="title-container">
 
+  {% if exchange['tos-urls'][0] and exchange['tos-urls'][0] != -1 %}
   <h3 class="title is-4">
     <a href="{{exchange['tos-urls'][0]}}">
       <i style="font-size: large;" class="far fa-file-alt"></i> Read exchange Terms and Conditions
@@ -251,6 +252,7 @@
     ></a>
   </h3>
 </div>
+{% endif %}
 
 <style>
 
