@@ -292,7 +292,7 @@ services:
     cash: False
     registration: False
     personal-info: False
-    open-source: False
+    open-source: True
     tor: True
     tor-url: http://digitazyyxyihwwzudp5syxxyn3qhcd63wqcha2dxpfqiyydmrgdiaad.onion/
     tos-url: https://proxysto.re/en/agb.html
