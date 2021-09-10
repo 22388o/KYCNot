@@ -16,7 +16,7 @@ exchanges:
     or "app" or other centralized service. It's software you run on your own hardware,
     which connects to other people running the Bisq software to facilitate trades.
     It's open-source and community-driven.
-  may-kyc: false
+  kyc-type: 0
   open-source: true
   p2p: true
   personal-info: false
@@ -32,6 +32,64 @@ exchanges:
   verified: true
   score-boost: 0
   xmr: true
+
+- name: BlockDX
+  short-description: Block DX offers completely decentralized and trust
+  long-description: A decentralized, non-custodial, 100% private and open-source exchange
+    using atomic-swaps between many cryptos. Monero not available.
+  btc: true
+  xmr: false
+  cash: false
+  exchange: true
+  buy: false
+  custodial: false
+  registration: false
+  personal-info: false
+  p2p: true
+  kyc-type: 0
+  open-source: true
+  comment:
+  kyc-check: true
+  suspicious-tos: []
+  refunds: false
+  score: 9.75
+  tor: false
+  tor-url: false
+  tos-urls:
+  - -1
+  url: https://blockdx.com/
+  verified: false
+  score-boost: 0
+
+- name: LocalMonero
+  short-description: Peer-to-peer Monero exchange.
+  long-description: A marketplace where users can buy and sell Monero to and from
+    each other. Localmonero provides you with a custodial web-wallet but you can withdraw
+    your funds to any wallet of your choice with no limits. A tor service is available.
+  btc: false
+  xmr: true
+  cash: false
+  exchange: true
+  buy: true
+  custodial: true
+  registration: true
+  personal-info: false
+  p2p: true
+  kyc-type: 0
+  open-source: false
+  comment:
+  kyc-check: true
+  suspicious-tos:
+  - false
+  refunds: false
+  score: 9.0
+  tor: true
+  tor-url: http://nehdddktmhvqklsnkjqcbpmb63htee2iznpcbs5tgzctipxykpj6yrid.onion/
+  tos-urls:
+  - https://localmonero.co/terms
+  url: https://localmonero.co/
+  verified: true
+  score-boost: 1
 
 - name: LocalCryptos
   btc: true
@@ -49,7 +107,7 @@ exchanges:
     of life place ads on LocalCryptos to buy and sell crypto. When two people agree
     on a sale, the buyer pays the fiat half directly to the seller—which is why LocalCryptos
     is so fast. LocalEthereum became LocalCryptos in November 2019.
-  may-kyc: false
+  kyc-type: 0
   open-source: false
   p2p: true
   personal-info: false
@@ -81,7 +139,7 @@ exchanges:
   registration: false
   personal-info: false
   p2p: false
-  may-kyc: false
+  kyc-type: 0
   open-source: true
   comment:
   kyc-check: true
@@ -97,36 +155,6 @@ exchanges:
   verified: false
   score-boost: 0
 
-- name: LocalMonero
-  short-description: Peer-to-peer Monero exchange.
-  long-description: A marketplace where users can buy and sell Monero to and from
-    each other. Localmonero provides you with a custodial web-wallet but you can withdraw
-    your funds to any wallet of your choice with no limits. A tor service is available.
-  btc: false
-  xmr: true
-  cash: false
-  exchange: true
-  buy: true
-  custodial: true
-  registration: true
-  personal-info: false
-  p2p: true
-  may-kyc: true
-  open-source: false
-  comment:
-  kyc-check: true
-  suspicious-tos:
-  - false
-  refunds: false
-  score: 8.75
-  tor: true
-  tor-url: http://nehdddktmhvqklsnkjqcbpmb63htee2iznpcbs5tgzctipxykpj6yrid.onion/
-  tos-urls:
-  - https://localmonero.co/terms
-  url: https://localmonero.co/
-  verified: true
-  score-boost: 1
-
 - name: Kilos Swap
   btc: true
   buy: false
@@ -139,7 +167,7 @@ exchanges:
   - false
   long-description: This coin swap service is only available with Tor and guarantees
     full anonimity to users.
-  may-kyc: false
+  kyc-type: 0
   open-source: false
   p2p: false
   personal-info: false
@@ -170,7 +198,7 @@ exchanges:
   registration: false
   personal-info: false
   p2p: false
-  may-kyc: false
+  kyc-type: 0
   open-source: false
   comment:
   kyc-check: true
@@ -199,7 +227,7 @@ exchanges:
   registration: false
   personal-info: false
   p2p: false
-  may-kyc: false
+  kyc-type: 0
   open-source: false
   comment:
   kyc-check: true
@@ -228,7 +256,7 @@ exchanges:
   registration: false
   personal-info: false
   p2p: false
-  may-kyc: false
+  kyc-type: 0
   open-source: false
   comment:
   kyc-check: true
@@ -242,38 +270,6 @@ exchanges:
   - https://swap.lightning-network.ro/faq/
   url: https://swap.lightning-network.ro/
   verified: true
-  score-boost: 0
-
-- name: FixedFloat
-  btc: true
-  xmr: true
-  buy: false
-  cash: false
-  comment:
-  custodial: false
-  exchange: true
-  kyc-check: true
-  suspicious-tos:
-  - false
-  long-description: FixedFloat.com is an instant, fully automated digital asset exchange
-    with lightning network, swift processing, favorable rates, and transparent fees.
-    No accounts, just scan the QR code in your wallet or enter it manually, and you
-    are set for all of your future deals. Say no to account holds on your assets and
-    get rid of the third parties that can compromise your trust.
-  may-kyc: false
-  open-source: false
-  p2p: false
-  personal-info: false
-  refunds: false
-  registration: false
-  score: 8.25
-  short-description: Lightning cryptocurrency exchange
-  tor: false
-  tor-url: false
-  tos-urls:
-  - https://fixedfloat.com/terms-of-service
-  url: https://fixedfloat.com/
-  verified: false
   score-boost: 0
 
 - name: AgoraDesk
@@ -293,7 +289,7 @@ exchanges:
     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
     fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
     culpa qui officia deserunt mollit anim id est laborum.
-  may-kyc: false
+  kyc-type: 0
   open-source: false
   p2p: true
   personal-info: false
@@ -310,69 +306,37 @@ exchanges:
   score-boost: 0
   xmr: true
 
-- name: BlockDX
-  short-description: Block DX offers completely decentralized and trust
-  long-description: A decentralized, non-custodial, 100% private and open-source exchange
-    using atomic-swaps between many cryptos. Monero not available.
+- name: FixedFloat
   btc: true
-  xmr: false
-  cash: false
-  exchange: true
+  xmr: true
   buy: false
-  custodial: false
-  registration: false
-  personal-info: false
-  p2p: true
-  may-kyc: false
-  open-source: true
+  cash: false
   comment:
-  kyc-check: true
-  suspicious-tos: []
-  refunds: false
-  score: 9.75
-  tor: false
-  tor-url: false
-  tos-urls:
-  - -1
-  url: https://blockdx.com/
-  verified: false
-  score-boost: 0
-
-- name: HodlHodl
-  btc: true
-  buy: true
-  cash: true
-  comment:
-  - Some sellers may require ID
-  - Refunds may require KYC
   custodial: false
   exchange: true
   kyc-check: true
   suspicious-tos:
   - false
-  long-description: Hodl Hodl is a global P2P Bitcoin trading platform, that allows
-    users to trade directly with each other and it doesn't hold user’s funds — locking
-    it in multisig escrow instead. This minimizes the possibility of Bitcoin assets
-    theft and reduces trading time. Because Hodl Hodl does not hold any money (neither
-    Bitcoin, nor fiat) it is not subject to complex compliance procedures. This allows
-    trades to happen directly between users' wallets and without having to submit
-    your identity to the trading platform.
-  may-kyc: true
+  long-description: FixedFloat.com is an instant, fully automated digital asset exchange
+    with lightning network, swift processing, favorable rates, and transparent fees.
+    No accounts, just scan the QR code in your wallet or enter it manually, and you
+    are set for all of your future deals. Say no to account holds on your assets and
+    get rid of the third parties that can compromise your trust.
+  kyc-type: 1
   open-source: false
-  p2p: true
+  p2p: false
   personal-info: false
   refunds: false
-  registration: true
+  registration: false
   score: 7.5
-  short-description: Exchange P2P worldwide.
+  short-description: Lightning cryptocurrency exchange
   tor: false
   tor-url: false
   tos-urls:
-  - https://accounts.hodlhodl.com/pages/terms_of_service
-  url: https://hodlhodl.com/
-  verified: true
+  - https://fixedfloat.com/terms-of-service
+  url: https://fixedfloat.com/
+  verified: false
   score-boost: 0
-  xmr: false
 
 - name: TradeOgre
   btc: true
@@ -389,7 +353,7 @@ exchanges:
     in general. Deposits and withdrawals are done without identity verification. It
     has no official support and the UI feels a bit outdated and may not fit the needs
     of some users.
-  may-kyc: false
+  kyc-type: 0
   open-source: false
   p2p: false
   personal-info: false
@@ -422,14 +386,14 @@ exchanges:
     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
     fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
     culpa qui officia deserunt mollit anim id est laborum.
-  may-kyc: true
+  kyc-type: 1
   open-source: false
   p2p: false
   personal-info: false
   refunds: false
   registration: false
   rgb-color:
-  score: 7.0
+  score: 7.5
   short-description: Exchange Crypto. Easily.
   tor: false
   tor-url: false
@@ -477,8 +441,8 @@ exchanges:
     SumSub’s link (it will be under the Verify button) and complete the verification
     through a comfortable and smooth UI. You will have 3 days to complete the verification
     procedure, and if you don’t want to pass KYC, you can refuse (in that case, please
-    shoot a message to <a href="/cdn-cgi/l/email-protection#9deee8ededf2efe9ddfef5fcf3faf8f3f2eab3f4f2"><span
-    class="__cf_email__" data-cfemail="b0c3c5c0c0dfc2c4f0d3d8d1ded7d5dedfc79ed9df">[email protected]</span></a>)
+    shoot a message to <a href="/cdn-cgi/l/email-protection#e3909693938c9197a3808b828d84868d8c94cd8a8c"><span
+    class="__cf_email__" data-cfemail="cebdbbbebea1bcba8eada6afa0a9aba0a1b9e0a7a1">[email protected]</span></a>)
     and receive a refund.</p>
   - <p class="collapse-panel--text">After ChangeNOW has received the confirmation
     of you having passed the KYC procedure from SumSub, the exchange is completed,
@@ -537,8 +501,8 @@ exchanges:
     in question.</p>
   - '<p class="collapse-panel--text">The hard copy of the request should be sent to
     our postal address: Amsterdam, Kraanspoor 50, 1033 SE, Netherlands. Please send
-    a digital copy of the request to <a href="/cdn-cgi/l/email-protection#4f3c3a3f3f203d3b0f2c272e21282a212038612620"><span
-    class="__cf_email__" data-cfemail="7a090f0a0a15080e3a19121b141d1f14150d541315">[email protected]</span></a>
+    a digital copy of the request to <a href="/cdn-cgi/l/email-protection#41323431312e3335012229202f26242f2e366f282e"><span
+    class="__cf_email__" data-cfemail="2c5f595c5c435e586c4f444d424b4942435b024543">[email protected]</span></a>
     before sending the hard one.</p>'
   - <p class="collapse-panel--text">Please note that the transaction might be stopped
     after the trading stage, depending on the time the report about stolen funds was
@@ -562,13 +526,13 @@ exchanges:
     a KYC procedure. The suspicious transaction detection system is not public so
     we can't know what may trigger this. You can get a refund to your address if you
     don't want to provide your information (without KYC).
-  may-kyc: true
+  kyc-type: 2
   open-source: false
   p2p: false
   personal-info: false
   refunds: true
   registration: false
-  score: 7.0
+  score: 7.5
   short-description: Fast Crypto Swaps, Free of Custody.
   tor: false
   tor-url: false
@@ -577,6 +541,71 @@ exchanges:
   url: https://changenow.io/
   verified: true
   score-boost: 0
+
+- name: HodlHodl
+  btc: true
+  buy: true
+  cash: true
+  comment:
+  - Some sellers may require ID
+  - Refunds may require KYC
+  custodial: false
+  exchange: true
+  kyc-check: true
+  suspicious-tos:
+  - false
+  long-description: Hodl Hodl is a global P2P Bitcoin trading platform, that allows
+    users to trade directly with each other and it doesn't hold user’s funds — locking
+    it in multisig escrow instead. This minimizes the possibility of Bitcoin assets
+    theft and reduces trading time. Because Hodl Hodl does not hold any money (neither
+    Bitcoin, nor fiat) it is not subject to complex compliance procedures. This allows
+    trades to happen directly between users' wallets and without having to submit
+    your identity to the trading platform.
+  kyc-type: 2
+  open-source: false
+  p2p: true
+  personal-info: false
+  refunds: false
+  registration: true
+  score: 7.0
+  short-description: Exchange P2P worldwide.
+  tor: false
+  tor-url: false
+  tos-urls:
+  - https://accounts.hodlhodl.com/pages/terms_of_service
+  url: https://hodlhodl.com/
+  verified: true
+  score-boost: 0
+  xmr: false
+
+- name: StealthEX
+  short-description: Instant custody-free exchange. No limits.
+  long-description: StealthEX is an instant exchange service that requires no registration.
+    Over 350 assets are available for limitless swaps now. Buying Bitcoin and altcoins
+    with fiat is also available.
+  btc: true
+  xmr: true
+  cash: false
+  exchange: true
+  buy: false
+  custodial: false
+  registration: false
+  personal-info: false
+  p2p: false
+  kyc-type: 1
+  open-source: false
+  comment:
+  kyc-check: true
+  suspicious-tos: false
+  refunds: false
+  score: 5.75
+  tor: false
+  tor-url: false
+  tos-urls:
+  - https://stealthex.io/terms
+  url: https://stealthex.io/
+  verified: false
+  score-boost: 0.5
 
 - name: Mandala
   short-description: Trade Cryptocurrency with Confidence.
@@ -596,14 +625,14 @@ exchanges:
   registration: true
   personal-info: false
   p2p: false
-  may-kyc: false
+  kyc-type: 2
   open-source: false
   comment:
   kyc-check: true
   suspicious-tos:
   - false
   refunds: false
-  score: 6.5
+  score: 4.75
   tor: false
   tor-url: false
   tos-urls:
@@ -626,7 +655,7 @@ exchanges:
   registration: true
   personal-info: false
   p2p: false
-  may-kyc: true
+  kyc-type: 3
   open-source: false
   comment:
   kyc-check: false
@@ -661,4 +690,4 @@ exchanges:
   verified: true
   score-boost: 0
 
-last_check: 2021-09-04 22:40:46.168502
+last_check: 2021-09-10 20:14:02.844527
