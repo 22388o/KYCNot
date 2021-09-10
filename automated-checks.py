@@ -20,30 +20,36 @@ def compute_score():
       data = yaml.load(exchanges)
       for exchange in data['exchanges']:
           score = 0
-          if not exchange['may-kyc']:
-              score += 2.25
-          if not exchange['custodial']:
-              score += 1.0
-          if not exchange['registration']:
-              score += 0.75
-          if not exchange['personal-info']:
-              score += 2.5
-          if exchange['kyc-check']:
-              score += 1.75
-          if exchange['p2p']:
-              score += 1.25
-          if exchange['open-source']:
-              score += 0.25
-          if exchange['tor']:
-              score += 0.25
-          if score < 7 and exchange['verified']:
-              score += 1
-          if score < 6 and exchange['refunds']:
-              score += 1
-          if score > 10:
-              exchange['score'] = 10.0
+          if exchange['kyc-type'] == 0:
+            score += 2.25
+          elif exchange['kyc-type'] == 1:
+            score += 1.5
+          elif exchange['kyc-type'] == 2:
+            score += 0.5
           else:
-              exchange['score'] = score+exchange['score-boost']
+            score += 0
+          if not exchange['custodial']:
+            score += 1.0
+          if not exchange['registration']:
+            score += 0.75
+          if not exchange['personal-info']:
+            score += 2.5
+          if exchange['kyc-check']:
+            score += 1.75
+          if exchange['p2p']:
+            score += 1.25
+          if exchange['open-source']:
+            score += 0.25
+          if exchange['tor']:
+            score += 0.25
+          if score < 7 and exchange['verified']:
+            score += 1
+          if score < 6 and exchange['refunds']:
+            score += 1
+          if score > 10:
+            exchange['score'] = 10.0
+          else:
+            exchange['score'] = score+exchange['score-boost']
       exchanges.seek(0)
       yaml.dump(data, exchanges)
       exchanges.truncate()

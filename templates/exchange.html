@@ -165,19 +165,23 @@
   </article>
 
   <article class="message long-description">
-    {% if exchange['may-kyc'] %}
-    <div class="message-header yellow">
-      <p><i class="fas fa-theater-masks"></i> May KYC</p>
+    {% if exchange['kyc-type'] == 0 %} 
+      <div class="message-header green">
+    {% else %}
+      <div class="message-header yellow">
+    {% endif %}
+      <p><i class="fas fa-theater-masks"></i> {{exchange['kyc-type']}} / 3 KYC</p>
     </div>
-    {%else%}
-    <div class="message-header green">
-      <p><i class="fas fa-user-ninja"></i> No KYC</p>
-    </div>
-    {%endif%}
     <div class="message-body">
-      {% if exchange['may-kyc'] %} This exchange may request a KYC verification
-      if it finds your movements suspicious. {%else%} The exchange ToS do not
-      mention requiring KYC verifications at all. {%endif%}
+      {% if exchange['kyc-type'] == 0 %} 
+         No KYC. The exchange ToS do not mention that it will ever request the user for a KYC verification.
+      {% elif exchange['kyc-type'] == 1 %} 
+         KYC is rare. The platform does not mention KYC/AML procedures as such, but the service has the right to share acquired data with representatives of the authorities and block funds or reject transactions.
+      {% elif exchange['kyc-type'] == 2 %}
+         The exchange may request KYC. Although KYC is not mandatory, the exchange reserves the right to require KYC for a certain user at a certain moment and may block funds. May be that a transaction is detected as suspicious or any other reason.
+      {% elif exchange['kyc-type'] == 3 %}
+         KYC is mandatory in order to use some features. Also, a non-KYCed user can be asked to verify their identity at any time or any moment for any reason.
+      {% endif %}
     </div>
   </article>
 
