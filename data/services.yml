@@ -299,3 +299,19 @@ services:
     url: https://digitalgoods.proxysto.re/
     category: GOODS
     verified: true
+
+  - name: XMR Bets
+    short-description: Bet on the easiest and most transparent lottery.
+    long-description: Simple, easy, anonymous and transparent lottery using Monero. All you have to do is to send 0.01 XMR to the address on the QR code and you are in the game.
+    btc: False
+    xmr: True
+    cash: False
+    registration: False
+    personal-info: False
+    open-source: False
+    tor: False
+    tor-url: false
+    tos-url: https://www.xmr-bets.com/
+    url: https://www.xmr-bets.com/
+    category: BET
+    verified: true
