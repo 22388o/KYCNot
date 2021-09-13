@@ -17,7 +17,7 @@ import httpx
 import os
 import re
 
-import git
+#import git
 import time
 
 base_dir = os.path.abspath(os.path.dirname(__name__))
