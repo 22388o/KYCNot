@@ -89,7 +89,7 @@ exchanges:
   - https://localmonero.co/terms
   url: https://localmonero.co/
   verified: true
-  score-boost: 1
+  score-boost: 0
 
 - name: LocalCryptos
   btc: true
