@@ -23,9 +23,9 @@ def compute_score():
           if exchange['kyc-type'] == 0:
             score += 2.25
           elif exchange['kyc-type'] == 1:
-            score += 1.5
+            score += 1.25
           elif exchange['kyc-type'] == 2:
-            score += 0.5
+            score += 0.25
           else:
             score += 0
           if not exchange['custodial']:
