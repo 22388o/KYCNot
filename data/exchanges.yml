@@ -505,10 +505,7 @@ exchanges:
     SumSub. In order to get your identity verified, you will be offered to follow
     SumSub’s link (it will be under the Verify button) and complete the verification
     through a comfortable and smooth UI. You will have 3 days to complete the verification
-    procedure, and if you don’t want to pass KYC, you can refuse (in that case, please
-    shoot a message to <a href="/cdn-cgi/l/email-protection#42313732322d303602212a232c25272c2d356c2b2d"><span
-    class="__cf_email__" data-cfemail="9eedebeeeef1eceadefdf6fff0f9fbf0f1e9b0f7f1">[email protected]</span></a>)
-    and receive a refund.</p>
+    procedure, and if you don’t want to pass KYC, you can refuse and receive a refund.</p>
   - <p class="collapse-panel--text">After ChangeNOW has received the confirmation
     of you having passed the KYC procedure from SumSub, the exchange is completed,
     and the exchanged funds are then sent to the specified recipient wallet address.</p>
@@ -566,8 +563,8 @@ exchanges:
     in question.</p>
   - '<p class="collapse-panel--text">The hard copy of the request should be sent to
     our postal address: Amsterdam, Kraanspoor 50, 1033 SE, Netherlands. Please send
-    a digital copy of the request to <a href="/cdn-cgi/l/email-protection#31424441415e4345715259505f56545f5e461f585e"><span
-    class="__cf_email__" data-cfemail="85f6f0f5f5eaf7f1c5e6ede4ebe2e0ebeaf2abecea">[email protected]</span></a>
+    a digital copy of the request to <a href="/cdn-cgi/l/email-protection#e99a9c9999869b9da98a8188878e8c87869ec78086"><span
+    class="__cf_email__" data-cfemail="90e3e5e0e0ffe2e4d0f3f8f1fef7f5feffe7bef9ff">[email protected]</span></a>
     before sending the hard one.</p>'
   - <p class="collapse-panel--text">Please note that the transaction might be stopped
     after the trading stage, depending on the time the report about stolen funds was
@@ -690,4 +687,4 @@ exchanges:
   verified: true
   score-boost: 0
 
-last_check: 2021-09-13 13:28:44.305280
+last_check: 2021-09-13 16:45:57.768176
