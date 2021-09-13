@@ -431,7 +431,7 @@ exchanges:
   tos-urls:
   - https://fixedfloat.com/terms-of-service
   url: https://fixedfloat.com/
-  verified: false
+  verified: true
   score-boost: 0
 
 - name: Morphtoken
