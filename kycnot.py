@@ -213,3 +213,4 @@ async def get_trustpilot_info(service):
     return time.strftime("%d/%m/%Y", time.gmtime(date))
 
 date = get_last_commit_date()'''
+date = "13/09/21"
