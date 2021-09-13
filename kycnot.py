@@ -17,15 +17,19 @@ import httpx
 import os
 import re
 
+import git
+import time
+
 base_dir = os.path.abspath(os.path.dirname(__name__))
 static_dir = os.path.join(base_dir, 'static')
 templates_dir = os.path.join(base_dir, 'templates')
 data_dir = os.path.join(base_dir, 'data')
 env = Environment(loader=FileSystemLoader(templates_dir), autoescape=True)
-app = Sanic(__name__)
-yaml = ruamel.yaml.YAML()
 
+app = Sanic(__name__)
 app.static('/static', static_dir)
+
+yaml = ruamel.yaml.YAML()
 
 FOOTER = f"""<footer class="container">
 <pre>by <a href="https://github.com/pluja">Pluja</a>.</pre> <br>
@@ -46,8 +50,6 @@ FOOTER = f"""<footer class="container">
 """
 
 # filename = ""
-
-
 @app.route("/", name="index")
 @app.route("/index", name="index")
 async def index(request):
@@ -55,7 +57,7 @@ async def index(request):
     with open(f"{data_dir}/exchanges.yml", "r") as exchanges:
         data = yaml.load(exchanges)
         data['exchanges'] = sorted(data['exchanges'], key=lambda k: k['score'], reverse=True)
-        return html(template.render(data=data,
+        return html(template.render(date=date, data=data,
                                     title="KYC? Not me!",
                                     subtitle="Find best <strong>NON-KYC</strong> online services."))
 
@@ -66,7 +68,7 @@ async def services(request):
     with open(f"{data_dir}/services.yml", "r") as services:
         data = yaml.load(services)
         data['services'] = sorted(data['services'], key=lambda k: k['category'], reverse=True)
-        return html(template.render(data=data,
+        return html(template.render(date=date, data=data,
                                     title="KYC? Not me!",
                                     subtitle="Find best <strong>NON-KYC</strong> online services."))
 
@@ -77,7 +79,7 @@ async def about(request):
     r = httpx.get(
         "https://codeberg.org/schylza/schylza/raw/branch/main/SUPPORT.md")
     donations = yaml.load(r.content)
-    return html(template.render(title="KYC? Not me!",
+    return html(template.render(date=date, title="KYC? Not me!",
                                 subtitle="About KYCNOT.ME",
                                 support=donations))
 
@@ -96,7 +98,7 @@ async def exchange(request, name=None):
                         color = "#FFB800"
                     else:
                         color = "#a71d31"
-                    return html(template.render(exchange=exchange, title="KYC? Not me!", color=color))
+                    return html(template.render(date=date, exchange=exchange, title="KYC? Not me!", color=color))
     return(f"{name} does not exist")
 
 
@@ -109,7 +111,7 @@ async def service(request, name=None):
                 if service['name'].replace(' ', '').lower() == name:
                     tpinfo = await get_trustpilot_info(service)
                     template = env.get_template('service.html')
-                    return html(template.render(service=service, tpinfo=tpinfo))
+                    return html(template.render(date=date, service=service, tpinfo=tpinfo))
     return(f"{name} does not exist")
 
 
@@ -198,3 +200,16 @@ async def get_trustpilot_info(service):
         'link': tplink
     }
     return tpinfo
+
+def get_last_commit_date():
+    repo = git.Repo(search_parent_directories=True)
+    tree = repo.tree()
+    lastcommit = 1111316191
+    for blob in tree:
+        commit = list(repo.iter_commits(paths=blob.path, max_count=1))
+        date = commit[0].committed_date
+        if lastcommit < date:
+            lastcommit = date
+    return time.strftime("%d/%m/%Y", time.gmtime(date))
+
+date = get_last_commit_date()
