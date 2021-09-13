@@ -201,7 +201,7 @@ async def get_trustpilot_info(service):
     }
     return tpinfo
 
-def get_last_commit_date():
+'''def get_last_commit_date():
     repo = git.Repo(search_parent_directories=True)
     tree = repo.tree()
     lastcommit = 1111316191
@@ -212,4 +212,4 @@ def get_last_commit_date():
             lastcommit = date
     return time.strftime("%d/%m/%Y", time.gmtime(date))
 
-date = get_last_commit_date()
+date = get_last_commit_date()'''
