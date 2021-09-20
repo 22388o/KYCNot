@@ -7,7 +7,12 @@ WORKDIR /app
 COPY ./requirements.txt /app
 
 # Build Dependencies
-RUN apk --no-cache add gcc musl-dev libffi-dev openssl-dev libxml2-dev libxslt-dev file llvm-dev make g++
+RUN apk update \
+&& apk add --virtual build-deps gcc python3-dev musl-dev \
+&& apk --no-cache add musl-dev libffi-dev openssl-dev libxml2-dev libxslt-dev file llvm-dev make g++ \
+&& apk add jpeg-dev zlib-dev libjpeg \
+&& pip install Pillow \
+&& apk del build-deps
 
 # Python Dependencies
 RUN pip install --no-cache-dir --prefix=/install gunicorn
