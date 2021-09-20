@@ -13,8 +13,8 @@ from random import randrange
 import ruamel.yaml
 import datetime
 import os.path
-import httpx
 import qrcode
+import httpx
 import os
 import re
 
@@ -62,6 +62,7 @@ async def about(request):
     r = httpx.get(
         "https://codeberg.org/schylza/schylza/raw/branch/main/SUPPORT.md")
     donations = yaml.load(r.content)
+    await generate_donations_qrcodes(donations)
     return html(template.render(date=date, title="KYC? Not me!",
                                 subtitle="About KYCNOT.ME",
                                 support=donations))
@@ -163,6 +164,26 @@ async def gns(request):
     if(request.json):
         return text('POST request - {}'.format(request.json))
     return(html(template.render()))
+
+async def generate_donations_qrcodes(donations):
+    qr = qrcode.QRCode()
+    qr.add_data(donations['xmr'])
+    qr.make(fit=True)
+    xmr = qr.make_image(fill_color="white", back_color=(26, 26, 26))
+
+    qr = qrcode.QRCode()
+    qr.add_data(donations['btc'])
+    qr.make(fit=True)
+    btc = qr.make_image(fill_color="white", back_color=(26, 26, 26))
+    
+    qr = qrcode.QRCode()
+    qr.add_data(donations['nano'])
+    qr.make(fit=True)
+    nano = qr.make_image(fill_color="white", back_color=(26, 26, 26))
+
+    xmr.save("static/img/qrcodes/xmr.png")
+    btc.save("static/img/qrcodes/btc.png")
+    nano.save("static/img/qrcodes/nano.png")
 
 async def get_trustpilot_info(service):
     r = httpx.get(

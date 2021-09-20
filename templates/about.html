@@ -229,11 +229,50 @@
     <h3>Donate</h3>
     <p>
       Thank you for considering making a donation. Donations help me with server
-      and domain costs and also are an incentive to keep up with the project :)
+      and domain costs and also are an incentive to keep up with my projects :)
     </p>
-    <pre>Monero: {{support['xmr']}}</pre>
-    <pre>Bitcoin: {{support['btc']}}</pre>
-    <pre>Nano: {{support['nano']}}</pre>
+
+    <div class="crypto-donations-container">
+      
+      <div class="donation-block">
+        <a class="butn" href="#open-modal-xmr"><i class="fas fa-qrcode"></i> Donate Monero </a>
+        <div id="open-modal-xmr" class="modal-window">
+          <div>
+            <a href="#support" title="Close" class="modal-close"><i class="fa fa-times"></i></a>
+            <h1>Monero</h1>
+            <img width="256" src="/static/img/qrcodes/xmr.png"></img>
+            <pre>{{support['xmr']}}</pre> 
+            <small>This modal DOES NOT require Javascript.</small>
+            </div>
+        </div>
+      </div>
+  
+      <div class="donation-block">
+        <a class="butn" href="#open-modal-btc"><i class="fas fa-qrcode"></i> Donate Bitcoin </a>
+        <div id="open-modal-btc" class="modal-window">
+          <div>
+            <a href="#support" title="Close" class="modal-close"><i class="fa fa-times"></i></a>
+            <h1>Bitcoin</h1>
+            <img width="256" src="/static/img/qrcodes/btc.png"></img>
+            <pre>{{support['btc']}}</pre> 
+            <small>This modal DOES NOT require Javascript.</small>
+            </div>
+        </div>
+      </div>
+  
+      <div class="donation-block">
+        <a class="butn" href="#open-modal-nano"><i class="fas fa-qrcode"></i> Donate Nano </a>
+        <div id="open-modal-nano" class="modal-window">
+          <div>
+            <a href="#support" title="Close" class="modal-close"><i class="fa fa-times"></i></a>
+            <h1>Nano</h1>
+            <img width="256" src="/static/img/qrcodes/nano.png"></img>
+            <pre>{{support['nano']}}</pre> 
+            <small>This modal DOES NOT require Javascript.</small>
+            </div>
+        </div>
+      </div>
+    </div>
 
     <p>
       Or you can donate with FIAT too:
@@ -253,6 +292,81 @@
     width: 75vw;
     padding: 15px;
   }
+
+  .modal-window {
+	 position: fixed;
+	 background-color: rgba(255, 255, 255, 0.25);
+	 top: 0;
+	 right: 0;
+	 bottom: 0;
+	 left: 0;
+	 z-index: 999;
+	 visibility: hidden;
+	 opacity: 0;
+	 pointer-events: none;
+	 transition: all 0.3s;
+}
+ .modal-window:target {
+	 visibility: visible;
+	 opacity: 1;
+	 pointer-events: auto;
+}
+ .modal-window > div {
+	 width: 300px;
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 transform: translate(-50%, -50%);
+	 padding: 1em;
+	 background: rgb(26, 26, 26);
+}
+ .modal-window header {
+	 font-weight: bold;
+}
+ .modal-window h1 {
+	 font-size: 150%;
+	 margin: 0 0 15px;
+}
+ .modal-close {
+	 color: #aaa;
+	 line-height: 50px;
+	 font-size: 80%;
+	 position: absolute;
+	 right: 0;
+	 text-align: center;
+	 top: 0;
+	 width: 70px;
+	 text-decoration: none;
+}
+ .modal-close:hover {
+	 color: black;
+}
+ .modal-window > div {
+	 border-radius: 1rem;
+}
+ .modal-window div:not(:last-of-type) {
+	 margin-bottom: 15px;
+}
+ .butn {
+   font-size: medium;
+	 padding: .1em .5em;
+	 border-radius: .1rem;
+	 text-decoration: none;
+}
+ .butn i {
+	 padding-right: 0.3em;
+}
+
+small{
+  font-size: 9px;
+  color: rgb(53, 52, 52);
+}
+
+.crypto-donations-container{
+  padding: 1.5rem;
+  padding-left: 0;
+}
+ 
 </style>
 
 {% endblock %}
