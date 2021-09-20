@@ -24,7 +24,7 @@
 {%if tpinfo['score'] != False %}
 <div class="section trustpilot">
   <div class="trustpilot-stats">
-    <h3 style="margin: 1px;" class="title is-5"> <a href="{{tpinfo['link']}}" target="_blank">Trustpilot</a> Stats </h3>
+    <h3 style="margin: 1px;" class="title is-5"> <a href="{{tpinfo['link']}}" target="_blank">Trustpilot<i class="fas fa-external-link-alt faw-small"></i></a>  Stats </h3>
     <i class="fas fa-star"></i> {{tpinfo['score']}} <i class="fas fa-grip-lines-vertical"></i> {{tpinfo['count']}} Reviews
   </div>
 </div>
@@ -76,7 +76,7 @@
         <span class="panel-icon">
           <i class="fas fa-bullseye"></i>
         </span>
-        Tor available
+        Tor available <i style="font-size: x-small; margin-left: 2px;" class="fas fa-external-link-alt"></i>
       </a>
     {%endif%}
   </article>
