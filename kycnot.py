@@ -8,12 +8,13 @@ from sanic.response import text
 from sanic.response import html
 from sanic import Sanic
 
-import ruamel.yaml
 from bs4 import BeautifulSoup
 from random import randrange
+import ruamel.yaml
 import datetime
 import os.path
 import httpx
+import qrcode
 import os
 import re
 
@@ -30,24 +31,6 @@ app = Sanic(__name__)
 app.static('/static', static_dir)
 
 yaml = ruamel.yaml.YAML()
-
-FOOTER = f"""<footer class="container">
-<pre>by <a href="https://github.com/pluja">Pluja</a>.</pre> <br>
-    <b style="font-size:.6em; color:#FB8537;"> <img style="width:2%;" src="https://web.getmonero.org/press-kit/symbols/monero-symbol-480.png"><mark>xmr:</mark> 83czvTQL5cHXZZpRM6bvcqVZSbNRqsX1tMwWnx1HjKBUD8swxUm9fFiTHUZbfYg8qPLM4nLwSdGCM1JmAXUp886KG93Pccr</b><br>
-    <b style="font-size:.6em; color:#1372A4;"> <mark>Ł (ltc):</mark> MMSW3AnzHbxnmVeXzGjnNgHf6h62qpR9VA</b></br>
-    <b style="font-size:.6em; color:#FEAC48;"> <mark>₿ (btc):</mark> bc1qnrh67j3q0y8kzsxl9npgrlqhalcgx4awa3j2u0</b><br>
-</footer>"""
-
-"""
-# is-primary = Teal -> Verified tag
-# is-success = Green -> Positive
-# is-warning = Yellow -> Warning
-# is-danger = Red -> Negative / Danger
-# is-black = Black -> Other info
-# is-light = Dark Grey -> None
-# is-info = Info Blue -> Buy/Exchange
-# is-dark = Light grey -> XMR / BTC non accepted
-"""
 
 # filename = ""
 @app.route("/", name="index")
