@@ -299,3 +299,19 @@ services:
     url: https://digitalgoods.proxysto.re/
     category: GOODS
     verified: true
+
+  - name: Azire
+    short-description: Secure and privacy-first VPN.
+    long-description: Azire VPN is an Open Sourced VPN with unlimited bandwidth, dedicated servers without hard drives, no logging VPN service that accepts Monero.
+    btc: True
+    xmr: True
+    cash: True
+    registration: True
+    personal-info: False
+    open-source: True
+    tor: False
+    tor-url: 
+    tos-url: https://www.azirevpn.com/terms-of-service
+    url: https://www.azirevpn.com/
+    category: VPN
+    verified: true
