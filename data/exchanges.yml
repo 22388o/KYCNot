@@ -283,7 +283,10 @@ exchanges:
   kyc-check: true
   suspicious-tos:
   - false
-  long-description: Users, called traders, create advertisements with the price and the payment method they want to offer. You can browse our website for trade advertisements and search for a payment method you prefer. You'll find traders buying and selling cryptocurrencies online for more than 60 different payment methods. 
+  long-description: Users, called traders, create advertisements with the price and
+    the payment method they want to offer. You can browse our website for trade advertisements
+    and search for a payment method you prefer. You'll find traders buying and selling
+    cryptocurrencies online for more than 60 different payment methods.
   kyc-type: 0
   open-source: false
   p2p: true
@@ -291,7 +294,8 @@ exchanges:
   refunds: false
   registration: true
   score: 8.0
-  short-description: A marketplace where users can buy and sell cryptocurrencies to and from each other
+  short-description: A marketplace where users can buy and sell cryptocurrencies to
+    and from each other
   tor: true
   tor-url: false
   tos-urls:
@@ -440,7 +444,8 @@ exchanges:
   kyc-check: true
   suspicious-tos:
   - false
-  long-description:  MorphToken takes one cryptocurrency and outputs one or more cryptocurrencies. It operates without user accounts, allowing to quickly exchange multiple assets.
+  long-description: MorphToken takes one cryptocurrency and outputs one or more cryptocurrencies.
+    It operates without user accounts, allowing to quickly exchange multiple assets.
   kyc-type: 1
   open-source: false
   p2p: false
@@ -495,7 +500,10 @@ exchanges:
     SumSub. In order to get your identity verified, you will be offered to follow
     SumSub’s link (it will be under the Verify button) and complete the verification
     through a comfortable and smooth UI. You will have 3 days to complete the verification
-    procedure, and if you don’t want to pass KYC, you can refuse and receive a refund.</p>
+    procedure, and if you don’t want to pass KYC, you can refuse (in that case, please
+    shoot a message to <a href="/cdn-cgi/l/email-protection#e99a9c9999869b9da98a8188878e8c87869ec78086"><span
+    class="__cf_email__" data-cfemail="2b585e5b5b44595f6b48434a454c4e45445c054244">[email protected]</span></a>)
+    and receive a refund.</p>
   - <p class="collapse-panel--text">After ChangeNOW has received the confirmation
     of you having passed the KYC procedure from SumSub, the exchange is completed,
     and the exchanged funds are then sent to the specified recipient wallet address.</p>
@@ -527,7 +535,7 @@ exchanges:
     right to submit all the received materials to legal authorities (Interpol, Europol,
     and others) in case a corresponding request is received. You can read the official
     ChangeNOW's Rules of Anti-Money Laundering and Combating The Financing Terrorism
-    compliance control <a href="/files/Rules_of_AML_CFT_compliance_ChangeNow.v1.3.pdf"
+    compliance control <a href="/files/Rules_of_AML_CFT_compliance_ChangeNow.v1.5.pdf"
     target="_blank">here</a>.</p>
   - <p class="collapse-panel--text">In order to purchase crypto with USD or EUR, you
     will need to enter your email address. It is a necessary step for user identification
@@ -552,9 +560,9 @@ exchanges:
     a clear intent to return the funds and have the information about the transaction
     in question.</p>
   - '<p class="collapse-panel--text">The hard copy of the request should be sent to
-    our postal address: Amsterdam, Kraanspoor 50, 1033 SE, Netherlands. Please send
-    a digital copy of the request to <a href="/cdn-cgi/l/email-protection#e99a9c9999869b9da98a8188878e8c87869ec78086"><span
-    class="__cf_email__" data-cfemail="90e3e5e0e0ffe2e4d0f3f8f1fef7f5feffe7bef9ff">[email protected]</span></a>
+    our postal address: Newtonlaan 115, Utrecht, 3584 BH, Netherlands. Please send
+    a digital copy of the request to <a href="/cdn-cgi/l/email-protection#1d6e686d6d726f695d7e757c737a7873726a337472"><span
+    class="__cf_email__" data-cfemail="4a393f3a3a25383e0a29222b242d2f24253d642325">[email protected]</span></a>
     before sending the hard one.</p>'
   - <p class="collapse-panel--text">Please note that the transaction might be stopped
     after the trading stage, depending on the time the report about stolen funds was
@@ -562,6 +570,7 @@ exchanges:
     the exchange was made (to-currency).</p>
   - <p class="collapse-panel--text">Yes, you can join our affiliate program and make
     0.4% of the funds attracted by you. Here is the detailed <a href="https://medium.com/@changenow_io/changenow-has-launched-an-affiliate-program-you-are-welcome-to-join-71a5296caa41">instruction</a>.</p>
+  - <p>Try it mobile NOW</p>
   kyc-check:
   - AML/KYC
   - KYC/AML
@@ -677,4 +686,4 @@ exchanges:
   verified: true
   score-boost: 0
 
-last_check: 2021-09-13 16:45:57.768176
+last_check: 2021-10-28 17:29:57.922410
