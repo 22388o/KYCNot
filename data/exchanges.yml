@@ -283,12 +283,7 @@ exchanges:
   kyc-check: true
   suspicious-tos:
   - false
-  long-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-    culpa qui officia deserunt mollit anim id est laborum.
+  long-description: Users, called traders, create advertisements with the price and the payment method they want to offer. You can browse our website for trade advertisements and search for a payment method you prefer. You'll find traders buying and selling cryptocurrencies online for more than 60 different payment methods. 
   kyc-type: 0
   open-source: false
   p2p: true
@@ -296,7 +291,7 @@ exchanges:
   refunds: false
   registration: true
   score: 8.0
-  short-description: Buy Crypto the private way.
+  short-description: A marketplace where users can buy and sell cryptocurrencies to and from each other
   tor: true
   tor-url: false
   tos-urls:
@@ -445,12 +440,7 @@ exchanges:
   kyc-check: true
   suspicious-tos:
   - false
-  long-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-    culpa qui officia deserunt mollit anim id est laborum.
+  long-description:  MorphToken takes one cryptocurrency and outputs one or more cryptocurrencies. It operates without user accounts, allowing to quickly exchange multiple assets.
   kyc-type: 1
   open-source: false
   p2p: false
