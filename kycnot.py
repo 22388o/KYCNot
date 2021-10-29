@@ -93,7 +93,12 @@ async def service(request, name=None):
             data = yaml.load(services)
             for service in data['services']:
                 if service['name'].replace(' ', '').lower() == name:
-                    tpinfo = await get_trustpilot_info(service)
+                    try:
+                        tpinfo = await get_trustpilot_info(service)
+                    except:
+                        tpinfo = {
+                            "score": False
+                        }
                     template = env.get_template('service.html')
                     return html(template.render(date=date, service=service, tpinfo=tpinfo))
     return(f"{name} does not exist")
