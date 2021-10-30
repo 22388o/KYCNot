@@ -128,6 +128,7 @@ async def gne(request):
           suspicious-tos: false
           refunds: false
           score: 6
+          kyc-type: 1
           tor: {args['tor'][0]}
           tor-url: {args['tor-url'][0]}
           tos-urls:
