@@ -184,6 +184,51 @@ exchanges:
   verified: false
   score-boost: 0
 
+- name: Exolix
+  short-description: Instant, secure and anonymous crypto exchange
+  long-description: Exolix is a secure and anonymous crypto exchange service with
+    fixed rates which is free of registration and any limits. Launched in 2018, Exolix
+    gained recognition as a fast and secure exchange. Exolix provides its customers
+    with the highest standards of confidentiality, as you do not have to register
+    to make a transaction. Exolix does not require KYC. The system also fixes the
+    exchange rate at the beginning of the transaction, thus, users are protected from
+    market volatility. In addition, Exolix does not have maximum limits, which allows
+    everyone to exchange any amount of cryptocurrencies. The main mission of Exolix
+    is to make an exchange process fast, easy and secure.
+  btc: true
+  xmr: true
+  cash: false
+  exchange: true
+  buy: false
+  custodial: false
+  registration: false
+  personal-info: false
+  p2p: false
+  may-kyc: false
+  open-source: false
+  comment:
+  - May reject large transactions at any time for any reason and ask for provenance
+    of funds.
+  kyc-check:
+  suspicious-tos:
+  - <p>1.18. Exolix may, in its discretion, prevent you from immediately dealing with
+    large amounts of digital currency that appear in Exolix. Should this occur, Exolix
+    will also contact you to confirm the provenance of, and your entitlement to, the
+    digital currency. Exolix will immediately release the currency to you on satisfaction
+    that the currency has not been received in breach of any applicable laws, including
+    laws relating to anti-money laundering and counter-terrorism financing, and that
+    you are otherwise entitled to the currency;</p>
+  refunds: false
+  score: 8.25
+  kyc-type: 0
+  tor: false
+  tor-url: false
+  tos-urls:
+  - https://exolix.com/terms
+  url: https://exolix.com/
+  verified: false
+  score-boost: 0
+
 - name: Sideshift.ai
   short-description: No Sign Up Crypto Exchange.
   long-description: SideShift.ai enables HUMANS and AI to shift between 30+ cryptocurrencies.
@@ -501,8 +546,8 @@ exchanges:
     SumSub’s link (it will be under the Verify button) and complete the verification
     through a comfortable and smooth UI. You will have 3 days to complete the verification
     procedure, and if you don’t want to pass KYC, you can refuse (in that case, please
-    shoot a message to <a href="/cdn-cgi/l/email-protection#e99a9c9999869b9da98a8188878e8c87869ec78086"><span
-    class="__cf_email__" data-cfemail="2b585e5b5b44595f6b48434a454c4e45445c054244">[email protected]</span></a>)
+    shoot a message to <a href="/cdn-cgi/l/email-protection#4b383e3b3b24393f0b28232a252c2e25243c652224"><span
+    class="__cf_email__" data-cfemail="cbb8bebbbba4b9bf8ba8a3aaa5acaea5a4bce5a2a4">[email protected]</span></a>)
     and receive a refund.</p>
   - <p class="collapse-panel--text">After ChangeNOW has received the confirmation
     of you having passed the KYC procedure from SumSub, the exchange is completed,
@@ -561,8 +606,8 @@ exchanges:
     in question.</p>
   - '<p class="collapse-panel--text">The hard copy of the request should be sent to
     our postal address: Newtonlaan 115, Utrecht, 3584 BH, Netherlands. Please send
-    a digital copy of the request to <a href="/cdn-cgi/l/email-protection#1d6e686d6d726f695d7e757c737a7873726a337472"><span
-    class="__cf_email__" data-cfemail="4a393f3a3a25383e0a29222b242d2f24253d642325">[email protected]</span></a>
+    a digital copy of the request to <a href="/cdn-cgi/l/email-protection#ed9e989d9d829f99ad8e858c838a8883829ac38482"><span
+    class="__cf_email__" data-cfemail="fc8f898c8c938e88bc9f949d929b9992938bd29593">[email protected]</span></a>
     before sending the hard one.</p>'
   - <p class="collapse-panel--text">Please note that the transaction might be stopped
     after the trading stage, depending on the time the report about stolen funds was
@@ -574,12 +619,7 @@ exchanges:
   kyc-check:
   - AML/KYC
   - KYC/AML
-  - AML/KYC
-  - KYC/AML
-  - KYC/AML
-  - KYC/AML
   - user identification
-  - KYC/AML
   long-description: ChangeNOW is a non-custodial crypto-to-crypto exchange where you
     can trade a large number of coins quickly, conveniently, registration-free, and
     without any limits. Although it normally does not require KYC it could be that
@@ -656,7 +696,7 @@ exchanges:
   comment:
   kyc-check: false
   suspicious-tos:
-  - 2.3. KuCoin maintains an anti-money laundering, countering the financing of terrorism
+  - <p>2.3. KuCoin maintains an anti-money laundering, countering the financing of terrorism
     and know your customer compliance policy (the “AML/CFT Policy”). Pursuant to such
     policy, KuCoin may, in its discretion, require identity verification and go through
     other screening procedures with respect to you or transactions associated with
@@ -668,14 +708,14 @@ exchanges:
     identity card or document or other photographic proof of your identity, and information
     regarding your Digital Token Account). KuCoin will have no liability or responsibility
     for any permanent or temporary inability to access or use any Services as a result
-    of any identity verification or other screening procedures.
-  - Further, pursuant to the AML/CFT Policy, KuCoin may, in its discretion, carry
+    of any identity verification or other screening procedures.</p>
+  - <p>Further, pursuant to the AML/CFT Policy, KuCoin may, in its discretion, carry
     out continuous monitoring of all KuCoin Accounts. If any unusually large or unusual
     patterns of trades or any inexplicable or suspicious circumstances are observed,
     KuCoin may, in its discretion, place an administrative hold on or freeze your
     KuCoin Account. You agree that KuCoin will have no liability or responsibility
     for any permanent or temporary inability to access or use any Service caused by
-    such action.
+    such action.</p>
   refunds: false
   score: 3.5
   tor: false
@@ -686,4 +726,4 @@ exchanges:
   verified: true
   score-boost: 0
 
-last_check: 2021-10-28 17:29:57.922410
+last_check: 2021-10-30 08:16:39.149087
