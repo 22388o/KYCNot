@@ -5,8 +5,19 @@
       alt="{{service['name']}}"
       class="leaderboard__picture"
     />
-    <span class="leaderboard__name"> {{service['name']}} </span>
-    <span class="tag is-info leaderboard__category">
+    <span class="leaderboard__name"> {{service['name']}} 
+      {% if service['lnn'] %}
+        <i style="font-size: 15px; color:rgb(93, 158, 255);" class="fas fa-bolt"></i>
+      {% endif %} 
+      {% if service['xmr'] %}
+        <i style="font-size: 15px; color:rgb(255, 139, 44);" class="fab fa-monero"></i>
+      {% endif %} 
+      {% if service['btc'] %}
+        <i style="font-size: 15px; color:rgb(255, 187, 0);" class="fab fa-bitcoin"></i>
+      {% endif %} 
+    </span>
+
+    <span style="font-size: .6em;" class="tag is-info leaderboard__category">
       {{service['category']}}
     </span>
   </article>

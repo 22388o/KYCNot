@@ -134,7 +134,7 @@ services:
     tos-url: https://jmp.chat/faq/
     url: https://jmp.chat/
     category: SMS
-    verified: true
+    verified: True
 
   - name: Njal.la
     url: https://njal.la/
