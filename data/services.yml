@@ -257,6 +257,7 @@ services:
     long-description: SMS4Sats offers SMS verification numbers online and you can pay using the Lightning Network. Cheap, easy, fast and anonymous.
     btc: True
     xmr: False
+    lnn: True
     cash: False
     registration: False
     personal-info: False
@@ -265,7 +266,7 @@ services:
     tor-url: false
     tos-url: -1
     url: https://sms4sats.com/
-    verified: false
+    verified: True
     category: SMS
 
   - name: Silent Link
