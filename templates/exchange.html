@@ -8,6 +8,14 @@
   </h2>
 </div>
 
+{% if status != 200 %}
+<div style="margin-bottom: 1em; margin-top: .1em !important;" class="title-container">
+    <h6 style="font-size: .7em;" class="subtitle is-6">
+        <i class="fas fa-circle redtext"></i> This site seems to be down
+    </h6>
+</div>
+{%endif%}
+
 <div class="section header-section">
   <figure class="image is-128x128">
     <img
@@ -36,59 +44,129 @@
   <article class="panel is-info">
     <p class="panel-heading">Quick Info</p>
     <a class="panel-block">
-      <span class="panel-icon">
-        <i class="fab fa-bitcoin" aria-hidden="true"></i>
-      </span>
-      {% if exchange['btc'] %} BTC available {% else %}
-      <p style="color: rgb(182, 78, 78)">BTC not available</p>
+      {% if exchange['btc'] %} 
+        <span class="panel-icon">
+          <i class="fab fa-bitcoin tealtext" aria-hidden="true"></i>
+        </span>
+        <p>BTC available</p> 
+      {% else %}
+        <span class="panel-icon">
+          <i class="fab fa-bitcoin redtext" aria-hidden="true"></i>
+        </span>
+        <p class="redtext">BTC not available</p>
       {%endif%}
     </a>
     <a class="panel-block">
-      <span class="panel-icon">
-        <i class="fab fa-monero" aria-hidden="true"></i>
-      </span>
-      {% if exchange['xmr'] %} XMR available {% else %}
-      <p style="color: rgb(182, 78, 78)">XMR not available</p>
+      {% if exchange['xmr'] %}
+        <span class="panel-icon">
+          <i class="fab fa-monero tealtext" aria-hidden="true"></i>
+        </span>
+        XMR available 
+      {% else %}
+        <span class="panel-icon">
+          <i class="fab fa-monero redtext" aria-hidden="true"></i>
+        </span>
+        <p class="redtext">XMR not available</p>
       {%endif%}
     </a>
     <a class="panel-block">
-      <span class="panel-icon">
-        <i class="fas fa-dollar-sign"></i>
-      </span>
-      {% if exchange['buy'] %} You can buy with fiat {% else %}
-      <p style="color: rgb(182, 78, 78)">You can't buy with FIAT</p>
+      {% if exchange['buy'] %} 
+        <span class="panel-icon">
+          <i class="fas fa-dollar-sign tealtext"></i>
+        </span>
+        <p>You can buy with fiat</p>
+        <a class="panel-block">
+          {% if exchange['cash'] %} 
+            <span class="panel-icon">
+              <i class="fas fa-money-bill-wave tealtext"></i>
+            </span>
+            <p>You can buy with cash</p>
+          {% else %}
+            <span class="panel-icon">
+              <i class="fas fa-money-bill-wave redtext"></i>
+            </span>
+            <p class="redtext">You can't buy with cash</p>
+          {%endif%}
+        </a>
+      {% else %}
+        <span class="panel-icon">
+          <i class="fas fa-dollar-sign redtext"></i>
+        </span>
+        <p class="redtext">You can't buy with FIAT</p>
       {%endif%}
     </a>
     <a class="panel-block">
-      <span class="panel-icon">
-        <i class="fas fa-random"></i>
-      </span>
-      {% if exchange['exchange'] %} Crypto exchange available {% else %}
-      <p style="color: rgb(182, 78, 78)">Crypto exchange not available</p>
+      {% if exchange['exchange'] %} 
+        <span class="panel-icon">
+          <i class="fas fa-random tealtext"></i>
+        </span>
+        <p>Crypto exchange available</p>
+      {% else %}
+        <span class="panel-icon">
+          <i class="fas fa-random redtext"></i>
+        </span>
+        <p class="redtext">Crypto exchange not available</p>
       {%endif%}
     </a>
     <a class="panel-block">
-      <span class="panel-icon">
-        <i class="fas fa-mask"></i>
-      </span>
-      {% if not exchange['registration'] %} No account needed {% else %}
-      <p style="color: rgb(182, 78, 78)">Registration needed</p>
+      {% if not exchange['registration'] %} 
+        <span class="panel-icon">
+          <i class="fas fa-user-circle tealtext"></i>
+        </span>
+        <p>No account needed</p>
+      {% else %}        
+        <span class="panel-icon">
+          <i class="fas fa-user-circle redtext"></i>
+        </span>
+        <p class="redtext">Registration needed</p>
+        <a class="panel-block">
+          {% if not exchange['personal-info'] %} 
+            <span class="panel-icon">
+              <i class="fas fa-mask tealtext"></i>
+            </span>
+            No personal information
+          {% else %}
+            <span class="panel-icon">
+              <i class="fas fa-mask redtext"></i>
+            </span>
+            <p class="redtext">Personal information required</p>
+          {%endif%}
+        </a>
       {%endif%}
     </a>
 
     <a class="panel-block">
-      <span class="panel-icon">
-        <i class="far fa-handshake"></i>
-      </span>
-      {% if exchange['p2p'] %} P2P Exchange {% else %}
-      <p style="color: rgb(185, 194, 20)">Non-P2P Exchange</p>
+      {% if exchange['p2p'] %}         
+        <span class="panel-icon">
+          <i class="far fa-handshake tealtext"></i>
+        </span>
+        P2P Exchange 
+      {% else %}         
+        <span class="panel-icon">
+          <i class="far fa-handshake redtext"></i>
+        </span>
+        <p class="redtext">Non-P2P Exchange</p>
+      {%endif%}
+    </a>
+
+    <a class="panel-block">
+      {% if not exchange['javascript'] %} 
+        <span class="panel-icon">
+          <i class="fab fa-js-square tealtext"></i>
+        </span>
+        <p>Javascript <strong>not</strong> required</p> 
+      {% else %}        
+        <span class="panel-icon">
+          <i class="fab fa-js-square redtext"></i>
+        </span>
+        <p class="redtext">Javascript required</p>
       {%endif%}
     </a>
 
     {% if exchange['tor'] %}
-      <a href="{{exchange['tor-url']}}" class="panel-block">
+      <a href="{{exchange['tor-onion']}}" class="panel-block">
         <span class="panel-icon">
-          <i class="fas fa-bullseye"></i>
+          <i class="fas fa-bullseye tealtext"></i>
         </span>
         Tor available <i class="fas fa-external-link-alt faw-small"></i>
       </a>
@@ -134,37 +212,6 @@
   </article>
 
   <article class="message long-description">
-    {% if exchange['kyc-check'] == True %}
-    <div class="message-header green">
-      <p><i class="far fa-check-circle"></i> KYC Check</p>
-    </div>
-    {%else%}
-    <div class="message-header yellow">
-      <p><i class="far fa-times-circle"></i> KYC Check</p>
-    </div>
-    {%endif%}
-    <div class="message-body">
-      {% if exchange['kyc-check'] == True%} 
-      <p>This exchange passes the automated KYCNOT.ME check. The ToS of this exchange seem <b>no-kyc</b> friendly. </p>
-      {%else%} 
-      <p> The automated KYCNOT.ME check has failed for this exchange. The exchange may require KYC for some cases or ToS may have changed since
-      the listing and may need review. </p>
-      
-      {% if exchange['suspicious-tos'] %}
-      <h3 class="title is-5" style="padding-top: 8px;"><strong> EXTRACTED SUSPICIOUS TOS: </strong></h3>
-      <article class="message">
-        <div class="message-body">
-          {% for part in exchange['suspicious-tos'] %}
-            <p style="margin: 10px;">{{part | safe}}</p>
-          {% endfor %}
-        </div>
-      </article>
-      {% endif %}
-      {%endif%}
-    </div>
-  </article>
-
-  <article class="message long-description">
     {% if exchange['kyc-type'] == 0 %} 
       <div class="message-header green">
     {% else %}
@@ -184,6 +231,53 @@
       {% endif %}
     </div>
   </article>
+
+  <article class="message long-description">
+    {% if exchange['kyc-check'] == True %}
+    <div class="message-header green">
+      <p><i class="far fa-check-circle"></i> KYC Check</p>
+    </div>
+    {%else%}
+    <div class="message-header yellow">
+      <p><i class="far fa-times-circle"></i> KYC Check</p>
+    </div>
+    {%endif%}
+    <div class="message-body">
+      {% if exchange['kyc-check'] == True%} 
+      <p>This exchange passes the automated KYCNOT.ME check. The ToS of this exchange seem <b>no-kyc</b> friendly. </p>
+      {%else%} 
+      <p> The automated KYCNOT.ME check has failed for this exchange. The exchange may require KYC for some cases or ToS may have changed since
+      the listing and may need review. </p>
+      
+      {% if exchange['suspicious-tos'] %}
+      <hr>
+      <h3 class="title is-5" style="margin-top: 8px;"><strong> EXTRACTED SUSPICIOUS TOS: </strong></h3>
+        {% for part in exchange['suspicious-tos'] %}
+          <article class="message">
+            <div class="message-body">
+                <p>{{part | safe}}</p>
+            </div>
+          </article>
+        {% endfor %}
+      {% endif %}
+      {%endif%}
+    </div>
+  </article>
+
+  {%if exchange['comments']%}
+    <article class="message long-description">
+      <div class="message-header yellow">
+        <p><i class="fas fa-plus-circle"></i> Additional notes</p>
+      </div>
+      {% for part in exchange['comments'] %}
+        <article style="margin: 3px;" class="message">
+          <div class="message-body">
+              {{part | safe}}
+          </div>
+        </article>
+      {% endfor %}
+    </article>
+  {%endif%}
 
   <article class="message long-description">
     {% if exchange['custodial'] %}
@@ -219,6 +313,21 @@
     </div>
   </article>
 
+  <!--<article class="message long-description">
+    {% if exchange['web-privacy-check'] %}
+    <div class="message-header green">
+      <p><i class="fas fa-code"></i> Web Privacy </p>
+    </div>
+    {%else%}
+    <div class="message-header yellow">
+      <p><i class="fas fa-box"></i> Web Privacy</p>
+    </div>
+    {%endif%}
+    <div class="message-body">
+      exchange['web-privacy-comment']
+    </div>
+  </article>-->
+
   {% if exchange['refunds'] %}
   <article class="message long-description">
     {% if exchange['refunds'] %}
@@ -238,10 +347,10 @@
   {%endif%}
 </section>
 
-{% if exchange['tor-url'] %}
+{% if exchange['tor-onion'] %}
 <div style="margin: 25px;" class="title-container">
   <h5 style="padding: .5em; border: 1px solid #9d52e9; border-radius: 5px; width: 8em; font-size: medium;" class="subtitle is-5">
-      <a href="{{exchange['tor-url']}}"> <i class="fas fa-bullseye"></i> TOR ONION AVAILABLE <i class="fas fa-external-link-alt faw-small"></i></a>
+      <a href="{{exchange['tor-onion']}}"> <i class="fas fa-bullseye"></i> TOR ONION AVAILABLE <i class="fas fa-external-link-alt faw-small"></i></a>
     </h5>
   </div>
 {% endif %}

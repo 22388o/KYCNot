@@ -10,7 +10,7 @@ from sanic import Sanic
 
 from bs4 import BeautifulSoup
 from random import randrange
-import ruamel.yaml
+import json
 import datetime
 import os.path
 #import qrcode
@@ -30,30 +30,28 @@ env = Environment(loader=FileSystemLoader(templates_dir), autoescape=True)
 app = Sanic(__name__)
 app.static('/static', static_dir)
 
-yaml = ruamel.yaml.YAML()
-
 # filename = ""
 @app.route("/", name="index")
 @app.route("/index", name="index")
 async def index(request):
     template = env.get_template('index.html')
-    with open(f"{data_dir}/exchanges.yml", "r") as exchanges:
-        data = yaml.load(exchanges)
-        data['exchanges'] = sorted(data['exchanges'], key=lambda k: k['score'], reverse=True)
-        return html(template.render(date=date, data=data,
-                                    title="KYC? Not me!",
-                                    subtitle="Find best <strong>NON-KYC</strong> online services."))
+    f = open(f'{data_dir}/exchanges.json')
+    data = json.load(f)
+    data['exchanges'] = sorted(data['exchanges'], key=lambda k: k['score'], reverse=True)
+    return html(template.render(date=date, data=data,
+                                title="KYC? Not me!",
+                                subtitle="Find best <strong>NON-KYC</strong> online services."))
 
 
 @app.route("/services", name="services")
 async def services(request):
     template = env.get_template('services.html')
-    with open(f"{data_dir}/services.yml", "r") as services:
-        data = yaml.load(services)
-        data['services'] = sorted(data['services'], key=lambda k: k['category'], reverse=True)
-        return html(template.render(date=date, data=data,
-                                    title="KYC? Not me!",
-                                    subtitle="Find best <strong>NON-KYC</strong> online services."))
+    f = open(f'{data_dir}/services.json')
+    data = json.load(f)
+    data['services'] = sorted(data['services'], key=lambda k: k['category'], reverse=True)
+    return html(template.render(date=date, data=data,
+                                title="KYC? Not me!",
+                                subtitle="Find best <strong>NON-KYC</strong> online services."))
 
 
 @app.route("/about", name="about")
@@ -71,36 +69,38 @@ async def about(request):
 @app.route("/exchange/<name>")
 async def exchange(request, name=None):
     if(name):
-        with open(f"{data_dir}/exchanges.yml", "r") as exchanges:
-            data = yaml.load(exchanges)
-            for exchange in data['exchanges']:
-                if ''.join(exchange['name'].split()).lower() == name:
-                    template = env.get_template('exchange.html')
-                    if exchange['score'] > 7:
-                        color = "#18B432"
-                    elif exchange['score'] <= 7 and exchange['score'] >= 5:
-                        color = "#FFB800"
-                    else:
-                        color = "#a71d31"
-                    return html(template.render(date=date, exchange=exchange, title="KYC? Not me!", color=color))
+        f = open(f'{data_dir}/exchanges.json')
+        data = json.load(f)
+        for exchange in data['exchanges']:
+            if ''.join(exchange['name'].split()).lower() == name:
+                template = env.get_template('exchange.html')
+                if exchange['score'] > 7:
+                    color = "#18B432"
+                elif exchange['score'] <= 7 and exchange['score'] >= 5:
+                    color = "#FFB800"
+                else:
+                    color = "#a71d31"
+
+                return html(template.render(date=date, status=200, exchange=exchange, title="KYC? Not me!", color=color))
     return(f"{name} does not exist")
 
 
 @app.route("/service/<name>")
 async def service(request, name=None):
-    if(name):
-        with open(f"{data_dir}/services.yml", "r") as services:
-            data = yaml.load(services)
-            for service in data['services']:
-                if service['name'].replace(' ', '').lower() == name:
-                    try:
-                        tpinfo = await get_trustpilot_info(service)
-                    except:
-                        tpinfo = {
-                            "score": False
-                        }
-                    template = env.get_template('service.html')
-                    return html(template.render(date=date, service=service, tpinfo=tpinfo))
+    if(name):        
+        template = env.get_template('services.html')
+        f = open(f'{data_dir}/services.json')
+        data = json.load(f)
+        for service in data['services']:
+            if service['name'].replace(' ', '').lower() == name:
+                try:
+                    tpinfo = await get_trustpilot_info(service)
+                except:
+                    tpinfo = {
+                        "score": False
+                    }
+                template = env.get_template('service.html')
+                return html(template.render(date=date, service=service, tpinfo=tpinfo))
     return(f"{name} does not exist")
 
 
@@ -108,36 +108,38 @@ async def service(request, name=None):
 async def gne(request):
     if(request.args):
         args = request.args
-        yamlString = f"""
-        <pre>- name: {args['name'][0]}
-          short-description: {args['short-d'][0]}
-          long-description: {args['large-d'][0]}
-          btc: {args['btc'][0]}
-          xmr: {args['xmr'][0]}
-          cash: {args['cash'][0]}
-          exchange: {args['exchange'][0]}
-          buy: {args['buy'][0]}
-          custodial: {args['custodial'][0]}
-          registration: {args['registration'][0]}
-          personal-info: {args['personal-info'][0]}
-          p2p: {args['p2p'][0]}
-          may-kyc: false
-          open-source: {args['open-source'][0]}
-          comment:
-          kyc-check: false
-          suspicious-tos: false
-          refunds: false
-          score: 6
-          kyc-type: 1
-          tor: {args['tor'][0]}
-          tor-url: {args['tor-url'][0]}
-          tos-urls:
-          - {args['tos'][0]}
-          url: {args['url'][0]}
-          verified: false
-          score-boost: 0 </pre>
-        """
-        return(html(yamlString))
+        exchange_json = {
+                "name": args['name'][0],
+                "verified": False,
+                "btc": {args['btc'][0]},
+                "xmr": {args['xmr'][0]},
+                "lnn": {args['lnn'][0]},
+                "cash": {args['cash'][0]},
+                "p2p": {args['p2p'][0]},
+                "tor": {args['tor'][0]},
+                "refunds": False,
+                "open-source": {args['open-source'][0]},
+                "custodial": {args['custodial'][0]},
+                "javascript": {args['javascript'][0]},
+                "registration": {args['registration'][0]},
+                "personal-info": {args['personal-info'][0]},
+                "buy": {args['buy'][0]},
+                "exchange": {args['exchange'][0]},
+                "short-description": args['short-d'][0],
+                "long-description": args['large-d'][0],
+                "comments": False,
+                "kyc-check": False,
+                "kyc-type": {args['kyc-type'][0]},
+                "score": None,
+                "suspicious-tos": False,
+                "tor-onion": args['tor-url'][0],
+                "url": args['url'][0],
+                "tos-urls": [
+                    args['tos-url'][0]
+                ],
+                "score-boost": 0
+            }
+        return(text((str(exchange_json))))
     template = env.get_template('generate-new-exchange.html')
     if(request.json):
         return text('POST request - {}'.format(request.json))
@@ -149,7 +151,8 @@ async def gns(request):
     if(request.args):
         args = request.args
         yamlString = f"""
-        <pre>- name: {args['name'][0]}
+        <pre>
+        - name: {args['name'][0]}
           short-description: {args['short-d'][0]}
           long-description: {args['large-d'][0]}
           btc: {args['btc'][0]}
@@ -163,7 +166,8 @@ async def gns(request):
           tos-url: {args['tos'][0]}
           url: {args['url'][0]}
           category: {args['category'][0]}
-          verified: false</pre>
+          verified: false
+        </pre>
         """
         return(html(yamlString))
     template = env.get_template('generate-new-service.html')
