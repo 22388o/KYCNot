@@ -497,7 +497,7 @@
                       "<p>If a transaction is detected as fraudulent, you may be asked for an identity verification.</p>"],
          "kyc-check": false,
          "kyc-type": 3,
-         "score": 5,
+         "score": 4.5,
          "suspicious-tos": [
             "<p>Mandala may, in its sole discretion, refuse to open an account for any User at any time.</p>",
             "<p>By registering an account with Mandala Exchange, the User agrees to share his or her personal information  for the purpose of identity verification. This information is used specifically for the detection of possible money laundering, terrorist financing, fraud and other financial crimes. In addition to providing this information, to facilitate compliance with global industry standards for data retention, the User agrees to permit Mandala to keep a record of such information for the lifetime of the account plus 5 years after account closing. The User also authorizes Mandala to make inquiries, either directly or through third parties, that are deemed necessary to verify the User’s identity or to protect the User and/or Mandala from financial crimes such as fraud.</p>"
@@ -530,7 +530,7 @@
                       "<p>If a transaction is detected as fraudulent, you may be asked for an identity verification.</p>"],
          "kyc-check": false,
          "kyc-type": 3,
-         "score": 4.5,
+         "score": 3.5,
          "suspicious-tos": [
             "<p>2.3. KuCoin maintains an anti-money laundering, countering the financing of terrorism\nand know your customer compliance policy (the “AML/CFT Policy”). Pursuant to such\npolicy, KuCoin may, in its discretion, require identity verification and go through\nother screening procedures with respect to you or transactions associated with\nyour KuCoin Account. You agree and undertake to provide KuCoin with any and all\ninformation and documents that KuCoin may from time to time request or require\nfor the purposes of these Terms or in connection with your KuCoin Account (including,\nbut not limited to, your name, address, telephone number, email address, date\nof birth, government-issued identification number, photograph of your government-issued\nidentity card or document or other photographic proof of your identity, and information\nregarding your Digital Token Account). KuCoin will have no liability or responsibility\nfor any permanent or temporary inability to access or use any Services as a result\nof any identity verification or other screening procedures.</p>",
             "<p>Further, pursuant to the AML/CFT Policy, KuCoin may, in its discretion, carry\nout continuous monitoring of all KuCoin Accounts. If any unusually large or unusual\npatterns of trades or any inexplicable or suspicious circumstances are observed,\nKuCoin may, in its discretion, place an administrative hold on or freeze your\nKuCoin Account. You agree that KuCoin will have no liability or responsibility\nfor any permanent or temporary inability to access or use any Service caused by\nsuch action.</p>"
