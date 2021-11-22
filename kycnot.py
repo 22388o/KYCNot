@@ -59,7 +59,7 @@ async def about(request):
     template = env.get_template('about.html')
     r = httpx.get(
         "https://codeberg.org/schylza/schylza/raw/branch/main/SUPPORT.md")
-    donations = yaml.load(r.content)
+    donations = json.loads(r.content)
     #await generate_donations_qrcodes(donations)
     return html(template.render(date=date, title="KYC? Not me!",
                                 subtitle="About KYCNOT.ME",
