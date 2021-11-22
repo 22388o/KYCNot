@@ -29,9 +29,9 @@ How was your experience?
 {EXPLANATION}
 
 ---
-{GENERATED YAML}
+{GENERATED  JSON}
 ```
-2. **Generate** a YAML code for your listing. If it's an Exchange use [this link](https://kycnot.me/generate-new-exchange). If it is a Service use [this link](https://kycnot.me/generate-new-service). And **replace** the `{GENERATED YAML}` with it.
+2. **Generate** a JSON code for your listing. If it's an Exchange use [this link](https://kycnot.me/generate-new-exchange). If it is a Service use [this link](https://kycnot.me/generate-new-service). And **replace** the `{GENERATED JSON}` with it.
 3. **Send an e-mail with the request** to the following direction:
 - `request [at] kycnot [dot] me`
 
