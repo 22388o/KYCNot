@@ -59,41 +59,36 @@
          "url": "https://blockdx.net/",
          "tos-urls": [-1],
          "score-boost": 0
-      },
+      },      
       {
-         "name": "Boltz",
-         "verified": false,
+         "name": "Majestic Bank",
+         "verified": true,
          "btc": true,
-         "xmr": false,
-         "lnn": true,
+         "xmr": true,
+         "lnn": false,
          "cash": false,
          "p2p": false,
          "tor": true,
          "refunds": false,
-         "open-source": true,
+         "open-source": false,
          "custodial": false,
-         "javascript": true,
+         "javascript": false,
          "registration": false,
          "personal-info": false,
          "buy": false,
          "exchange": true,
-         "short-description": "Privacy first, account-free crypto exchange.",
-         "long-description": "Boltz is a privacy first, account-free, lightning-friendly crypto\nexchange that can't track its users. Boltz neither users any trackers nor log\nany data that could potentially be traced back to the identity of the users.",
-         "comments": [
-            "Some sellers may require ID verification or KYC. Avoid these sellers.",
-            "Refunds may require KYC"
-         ],
+         "short-description": "Anonymous crypto exchange.",
+         "long-description": "Anonymous Crypto Bank providing Exchange Bitcoin to Monero and vice versa.",
+         "comments": false,
          "kyc-check": true,
          "kyc-type": 0,
          "score": 8.75,
          "suspicious-tos": false,
-         "tor-onion": "http://boltzzzbnus4m7mta3cxmflnps4fp7dueu2tgurstbvrbt6xswzcocyd.onion/",
-         "url": "https://boltz.exchange/",
-         "tos-urls": [
-            "https://www.notion.so/Frequently-Asked-Questions-585328ae43944e2eba351050790d5eec"
-         ],
+         "tor-onion": "http://majestictfvnfjgo5hqvmuzynak4kjl5tjs3j5zdabawe6n2aaebldad.onion",
+         "url": "https://majesticbank.sc/",
+         "tos-urls": ["https://majesticbank.sc/privacy-policy"],
          "score-boost": 0
-      },
+      },  
       {
          "name": "Kilos Swap",
          "verified": true,
@@ -122,7 +117,41 @@
          "url": "http://mlyusr6htlxsyc7t2f4z53wdxh3win7q3qpxcrbam6jf3dmua7tnzuyd.onion/coinswap",
          "tos-urls": [-1],
          "score-boost": 0
-      },       
+      },          
+      {
+         "name": "Boltz",
+         "verified": false,
+         "btc": true,
+         "xmr": false,
+         "lnn": true,
+         "cash": false,
+         "p2p": false,
+         "tor": true,
+         "refunds": false,
+         "open-source": true,
+         "custodial": false,
+         "javascript": true,
+         "registration": false,
+         "personal-info": false,
+         "buy": false,
+         "exchange": true,
+         "short-description": "Privacy first, account-free crypto exchange.",
+         "long-description": "Boltz is a privacy first, account-free, lightning-friendly crypto\nexchange that can't track its users. Boltz neither users any trackers nor log\nany data that could potentially be traced back to the identity of the users.",
+         "comments": [
+            "Some sellers may require ID verification or KYC. Avoid these sellers.",
+            "Refunds may require KYC"
+         ],
+         "kyc-check": true,
+         "kyc-type": 0,
+         "score": 8.5,
+         "suspicious-tos": false,
+         "tor-onion": "http://boltzzzbnus4m7mta3cxmflnps4fp7dueu2tgurstbvrbt6xswzcocyd.onion/",
+         "url": "https://boltz.exchange/",
+         "tos-urls": [
+            "https://www.notion.so/Frequently-Asked-Questions-585328ae43944e2eba351050790d5eec"
+         ],
+         "score-boost": 0
+      },   
       {
          "name": "LocalMonero",
          "verified": true,
@@ -408,7 +437,7 @@
          "url": "https://fixedfloat.com/",
          "tos-urls": ["https://fixedfloat.com/terms-of-service"],
          "score-boost": 0
-      },  
+      }, 
       {
          "name": "ChangeNow",
          "verified": true,
