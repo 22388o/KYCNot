@@ -18,7 +18,7 @@
          "buy": true,
          "exchange": true,
          "short-description": "P2P exchange. Full privacy.",
-         "long-description": "Buy and sell bitcoin for fiat (or other cryptocurrencies) privately\nand securely using Bisq's peer-to-peer network and open-source desktop software.\nNo registration required. Bisq is a peer-to-peer trading network, not a website\nor \"app\" or other centralized service. It's software you run on your own hardware,\nwhich connects to other people running the Bisq software to facilitate trades.\nIt's open-source and community-driven.",
+         "long-description": "Buy and sell bitcoin for fiat (or other cryptocurrencies) privately and securely using Bisq's peer-to-peer network and open-source desktop software. No registration required. Bisq is a peer-to-peer trading network, not a website or \"app\" or other centralized service. It's software you run on your own hardware, which connects to other people running the Bisq software to facilitate trades. It's open-source and community-driven.<br><br><a href='https://bisq.wiki/Table_of_penalties'>Bisq penalizes sellers that ask for any additional information.</a>",
          "comments": false,
          "kyc-check": true,
          "kyc-type": 0,
