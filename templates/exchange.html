@@ -164,19 +164,19 @@
     </a>
 
     {% if exchange['tor'] %}
-      {% if exchange['tor-onion'] %}
-      <a href="{{exchange['tor-onion']}}" class="panel-block">
-        <span class="panel-icon">
-          <i class="fas fa-bullseye tealtext"></i>
-        </span>
-        Tor available <i class="fas fa-external-link-alt faw-small"></i>
-      </a>
-      {% else %}
+      {% if exchange['tor-onion'] == False %}
       <a class="panel-block">
         <span class="panel-icon">
           <i class="fas fa-bullseye tealtext"></i>
         </span>
         Tor connections
+      </a>
+      {% else %}
+      <a href="{{exchange['tor-onion']}}" class="panel-block">
+        <span class="panel-icon">
+          <i class="fas fa-bullseye tealtext"></i>
+        </span>
+        Tor available <i class="fas fa-external-link-alt faw-small"></i>
       </a>
       {%endif%}
     {%endif%}
