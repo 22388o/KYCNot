@@ -34,3 +34,5 @@ ujson==4.0.2
 uvloop==0.15.2
 websockets==8.1
 wrapt==1.12.1
+qrcode
+pillow

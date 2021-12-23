@@ -13,7 +13,7 @@ from random import randrange
 import json
 import datetime
 import os.path
-#import qrcode
+import qrcode
 import httpx
 import os
 import re
@@ -53,13 +53,30 @@ async def services(request):
                                 title="KYC? Not me!",
                                 subtitle="Find best <strong>NON-KYC</strong> online services."))
 
-
 @app.route("/about", name="about")
 async def about(request):
     template = env.get_template('about.html')
     r = httpx.get(
         "https://codeberg.org/schylza/schylza/raw/branch/main/SUPPORT.md")
     donations = json.loads(r.content)
+    addresses = [
+                {'name': 'btc',
+                'address': donations['btc']},
+                {'name': 'xmr',
+                'address': donations['xmr']},
+                {'name': 'nano',
+                'address': donations['nano']},
+                ]
+    for ad in addresses:
+        qr = qrcode.QRCode(version=1, box_size=10, border=4)
+        # add data to the QR code
+        qr.add_data(ad['address'])
+        # compile the data into a QR code array
+        qr.make()
+        # transfer the array into an actual image
+        img = qr.make_image(fill_color="white", back_color="#1a1a1a")
+        # save it to a file
+        img.save(f"./static/img/qrcodes/{ad['name']}.png")
     #await generate_donations_qrcodes(donations)
     return html(template.render(date=date, title="KYC? Not me!",
                                 subtitle="About KYCNOT.ME",
