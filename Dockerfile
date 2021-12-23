@@ -15,6 +15,8 @@ RUN zlib-dev jpeg-dev libjpeg
 RUN python -m pip install --upgrade pip
 RUN pip install --no-cache-dir --prefix=/install gunicorn
 RUN pip install --no-cache-dir --prefix=/install -r requirements.txt
+RUN apk add zlib-dev jpeg-dev gcc musl-dev
+RUN pip install pillow
 
 # Runtime Environment Image
 FROM base
