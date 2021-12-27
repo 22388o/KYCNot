@@ -328,6 +328,24 @@
          "category": "VPN",
          "javascript": true,
          "verified": true
+      },      
+      {
+         "name": "Bitejo",
+         "short-description": "The Free Bitcoin Marketplace",
+         "long-description": "Trade peer-to-peer with your friends, community and the world.  With Bitejo, members can use Bitcoin to freely trade with their friends, community and the world. Buy and sell products, find work and hire people, raise funds and support causes, exchange cryptocurrencies and fiat all in one place. Reviews and reputation help members to find the best listings. A simple Bitcoin web wallet helps members to get started. All without KYC keeping financial participation accessible for everyone.",
+         "btc": true,
+         "xmr": true,
+         "cash": true,
+         "registration": true,
+         "personal-info": false,
+         "open-source": false,
+         "tor": false,
+         "tor-url": null,
+         "tos-url": "https://bitejo.com/terms/",
+         "url": "https://bitejo.com/",
+         "category": "TRADE",
+         "javascript": false,
+         "verified": true
       }
    ]
 }
