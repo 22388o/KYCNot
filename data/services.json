@@ -345,7 +345,7 @@
          "url": "https://bitejo.com/",
          "category": "TRADE",
          "javascript": false,
-         "verified": true
+         "verified": false
       }
    ]
 }
