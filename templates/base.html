@@ -20,9 +20,23 @@
   <body>
     <div class="links-container">
       <div class="nav-menu">
-        <a class="link-item" href="/">Exchanges</a>
-        <a class="link-item" href="/services">Services</a>
-        <a class="link-item" href="/about">About</a>
+        {% if active == 0 %}
+          <a class="link-item is-active" href="/">Exchanges</a>
+        {% else %}
+          <a class="link-item" href="/">Exchanges</a>
+        {%endif%}
+
+        {% if active == 1 %}
+          <a class="link-item is-active" href="/services">Services</a>
+        {% else %}
+          <a class="link-item" href="/services">Services</a>
+        {%endif%}
+
+        {% if active == 3 %}
+          <a class="link-item is-active" href="/about">About</a>
+        {% else %}
+          <a class="link-item" href="/about">About</a>
+        {%endif%}
       </div>
     </div>
 
@@ -87,16 +101,21 @@
 
     .nav-menu {
       text-align: center;
-      font-size: x-large;
+      font-size: 1.2em;
       border-bottom: 0.5px #00b199 solid;
       /*border-bottom: 0.5px rgba(226, 226, 226, 0.624) solid;*/
-      padding: 0px !important;
+      padding: 1px !important;
       margin-bottom: 1px;
       width: 30vw;
     }
 
     .nav-menu > a {
       color: rgba(211, 211, 211, 0.535) !important;
+    }
+
+
+    .nav-menu > .is-active{
+      color: #00b199 !important;
     }
 
     .nav-menu > a:hover {

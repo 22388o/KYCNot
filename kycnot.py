@@ -40,6 +40,7 @@ async def index(request):
     data['exchanges'] = sorted(data['exchanges'], key=lambda k: k['score'], reverse=True)
     return html(template.render(date=date, data=data,
                                 title="KYC? Not me!",
+                                active=0,
                                 subtitle="Find best <strong>NON-KYC</strong> online services."))
 
 
@@ -51,6 +52,7 @@ async def services(request):
     data['services'] = sorted(data['services'], key=lambda k: k['category'], reverse=True)
     return html(template.render(date=date, data=data,
                                 title="KYC? Not me!",
+                                active=1,
                                 subtitle="Find best <strong>NON-KYC</strong> online services."))
 
 @app.route("/about", name="about")
@@ -80,6 +82,7 @@ async def about(request):
     #await generate_donations_qrcodes(donations)
     return html(template.render(date=date, title="KYC? Not me!",
                                 subtitle="About KYCNOT.ME",
+                                active=2,
                                 support=donations))
 
 
@@ -98,7 +101,7 @@ async def exchange(request, name=None):
                 else:
                     color = "#a71d31"
 
-                return html(template.render(date=date, status=200, exchange=exchange, title="KYC? Not me!", color=color))
+                return html(template.render(date=date, status=200, exchange=exchange, title="KYC? Not me!", color=color, active=0))
     return(f"{name} does not exist")
 
 
@@ -117,7 +120,7 @@ async def service(request, name=None):
                         "score": False
                     }
                 template = env.get_template('service.html')
-                return html(template.render(date=date, service=service, tpinfo=tpinfo))
+                return html(template.render(date=date, service=service, tpinfo=tpinfo, active=1))
     return(f"{name} does not exist")
 
 
