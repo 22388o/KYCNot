@@ -5,7 +5,19 @@
       alt="{{exchange['name']}}"
       class="leaderboard__picture"
     />
-    <span class="leaderboard__name">{{exchange['name']}}</span>
-    <span class="leaderboard__value">{{exchange['score']}}<span>KS</span></span>
+    <span class="leaderboard__name">{{exchange['name']}}
+      <div class="currencies">
+        {% if exchange['xmr'] %}
+        <i style="font-size: 15px; color:rgb(255, 139, 44);" class="fab fa-monero"></i>
+        {% endif %} 
+        {% if exchange['btc'] %}
+        <i style="font-size: 15px; color:rgb(255, 187, 0);" class="fab fa-bitcoin"></i>
+        {% endif %} 
+        {% if exchange['lnn'] %}
+        <i style="font-size: 15px; color:rgb(93, 158, 255);" class="fas fa-bolt"></i>
+        {% endif %} 
+      </div>
+    </span>
+    <span style="font-size: 24px;" class="leaderboard__value">{{exchange['score']}}<span>KS</span></span>
   </article>
 </a>
