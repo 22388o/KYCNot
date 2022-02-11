@@ -59,7 +59,7 @@
          "tor-onion": false,
          "url": "https://blockdx.net/",
          "tos-urls": [-1],
-         "third-party-connections": false,
+         "third-party-connections": true,
          "score-boost": 0
       },      
       {
@@ -91,7 +91,7 @@
          "tor-onion": "http://majestictfvnfjgo5hqvmuzynak4kjl5tjs3j5zdabawe6n2aaebldad.onion",
          "url": "https://majesticbank.sc/",
          "tos-urls": ["https://majesticbank.sc/privacy-policy"],
-         "third-party-connections": false,
+         "third-party-connections": true,
          "score-boost": 0
       },  
       {
@@ -220,7 +220,7 @@
          "tos-urls": [
             "https://www.notion.so/Frequently-Asked-Questions-585328ae43944e2eba351050790d5eec"
          ],
-         "third-party-connections": false,
+         "third-party-connections": true,
          "score-boost": 0
       },   
       {
@@ -250,7 +250,7 @@
          "tor-onion": false,
          "url": "https://coinswap.click/",
          "tos-urls": ["https://coinswap.click/faq/"],
-         "third-party-connections": false,
+         "third-party-connections": true,
          "score-boost": 0
       },
       {
@@ -318,7 +318,7 @@
          "tor-onion": false,
          "url": "https://sideshift.ai/",
          "tos-urls": false,
-         "third-party-connections": false,
+         "third-party-connections": true,
          "score-boost": 0
       }, 
       {
@@ -350,7 +350,7 @@
          "tos-urls": [
             "https://xchange.me/terms-of-service"
          ],
-         "third-party-connections": false,
+         "third-party-connections": true,
          "score-boost": 0
       },       
       {
@@ -385,7 +385,7 @@
          "tor-onion": false,
          "url": "https://hodlhodl.com/",
          "tos-urls": ["https://accounts.hodlhodl.com/pages/terms_of_service"],
-         "third-party-connections": false,
+         "third-party-connections": true,
          "score-boost": 0
       },       
       {
@@ -415,7 +415,7 @@
          "tor-onion": false,
          "url": "https://tradeogre.com/",
          "tos-urls": false,
-         "third-party-connections": false,
+         "third-party-connections": true,
          "score-boost": 0
       },               
       {
@@ -451,7 +451,7 @@
          "tos-urls": [            
             "https://exolix.com/terms"
          ],
-         "third-party-connections": false,
+         "third-party-connections": true,
          "score-boost": 0
       },  
       {
@@ -481,7 +481,7 @@
          "tor-onion": false,
          "url": "https://fixedfloat.com/",
          "tos-urls": ["https://fixedfloat.com/terms-of-service"],
-         "third-party-connections": false,
+         "third-party-connections": true,
          "score-boost": 0
       }, 
       {
@@ -518,7 +518,7 @@
          "tor-onion": false,
          "url": "https://changenow.io/",
          "tos-urls": ["https://changenow.io/faq/kyc-aml-procedure"],
-         "third-party-connections": false,
+         "third-party-connections": true,
          "score-boost": 0
       },        
       {
@@ -548,7 +548,7 @@
          "tor-onion": false,
          "url": "https://morphtoken.com/",
          "tos-urls": ["https://www.morphtoken.com/terms/"],
-         "third-party-connections": false,
+         "third-party-connections": true,
          "score-boost": 0
       },
       {
@@ -582,7 +582,7 @@
          "tor-onion": false,
          "url": "https://mandala.exchange/",
          "tos-urls": ["https://support.mandala.exchange/hc/en-us/articles/360055720074-Mandala-Exchange-Terms-and-Conditions"],
-         "third-party-connections": false,
+         "third-party-connections": true,
          "score-boost": 0
       },
       {
@@ -616,7 +616,7 @@
          "tor-onion": false,
          "url": "https://kucoin.com/",
          "tos-urls": ["https://www.kucoin.com/news/en-terms-of-use?lang=en_US"],
-         "third-party-connections": false,
+         "third-party-connections": true,
          "score-boost": 0
       }
    ]
