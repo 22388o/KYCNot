@@ -354,6 +354,22 @@
     </div>
   </article>
   {%endif%}
+
+  <article class="message long-description">
+    {% if not exchange['third-party-connections'] %}
+    <div class="message-header green">
+      <p><i class="fas fa-street-view"></i> No third party connections. </p>
+    </div>
+    {%else%}
+    <div class="message-header yellow">
+      <p><i class="fas fa-satellite-dish"></i> Makes third party connections</p>
+    </div>
+    {%endif%}
+    <div class="message-body">
+      {% if not exchange['third-party-connections'] %} The site does not make any calls to a third party service such as Google Fonts.
+      {%else%} The site makes connections or calls to third parties (eg. Google Fonts) {%endif%}
+    </div>
+  </article>
 </section>
 
 {% if exchange['tor-onion'] %}
