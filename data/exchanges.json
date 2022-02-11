@@ -29,6 +29,7 @@
          "tos-urls": [
             "https://bisq.wiki/Frequently_asked_questions"
          ],
+         "third-party-connections": false,
          "score-boost": 0
       },      
       {
@@ -58,6 +59,7 @@
          "tor-onion": false,
          "url": "https://blockdx.net/",
          "tos-urls": [-1],
+         "third-party-connections": false,
          "score-boost": 0
       },      
       {
@@ -79,7 +81,9 @@
          "exchange": true,
          "short-description": "Anonymous crypto exchange.",
          "long-description": "Anonymous Crypto Bank providing Exchange Bitcoin to Monero and vice versa.",
-         "comments": false,
+         "comments": [
+            "This site uses DDOS-Guard."
+         ],
          "kyc-check": true,
          "kyc-type": 0,
          "score": 8.75,
@@ -87,6 +91,7 @@
          "tor-onion": "http://majestictfvnfjgo5hqvmuzynak4kjl5tjs3j5zdabawe6n2aaebldad.onion",
          "url": "https://majesticbank.sc/",
          "tos-urls": ["https://majesticbank.sc/privacy-policy"],
+         "third-party-connections": false,
          "score-boost": 0
       },  
       {
@@ -116,6 +121,7 @@
          "tor-onion": "http://mlyusr6htlxsyc7t2f4z53wdxh3win7q3qpxcrbam6jf3dmua7tnzuyd.onion/coinswap",
          "url": "http://mlyusr6htlxsyc7t2f4z53wdxh3win7q3qpxcrbam6jf3dmua7tnzuyd.onion/coinswap",
          "tos-urls": [-1],
+         "third-party-connections": false,
          "score-boost": 0
       },
       {
@@ -129,7 +135,7 @@
          "tor": true,
          "refunds": false,
          "open-source": false,
-         "custodial": true,
+         "custodial": false,
          "javascript": false,
          "registration": true,
          "personal-info": false,
@@ -147,6 +153,7 @@
          "tor-onion": "http://nehdddktmhvqklsnkjqcbpmb63htee2iznpcbs5tgzctipxykpj6yrid.onion/",
          "url": "https://localmonero.co/",
          "tos-urls": ["https://localmonero.co/faq"],
+         "third-party-connections": false,
          "score-boost": 0
       },            
       {
@@ -160,7 +167,7 @@
          "tor": true,
          "refunds": false,
          "open-source": false,
-         "custodial": true,
+         "custodial": false,
          "javascript": false,
          "registration": true,
          "personal-info": false,
@@ -178,6 +185,7 @@
          "tor-onion": "http://2jopbxfi2mrw6pfpmufm7smacrgniglr7a4raaila3kwlhlumflxfxad.onion/",
          "url": "https://agoradesk.com/",
          "tos-urls": ["https://agoradesk.com/faq"],
+         "third-party-connections": false,
          "score-boost": 0
       },              
       {
@@ -212,6 +220,7 @@
          "tos-urls": [
             "https://www.notion.so/Frequently-Asked-Questions-585328ae43944e2eba351050790d5eec"
          ],
+         "third-party-connections": false,
          "score-boost": 0
       },   
       {
@@ -241,6 +250,7 @@
          "tor-onion": false,
          "url": "https://coinswap.click/",
          "tos-urls": ["https://coinswap.click/faq/"],
+         "third-party-connections": false,
          "score-boost": 0
       },
       {
@@ -276,6 +286,7 @@
             "https://localcryptos.com/terms/terms-of-use",
             "https://localcryptos.com/terms/service-terms"
          ],
+         "third-party-connections": false,
          "score-boost": 0
       },
       {
@@ -307,6 +318,7 @@
          "tor-onion": false,
          "url": "https://sideshift.ai/",
          "tos-urls": false,
+         "third-party-connections": false,
          "score-boost": 0
       }, 
       {
@@ -338,6 +350,7 @@
          "tos-urls": [
             "https://xchange.me/terms-of-service"
          ],
+         "third-party-connections": false,
          "score-boost": 0
       },       
       {
@@ -372,6 +385,7 @@
          "tor-onion": false,
          "url": "https://hodlhodl.com/",
          "tos-urls": ["https://accounts.hodlhodl.com/pages/terms_of_service"],
+         "third-party-connections": false,
          "score-boost": 0
       },       
       {
@@ -401,6 +415,7 @@
          "tor-onion": false,
          "url": "https://tradeogre.com/",
          "tos-urls": false,
+         "third-party-connections": false,
          "score-boost": 0
       },               
       {
@@ -436,6 +451,7 @@
          "tos-urls": [            
             "https://exolix.com/terms"
          ],
+         "third-party-connections": false,
          "score-boost": 0
       },  
       {
@@ -465,6 +481,7 @@
          "tor-onion": false,
          "url": "https://fixedfloat.com/",
          "tos-urls": ["https://fixedfloat.com/terms-of-service"],
+         "third-party-connections": false,
          "score-boost": 0
       }, 
       {
@@ -501,6 +518,7 @@
          "tor-onion": false,
          "url": "https://changenow.io/",
          "tos-urls": ["https://changenow.io/faq/kyc-aml-procedure"],
+         "third-party-connections": false,
          "score-boost": 0
       },        
       {
@@ -530,6 +548,7 @@
          "tor-onion": false,
          "url": "https://morphtoken.com/",
          "tos-urls": ["https://www.morphtoken.com/terms/"],
+         "third-party-connections": false,
          "score-boost": 0
       },
       {
@@ -563,6 +582,7 @@
          "tor-onion": false,
          "url": "https://mandala.exchange/",
          "tos-urls": ["https://support.mandala.exchange/hc/en-us/articles/360055720074-Mandala-Exchange-Terms-and-Conditions"],
+         "third-party-connections": false,
          "score-boost": 0
       },
       {
@@ -596,6 +616,7 @@
          "tor-onion": false,
          "url": "https://kucoin.com/",
          "tos-urls": ["https://www.kucoin.com/news/en-terms-of-use?lang=en_US"],
+         "third-party-connections": false,
          "score-boost": 0
       }
    ]
