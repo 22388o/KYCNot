@@ -63,38 +63,6 @@
          "score-boost": 0
       },      
       {
-         "name": "Majestic Bank",
-         "verified": true,
-         "btc": true,
-         "xmr": true,
-         "lnn": false,
-         "cash": false,
-         "p2p": false,
-         "tor": true,
-         "refunds": false,
-         "open-source": false,
-         "custodial": false,
-         "javascript": false,
-         "registration": false,
-         "personal-info": false,
-         "buy": false,
-         "exchange": true,
-         "short-description": "Anonymous crypto exchange.",
-         "long-description": "Anonymous Crypto Bank providing Exchange Bitcoin to Monero and vice versa.",
-         "comments": [
-            "This site uses DDOS-Guard."
-         ],
-         "kyc-check": true,
-         "kyc-type": 0,
-         "score": 8.75,
-         "suspicious-tos": false,
-         "tor-onion": "http://majestictfvnfjgo5hqvmuzynak4kjl5tjs3j5zdabawe6n2aaebldad.onion",
-         "url": "https://majesticbank.sc/",
-         "tos-urls": ["https://majesticbank.sc/privacy-policy"],
-         "third-party-connections": true,
-         "score-boost": 0
-      },  
-      {
          "name": "Kilos Swap",
          "verified": true,
          "btc": true,
@@ -187,7 +155,7 @@
          "tos-urls": ["https://agoradesk.com/faq"],
          "third-party-connections": false,
          "score-boost": 0
-      },              
+      },    
       {
          "name": "Boltz",
          "verified": false,
@@ -222,7 +190,40 @@
          ],
          "third-party-connections": true,
          "score-boost": 0
-      },   
+      },
+      
+      {
+         "name": "Majestic Bank",
+         "verified": true,
+         "btc": true,
+         "xmr": true,
+         "lnn": false,
+         "cash": false,
+         "p2p": false,
+         "tor": true,
+         "refunds": false,
+         "open-source": false,
+         "custodial": false,
+         "javascript": false,
+         "registration": false,
+         "personal-info": false,
+         "buy": false,
+         "exchange": true,
+         "short-description": "Anonymous crypto exchange.",
+         "long-description": "Anonymous Crypto Bank providing Exchange Bitcoin to Monero and vice versa.",
+         "comments": [
+            "This site uses DDOS-Guard."
+         ],
+         "kyc-check": true,
+         "kyc-type": 0,
+         "score": 8.25,
+         "suspicious-tos": false,
+         "tor-onion": "http://majestictfvnfjgo5hqvmuzynak4kjl5tjs3j5zdabawe6n2aaebldad.onion",
+         "url": "https://majesticbank.sc/",
+         "tos-urls": ["https://majesticbank.sc/privacy-policy"],
+         "third-party-connections": true,
+         "score-boost": 0
+      },  
       {
          "name": "Coin Swap",
          "verified": true,
