@@ -247,7 +247,7 @@
       <p><i class="far fa-check-circle"></i> KYC Check</p>
     </div>
     {%else%}
-    <div class="message-header yellow">
+    <div class="message-header red">
       <p><i class="far fa-times-circle"></i> KYC Check</p>
     </div>
     {%endif%}
@@ -289,19 +289,23 @@
   {%endif%}
 
   <article class="message long-description">
-    {% if exchange['custodial'] %}
-    <div class="message-header yellow">
+    {% if exchange['custodial'] == true %}
+    <div class="message-header red">
       <p><i class="fas fa-lock"></i> Custodial Wallet</p>
     </div>
-    {%else%}
+    {%elif exchange['custodial'] == false%}
     <div class="message-header green">
       <p><i class="fas fa-lock-open"></i> Non-Custodial Wallet</p>
     </div>
+    {%else%}
+    <div class="message-header yellow">
+      <p><i class="fa-solid fa-unlock"></i> Semi-custodial</p>
+    </div>
     {%endif%}
     <div class="message-body">
-      {% if exchange['custodial'] %} The exchange provides you a wallet and
-      controls the private key (aka seed/words/mnemonic) of it. {%else%} The
-      exchange does not provide a wallet or it does not hold the private key.
+      {% if exchange['custodial'] == true %} The exchange provides you a wallet and
+      controls the private key (aka seed/words/mnemonic) of it. {%elif exchange['custodial'] == false%} The
+      exchange does not provide a wallet or it does not hold the private key. {%else%} The exchange wallet is custodial, but funds are tranfered to your wallet once completed.
       {%endif%}
     </div>
   </article>
@@ -424,7 +428,7 @@
   }
 
   .red {
-    background-color: rgb(182, 8, 8) !important;
+    background-color: rgb(179, 49, 49) !important;
   }
 
   .card-header-title {
