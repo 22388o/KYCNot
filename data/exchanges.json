@@ -142,7 +142,8 @@
          "short-description": "Peer-to-peer Monero exchange.",
          "long-description": "A marketplace where users can buy and sell Monero to and from\neach other. Localmonero provides you with a custodial web-wallet but you can withdraw\nyour funds to any wallet of your choice with no limits. A tor service is available.",
          "comments": [
-            "Some sellers may require ID verification or KYC. Avoid these sellers."
+            "Some sellers may require ID verification or KYC. Avoid these sellers.",
+            "Good to read issue: <a href='https://codeberg.org/pluja/kycnot.me/issues/9'> issue 9</a>"
          ],
          "kyc-check": true,
          "kyc-type": 0,
