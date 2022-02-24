@@ -61,7 +61,7 @@
          "tos-urls": [-1],
          "third-party-connections": true,
          "score-boost": 0
-      },       
+      },    
       {
          "name": "Majestic Bank",
          "verified": true,
@@ -84,7 +84,7 @@
          "comments": false,
          "kyc-check": true,
          "kyc-type": 0,
-         "score": 8.5,
+         "score": 8.75,
          "suspicious-tos": false,
          "tor-onion": "http://majestictfvnfjgo5hqvmuzynak4kjl5tjs3j5zdabawe6n2aaebldad.onion",
          "url": "https://majesticbank.sc/",
@@ -111,10 +111,10 @@
          "exchange": true,
          "short-description": "Tor based full privacy exchange.",         
          "long-description": "This coin swap service is only available with Tor and guarantees\nfull anonimity to users.",
-         "comments": false,
+         "comments": ["Only available over Tor network. This is improves privacy but makes the service less accessible to non-tech users: Visit <a href='https://www.torproject.org/download/'>tor project's websie</a> and use it."],
          "kyc-check": true,
          "kyc-type": 0,
-         "score": 8.5,
+         "score": 8.75,
          "suspicious-tos": false,
          "tor-onion": "http://mlyusr6htlxsyc7t2f4z53wdxh3win7q3qpxcrbam6jf3dmua7tnzuyd.onion/coinswap",
          "url": "http://mlyusr6htlxsyc7t2f4z53wdxh3win7q3qpxcrbam6jf3dmua7tnzuyd.onion/coinswap",
@@ -153,7 +153,7 @@
          "tos-urls": ["https://localmonero.co/faq"],
          "third-party-connections": false,
          "score-boost": 0
-      },            
+      }, 
       {
          "name": "AgoraDesk",
          "verified": true,
@@ -185,7 +185,7 @@
          "tos-urls": ["https://agoradesk.com/faq"],
          "third-party-connections": false,
          "score-boost": 0
-      },    
+      },           
       {
          "name": "Boltz",
          "verified": false,
