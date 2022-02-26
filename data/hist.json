@@ -1,5 +1,35 @@
 {
-    "exchanges": [
-        
+    "exchanges": [        
+      {
+        "name": "FixedFloat",
+        "verified": true,
+        "btc": true,
+        "xmr": true,
+        "lnn": true,
+        "cash": false,
+        "p2p": false,
+        "tor": false,
+        "refunds": false,
+        "open-source": false,
+        "custodial": false,
+        "javascript": true,
+        "registration": false,
+        "personal-info": false,
+        "buy": false,
+        "exchange": true,
+        "short-description": "Lightning cryptocurrency exchange",
+        "long-description": "FixedFloat.com is an instant, fully automated digital asset exchange\nwith lightning network, swift processing, favorable rates, and transparent fees.\nNo accounts, just scan the QR code in your wallet or enter it manually, and you\nare set for all of your future deals. Say no to account holds on your assets and\nget rid of the third parties that can compromise your trust.",
+        "comments": false,
+        "kyc-check": true,
+        "kyc-type": 1,
+        "score": 7.25,
+        "suspicious-tos": false,
+        "tor-onion": false,
+        "url": "https://fixedfloat.com/",
+        "tos-urls": ["https://fixedfloat.com/terms-of-service"],
+        "third-party-connections": true,
+        "score-boost": 0,
+        "reason": "See https://libreddit.kavin.rocks/r/Monero/comments/t1gyoo/fixedfloat_scammed_me_for_6000_usd/ and https://xmrguide.org/exchanges for more info"
+     }
     ]
 }
