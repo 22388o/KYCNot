@@ -146,7 +146,7 @@
             "Good to read issue: <a href='https://codeberg.org/pluja/kycnot.me/issues/9#issuecomment-380431'> issue 9</a>"
          ],
          "kyc-check": true,
-         "kyc-type": 0,
+         "kyc-type": 1,
          "score": 8.5,
          "suspicious-tos": false,
          "tor-onion": "http://nehdddktmhvqklsnkjqcbpmb63htee2iznpcbs5tgzctipxykpj6yrid.onion/",
@@ -178,7 +178,7 @@
             "Some sellers may require ID verification or KYC. Avoid these sellers."
          ],
          "kyc-check": true,
-         "kyc-type": 0,
+         "kyc-type": 1,
          "score": 8.5,
          "suspicious-tos": false,
          "tor-onion": "http://2jopbxfi2mrw6pfpmufm7smacrgniglr7a4raaila3kwlhlumflxfxad.onion/",
