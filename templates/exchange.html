@@ -25,12 +25,13 @@
   </figure>
 
   <div class="card score">
+    <span class="tag is-dark score-indicator"> <a href="/about#score">SCORE</a></span>
     <header class="card-header">
       <p
         class="card-header-title"
         style="background-color:{{color}} !important;"
       >
-        {{exchange['score']}} KS
+        {{exchange['score']}}/10
       </p>
     </header>
   </div>
@@ -469,6 +470,18 @@
   .short-description {
     border-bottom: lightgrey solid 1px;
     max-width: 60vw;
+  }
+
+
+  .score-indicator{
+    justify-self: flex-start;
+    z-index: -2;
+    top: 1px;
+    margin: 0 !important;
+  }
+
+  .score-indicator a{
+    color: white;
   }
 
   .score {
