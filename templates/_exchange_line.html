@@ -16,6 +16,9 @@
         {% if exchange['lnn'] %}
         <i style="font-size: 15px; color:rgb(93, 158, 255);" class="fas fa-bolt"></i>
         {% endif %} 
+        {% if exchange['cash'] %}
+        <i style="font-size: 15px; color:rgb(99, 160, 0);" class="fa-solid fa-money-bill-1-wave"></i>
+        {% endif %} 
       </div>
     </span>
     <span style="font-size: 24px;" class="leaderboard__value">{{exchange['score']}}<span>/10</span></span>

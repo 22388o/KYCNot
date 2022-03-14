@@ -13,8 +13,9 @@
 
     <main class="leaderboard__profiles">
       <span class="tag is-dark score-indicator"> <a href="/about#score">SCORE</a></span>
-      {% for exchange in data['exchanges'] %} {% include '_exchange_line.html'
-      %} {% endfor %}
+      {% for exchange in data['exchanges'] %} 
+        {% include '_exchange_line.html'%} 
+      {% endfor %}
     </main>
   </article>
 </div>
