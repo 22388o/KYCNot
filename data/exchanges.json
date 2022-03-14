@@ -81,7 +81,7 @@
        "exchange": true, 
        "short-description": "Simple and Private Lightning P2P Exchange", 
        "long-description": "RoboSats is a simple and private way to exchange bitcoin for national currencies. Robosats simplifies the peer-to-peer user experience and uses lightning hold invoices to minimize custody and trust requirements. The deterministically generated avatars help users stick to best privacy practices.", 
-       "comments": ["The service is currently in a Beta state.", "Clearnet site can be visited at <a href='unsafe.robosats.com'>unsafe.robosats.com</a>. NOT RECOMMENDED FOR TRADING, use Tor onion instead."], 
+       "comments": ["The service is currently in a Beta state.", "Clearnet site can be visited at <a href='unsafe.robosats.com'>unsafe.robosats.com</a>. NOT RECOMMENDED FOR TRADING, use Tor onion instead.", "<a href='https://github.com/Reckless-Satoshi/robosats/blob/main/docs/how-to-use.md'> How to use RoboSats guide </a>"], 
        "kyc-check": true, 
        "kyc-type": 0, 
        "score": 9, 
