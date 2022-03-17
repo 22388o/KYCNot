@@ -299,7 +299,7 @@
          "long-description": "Online shopping is convenient, but often problematic from a privacy and data protection perspective. Most online stores require a lot of data from you. You are often asked to create an account to which your data is permanently linked. But even without an account, you usually receive an invoice by default. Invoices and billing data must be stored for years. Payment providers and delivery services also notice who you are and where you shop, of course. With this solution you will be able to buy whatever without handing all this precious information. We want to strengthen digital self-defense.",
          "btc": true,
          "xmr": true,
-         "cash": false,
+         "cash": true,
          "registration": false,
          "personal-info": false,
          "open-source": true,
