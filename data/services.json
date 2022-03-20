@@ -3,6 +3,7 @@
       {
          "name": "Mullvad VPN",
          "url": "https://mullvad.net/",
+         "referral_url": false,
          "tos-url": false,
          "short-description": "Open source, fast and anonymous VPN.",
          "long-description": "No logs, no registration fully anonymous VPN.",
@@ -23,6 +24,7 @@
       {
          "name": "IVPN",
          "url": "https://ivpn.net/",
+         "referral_url": false,
          "tos-url": false,
          "short-description": "Open source anonymous VPN.",
          "long-description": "No logs, no registration fully anonymous VPN.",
@@ -43,6 +45,7 @@
       {
          "name": "JuicySMS",
          "url": "https://juicysms.com/",
+         "referral_url": false,
          "tos-url": false,
          "short-description": "Anonymous virtual phone numbers.",
          "long-description": "Verify your online accounts! Temporary real phone numbers.",
@@ -63,6 +66,7 @@
       {
          "name": "Cryptoho.st",
          "url": "https://cryptoho.st/",
+         "referral_url": false,
          "tos-url": false,
          "short-description": "Blazing fast VPS and Hosting.",
          "long-description": null,
@@ -83,6 +87,7 @@
       {
          "name": "Bitrefill",
          "url": "https://www.bitrefill.com/",
+         "referral_url": false,
          "tos-url": false,
          "short-description": "Buy gift cards with Bitcoin.",
          "long-description": "Buy gift cards without registering using cryptocurrencies.",
@@ -103,6 +108,7 @@
       {
          "name": "Coincards",
          "url": "https://coincards.com/",
+         "referral_url": false,
          "tos-url": false,
          "short-description": "The platform for living off Bitcoin.",
          "long-description": "Vast selection of Gift Cards, Mobile Top-ups, and Prepaid Vouchers from hundreds of retailers.",
@@ -134,6 +140,7 @@
          "tor-url": false,
          "tos-url": "https://jmp.chat/faq/",
          "url": "https://jmp.chat/",
+         "referral_url": false,
          "category": "SMS",
          "javascript": true,
          "verified": true
@@ -141,6 +148,7 @@
       {
          "name": "Njal.la",
          "url": "https://njal.la/",
+         "referral_url": false,
          "tos-url": false,
          "short-description": "Private Hosting, VPS, Domains and VPN.",
          "long-description": "Njal.la sits in between the domain name registration service and you, acting as a privacy shield. When you purchase a domain name through Njalla, they own it for you. However, the agreement grants you full usage rights to the domain. Whenever you want to, you can transfer the ownership to yourself or some other party.",
@@ -161,6 +169,7 @@
       {
          "name": "NiceVPS.net",
          "url": "https://nicevps.net/",
+         "referral_url": false,
          "tos-url": false,
          "short-description": "Uncensored Hosting, VPS, Domains and VPN.",
          "long-description": "Uncensored and privacy oriented hosting service. Tor available. Professional hosting for High Risk Businesses.",
@@ -181,6 +190,7 @@
       {
          "name": "LNN Stores",
          "url": "https://lightningnetworkstores.com/",
+         "referral_url": false,
          "tos-url": false,
          "short-description": "Venue of stores spporting LNN payments.",
          "long-description": "Tracks the adoption of the bitcoin lightning network by merchants and allow users to find and review them. The website is mostly automated and community maintained.",
@@ -201,6 +211,7 @@
       {
          "name": "Swapzone",
          "url": "https://swapzone.io/",
+         "referral_url": false,
          "tos-url": false,
          "short-description": "Collection of rates, speed, verification rules, and user feedback.",
          "long-description": "Swapzone aggregates exchange rates, transaction processing speed, and reviews on cryptocurrency exchanges for you to make the best choice and convert crypto instantly.",
@@ -221,6 +232,7 @@
       {
          "name": "Lend by HodlHodl",
          "url": "https://lend.hodlhodl.com/",
+         "referral_url": false,
          "tos-url": false,
          "short-description": "Non-custodial P2P lending platform",
          "long-description": "Lend at Hodl Hodl allows lending and borrowing with bitcoins and cryptocurrencies, and is based on Bitcoin multisig smart contracts, which ensure a secure and transparent collateral storage system. The lending platform ensures safety by providing unique multisig escrow for each contract created.",
@@ -252,6 +264,7 @@
          "tor-url": false,
          "tos-url": "http://smspva.com/help.html",
          "url": "http://smspva.com/",
+         "referral_url": false,
          "verified": false,
          "category": "SMS",
          "javascript": true
@@ -271,6 +284,7 @@
          "tor-url": false,
          "tos-url": -1,
          "url": "https://sms4sats.com/",
+         "referral_url": false,
          "verified": true,
          "category": "SMS",
          "javascript": true
@@ -289,6 +303,7 @@
          "tor-url": false,
          "tos-url": "-https://silent.link/faq",
          "url": "https://silent.link/",
+         "referral_url": false,
          "category": "SMS",
          "javascript": true,
          "verified": false
@@ -307,6 +322,7 @@
          "tor-url": "http://digitazyyxyihwwzudp5syxxyn3qhcd63wqcha2dxpfqiyydmrgdiaad.onion/",
          "tos-url": "https://proxysto.re/en/agb.html",
          "url": "https://digitalgoods.proxysto.re/",
+         "referral_url": false,
          "category": "GOODS",
          "javascript": true,
          "verified": true
@@ -325,6 +341,7 @@
          "tor-url": null,
          "tos-url": "https://www.azirevpn.com/terms-of-service",
          "url": "https://www.azirevpn.com/",
+         "referral_url": false,
          "category": "VPN",
          "javascript": true,
          "verified": true
@@ -343,8 +360,28 @@
          "tor-url": null,
          "tos-url": "https://bitejo.com/terms/",
          "url": "https://bitejo.com/",
+         "referral_url": false,
          "category": "TRADE",
          "javascript": false,
+         "verified": false
+      },
+      {
+         "name": "UniJoin",
+         "short-description": "Coin mixing service.",
+         "long-description": "UniJoin is a crypto mixer that mixers your crypto funds using CoinJoin technology. With UniJoin you can obfuscate the link between your identity and your wallet address in a few simple steps and use your funds for transactions without compromising your anonymity.",
+         "btc": true,
+         "xmr": false,
+         "cash": false,
+         "registration": false,
+         "personal-info": false,
+         "open-source": false,
+         "tor": true,
+         "tor-url": "http://unijoinxaogdzmk3bonngoxxoaezkmsfdyrtfyximisungh2dnc2azad.onion/",
+         "tos-url": "https://unijoin.io/en/terms-and-conditions",
+         "url": "https://unijoin.io/",
+         "referral_url": "https://unijoin.io/?ref=DjUqpOI",
+         "category": "JOIN",
+         "javascript": true,
          "verified": false
       }
    ]
