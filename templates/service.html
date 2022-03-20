@@ -5,7 +5,13 @@
     <a href="{{service['url']}}" target="_blank">
       {{service['name']}} <i class="fas fa-external-link-alt"></i>
     </a>
-  </h2>
+  </h1>
+
+  {% if service['referral_url'] %}
+    <h3 style="padding-bottom:1em;" class="title is-5">
+      <a href="{{service['referral_url']}}"> Use a referral link <i class="fas fa-external-link-alt"></i></a>
+    </h3>
+  {% endif %}
 </div>
 
 <div class="section header-section">
