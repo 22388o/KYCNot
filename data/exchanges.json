@@ -26,6 +26,7 @@
          "suspicious-tos": false,
          "tor-onion": false,
          "url": "https://bisq.network",
+         "referral_url": false,
          "tos-urls": [
             "https://bisq.wiki/Frequently_asked_questions"
          ],
@@ -58,6 +59,7 @@
          "suspicious-tos": false,
          "tor-onion": false,
          "url": "https://blockdx.net/",
+         "referral_url": false,
          "tos-urls": [-1],
          "third-party-connections": true,
          "score-boost": 0
@@ -88,6 +90,7 @@
        "suspicious-tos": false, 
        "tor-onion": "http://robosats6tkf3eva7x2voqso3a5wcorsnw34jveyxfqi2fu7oyheasid.onion", 
        "url": "http://robosats6tkf3eva7x2voqso3a5wcorsnw34jveyxfqi2fu7oyheasid.onion", 
+       "referral_url": false,
        "tos-urls": ["http://robosats6tkf3eva7x2voqso3a5wcorsnw34jveyxfqi2fu7oyheasid.onion"], 
        "score-boost": 0
       },
@@ -117,6 +120,7 @@
          "suspicious-tos": false,
          "tor-onion": "http://majestictfvnfjgo5hqvmuzynak4kjl5tjs3j5zdabawe6n2aaebldad.onion",
          "url": "https://majesticbank.sc/",
+         "referral_url": false,
          "tos-urls": ["https://majesticbank.sc/privacy-policy"],
          "third-party-connections": false,
          "score-boost": 0
@@ -147,6 +151,7 @@
          "suspicious-tos": false,
          "tor-onion": "http://mlyusr6htlxsyc7t2f4z53wdxh3win7q3qpxcrbam6jf3dmua7tnzuyd.onion/coinswap",
          "url": "http://mlyusr6htlxsyc7t2f4z53wdxh3win7q3qpxcrbam6jf3dmua7tnzuyd.onion/coinswap",
+         "referral_url": false,
          "tos-urls": [-1],
          "third-party-connections": false,
          "score-boost": 0
@@ -180,6 +185,7 @@
          "suspicious-tos": false,
          "tor-onion": "http://nehdddktmhvqklsnkjqcbpmb63htee2iznpcbs5tgzctipxykpj6yrid.onion/",
          "url": "https://localmonero.co/",
+         "referral_url": false,
          "tos-urls": ["https://localmonero.co/faq"],
          "third-party-connections": false,
          "score-boost": 0
@@ -212,6 +218,7 @@
          "suspicious-tos": false,
          "tor-onion": "http://2jopbxfi2mrw6pfpmufm7smacrgniglr7a4raaila3kwlhlumflxfxad.onion/",
          "url": "https://agoradesk.com/",
+         "referral_url": false,
          "tos-urls": ["https://agoradesk.com/faq"],
          "third-party-connections": false,
          "score-boost": 0
@@ -245,6 +252,7 @@
          "suspicious-tos": false,
          "tor-onion": "http://boltzzzbnus4m7mta3cxmflnps4fp7dueu2tgurstbvrbt6xswzcocyd.onion/",
          "url": "https://boltz.exchange/",
+         "referral_url": false,
          "tos-urls": [
             "https://www.notion.so/Frequently-Asked-Questions-585328ae43944e2eba351050790d5eec"
          ],
@@ -277,6 +285,7 @@
          "suspicious-tos": false,
          "tor-onion": false,
          "url": "https://coinswap.click/",
+         "referral_url": false,
          "tos-urls": ["https://coinswap.click/faq/"],
          "third-party-connections": true,
          "score-boost": 0
@@ -310,6 +319,7 @@
          "suspicious-tos": false,
          "tor-onion": false,
          "url": "https://localcryptos.com/",
+         "referral_url": false,
          "tos-urls": [
             "https://localcryptos.com/terms/terms-of-use",
             "https://localcryptos.com/terms/service-terms"
@@ -345,6 +355,7 @@
          "suspicious-tos": false,
          "tor-onion": false,
          "url": "https://sideshift.ai/",
+         "referral_url": false,
          "tos-urls": false,
          "third-party-connections": true,
          "score-boost": 0
@@ -375,6 +386,7 @@
          "suspicious-tos": false,
          "tor-onion": "http://aa7oyok6dxgyedeteldaumqjernm5ai7dnpqayy3p4q7solc6dxi5vad.onion/",
          "url": "https://xchange.me/",
+         "referral_url": false,
          "tos-urls": [
             "https://xchange.me/terms-of-service"
          ],
@@ -412,6 +424,7 @@
          ],
          "tor-onion": false,
          "url": "https://hodlhodl.com/",
+         "referral_url": false,
          "tos-urls": ["https://accounts.hodlhodl.com/pages/terms_of_service"],
          "third-party-connections": true,
          "score-boost": 0
@@ -442,6 +455,7 @@
          "suspicious-tos": false,
          "tor-onion": false,
          "url": "https://tradeogre.com/",
+         "referral_url": false,
          "tos-urls": false,
          "third-party-connections": true,
          "score-boost": 0
@@ -476,6 +490,7 @@
          ],
          "tor-onion": false,
          "url": "https://exolix.com/",
+         "referral_url": false,
          "tos-urls": [            
             "https://exolix.com/terms"
          ],
@@ -515,6 +530,7 @@
          ],
          "tor-onion": false,
          "url": "https://changenow.io/",
+         "referral_url": false,
          "tos-urls": ["https://changenow.io/faq/kyc-aml-procedure"],
          "third-party-connections": true,
          "score-boost": 0
@@ -545,6 +561,7 @@
          "suspicious-tos": ["<p>AMSA has the right to address the activities or behavior associated with the Prohibited Use by imposing relevant and appropriate penalties or limitations, at the sole and absolute discretion of AMSA. Such penalties or limitations might include, but is not limited to, sending a full report of the illicit activities/behavior to authorities of the law in the appropriate jurisdiction and/or immediately terminating your access to the Site and usage of any of the Services.</p>"],
          "tor-onion": false,
          "url": "https://morphtoken.com/",
+         "referral_url": false,
          "tos-urls": ["https://www.morphtoken.com/terms/"],
          "third-party-connections": true,
          "score-boost": 0
@@ -579,6 +596,7 @@
          ],
          "tor-onion": false,
          "url": "https://mandala.exchange/",
+         "referral_url": false,
          "tos-urls": ["https://support.mandala.exchange/hc/en-us/articles/360055720074-Mandala-Exchange-Terms-and-Conditions"],
          "third-party-connections": true,
          "score-boost": 0
@@ -613,6 +631,7 @@
          ],
          "tor-onion": false,
          "url": "https://kucoin.com/",
+         "referral_url": false,
          "tos-urls": ["https://www.kucoin.com/news/en-terms-of-use?lang=en_US"],
          "third-party-connections": true,
          "score-boost": 0

@@ -6,6 +6,12 @@
       {{exchange['name']}} <i class="fas fa-external-link-alt"></i>
     </a>
   </h2>
+
+  {% if exchange['referral_url'] %}
+    <h3 style="padding-bottom:1em;" class="title is-5">
+      <a href="{{exchange['referral_url']}}"> Use a referral link <i class="fas fa-external-link-alt"></i></a>
+    </h3>
+  {% endif %}
 </div>
 
 {% if status != 200 %}
