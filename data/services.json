@@ -211,7 +211,7 @@
       {
          "name": "Swapzone",
          "url": "https://swapzone.io/",
-         "referral_url": false,
+         "referral_url": "https://swapzone.io/?refId=sMB-wnFaBG",
          "tos-url": false,
          "short-description": "Collection of rates, speed, verification rules, and user feedback.",
          "long-description": "Swapzone aggregates exchange rates, transaction processing speed, and reviews on cryptocurrency exchanges for you to make the best choice and convert crypto instantly.",
@@ -341,7 +341,7 @@
          "tor-url": null,
          "tos-url": "https://www.azirevpn.com/terms-of-service",
          "url": "https://www.azirevpn.com/",
-         "referral_url": false,
+         "referral_url": "https://www.azirevpn.com/ref/dBLhHhFSle",
          "category": "VPN",
          "javascript": true,
          "verified": true
