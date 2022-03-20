@@ -90,7 +90,7 @@
        "suspicious-tos": false, 
        "tor-onion": "http://robosats6tkf3eva7x2voqso3a5wcorsnw34jveyxfqi2fu7oyheasid.onion", 
        "url": "http://robosats6tkf3eva7x2voqso3a5wcorsnw34jveyxfqi2fu7oyheasid.onion", 
-       "referral_url": false,
+       "referral_url": "http://robosats6tkf3eva7x2voqso3a5wcorsnw34jveyxfqi2fu7oyheasid.onion/ref/nkeR0zrEt3o",
        "tos-urls": ["http://robosats6tkf3eva7x2voqso3a5wcorsnw34jveyxfqi2fu7oyheasid.onion"], 
        "score-boost": 0
       },
@@ -120,7 +120,7 @@
          "suspicious-tos": false,
          "tor-onion": "http://majestictfvnfjgo5hqvmuzynak4kjl5tjs3j5zdabawe6n2aaebldad.onion",
          "url": "https://majesticbank.sc/",
-         "referral_url": false,
+         "referral_url": "https://majesticbank.sc/?ref=ZIFOYl",
          "tos-urls": ["https://majesticbank.sc/privacy-policy"],
          "third-party-connections": false,
          "score-boost": 0
@@ -185,7 +185,7 @@
          "suspicious-tos": false,
          "tor-onion": "http://nehdddktmhvqklsnkjqcbpmb63htee2iznpcbs5tgzctipxykpj6yrid.onion/",
          "url": "https://localmonero.co/",
-         "referral_url": false,
+         "referral_url": "https://localmonero.co/?rc=sy3j",
          "tos-urls": ["https://localmonero.co/faq"],
          "third-party-connections": false,
          "score-boost": 0
@@ -218,7 +218,7 @@
          "suspicious-tos": false,
          "tor-onion": "http://2jopbxfi2mrw6pfpmufm7smacrgniglr7a4raaila3kwlhlumflxfxad.onion/",
          "url": "https://agoradesk.com/",
-         "referral_url": false,
+         "referral_url": "https://agoradesk.com/?rc=sy3j",
          "tos-urls": ["https://agoradesk.com/faq"],
          "third-party-connections": false,
          "score-boost": 0
