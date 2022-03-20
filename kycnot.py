@@ -49,7 +49,7 @@ async def services(request):
     template = env.get_template('services.html')
     f = open(f'{data_dir}/services.json')
     data = json.load(f)
-    data['services'] = sorted(data['services'], key=lambda k: k['category'], reverse=True)
+    data['services'] = sorted(data['services'], key=lambda k: k['category'], reverse=False)
     return html(template.render(date=date, data=data,
                                 title="KYC? Not me!",
                                 active=1,
