@@ -143,6 +143,25 @@
     </a>
 
     <a class="panel-block">
+      {% if exchange['custodial'] == true %}         
+        <span class="panel-icon">
+          <i class="fas fa-lock redtext"></i>
+        </span>
+        <p class="redtext"> The wallet is custodial.</p>
+      {% elif exchange['custodial'] == false%}
+      <span class="panel-icon">
+        <i class="fa-solid fa-lock-open tealtext"></i>
+      </span>
+      The wallet is not custodial.
+      {% else %}
+      <span class="panel-icon">
+        <i class="fas fa-unlock yellowtext"></i>
+      </span>
+      <p class="yellowtext"> The wallet is semi-custodial. </p>
+      {%endif%}
+    </a>
+
+    <a class="panel-block">
       {% if exchange['p2p'] %}         
         <span class="panel-icon">
           <i class="far fa-handshake tealtext"></i>
@@ -153,6 +172,20 @@
           <i class="far fa-handshake redtext"></i>
         </span>
         <p class="redtext">Non-P2P Exchange</p>
+      {%endif%}
+    </a>
+
+    <a class="panel-block">
+      {% if exchange['open-source'] %}         
+        <span class="panel-icon">
+          <i class="fas fa-code tealtext"></i>
+        </span>
+        The code is open source 
+      {% else %}         
+        <span class="panel-icon">
+          <i class="fas fa-code redtext"></i>
+        </span>
+        <p class="redtext">The code is not open source</p>
       {%endif%}
     </a>
 
@@ -314,22 +347,6 @@
       controls the private key (aka seed/words/mnemonic) of it. {%elif exchange['custodial'] == false%} The
       exchange does not provide a wallet or it does not hold the private key. {%else%} The exchange wallet is custodial, but funds are tranfered to your wallet once completed.
       {%endif%}
-    </div>
-  </article>
-
-  <article class="message long-description">
-    {% if exchange['open-source'] %}
-    <div class="message-header green">
-      <p><i class="fas fa-code"></i> Open Source</p>
-    </div>
-    {%else%}
-    <div class="message-header yellow">
-      <p><i class="fas fa-box"></i> Not Open Source</p>
-    </div>
-    {%endif%}
-    <div class="message-body">
-      {% if exchange['open-source'] %} This service code is available for study.
-      {%else%} This service's code is not available. {%endif%}
     </div>
   </article>
 
