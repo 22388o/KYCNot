@@ -31,7 +31,8 @@
             "https://bisq.wiki/Frequently_asked_questions"
          ],
          "third-party-connections": false,
-         "score-boost": 0
+         "score-boost": 0,
+         "listing-date": "2022-01-01"
       },      
       {
          "name": "BlockDX",
@@ -62,7 +63,8 @@
          "referral_url": false,
          "tos-urls": [-1],
          "third-party-connections": true,
-         "score-boost": 0
+         "score-boost": 0,
+         "listing-date": "2022-01-01"
       },
       {
        "name": "RoboSats", 
@@ -92,7 +94,8 @@
        "url": "http://robosats6tkf3eva7x2voqso3a5wcorsnw34jveyxfqi2fu7oyheasid.onion", 
        "referral_url": "http://robosats6tkf3eva7x2voqso3a5wcorsnw34jveyxfqi2fu7oyheasid.onion/ref/nkeR0zrEt3o",
        "tos-urls": ["http://robosats6tkf3eva7x2voqso3a5wcorsnw34jveyxfqi2fu7oyheasid.onion"], 
-       "score-boost": 0
+       "score-boost": 0,
+       "listing-date": "2022-03-18"
       },
       {
          "name": "Majestic Bank",
@@ -123,7 +126,8 @@
          "referral_url": "https://majesticbank.sc/?ref=ZIFOYl",
          "tos-urls": ["https://majesticbank.sc/privacy-policy"],
          "third-party-connections": false,
-         "score-boost": 0
+         "score-boost": 0,
+         "listing-date": "2022-01-01"
       },       
       {
          "name": "Kilos Swap",
@@ -154,7 +158,8 @@
          "referral_url": false,
          "tos-urls": [-1],
          "third-party-connections": false,
-         "score-boost": 0
+         "score-boost": 0,
+         "listing-date": "2022-01-01"
       },
       {
          "name": "LocalMonero",
@@ -188,7 +193,8 @@
          "referral_url": "https://localmonero.co/?rc=sy3j",
          "tos-urls": ["https://localmonero.co/faq"],
          "third-party-connections": false,
-         "score-boost": 0
+         "score-boost": 0,
+         "listing-date": "2022-01-01"
       }, 
       {
          "name": "AgoraDesk",
@@ -221,7 +227,8 @@
          "referral_url": "https://agoradesk.com/?rc=sy3j",
          "tos-urls": ["https://agoradesk.com/faq"],
          "third-party-connections": false,
-         "score-boost": 0
+         "score-boost": 0,
+         "listing-date": "2022-01-01"
       },           
       {
          "name": "Boltz",
@@ -257,7 +264,8 @@
             "https://www.notion.so/Frequently-Asked-Questions-585328ae43944e2eba351050790d5eec"
          ],
          "third-party-connections": true,
-         "score-boost": 0
+         "score-boost": 0,
+         "listing-date": "2022-01-01"
       },
       {
          "name": "Coin Swap",
@@ -288,7 +296,8 @@
          "referral_url": false,
          "tos-urls": ["https://coinswap.click/faq/"],
          "third-party-connections": true,
-         "score-boost": 0
+         "score-boost": 0,
+         "listing-date": "2022-01-01"
       },
       {
          "name": "LocalCryptos",
@@ -325,7 +334,8 @@
             "https://localcryptos.com/terms/service-terms"
          ],
          "third-party-connections": false,
-         "score-boost": 0
+         "score-boost": 0,
+         "listing-date": "2022-01-01"
       },
       {
          "name": "Sideshift.ai",
@@ -358,7 +368,8 @@
          "referral_url": false,
          "tos-urls": false,
          "third-party-connections": true,
-         "score-boost": 0
+         "score-boost": 0,
+         "listing-date": "2022-01-01"
       }, 
       {
          "name": "XCHANGE.ME",
@@ -391,7 +402,8 @@
             "https://xchange.me/terms-of-service"
          ],
          "third-party-connections": true,
-         "score-boost": 0
+         "score-boost": 0,
+         "listing-date": "2022-01-01"
       },       
       {
          "name": "HodlHodl",
@@ -427,7 +439,8 @@
          "referral_url": false,
          "tos-urls": ["https://accounts.hodlhodl.com/pages/terms_of_service"],
          "third-party-connections": true,
-         "score-boost": 0
+         "score-boost": 0,
+         "listing-date": "2022-01-01"
       },       
       {
          "name": "TradeOgre",
@@ -458,7 +471,8 @@
          "referral_url": false,
          "tos-urls": false,
          "third-party-connections": true,
-         "score-boost": 0
+         "score-boost": 0,
+         "listing-date": "2022-01-01"
       },               
       {
          "name": "Exolix",
@@ -495,7 +509,8 @@
             "https://exolix.com/terms"
          ],
          "third-party-connections": true,
-         "score-boost": 0
+         "score-boost": 0,
+         "listing-date": "2022-01-01"
       },  
       {
          "name": "ChangeNow",
@@ -533,7 +548,8 @@
          "referral_url": false,
          "tos-urls": ["https://changenow.io/faq/kyc-aml-procedure"],
          "third-party-connections": true,
-         "score-boost": 0
+         "score-boost": 0,
+         "listing-date": "2022-01-01"
       },        
       {
          "name": "Morphtoken",
@@ -564,7 +580,8 @@
          "referral_url": false,
          "tos-urls": ["https://www.morphtoken.com/terms/"],
          "third-party-connections": true,
-         "score-boost": 0
+         "score-boost": 0,
+         "listing-date": "2022-01-01"
       },
       {
          "name": "Mandala",
@@ -599,7 +616,8 @@
          "referral_url": false,
          "tos-urls": ["https://support.mandala.exchange/hc/en-us/articles/360055720074-Mandala-Exchange-Terms-and-Conditions"],
          "third-party-connections": true,
-         "score-boost": 0
+         "score-boost": 0,
+         "listing-date": "2022-01-01"
       },
       {
          "name": "KuCoin",
@@ -634,7 +652,8 @@
          "referral_url": false,
          "tos-urls": ["https://www.kucoin.com/news/en-terms-of-use?lang=en_US"],
          "third-party-connections": true,
-         "score-boost": 0
+         "score-boost": 0,
+         "listing-date": "2022-01-01"
       }
    ]
 }

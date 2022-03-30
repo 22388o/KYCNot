@@ -1,6 +1,6 @@
 # /path/to/server.py
-from jinja2 import Environment, FileSystemLoader
-from datetime import datetime, timedelta
+from jinja2 import Environment, FileSystemLoader, Template
+from datetime import timedelta, datetime
 from urllib.parse import unquote
 
 from sanic.response import redirect
@@ -9,9 +9,9 @@ from sanic.response import html
 from sanic import Sanic
 
 from bs4 import BeautifulSoup
+from dateutil import parser
 from random import randrange
 import json
-import datetime
 import os.path
 import qrcode
 import httpx
@@ -26,6 +26,7 @@ static_dir = os.path.join(base_dir, 'static')
 templates_dir = os.path.join(base_dir, 'templates')
 data_dir = os.path.join(base_dir, 'data')
 env = Environment(loader=FileSystemLoader(templates_dir), autoescape=True)
+date = datetime.today() - timedelta(days=7)
 
 app = Sanic(__name__)
 app.static('/static', static_dir)
@@ -38,6 +39,8 @@ async def index(request):
     f = open(f'{data_dir}/exchanges.json')
     data = json.load(f)
     data['exchanges'] = sorted(data['exchanges'], key=lambda k: k['score'], reverse=True)
+    for e in data['exchanges']:
+        e['listing-date'] = parser.parse(e['listing-date'])
     return html(template.render(date=date, data=data,
                                 title="KYC? Not me!",
                                 active=0,
@@ -50,6 +53,8 @@ async def services(request):
     f = open(f'{data_dir}/services.json')
     data = json.load(f)
     data['services'] = sorted(data['services'], key=lambda k: k['category'], reverse=False)
+    for s in data['services']:
+        s['listing-date'] = parser.parse(s['listing-date'])
     return html(template.render(date=date, data=data,
                                 title="KYC? Not me!",
                                 active=1,
@@ -249,4 +254,3 @@ async def get_trustpilot_info(service):
     return time.strftime("%d/%m/%Y", time.gmtime(date))
 
 date = get_last_commit_date()'''
-date = "13/09/21"

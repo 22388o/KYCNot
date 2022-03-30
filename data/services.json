@@ -19,7 +19,8 @@
          "cash": true,
          "open-source": true,
          "category": "VPN",
-         "javascript": true
+         "javascript": true,
+         "listing-date": "2022-01-01"
       },
       {
          "name": "IVPN",
@@ -40,7 +41,8 @@
          "cash": true,
          "open-source": true,
          "category": "VPN",
-         "javascript": true
+         "javascript": true,
+         "listing-date": "2022-01-01"
       },
       {
          "name": "JuicySMS",
@@ -61,7 +63,8 @@
          "cash": false,
          "open-source": false,
          "category": "SMS",
-         "javascript": true
+         "javascript": true,
+         "listing-date": "2022-01-01"
       },
       {
          "name": "Cryptoho.st",
@@ -82,7 +85,8 @@
          "cash": false,
          "open-source": false,
          "category": "HOST",
-         "javascript": true
+         "javascript": true,
+         "listing-date": "2022-01-01"
       },
       {
          "name": "Bitrefill",
@@ -103,7 +107,8 @@
          "cash": false,
          "open-source": false,
          "category": "GIFT",
-         "javascript": true
+         "javascript": true,
+         "listing-date": "2022-01-01"
       },
       {
          "name": "Coincards",
@@ -124,7 +129,8 @@
          "cash": false,
          "open-source": false,
          "category": "GIFT",
-         "javascript": true
+         "javascript": true,
+         "listing-date": "2022-01-01"
       },
       {
          "name": "JMP",
@@ -143,6 +149,7 @@
          "referral_url": false,
          "category": "SMS",
          "javascript": true,
+         "listing-date": "2022-01-01",
          "verified": true
       },
       {
@@ -164,7 +171,8 @@
          "cash": false,
          "open-source": false,
          "category": "HOST",
-         "javascript": true
+         "javascript": true,
+         "listing-date": "2022-01-01"
       },
       {
          "name": "NiceVPS.net",
@@ -185,7 +193,8 @@
          "cash": false,
          "open-source": false,
          "category": "VPS",
-         "javascript": true
+         "javascript": true,
+         "listing-date": "2022-01-01"
       },
       {
          "name": "LNN Stores",
@@ -206,7 +215,8 @@
          "cash": false,
          "open-source": false,
          "category": "LIST",
-         "javascript": true
+         "javascript": true,
+         "listing-date": "2022-01-01"
       },
       {
          "name": "Swapzone",
@@ -227,7 +237,8 @@
          "cash": false,
          "open-source": false,
          "category": "HELP",
-         "javascript": true
+         "javascript": true,
+         "listing-date": "2022-01-01"
       },
       {
          "name": "Lend by HodlHodl",
@@ -248,7 +259,8 @@
          "cash": false,
          "open-source": false,
          "category": "LEND",
-         "javascript": true
+         "javascript": true,
+         "listing-date": "2022-01-01"
       },
       {
          "name": "SMSPVA",
@@ -267,7 +279,8 @@
          "referral_url": false,
          "verified": false,
          "category": "SMS",
-         "javascript": true
+         "javascript": true,
+         "listing-date": "2022-01-01"
       },
       {
          "name": "SMS4Sats",
@@ -287,7 +300,8 @@
          "referral_url": false,
          "verified": true,
          "category": "SMS",
-         "javascript": true
+         "javascript": true,
+         "listing-date": "2022-01-01"
       },
       {
          "name": "Silent Link",
@@ -306,6 +320,7 @@
          "referral_url": false,
          "category": "SMS",
          "javascript": true,
+         "listing-date": "2022-01-01",
          "verified": false
       },
       {
@@ -325,6 +340,7 @@
          "referral_url": false,
          "category": "GOODS",
          "javascript": true,
+         "listing-date": "2022-01-01",
          "verified": true
       },
       {
@@ -344,6 +360,7 @@
          "referral_url": "https://www.azirevpn.com/ref/dBLhHhFSle",
          "category": "VPN",
          "javascript": true,
+         "listing-date": "2022-01-01",
          "verified": true
       },      
       {
@@ -363,6 +380,7 @@
          "referral_url": false,
          "category": "TRADE",
          "javascript": false,
+         "listing-date": "2022-01-01",
          "verified": false
       },
       {
@@ -382,7 +400,28 @@
          "referral_url": "https://unijoin.io/?ref=DjUqpOI",
          "category": "JOIN",
          "javascript": true,
+         "listing-date": "2022-01-01",
          "verified": false
-      }
+      },
+      {
+         "name": "CriptoDebit",
+         "short-description": "Buy Virtual Mastercard Debit Cards.",
+         "long-description": "CriptoDebit.com lets you buy virtual Mastercard Debit Cards without KYC with over 80+ cryptocurrencies and PerfectMoney. All cards are instantly delivered and ready to use online worldwide where Mastercards are accepted. ",
+         "btc": true,
+         "xmr": false,
+         "cash": false,
+         "registration": true,
+         "personal-info": false,
+         "open-source": false,
+         "tor": false,
+         "tor-url": false,
+         "tos-url": "https://criptodebit.com/terms-conditions.html",
+         "url": "https://criptodebit.com/",
+         "referral_url": "https://criptodebit.com/referral/PfnMBN",
+         "category": "CARDS",
+         "javascript": true,
+         "listing-date": "2022-03-30",
+         "verified": false
+      }      
    ]
 }
