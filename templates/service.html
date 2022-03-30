@@ -70,10 +70,24 @@
     </a>
     <a class="panel-block">
       <span class="panel-icon">
-        <i class="fas fa-mask"></i>
+        <i class="fas fa-user-circle"></i>
       </span>
-      {% if not service['registration'] %} No account needed {% else %}
+      {% if not service['registration'] %} No account needed 
+      {% else %}
       <p style="color: rgb(209, 170, 42)">Registration needed</p>
+      <a class="panel-block">
+        {% if not service['personal-info'] %} 
+          <span class="panel-icon">
+            <i class="fas fa-mask"></i>
+          </span>
+          No personal information
+        {% else %}
+          <span class="panel-icon">
+            <i class="fas fa-mask redtext"></i>
+          </span>
+          <p class="redtext">Personal information required</p>
+        {%endif%}
+      </a>
       {%endif%}
     </a>
 
