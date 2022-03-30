@@ -1,11 +1,21 @@
 <a href="/service/{{service['name'] | replace(' ', '') | lower}}">
+  {% if service['listing-date'] > date%}
+  <article style="border: 2px solid rgb(106, 208, 255);" class="leaderboard__profile">
+  {% else %}
   <article class="leaderboard__profile">
+  {%endif%}
     <img
       src="../static/img/{{ service['name'] | replace(' ', '') | lower }}.jpeg"
       alt="{{service['name']}}"
       class="leaderboard__picture"
     />
-    <span class="leaderboard__name"> {{service['name']}} 
+    <span class="leaderboard__name"> 
+      {% if service['listing-date'] > date%}
+        <span class="tag is-info new-indicator">
+          New
+        </span>
+      {%endif%}
+      {{service['name']}} 
       {% if service['lnn'] %}
         <i style="font-size: 15px; color:rgb(93, 158, 255);" class="fas fa-bolt"></i>
       {% endif %} 
@@ -23,7 +33,6 @@
         {{service["short-description"]}}
       </div>
     </span>
-
     <span style="font-size: .6em;" class="tag is-info leaderboard__category">
       {{service['category']}}
     </span>

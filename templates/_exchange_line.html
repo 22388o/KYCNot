@@ -1,11 +1,21 @@
 <a href="/exchange/{{exchange['name'] | replace(' ', '') | lower}}">
+  {% if exchange['listing-date'] > date%}
+  <article style="border: 2px solid rgb(106, 208, 255);" class="leaderboard__profile">
+  {% else %}
   <article class="leaderboard__profile">
+  {%endif%}
     <img
       src="../static/img/{{ exchange['name'] | replace(' ', '') | lower }}.jpeg"
       alt="{{exchange['name']}}"
       class="leaderboard__picture"
     />
-    <span class="leaderboard__name">{{exchange['name']}}
+    <span class="leaderboard__name">
+      {% if service['listing-date'] > date%}
+        <span class="tag is-info new-indicator">
+          New
+        </span>
+      {%endif%}
+      {{exchange['name']}}
       <div class="currencies">
         {% if exchange['xmr'] %}
         <i style="font-size: 15px; color:rgb(255, 139, 44);" class="fab fa-monero"></i>
@@ -21,6 +31,6 @@
         {% endif %} 
       </div>
     </span>
-    <span style="font-size: 24px;" class="leaderboard__value">{{exchange['score']}}<span>/10</span></span>
+    <span style="font-size: 30px;" class="leaderboard__value">{{exchange['score']}}<span>/10</span></span>
   </article>
 </a>
