@@ -10,7 +10,7 @@ from sanic import Sanic
 
 from bs4 import BeautifulSoup
 from dateutil import parser
-from random import randrange
+from random import randrange, randint
 import json
 import os.path
 import qrcode
@@ -41,6 +41,8 @@ async def index(request):
     data['exchanges'] = sorted(data['exchanges'], key=lambda k: k['score'], reverse=True)
     for e in data['exchanges']:
         e['listing-date'] = parser.parse(e['listing-date'])
+        if isinstance(e['url'], list):
+            e['url'] = e['url'][randint(0, len(e['url'])-1)]
     return html(template.render(date=date, data=data,
                                 title="KYC? Not me!",
                                 active=0,
@@ -105,6 +107,8 @@ async def exchange(request, name=None):
                     color = "#FFB800"
                 else:
                     color = "#a71d31"
+                if isinstance(exchange['url'], list):
+                    exchange['url'] = exchange['url'][randint(0, len(exchange['url'])-1)]
 
                 return html(template.render(date=date, status=200, exchange=exchange, title="KYC? Not me!", color=color, active=0))
     return(f"{name} does not exist")
