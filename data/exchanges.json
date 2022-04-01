@@ -32,7 +32,8 @@
          ],
          "third-party-connections": false,
          "score-boost": 0,
-         "listing-date": "2022-01-01"
+         "listing-date": "2022-01-01",
+         "api": false
       },      
       {
          "name": "BlockDX",
@@ -64,7 +65,8 @@
          "tos-urls": [-1],
          "third-party-connections": true,
          "score-boost": 0,
-         "listing-date": "2022-01-01"
+         "listing-date": "2022-01-01",
+         "api": false
       },
       {
        "name": "RoboSats", 
@@ -95,7 +97,9 @@
        "referral_url": "ref/nkeR0zrEt3o",
        "tos-urls": ["http://robosats6tkf3eva7x2voqso3a5wcorsnw34jveyxfqi2fu7oyheasid.onion/"], 
        "score-boost": 0,
-       "listing-date": "2022-03-18"
+       "listing-date": "2022-03-18",
+       "api": true,
+       "api-url": "http://robosats6tkf3eva7x2voqso3a5wcorsnw34jveyxfqi2fu7oyheasid.onion/api/price/"
       },
       {
          "name": "Majestic Bank",
@@ -127,7 +131,9 @@
          "tos-urls": ["https://majesticbank.sc/privacy-policy"],
          "third-party-connections": false,
          "score-boost": 0,
-         "listing-date": "2022-01-01"
+         "listing-date": "2022-01-01",
+         "api": true,
+         "api-url": "https://majesticbank.sc/api"
       },       
       {
          "name": "Kilos Swap",
@@ -159,7 +165,8 @@
          "tos-urls": [-1],
          "third-party-connections": false,
          "score-boost": 0,
-         "listing-date": "2022-01-01"
+         "listing-date": "2022-01-01",
+         "api": false
       },
       {
          "name": "LocalMonero",
@@ -194,7 +201,9 @@
          "tos-urls": ["https://localmonero.co/faq"],
          "third-party-connections": false,
          "score-boost": 0,
-         "listing-date": "2022-01-01"
+         "listing-date": "2022-01-01",
+         "api": true,
+         "api-url": "https://agoradesk.com/api-docs/v1"
       }, 
       {
          "name": "AgoraDesk",
@@ -228,7 +237,9 @@
          "tos-urls": ["https://agoradesk.com/faq"],
          "third-party-connections": false,
          "score-boost": 0,
-         "listing-date": "2022-01-01"
+         "listing-date": "2022-01-01",
+         "api": true,
+         "api-url": "https://agoradesk.com/api-docs/v1"
       },           
       {
          "name": "Boltz",
@@ -265,7 +276,9 @@
          ],
          "third-party-connections": true,
          "score-boost": 0,
-         "listing-date": "2022-01-01"
+         "listing-date": "2022-01-01",
+         "api": true,
+         "api-url": "https://docs.boltz.exchange/en/latest/api/"
       },
       {
          "name": "Coin Swap",
@@ -297,7 +310,9 @@
          "tos-urls": ["https://coinswap.click/faq/"],
          "third-party-connections": true,
          "score-boost": 0,
-         "listing-date": "2022-01-01"
+         "listing-date": "2022-01-01",
+         "api": "rates-only",
+         "api-url": "https://coinswap.click/api/v0.1/rates"
       },
       {
          "name": "LocalCryptos",
@@ -335,7 +350,8 @@
          ],
          "third-party-connections": false,
          "score-boost": 0,
-         "listing-date": "2022-01-01"
+         "listing-date": "2022-01-01",
+         "api": false
       },
       {
          "name": "Sideshift.ai",
@@ -369,7 +385,9 @@
          "tos-urls": false,
          "third-party-connections": true,
          "score-boost": 0,
-         "listing-date": "2022-01-01"
+         "listing-date": "2022-01-01",
+         "api": true,
+         "api-url": "https://documenter.getpostman.com/view/6895769/TWDZGvjd"
       }, 
       {
          "name": "XCHANGE.ME",
@@ -403,7 +421,9 @@
          ],
          "third-party-connections": true,
          "score-boost": 0,
-         "listing-date": "2022-01-01"
+         "listing-date": "2022-01-01",
+         "api": true,
+         "api-url": "https://api.xchange.me"
       },       
       {
          "name": "HodlHodl",
@@ -440,7 +460,9 @@
          "tos-urls": ["https://accounts.hodlhodl.com/pages/terms_of_service"],
          "third-party-connections": true,
          "score-boost": 0,
-         "listing-date": "2022-01-01"
+         "listing-date": "2022-01-01",
+         "api": true,
+         "api-url": "https://hodlhodl.com/api/docs"
       },       
       {
          "name": "TradeOgre",
@@ -472,7 +494,9 @@
          "tos-urls": false,
          "third-party-connections": true,
          "score-boost": 0,
-         "listing-date": "2022-01-01"
+         "listing-date": "2022-01-01",
+         "api": true,
+         "api-url": "https://tradeogre.com/help/api"
       },               
       {
          "name": "Exolix",
@@ -510,7 +534,9 @@
          ],
          "third-party-connections": true,
          "score-boost": 0,
-         "listing-date": "2022-01-01"
+         "listing-date": "2022-01-01",
+         "api": true,
+         "api-url": "https://exolix.com/developers"
       },  
       {
          "name": "ChangeNow",
@@ -549,7 +575,9 @@
          "tos-urls": ["https://changenow.io/faq/kyc-aml-procedure"],
          "third-party-connections": true,
          "score-boost": 0,
-         "listing-date": "2022-01-01"
+         "listing-date": "2022-01-01",
+         "api": true,
+         "api-url": "https://changenow.io/api/docs"
       },        
       {
          "name": "Morphtoken",
@@ -581,7 +609,8 @@
          "tos-urls": ["https://www.morphtoken.com/terms/"],
          "third-party-connections": true,
          "score-boost": 0,
-         "listing-date": "2022-01-01"
+         "listing-date": "2022-01-01",
+         "api": false
       },
       {
          "name": "Mandala",
@@ -617,7 +646,9 @@
          "tos-urls": ["https://support.mandala.exchange/hc/en-us/articles/360055720074-Mandala-Exchange-Terms-and-Conditions"],
          "third-party-connections": true,
          "score-boost": 0,
-         "listing-date": "2022-01-01"
+         "listing-date": "2022-01-01",
+         "api": true,
+         "api-url": "https://trade.mandala.exchange/apidocs/"
       },
       {
          "name": "KuCoin",
@@ -653,7 +684,9 @@
          "tos-urls": ["https://www.kucoin.com/news/en-terms-of-use?lang=en_US"],
          "third-party-connections": true,
          "score-boost": 0,
-         "listing-date": "2022-01-01"
+         "listing-date": "2022-01-01",
+         "api": true,
+         "api-url": "https://kucoin.com/api"
       }
    ]
 }
