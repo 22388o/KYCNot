@@ -220,6 +220,19 @@
       </a>
       {%endif%}
     {%endif%}
+
+    {% if exchange['api'] %}
+      <a href="{{exchange['api-url']}}" class="panel-block">
+        <span class="panel-icon">
+          <i class="fas fa-gear tealtext"></i>
+        </span>
+        API available
+        {% if exchange['api'] == 'rates-only' %}
+          (rates only)
+        {%endif%}
+        <i class="fas fa-external-link-alt faw-small"></i>
+      </a>
+    {%endif%}
   </article>
 </div>
 
