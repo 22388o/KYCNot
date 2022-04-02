@@ -18,9 +18,10 @@
          "tor-url": false,
          "cash": true,
          "open-source": true,
-         "category": "VPN",
+         "tags": ["VPN"],
          "javascript": true,
-         "listing-date": "2022-01-01"
+         "listing-date": "2022-01-01",
+         "score": 0
       },
       {
          "name": "IVPN",
@@ -40,9 +41,10 @@
          "tor-url": false,
          "cash": true,
          "open-source": true,
-         "category": "VPN",
+         "tags": ["VPN"],
          "javascript": true,
-         "listing-date": "2022-01-01"
+         "listing-date": "2022-01-01",
+         "score": 0
       },
       {
          "name": "JuicySMS",
@@ -62,9 +64,10 @@
          "tor-url": false,
          "cash": false,
          "open-source": false,
-         "category": "SMS",
+         "tags": ["SMS"],
          "javascript": true,
-         "listing-date": "2022-01-01"
+         "listing-date": "2022-01-01",
+         "score": 0
       },
       {
          "name": "Cryptoho.st",
@@ -84,9 +87,10 @@
          "tor-url": false,
          "cash": false,
          "open-source": false,
-         "category": "HOST",
+         "tags": ["HOST"],
          "javascript": true,
-         "listing-date": "2022-01-01"
+         "listing-date": "2022-01-01",
+         "score": 0
       },
       {
          "name": "Bitrefill",
@@ -106,9 +110,10 @@
          "tor-url": false,
          "cash": false,
          "open-source": false,
-         "category": "GIFT",
+         "tags": ["GIFT"],
          "javascript": true,
-         "listing-date": "2022-01-01"
+         "listing-date": "2022-01-01",
+         "score": 0
       },
       {
          "name": "Coincards",
@@ -128,9 +133,10 @@
          "tor-url": false,
          "cash": false,
          "open-source": false,
-         "category": "GIFT",
+         "tags": ["GIFT"],
          "javascript": true,
-         "listing-date": "2022-01-01"
+         "listing-date": "2022-01-01",
+         "score": 0
       },
       {
          "name": "JMP",
@@ -147,9 +153,10 @@
          "tos-url": "https://jmp.chat/faq/",
          "url": "https://jmp.chat/",
          "referral_url": false,
-         "category": "SMS",
+         "tags": ["SMS"],
          "javascript": true,
          "listing-date": "2022-01-01",
+         "score": 0,
          "verified": true
       },
       {
@@ -170,9 +177,10 @@
          "tor-url": "http://njallalafimoej5i4eg7vlnqjvmb6zhdh27qxcatdn647jtwwwui3nad.onion/",
          "cash": false,
          "open-source": false,
-         "category": "HOST",
+         "tags": ["HOST"],
          "javascript": true,
-         "listing-date": "2022-01-01"
+         "listing-date": "2022-01-01",
+         "score": 0
       },
       {
          "name": "NiceVPS.net",
@@ -192,9 +200,10 @@
          "tor-url": "https://nicevpsb7u3vqpo5zhyahmvfi5tihon4gnh676ucmzpcyxwodeztr4yd.onion/",
          "cash": false,
          "open-source": false,
-         "category": "VPS",
+         "tags": ["VPS"],
          "javascript": true,
-         "listing-date": "2022-01-01"
+         "listing-date": "2022-01-01",
+         "score": 0
       },
       {
          "name": "LNN Stores",
@@ -214,9 +223,10 @@
          "tor-url": false,
          "cash": false,
          "open-source": false,
-         "category": "LIST",
+         "tags": ["LIST"],
          "javascript": true,
-         "listing-date": "2022-01-01"
+         "listing-date": "2022-01-01",
+         "score": 0
       },
       {
          "name": "Swapzone",
@@ -236,9 +246,10 @@
          "tor-url": false,
          "cash": false,
          "open-source": false,
-         "category": "HELP",
+         "tags": ["HELP"],
          "javascript": true,
-         "listing-date": "2022-01-01"
+         "listing-date": "2022-01-01",
+         "score": 0
       },
       {
          "name": "Lend by HodlHodl",
@@ -258,9 +269,10 @@
          "tor-url": false,
          "cash": false,
          "open-source": false,
-         "category": "LEND",
+         "tags": ["LEND"],
          "javascript": true,
-         "listing-date": "2022-01-01"
+         "listing-date": "2022-01-01",
+         "score": 0
       },
       {
          "name": "SMSPVA",
@@ -279,9 +291,10 @@
          "url": "http://smspva.com/",
          "referral_url": false,
          "verified": false,
-         "category": "SMS",
+         "tags": ["SMS"],
          "javascript": true,
-         "listing-date": "2022-01-01"
+         "listing-date": "2022-01-01",
+         "score": 0
       },
       {
          "name": "SMS4Sats",
@@ -300,9 +313,10 @@
          "url": "https://sms4sats.com/",
          "referral_url": false,
          "verified": true,
-         "category": "SMS",
+         "tags": ["SMS"],
          "javascript": true,
-         "listing-date": "2022-01-01"
+         "listing-date": "2022-01-01",
+         "score": 0
       },
       {
          "name": "Silent Link",
@@ -320,9 +334,10 @@
          "tos-url": "-https://silent.link/faq",
          "url": "https://silent.link/",
          "referral_url": false,
-         "category": "SMS",
+         "tags": ["SMS"],
          "javascript": true,
          "listing-date": "2022-01-01",
+         "score": 0,
          "verified": false
       },
       {
@@ -341,9 +356,10 @@
          "tos-url": "https://proxysto.re/en/agb.html",
          "url": "https://digitalgoods.proxysto.re/",
          "referral_url": false,
-         "category": "GOODS",
+         "tags": ["GOODS"],
          "javascript": true,
          "listing-date": "2022-01-01",
+         "score": 0,
          "verified": true
       },
       {
@@ -361,9 +377,10 @@
          "tos-url": "https://www.azirevpn.com/terms-of-service",
          "url": "https://www.azirevpn.com/",
          "referral_url": "https://www.azirevpn.com/ref/dBLhHhFSle",
-         "category": "VPN",
+         "tags": ["VPN"],
          "javascript": true,
          "listing-date": "2022-01-01",
+         "score": 0,
          "verified": true
       },      
       {
@@ -381,9 +398,10 @@
          "tos-url": "https://bitejo.com/terms/",
          "url": "https://bitejo.com/",
          "referral_url": false,
-         "category": "TRADE",
+         "tags": ["TRADE"],
          "javascript": false,
          "listing-date": "2022-01-01",
+         "score": 0,
          "verified": false
       },
       {
@@ -402,9 +420,10 @@
          "tos-url": "https://unijoin.io/en/terms-and-conditions",
          "url": "https://unijoin.io/",
          "referral_url": "https://unijoin.io/?ref=DjUqpOI",
-         "category": "JOIN",
+         "tags": ["JOIN"],
          "javascript": true,
          "listing-date": "2022-01-01",
+         "score": 0,
          "verified": false
       },
       {
@@ -423,9 +442,10 @@
          "tos-url": "https://criptodebit.com/terms-conditions.html",
          "url": "https://criptodebit.com/",
          "referral_url": "https://criptodebit.com/referral/PfnMBN",
-         "category": "CARDS",
+         "tags": ["CARDS"],
          "javascript": true,
          "listing-date": "2022-03-30",
+         "score": 0,
          "verified": false
       }      
    ]
