@@ -52,7 +52,7 @@
          "personal-info": false,
          "buy": false,
          "exchange": true,
-         "short-description": "Block DX offers completely decentralized and trust",
+         "short-description": "Decentralized and trustless exchange.",
          "long-description": "A decentralized, non-custodial, 100% private and open-source exchange\nusing atomic-swaps between many cryptos. Monero not available.",
          "comments": false,
          "kyc-check": true,
@@ -85,7 +85,7 @@
        "personal-info": false, 
        "buy": true, 
        "exchange": true, 
-       "short-description": "Simple and Private Lightning P2P Exchange", 
+       "short-description": "Private Lightning P2P Exchange", 
        "long-description": "RoboSats is a simple and private way to exchange bitcoin for national currencies. Robosats simplifies the peer-to-peer user experience and uses lightning hold invoices to minimize custody and trust requirements. The deterministically generated avatars help users stick to best privacy practices.", 
        "comments": ["The service is currently in a Beta state.", "Clearnet site can be visited at <a href='https://unsafe.robosats.com'>unsafe.robosats.com</a>. NOT RECOMMENDED FOR TRADING, use Tor onion instead.", "<a href='https://github.com/Reckless-Satoshi/robosats/blob/main/docs/how-to-use.md'> How to use RoboSats guide </a>"], 
        "kyc-check": true, 
@@ -222,7 +222,7 @@
          "personal-info": false,
          "buy": true,
          "exchange": true,
-         "short-description": "A marketplace where users can buy and sell cryptocurrencies to\nand from each other",
+         "short-description": "Peer-to-peer Bitcoin exchange.",
          "long-description": "Users, called traders, create advertisements with the price and\nthe payment method they want to offer. You can browse our website for trade advertisements\nand search for a payment method you prefer. You'll find traders buying and selling\ncryptocurrencies online for more than 60 different payment methods.",
          "comments": [
             "Some sellers may require ID verification or KYC. Avoid these sellers."
