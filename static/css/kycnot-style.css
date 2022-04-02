@@ -1,0 +1,355 @@
+html {
+  background-color: rgb(0, 0, 0);
+  font-size: 16px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  min-width: 300px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body,
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.menu {
+  font-size: 1rem;
+}
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+body,
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+}
+
+nav.menu {
+  background-color: rgba(59, 23, 73, 0.603);
+  margin: 10px;
+  border-radius: 1em;
+  padding: 1em;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.brand a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+nav.menu .elements a {
+  margin: 0.4em;
+  color: white;
+  font-size: large;
+  padding: 1em;
+  border-radius: 0.4em;
+  background-color: rgba(97, 36, 105, 0.287);
+  border: 1px solid transparent;
+}
+
+nav.menu .elements a:hover {
+  background-color: rgb(0, 0, 0);
+  border: 1px solid white;
+  color: white;
+}
+
+nav.menu .support a.support {
+  background-color: black;
+  border: 2px solid rgb(148, 14, 172);
+  margin: 0.4em;
+  color: white;
+  font-size: medium;
+  padding: 1em;
+  border-radius: 0.4em;
+  font-weight: bold;
+}
+
+nav.menu .support a.support:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border: 2px solid white;
+}
+
+.is-active {
+  font-weight: bold;
+  border: 2px solid rgb(85, 19, 97) !important;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  text-align: center;
+  font-weight: bold;
+}
+
+.title {
+  color: white;
+}
+
+.title h2,
+a {
+  margin: 0;
+  padding: 0em;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1800px;
+}
+
+.item-card {
+  background: linear-gradient(115.27deg, #0c0c0c, #0f0f0f);
+  border: 2px solid transparent !important;
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  padding: 25px;
+  width: 350px;
+  margin: 0.5em;
+}
+
+.item-card:hover {
+  border: 2px solid rgb(88, 22, 114) !important;
+}
+
+.card-content {
+  grid-row-gap: 15px;
+  display: grid;
+  grid-template-columns: 100%;
+}
+
+.card-header {
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.card-header-logo {
+  height: 55px;
+  width: 55px;
+  border-radius: 125px;
+}
+
+.card-header-text {
+  margin-left: 2em;
+}
+
+.card-header-text-name {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: flex-start;
+  margin: 0 !important;
+}
+
+.card-header-text-name svg {
+  color: rgb(95, 95, 248);
+  margin-right: 0.2em;
+}
+
+.card-header-text-icons {
+  align-items: center;
+  display: flex;
+  font-family: Poppins, sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  line-height: 100%;
+  margin-top: 1px;
+  color: #fff;
+  letter-spacing: 0.08em;
+}
+
+.card-header-text-score {
+  margin-left: 1em;
+  border: 1px solid green;
+  background: green;
+  border-radius: 0.7em;
+  padding: 0.3em;
+  font-size: 0.7em;
+}
+
+.score {
+  font-weight: bold;
+  display: inline;
+}
+
+.is-red {
+  background: rgb(134, 37, 37) !important;
+  border: 1px solid rgb(134, 37, 37) !important;
+}
+
+.card-header-icons {
+  display: inline-flex;
+  align-items: center;
+}
+
+.card-header-icons span {
+  margin: 3px;
+}
+
+.card-header-text-isnew {
+  letter-spacing: 0.05em;
+  position: relative;
+  display: inline-flex;
+  color: rgb(95, 95, 248);
+}
+
+.card-info-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-info-value {
+  display: flex;
+  font-family: Inter, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  justify-content: space-between;
+  line-height: 100%;
+  margin: 0.25em;
+}
+
+.card-info-value-title {
+  opacity: 70%;
+}
+
+.card-info-value-description {
+  margin-top: 0.5em;
+  font-size: 0.7em;
+  opacity: 70%;
+}
+
+.card-info-value-value {
+  align-items: center;
+}
+
+.h4,
+.h5 {
+  font-weight: 600;
+  line-height: 150%;
+}
+
+@media screen and (max-width: 700px) {
+  nav.menu {
+    background-color: rgba(40, 13, 51, 0.603);
+    margin: 5px;
+    border-radius: 1em;
+    padding: 0.8em;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .brand a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+  }
+
+  nav.menu .elements a {
+    margin: 0.4em;
+    margin-right: 0.2em;
+    color: white;
+    font-size: medium;
+    padding: 0.5em;
+    border-radius: 0.4em;
+    background-color: rgba(97, 36, 105, 0.287);
+    border: 1px solid transparent;
+  }
+
+  nav.menu .elements a:hover {
+    background-color: rgb(0, 0, 0);
+    border: 1px solid white;
+    color: white;
+  }
+
+  nav.menu .support a.support {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  nav.menu {
+    background-color: rgba(40, 13, 51, 0.603);
+    margin: 5px;
+    border-radius: 1em;
+    padding: 0.8em;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .brand {
+    padding-bottom: 1em;
+  }
+
+  .brand a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+  }
+
+  nav.menu .elements a {
+    margin: 0.4em;
+    margin-right: 0.2em;
+    color: white;
+    font-size: medium;
+    padding: 0.5em;
+    border-radius: 0.4em;
+    background-color: rgba(97, 36, 105, 0.287);
+    border: 1px solid transparent;
+  }
+
+  nav.menu .elements a:hover {
+    background-color: rgb(0, 0, 0);
+    border: 1px solid white;
+    color: white;
+  }
+
+  nav.menu .support a.support {
+    display: none;
+  }
+}
