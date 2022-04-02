@@ -1,36 +1,39 @@
 
-
-<a class="item-card" href="/exchange/{{exchange['name'] | replace(' ', '') | lower}}">
+{%if item['listing-date'] > date%}
+<a alt="New listing" class="item-card is-new" href="/exchange/{{item['name'] | replace(' ', '') | lower}}">
+{% else %}
+<a class="item-card" href="/exchange/{{item['name'] | replace(' ', '') | lower}}">
+{% endif %}
   <div class="card-content">
     <div class="card-header">
-      <img class="card-header-logo" src="../static/img/{{ exchange['name'] | replace(' ', '') | lower }}.jpeg" alt="{{exchange['name']}} logo" loading="lazy">
+      <img class="card-header-logo" src="../static/img/{{ item['name'] | replace(' ', '') | lower }}.jpeg" alt="{{item['name']}} logo" loading="lazy">
       <div class="card-header-text">
 
         <h5 class="card-header-text-name">
-          {%if exchange['listing-date'] > date%}
-            <svg width="20" height="26" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg> 
+          {%if item['listing-date'] > date%}
+            <svg alt="New listing" width="20" height="26" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg> 
           {%endif%}
-          {{exchange['name']}}
+          {{item['name']}}
         </h5>
         
         <div class="card-header-text-icons">
           <div class="card-header-icons">
-            {% if exchange['xmr'] %}
+            {% if item['xmr'] %}
             <span>
               <i style="font-size: 15px; color:rgb(255, 139, 44);" class="fab fa-monero"></i>
             </span>
             {% endif %} 
-            {% if exchange['btc'] %}
+            {% if item['btc'] %}
             <span>
               <i style="font-size: 15px; color:rgb(255, 187, 0);" class="fab fa-bitcoin"></i>
             </span>
             {% endif %} 
-            {% if exchange['lnn'] %}
+            {% if item['lnn'] %}
             <span>
               <i style="font-size: 15px; color:rgb(93, 158, 255);" class="fas fa-bolt"></i>
             </span>
             {% endif %} 
-            {% if exchange['buy'] %}
+            {% if item['buy'] %}
             <span>
               <i style="font-size: 15px; color:rgb(99, 160, 0);" class="fa-solid fa-money-bill-1-wave"></i>
             </span>
@@ -44,71 +47,72 @@
     <div class="card-info-content">
       <div class="card-info-value">
         <div class="card-info-value-description">
-          <span class="card-info-value-title">{{exchange['short-description']}}</span>
+          <span class="card-info-value-title">{{item['short-description']}}</span>
         </div>
       </div>
 
       <div class="card-info-value">
         <span class="card-info-value-title">Score</span>
         <span class="class-info-value-value">
-          {%if exchange['score'] < 5 %}
+          {%if item['score'] < 5 %}
             <span class="card-header-text-score is-red">
-              {{exchange['score']}} / 10
+              {{item['score']}} / 10
             </span>
           {%else%}
           <span class="card-header-text-score">
-            <p class="score">{{exchange['score']}}</p> / 10
+            <p class="score">{{item['score']}}</p> / 10
           </span>
           {%endif%}
           
         </span>
       </div>
       
-      <div class="card-info-value">
-        <span class="card-info-value-title">Test</span>
-        <span class="class-info-value-value">
-          <span>8080</span>
-        </span>
+      {% if item['tags'] %}
+      <div class="card-info-tags-container">
+        {% for tag in item['tags'] %}
+          <span class="card-info-tag">{{tag}}</span>
+        {% endfor %}
       </div>
+      {% endif %}
     </div>
   </div>
 </a>
 
 <!---
-<a href="/exchange/{{exchange['name'] | replace(' ', '') | lower}}">
-  {% if exchange['listing-date'] > date%}
+<a href="/exchange/{{item['name'] | replace(' ', '') | lower}}">
+  {% if item['listing-date'] > date%}
   <article style="border: 2px solid rgb(106, 208, 255);" class="leaderboard__profile">
   {% else %}
   <article class="leaderboard__profile">
   {%endif%}
     <img
-      src="../static/img/{{ exchange['name'] | replace(' ', '') | lower }}.jpeg"
-      alt="{{exchange['name']}}"
+      src="../static/img/{{ item['name'] | replace(' ', '') | lower }}.jpeg"
+      alt="{{item['name']}}"
       class="leaderboard__picture"
     />
     <span class="leaderboard__name">
-      {% if exchange['listing-date'] > date%}
+      {% if item['listing-date'] > date%}
         <span class="tag is-info new-indicator">
           New
         </span>
       {%endif%}
-      {{exchange['name']}}
+      {{item['name']}}
       <div class="currencies">
-        {% if exchange['xmr'] %}
+        {% if item['xmr'] %}
         <i style="font-size: 15px; color:rgb(255, 139, 44);" class="fab fa-monero"></i>
         {% endif %} 
-        {% if exchange['btc'] %}
+        {% if item['btc'] %}
         <i style="font-size: 15px; color:rgb(255, 187, 0);" class="fab fa-bitcoin"></i>
         {% endif %} 
-        {% if exchange['lnn'] %}
+        {% if item['lnn'] %}
         <i style="font-size: 15px; color:rgb(93, 158, 255);" class="fas fa-bolt"></i>
         {% endif %} 
-        {% if exchange['buy'] %}
+        {% if item['buy'] %}
         <i style="font-size: 15px; color:rgb(99, 160, 0);" class="fa-solid fa-money-bill-1-wave"></i>
         {% endif %} 
       </div>
     </span>
-    <span style="font-size: 30px;" class="leaderboard__value">{{exchange['score']}}<span>/10</span></span>
+    <span style="font-size: 30px;" class="leaderboard__value">{{item['score']}}<span>/10</span></span>
   </article>
 </a>
 -->

@@ -43,16 +43,40 @@ textarea {
     Arial, sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 nav.menu {
-  background-color: rgba(59, 23, 73, 0.603);
-  margin: 10px;
-  border-radius: 1em;
-  padding: 1em;
+  background-color: rgba(42, 14, 53, 0.603);
 
   display: flex;
+  flex-direction: row;
+  justify-content: space-around; /*or space-between*/
   align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  width: 100%;
+}
+
+.brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+}
+
+.elements {
+  align-content: center;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1em;
+  column-gap: 1em;
+}
+
+.support {
+  align-items: center;
+  justify-content: center;
 }
 
 .brand a {
@@ -60,10 +84,10 @@ nav.menu {
   color: white;
   font-weight: bold;
   font-size: x-large;
+  z-index: 99;
 }
 
 nav.menu .elements a {
-  margin: 0.4em;
   color: white;
   font-size: large;
   padding: 1em;
@@ -100,17 +124,45 @@ nav.menu .support a.support:hover {
   border: 2px solid rgb(85, 19, 97) !important;
 }
 
+.header button {
+  border: 0px transparent;
+  border-radius: 0.2em;
+  color: white;
+  background-color: #42004b;
+  cursor: pointer;
+  padding: 0.5em;
+}
+
+.clear-button {
+  border: 0px transparent;
+  border-radius: 0.2em;
+  color: white !important;
+  background-color: #42004b;
+  cursor: pointer;
+  padding: 0.3em;
+  font-weight: normal !important;
+  margin-left: 0.3em;
+}
+
+.header-container {
+  padding: 1em;
+}
+
 .header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2em;
   text-align: center;
   font-weight: bold;
 }
 
 .title {
   color: white;
+}
+
+.title h2 {
+  font-weight: bold;
+  font-size: medium;
 }
 
 .title h2,
@@ -124,6 +176,23 @@ a {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.filters {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.filters button {
+  margin-left: 1em;
+}
+
+.filters label {
+  margin-right: 1em;
 }
 
 .card-container {
@@ -144,6 +213,10 @@ a {
   padding: 25px;
   width: 350px;
   margin: 0.5em;
+}
+
+.item-card.is-new {
+  border: 2px solid rgb(53, 53, 149) !important;
 }
 
 .item-card:hover {
@@ -206,6 +279,22 @@ a {
   font-size: 0.7em;
 }
 
+.card-info-tags-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-info-tag {
+  margin-left: 0.2em;
+  border: 1px solid rgb(28, 105, 156);
+  background: rgb(28, 105, 156);
+  border-radius: 0.5em;
+  padding: 0.3em;
+  font-size: 0.8em;
+}
+
 .score {
   font-weight: bold;
   display: inline;
@@ -253,7 +342,9 @@ a {
 
 .card-info-value-description {
   margin-top: 0.5em;
+  margin-bottom: 0.5em;
   font-size: 0.7em;
+  min-height: 3em;
   opacity: 70%;
 }
 
