@@ -1,3 +1,80 @@
+
+
+<a class="item-card" href="/exchange/{{exchange['name'] | replace(' ', '') | lower}}">
+  <div class="card-content">
+    <div class="card-header">
+      <img class="card-header-logo" src="../static/img/{{ exchange['name'] | replace(' ', '') | lower }}.jpeg" alt="{{exchange['name']}} logo" loading="lazy">
+      <div class="card-header-text">
+
+        <h5 class="card-header-text-name">
+          {%if exchange['listing-date'] > date%}
+            <svg width="20" height="26" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg> 
+          {%endif%}
+          {{exchange['name']}}
+        </h5>
+        
+        <div class="card-header-text-icons">
+          <div class="card-header-icons">
+            {% if exchange['xmr'] %}
+            <span>
+              <i style="font-size: 15px; color:rgb(255, 139, 44);" class="fab fa-monero"></i>
+            </span>
+            {% endif %} 
+            {% if exchange['btc'] %}
+            <span>
+              <i style="font-size: 15px; color:rgb(255, 187, 0);" class="fab fa-bitcoin"></i>
+            </span>
+            {% endif %} 
+            {% if exchange['lnn'] %}
+            <span>
+              <i style="font-size: 15px; color:rgb(93, 158, 255);" class="fas fa-bolt"></i>
+            </span>
+            {% endif %} 
+            {% if exchange['buy'] %}
+            <span>
+              <i style="font-size: 15px; color:rgb(99, 160, 0);" class="fa-solid fa-money-bill-1-wave"></i>
+            </span>
+            {% endif %} 
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="card-info-content">
+      <div class="card-info-value">
+        <div class="card-info-value-description">
+          <span class="card-info-value-title">{{exchange['short-description']}}</span>
+        </div>
+      </div>
+
+      <div class="card-info-value">
+        <span class="card-info-value-title">Score</span>
+        <span class="class-info-value-value">
+          {%if exchange['score'] < 5 %}
+            <span class="card-header-text-score is-red">
+              {{exchange['score']}} / 10
+            </span>
+          {%else%}
+          <span class="card-header-text-score">
+            <p class="score">{{exchange['score']}}</p> / 10
+          </span>
+          {%endif%}
+          
+        </span>
+      </div>
+      
+      <div class="card-info-value">
+        <span class="card-info-value-title">Test</span>
+        <span class="class-info-value-value">
+          <span>8080</span>
+        </span>
+      </div>
+    </div>
+  </div>
+</a>
+
+<!---
 <a href="/exchange/{{exchange['name'] | replace(' ', '') | lower}}">
   {% if exchange['listing-date'] > date%}
   <article style="border: 2px solid rgb(106, 208, 255);" class="leaderboard__profile">
@@ -34,3 +111,4 @@
     <span style="font-size: 30px;" class="leaderboard__value">{{exchange['score']}}<span>/10</span></span>
   </article>
 </a>
+-->
