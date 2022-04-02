@@ -31,34 +31,71 @@ date = datetime.today() - timedelta(days=7)
 app = Sanic(__name__)
 app.static('/static', static_dir)
 
+def keep_dupes(iterable):
+    seen = []
+    dupes = []
+    result = []
+    for item in iterable:
+        if item in seen and item not in dupes:
+            result.append(item)
+            dupes.append(item)
+        else:
+            seen.append(item)
+    return result
+
 # filename = ""
 @app.route("/", name="index")
 @app.route("/index", name="index")
 async def index(request):
-    template = env.get_template('index.html')
-    f = open(f'{data_dir}/exchanges.json')
-    data = json.load(f)
-    data['exchanges'] = sorted(data['exchanges'], key=lambda k: k['score'], reverse=True)
-    for e in data['exchanges']:
-        e['listing-date'] = parser.parse(e['listing-date'])
-        if isinstance(e['url'], list):
-            e['url'] = e['url'][randint(0, len(e['url'])-1)]
-    return html(template.render(date=date, data=data,
-                                title="KYC? Not me!",
+    if(request.args):
+        args = request.args
+        template = env.get_template('index.html')
+        f = open(f'{data_dir}/exchanges.json')
+        data = json.load(f)
+        exchanges = []
+        for e in data['exchanges']:
+            e['listing-date'] = parser.parse(e['listing-date'])
+            if isinstance(e['url'], list):
+                e['url'] = e['url'][randint(0, len(e['url'])-1)]
+            if 'exchange' in args and e['exchange']:
+                exchanges.append(e)
+            if 'registration' in args and not e['registration']:
+                exchanges.append(e)
+            if 'tor' in args and e['tor']:
+                exchanges.append(e)
+            if 'cash' in args and e['cash']:
+                exchanges.append(e) 
+        if len(args) > 1:
+            exchanges = keep_dupes(exchanges)
+        return html(template.render(date=date, data=exchanges,
+                                title="Exchanges",
+                                active=0,
+                                subtitle="Find best <strong>NON-KYC</strong> online services."))
+    else:
+        template = env.get_template('index.html')
+        f = open(f'{data_dir}/exchanges.json')
+        data = json.load(f)
+        data['exchanges'] = sorted(data['exchanges'], key=lambda k: k['score'], reverse=True)
+        for e in data['exchanges']:
+            e['listing-date'] = parser.parse(e['listing-date'])
+            if isinstance(e['url'], list):
+                e['url'] = e['url'][randint(0, len(e['url'])-1)]
+        return html(template.render(date=date, data=data['exchanges'],
+                                title="Exchanges",
                                 active=0,
                                 subtitle="Find best <strong>NON-KYC</strong> online services."))
 
 
 @app.route("/services", name="services")
 async def services(request):
-    template = env.get_template('services.html')
+    template = env.get_template('index.html')
     f = open(f'{data_dir}/services.json')
     data = json.load(f)
-    data['services'] = sorted(data['services'], key=lambda k: k['category'], reverse=False)
+    #data['services'] = sorted(data['services'], key=lambda k: k['category'], reverse=False)
     for s in data['services']:
         s['listing-date'] = parser.parse(s['listing-date'])
-    return html(template.render(date=date, data=data,
-                                title="KYC? Not me!",
+    return html(template.render(date=date, data=data['services'],
+                                title="Services",
                                 active=1,
                                 subtitle="Find best <strong>NON-KYC</strong> online services."))
 

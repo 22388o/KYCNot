@@ -1,15 +1,32 @@
 {% extends "base.html" %} {% block content %}
 
-<div class="header">
-    <div class="title">
-        <h2>EXCHANGES</h2>
-        <p>Buy and swap anonymously</p>
+<div class="header-container">
+    <div class="header">
+        <form action="/" class="filters">
+            {% if title == 'Exchanges' %}
+                <input type="checkbox" name="cash" id="cash">
+                <label for="cash">FIAT</label>
+
+                <input type="checkbox" name="exchange" id="exchange">
+                <label for="exchange">SWAP</label>
+        
+                <input type="checkbox" name="registration" id="registration">
+                <label for="registration">No account</label>
+        
+                <input type="checkbox" name="tor" id="tor">
+                <label for="tor">Tor</label>
+            {% else %}
+            {% endif %}        
+            <button type="submit">Filter</button>
+            <span class="clear-button"><a href="/"> Clear </a></span>
+        </form>
     </div>
 </div>
 
+
 <div class="content">
     <div class="card-container">
-        {% for exchange in data['exchanges'] %} 
+        {% for item in data %} 
             {% include '_exchange_line.html'%} 
         {% endfor %}
     </div>
