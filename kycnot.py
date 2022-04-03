@@ -35,7 +35,6 @@ def keep_dupes(iterable, times):
     seen = []
     dupes = []
     result = []
-    print(times)
     for item in iterable:
         if item in seen and item not in dupes:
             if 'times' not in item:
@@ -53,23 +52,18 @@ def keep_dupes(iterable, times):
 @app.route("/index", name="index")
 async def index(request):
     if(request.args):
-        args = request.args
+        args = list(request.args.keys())
         template = env.get_template('index.html')
         f = open(f'{data_dir}/exchanges.json')
         data = json.load(f)
         exchanges = []
-        for e in data['exchanges']:
-            e['listing-date'] = parser.parse(e['listing-date'])
-            if isinstance(e['url'], list):
-                e['url'] = e['url'][randint(0, len(e['url'])-1)]
-            if 'exchange' in args and e['exchange']:
-                exchanges.append(e)
-            if 'registration' in args and not e['registration']:
-                exchanges.append(e)
-            if 'tor' in args and e['tor']:
-                exchanges.append(e)
-            if 'cash' in args and e['cash']:
-                exchanges.append(e) 
+        for exchange in data['exchanges']:
+            exchange['listing-date'] = parser.parse(exchange['listing-date'])
+            if isinstance(exchange['url'], list):
+                exchange['url'] = exchange['url'][randint(0, len(exchange['url'])-1)]
+            for arg in args:
+                if exchange[arg]:
+                    exchanges.append(exchange)
         if len(args) > 1:
             exchanges = keep_dupes(exchanges, len(args))
         return html(template.render(date=date, data=exchanges,
