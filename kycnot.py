@@ -67,7 +67,7 @@ async def index(request):
         if len(args) > 1:
             exchanges = keep_dupes(exchanges, len(args))
         return html(template.render(date=date, data=exchanges,
-                                title="Exchanges",
+                                title="exchange",
                                 active=0,
                                 filters=True,
                                 subtitle="Find best <strong>NON-KYC</strong> online services."))
@@ -81,7 +81,7 @@ async def index(request):
             if isinstance(e['url'], list):
                 e['url'] = e['url'][randint(0, len(e['url'])-1)]
         return html(template.render(date=date, data=data['exchanges'],
-                                title="exchanges",
+                                title="exchange",
                                 active=0,
                                 subtitle="Find best <strong>NON-KYC</strong> online services."))
 
@@ -132,7 +132,7 @@ async def services(request):
                     if _type in service['tags']:
                         services.append(service)
         return html(template.render(date=date, data=services,
-                                title="services",
+                                title="service",
                                 active=1,
                                 filters=True,
                                 subtitle="Find best <strong>NON-KYC</strong> online services."))
@@ -144,7 +144,7 @@ async def services(request):
     for s in data['services']:
         s['listing-date'] = parser.parse(s['listing-date'])
     return html(template.render(date=date, data=data['services'],
-                                title="Services",
+                                title="service",
                                 active=1,
                                 subtitle="Find best <strong>NON-KYC</strong> online services."))
 
