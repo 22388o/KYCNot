@@ -383,6 +383,109 @@ a {
   line-height: 150%;
 }
 
+/* exchange.html */
+.exchange-page-header-container {
+  display: flex;
+  justify-content: center;
+  padding: 2em;
+}
+
+.exchange-page-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.exchange-page-logo {
+  border-radius: 125px;
+  width: 10em;
+  margin: 1em;
+}
+
+.exchange-page-header-title {
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.exchange-page-header-actions-button {
+  border: 2px solid rgb(211, 76, 188);
+  border-radius: 0.5em;
+  padding: 0.5em;
+  margin: 0.3em;
+}
+
+.exchange-page-header-actions {
+  margin: 1.2em;
+}
+
+.exchange-page-quick-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.exchange-page-quick-info-icon {
+  font-size: 1.8em;
+  margin-right: 1em;
+}
+
+.exchange-page-quick-info-text {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+table {
+  position: relative;
+  vertical-align: middle;
+  width: 80%;
+  max-width: 800px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 12px;
+  overflow: hidden;
+}
+td,
+th {
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+}
+th {
+  background: linear-gradient(115.27deg, #0c0c0c, #0f0f0f);
+  color: #fafafa;
+  font-family: "Open Sans", Sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+tr {
+  width: 100%;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+tr:nth-child(even) {
+  background-color: #02703d;
+}
+tr:nth-child(odd) {
+  background-color: #004918;
+}
+
+tr:nth-child(even).tr-is-red {
+  background-color: #7a2828 !important;
+}
+tr:nth-child(odd).tr-is-red {
+  background-color: #5f2222 !important;
+}
+
+tr:nth-child(even).tr-is-yellow {
+  background-color: #7a7428 !important;
+}
+tr:nth-child(odd).tr-is-yellow {
+  background-color: #5f5922 !important;
+}
+
 @media screen and (max-width: 700px) {
   nav.menu {
     background-color: rgba(40, 13, 51, 0.603);
