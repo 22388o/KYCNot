@@ -31,14 +31,19 @@ date = datetime.today() - timedelta(days=7)
 app = Sanic(__name__)
 app.static('/static', static_dir)
 
-def keep_dupes(iterable):
+def keep_dupes(iterable, times):
     seen = []
     dupes = []
     result = []
+    print(times)
     for item in iterable:
         if item in seen and item not in dupes:
-            result.append(item)
-            dupes.append(item)
+            if 'times' not in item:
+                item['times'] = 1
+            item['times'] += 1
+            if item['times'] == times:
+                result.append(item)
+                dupes.append(item)
         else:
             seen.append(item)
     return result
@@ -66,7 +71,7 @@ async def index(request):
             if 'cash' in args and e['cash']:
                 exchanges.append(e) 
         if len(args) > 1:
-            exchanges = keep_dupes(exchanges)
+            exchanges = keep_dupes(exchanges, len(args))
         return html(template.render(date=date, data=exchanges,
                                 title="Exchanges",
                                 active=0,
