@@ -176,6 +176,18 @@ a {
   color: white;
 }
 
+.filter-select-type {
+  border: 0px transparent;
+  border-radius: 0.2em;
+  color: white !important;
+  background-color: #42004b;
+  cursor: pointer;
+  padding: 0.2em;
+  font-weight: normal !important;
+  margin-left: 1em;
+  font-size: 18px;
+}
+
 .filters button {
   border: 0px transparent;
   border-radius: 0.2em;

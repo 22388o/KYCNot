@@ -69,6 +69,7 @@ async def index(request):
         return html(template.render(date=date, data=exchanges,
                                 title="Exchanges",
                                 active=0,
+                                filters=True,
                                 subtitle="Find best <strong>NON-KYC</strong> online services."))
     else:
         template = env.get_template('index.html')
@@ -80,13 +81,62 @@ async def index(request):
             if isinstance(e['url'], list):
                 e['url'] = e['url'][randint(0, len(e['url'])-1)]
         return html(template.render(date=date, data=data['exchanges'],
-                                title="Exchanges",
+                                title="exchanges",
                                 active=0,
                                 subtitle="Find best <strong>NON-KYC</strong> online services."))
 
-
 @app.route("/services", name="services")
 async def services(request):
+    if(request.args):
+        args = list(request.args.keys())
+        if 'type' in request.args:
+            args.remove('type')
+            _type = request.args['type'][0]
+        else:
+            _type = False
+
+        template = env.get_template('index.html')
+        f = open(f'{data_dir}/services.json')
+        data = json.load(f)
+
+        services = []
+        if len(args) > 0:
+            for service in data['services']:
+                # Treat the info
+                service['listing-date'] = parser.parse(service['listing-date'])
+                if isinstance(service['url'], list):
+                    service['url'] = service['url'][randint(0, len(service['url'])-1)]
+                # For each filter parameter
+                for arg in args:
+                    # If the service has it
+                    if service[arg]:
+                        # If there is no type filter, we just add it
+                        if not _type:
+                            services.append(service)
+                        else:
+                            # If there is a type filter we check if the service is from that type
+                            if _type in service['tags']:
+                                services.append(service)
+                # We keep only the services that fit all the conditions
+            if len(args) > 1:
+                services = keep_dupes(services, len(args))
+
+        else:
+            for service in data['services']:
+                service['listing-date'] = parser.parse(service['listing-date'])
+                if isinstance(service['url'], list):
+                    service['url'] = service['url'][randint(0, len(service['url'])-1)]
+                if not _type:
+                    services.append(service)
+                else:
+                    if _type in service['tags']:
+                        services.append(service)
+        return html(template.render(date=date, data=services,
+                                title="services",
+                                active=1,
+                                filters=True,
+                                subtitle="Find best <strong>NON-KYC</strong> online services."))
+
     template = env.get_template('index.html')
     f = open(f'{data_dir}/services.json')
     data = json.load(f)

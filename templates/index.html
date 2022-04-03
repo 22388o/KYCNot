@@ -2,7 +2,11 @@
 
 <div class="header-container">
     <div class="header">
+        {% if title == "exchanges" %}
         <form action="/" class="filters">
+        {% else %}
+        <form action="/services" class="filters">
+        {%endif%}
            <!--General filters-->
            <div class="filter-item">
                 <input type="checkbox" name="open-source" id="open-source">
@@ -17,11 +21,15 @@
                 <label for="btc">BTC</label>
            </div> 
            <div class="filter-item">
+            <input type="checkbox" name="lnn" id="lnn">
+            <label for="lnn">LNN</label>
+       </div> 
+           <div class="filter-item">
                 <input type="checkbox" name="xmr" id="xmr">
                 <label for="xmr">XMR</label>
            </div> 
 
-           {% if title == 'Exchanges' %}
+           {% if title == 'exchanges' %}
            <!--Exchange only filters-->
                <div class="filter-item">
                 <input type="checkbox" name="exchange" id="exchange">
@@ -44,10 +52,27 @@
                </div> 
             {% else %}
             <!--Service only filters-->
+            <select class="filter-select-type" name="type" id="type">
+              <option value="none" selected disabled hidden>Type</option>
+              <option value="VPN">VPN</option>
+              <option value="VPS">VPS</option>
+              <option value="SMS">SMS</option>
+              <option value="HOSTING">HOSTING</option>
+              <option value="GOODS">GOODS</option>
+              <option value="COINJOIN">COINJOIN</option>
+            </select> 
             {% endif %}
             <div class="actions">
                 <button type="submit">Filter</button>
-                <span class="clear-button"><a href="/"> Clear </a></span>
+                {% if filters%}
+                    <span class="clear-button">
+                        {% if title == "exchanges" %}
+                            <a href="/"> Clear </a>
+                        {% else %}
+                            <a href="/services"> Clear </a>
+                        {% endif %}
+                    </span>
+                {% endif %}
             </div>
         </form>
     </div>
