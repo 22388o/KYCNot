@@ -3,22 +3,52 @@
 <div class="header-container">
     <div class="header">
         <form action="/" class="filters">
-            {% if title == 'Exchanges' %}
+           <!--General filters-->
+           <div class="filter-item">
+                <input type="checkbox" name="open-source" id="open-source">
+                <label for="open-source">Open Source</label>
+           </div> 
+           <div class="filter-item">
                 <input type="checkbox" name="cash" id="cash">
                 <label for="cash">FIAT</label>
+           </div> 
+           <div class="filter-item">
+                <input type="checkbox" name="btc" id="btc">
+                <label for="btc">BTC</label>
+           </div> 
+           <div class="filter-item">
+                <input type="checkbox" name="xmr" id="xmr">
+                <label for="xmr">XMR</label>
+           </div> 
 
+           {% if title == 'Exchanges' %}
+           <!--Exchange only filters-->
+               <div class="filter-item">
                 <input type="checkbox" name="exchange" id="exchange">
                 <label for="exchange">SWAP</label>
+               </div> 
         
+               <div class="filter-item">
                 <input type="checkbox" name="no-registration" id="no-registration">
                 <label for="no-registration">No account</label>
+               </div> 
         
+               <div class="filter-item">
                 <input type="checkbox" name="tor" id="tor">
                 <label for="tor">Tor</label>
+               </div> 
+
+               <div class="filter-item">
+                <input type="checkbox" name="api" id="api">
+                <label for="api">API</label>
+               </div> 
             {% else %}
-            {% endif %}        
-            <button type="submit">Filter</button>
-            <span class="clear-button"><a href="/"> Clear </a></span>
+            <!--Service only filters-->
+            {% endif %}
+            <div class="actions">
+                <button type="submit">Filter</button>
+                <span class="clear-button"><a href="/"> Clear </a></span>
+            </div>
         </form>
     </div>
 </div>
