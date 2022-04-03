@@ -1,8 +1,8 @@
 
 {%if item['listing-date'] > date%}
-<a alt="New listing" class="item-card is-new" href="/exchange/{{item['name'] | replace(' ', '') | lower}}">
+<a alt="New listing" class="item-card is-new" href="/{{title}}/{{item['name'] | replace(' ', '') | lower}}">
 {% else %}
-<a class="item-card" href="/exchange/{{item['name'] | replace(' ', '') | lower}}">
+<a class="item-card" href="/{{title}}/{{item['name'] | replace(' ', '') | lower}}">
 {% endif %}
   <div class="card-content">
     <div class="card-header">
