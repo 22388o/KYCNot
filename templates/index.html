@@ -2,7 +2,7 @@
 
 <div class="header-container">
     <div class="header">
-        {% if title == "exchanges" %}
+        {% if title == "exchange" %}
         <form action="/" class="filters">
         {% else %}
         <form action="/services" class="filters">
@@ -29,7 +29,7 @@
                 <label for="xmr">XMR</label>
            </div> 
 
-           {% if title == 'exchanges' %}
+           {% if title == 'exchange' %}
            <!--Exchange only filters-->
                <div class="filter-item">
                 <input type="checkbox" name="exchange" id="exchange">
