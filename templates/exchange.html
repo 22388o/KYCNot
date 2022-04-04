@@ -9,6 +9,7 @@
 
     <div class="exchange-page-header-actions">
       <a target="_blank" class="exchange-page-header-actions-button" href="{{exchange['url']}}">Website</a>
+      <a target="_blank" class="exchange-page-header-actions-button" href="{{exchange['tos-urls'][0]}}">ToS</a>
       {% if exchange['tor'] and exchange['tor-onion'] %}
         <a target="_blank" class="exchange-page-header-actions-button" href="{{exchange['tor-onion']}}">Tor</a>
       {% endif %}
@@ -222,8 +223,48 @@
           <span class="exchange-page-quick-info-text">No Tor service available</span>
         </td>
       </tr>
-      {% endif %}
+    {% endif %}
   </table>
+  
+  <table class="exchange-page-quick-info-comments-table">
+    <tr>
+      <th>Comments</th>
+    </tr>
+    {% if exchange['comments'] %}
+      {% for comment in exchange['comments'] %}
+        <tr class="tr-is-info">
+          <td> 
+            <div class="comment-container">
+              <div class="comment">
+                {{comment | safe}}
+              </div>
+            </div>
+          </td>
+        </tr>
+      {% endfor %}
+    {% endif %}
+  </table>
+
+  <table class="exchange-page-quick-info-comments-table">
+    <tr>
+      <th>Suspicious ToS</th>
+    </tr>
+    {% if exchange['suspicious-tos'] %}
+      {% for comment in exchange['suspicious-tos'] %}
+        <tr class="tr-is-yellow">
+          <td> 
+            <div class="comment-container">
+              <div class="comment">
+                {{comment | safe}}
+              </div>
+            </div>
+          </td>
+        </tr>
+      {% endfor %}
+    {% endif %}
+  </table>
+
+
 </div>
   
 {% endblock %}
