@@ -9,51 +9,87 @@
         {%endif%}
            <!--General filters-->
            <div class="filter-item">
+                {% if filters and "open-source" in filters %}
+                <input checked type="checkbox" name="open-source" id="open-source">
+                {% else %}
                 <input type="checkbox" name="open-source" id="open-source">
+                {%endif%}
                 <label for="open-source">Open Source</label>
            </div> 
            <div class="filter-item">
+                {% if filters and "cash" in filters %}
+                <input checked type="checkbox" name="cash" id="cash">
+                {% else %}
                 <input type="checkbox" name="cash" id="cash">
+                {% endif %}
                 <label for="cash">FIAT</label>
            </div> 
            <div class="filter-item">
+                {% if filters and "btc" in filters %}
+                <input checked type="checkbox" name="btc" id="btc">
+                {% else %}
                 <input type="checkbox" name="btc" id="btc">
+                {% endif %}
                 <label for="btc">BTC</label>
            </div> 
            <div class="filter-item">
-            <input type="checkbox" name="lnn" id="lnn">
+                {% if filters and "lnn" in filters %}
+                <input checked type="checkbox" name="lnn" id="lnn">
+                {% else %}
+                <input type="checkbox" name="lnn" id="lnn">
+                {% endif %}
             <label for="lnn">LNN</label>
        </div> 
            <div class="filter-item">
+                {% if filters and "xmr" in filters %}
+                <input checked type="checkbox" name="xmr" id="xmr">
+                {% else %}
                 <input type="checkbox" name="xmr" id="xmr">
+                {% endif %}
                 <label for="xmr">XMR</label>
            </div> 
 
            {% if title == 'exchange' %}
            <!--Exchange only filters-->
                <div class="filter-item">
+                {% if filters and "exchange" in filters %}
+                <input checked type="checkbox" name="exchange" id="exchange">
+                {% else %}
                 <input type="checkbox" name="exchange" id="exchange">
+                {% endif %}
                 <label for="exchange">SWAP</label>
                </div> 
         
                <div class="filter-item">
+                {% if filters and "no-registration" in filters %}
+                <input checked type="checkbox" name="no-registration" id="no-registration">
+                {% else %}
                 <input type="checkbox" name="no-registration" id="no-registration">
+                {% endif %}
                 <label for="no-registration">No account</label>
                </div> 
         
                <div class="filter-item">
+                {% if filters and "tor" in filters %}
+                <input checked type="checkbox" name="tor" id="tor">
+                {% else %}
                 <input type="checkbox" name="tor" id="tor">
+                {% endif %}
                 <label for="tor">Tor</label>
                </div> 
 
                <div class="filter-item">
+                {% if filters and "api" in filters %}
+                <input checked type="checkbox" name="api" id="api">
+                {% else %}
                 <input type="checkbox" name="api" id="api">
+                {% endif %}
                 <label for="api">API</label>
                </div> 
             {% else %}
             <!--Service only filters-->
             <select class="filter-select-type" name="type" id="type">
-              <option value="none" selected disabled hidden>Type</option>
+              <option value="{{_type}}" selected disabled hidden>{{_type}}</option>
               <option value="VPN">VPN</option>
               <option value="VPS">VPS</option>
               <option value="SMS">SMS</option>
