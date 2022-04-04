@@ -226,11 +226,11 @@
     {% endif %}
   </table>
   
+  {% if exchange['comments'] %}
   <table class="exchange-page-quick-info-comments-table">
     <tr>
       <th>Comments</th>
     </tr>
-    {% if exchange['comments'] %}
       {% for comment in exchange['comments'] %}
         <tr class="tr-is-info">
           <td> 
@@ -242,14 +242,14 @@
           </td>
         </tr>
       {% endfor %}
+    </table>
     {% endif %}
-  </table>
 
+    {% if exchange['suspicious-tos'] %}
   <table class="exchange-page-quick-info-comments-table">
     <tr>
       <th>Suspicious ToS</th>
     </tr>
-    {% if exchange['suspicious-tos'] %}
       {% for comment in exchange['suspicious-tos'] %}
         <tr class="tr-is-yellow">
           <td> 
@@ -261,8 +261,8 @@
           </td>
         </tr>
       {% endfor %}
+    </table>
     {% endif %}
-  </table>
 
 
 </div>
