@@ -442,6 +442,11 @@ a {
   margin-top: 1em;
 }
 
+.exchange-page-quick-info-kyctype-table {
+  margin-top: 1em;
+  font-weight: bold;
+}
+
 table {
   position: relative;
   vertical-align: middle;

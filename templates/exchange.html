@@ -9,14 +9,14 @@
 
     <div class="exchange-page-header-actions">
       <a target="_blank" class="exchange-page-header-actions-button" href="{{exchange['url']}}">Website</a>
+      {% if exchange['referral'] %}
+        <a target="_blank" class="exchange-page-header-actions-button" href="{{exchange['url']}}{{exchange['referral']}}">Referral</a>
+      {% endif %}
       {% if exchange['tos-urls'][0] != -1%}
       <a target="_blank" class="exchange-page-header-actions-button" href="{{exchange['tos-urls'][0]}}">ToS</a>
       {% endif %}
       {% if exchange['tor'] and exchange['tor-onion'] %}
         <a target="_blank" class="exchange-page-header-actions-button" href="{{exchange['tor-onion']}}">Tor</a>
-      {% endif %}
-      {% if exchange['referral'] %}
-        <a target="_blank" class="exchange-page-header-actions-button" href="{{exchange['url']}}{{exchange['referral']}}">Referral</a>
       {% endif %}
     </div>
   </div>
@@ -227,6 +227,45 @@
       </tr>
     {% endif %}
   </table>
+  
+  <table class="exchange-page-quick-info-kyctype-table">
+    <tr>
+      <th>KYC Level: {{exchange['kyc-type']}}</th>
+    </tr>
+              {% if exchange['kyc-type'] == 0 %} 
+              <tr class="tr-is-green">
+                <td> 
+                  <div class="comment">
+                    No KYC. The exchange ToS do not mention that it will ever request the user for a KYC verification.
+                  </div>
+                </td>
+              </tr>
+              {% elif exchange['kyc-type'] == 1 %} 
+              <tr class="tr-is-green">
+                <td> 
+                  <div class="comment">
+                    KYC is rare. The platform does not mention KYC/AML procedures as such, but the service has the right to share acquired data with representatives of the authorities and block funds or reject transactions.
+                  </div>
+                </td>
+              </tr>
+              {% elif exchange['kyc-type'] == 2 %}
+              <tr class="tr-is-yellow">
+                <td> 
+                  <div class="comment">
+                    The exchange may request KYC. Although KYC is not mandatory, the exchange reserves the right to require KYC for a certain user at a certain moment and may block funds. May be that a transaction is detected as suspicious or any other reason.
+                  </div>
+                </td>
+              </tr>
+              {% elif exchange['kyc-type'] == 3 %}
+              <tr class="tr-is-red">
+                <td> 
+                  <div class="comment">
+                    KYC is mandatory in order to use some features. Also, a non-KYCed user can be asked to verify their identity at any time or any moment for any reason.
+                  </div>
+                </td>
+              </tr>
+              {% endif %}
+    </table>
   
   {% if exchange['comments'] %}
   <table class="exchange-page-quick-info-comments-table">
