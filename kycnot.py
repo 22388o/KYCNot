@@ -69,7 +69,7 @@ async def index(request):
         return html(template.render(date=date, data=exchanges,
                                 title="exchange",
                                 active=0,
-                                filters=True,
+                                filters=args,
                                 subtitle="Find best <strong>NON-KYC</strong> online services."))
     else:
         template = env.get_template('index.html')
@@ -131,10 +131,13 @@ async def services(request):
                 else:
                     if _type in service['tags']:
                         services.append(service)
+
+        if not _type: _type="Type"
         return html(template.render(date=date, data=services,
                                 title="service",
                                 active=1,
-                                filters=True,
+                                filters=list(request.args.keys()),
+                                _type=_type,
                                 subtitle="Find best <strong>NON-KYC</strong> online services."))
 
     template = env.get_template('index.html')
@@ -146,6 +149,7 @@ async def services(request):
     return html(template.render(date=date, data=data['services'],
                                 title="service",
                                 active=1,
+                                _type="Type",
                                 subtitle="Find best <strong>NON-KYC</strong> online services."))
 
 @app.route("/about", name="about")
