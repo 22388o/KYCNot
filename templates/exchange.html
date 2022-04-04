@@ -9,7 +9,9 @@
 
     <div class="exchange-page-header-actions">
       <a target="_blank" class="exchange-page-header-actions-button" href="{{exchange['url']}}">Website</a>
+      {% if exchange['tos-urls'][0] != -1%}
       <a target="_blank" class="exchange-page-header-actions-button" href="{{exchange['tos-urls'][0]}}">ToS</a>
+      {% endif %}
       {% if exchange['tor'] and exchange['tor-onion'] %}
         <a target="_blank" class="exchange-page-header-actions-button" href="{{exchange['tor-onion']}}">Tor</a>
       {% endif %}
