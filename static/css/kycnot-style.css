@@ -385,65 +385,65 @@ a {
   line-height: 150%;
 }
 
-/* exchange.html */
-.exchange-page-header-container {
+/* item.html */
+.item-page-header-container {
   display: flex;
   justify-content: center;
   padding: 2em;
 }
 
-.exchange-page-header {
+.item-page-header {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.exchange-page-logo {
+.item-page-logo {
   border-radius: 125px;
   width: 10em;
   margin: 1em;
 }
 
-.exchange-page-header-title {
+.item-page-header-title {
   color: white;
   font-size: 2em;
   font-weight: bold;
 }
 
-.exchange-page-header-actions-button {
+.item-page-header-actions-button {
   border: 2px solid rgb(109, 22, 124);
   border-radius: 0.5em;
   padding: 0.5em;
   margin: 0.3em;
 }
 
-.exchange-page-header-actions {
+.item-page-header-actions {
   margin: 1.2em;
 }
 
-.exchange-page-quick-info {
+.item-page-quick-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.exchange-page-quick-info-icon {
+.item-page-quick-info-icon {
   font-size: 1.8em;
   margin-right: 1em;
 }
 
-.exchange-page-quick-info-text {
+.item-page-quick-info-text {
   font-size: 1.1em;
   font-weight: bold;
 }
 
-.exchange-page-quick-info-comments-table {
+.item-page-quick-info-comments-table {
   margin-top: 1em;
 }
 
-.exchange-page-quick-info-kyctype-table {
+.item-page-quick-info-kyctype-table {
   margin-top: 1em;
   font-weight: bold;
 }
