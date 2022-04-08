@@ -480,19 +480,19 @@ tr {
 }
 
 tr {
-  background-color: #137206;
+  background-color: #1c4916;
 }
 
 tr.tr-is-red {
-  background-color: #720615 !important;
+  background-color: #551e25 !important;
 }
 
 tr.tr-is-yellow {
-  background-color: #726e06 !important;
+  background-color: #575523 !important;
 }
 
 tr.tr-is-info {
-  background-color: #064772 !important;
+  background-color: #214055 !important;
 }
 
 .comment-container {
