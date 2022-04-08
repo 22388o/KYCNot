@@ -426,6 +426,27 @@
          "category": "CARDS",
          "javascript": true,
          "listing-date": "2022-03-30",
+         "verified": true
+      },
+      {
+         "name": "PacketPoint",
+         "short-description": "Anonymous canadian hosting.",
+         "long-description": "A privacy focused virtual server host that offers completely anonymous vps hosting at an affordable price. Get your server payed in Bitcoin or Monero.",
+         "btc": true,
+         "xmr": true,
+         "lnn": false,
+         "cash": false,
+         "registration": true,
+         "personal-info": false,
+         "open-source": false,
+         "tor": false,
+         "tor-url": false,
+         "tos-url": "https://packetpoint.ca/#faq",
+         "url": "https://packetpoint.ca/",
+         "referral_url": false,
+         "category": "VPS",
+         "javascript": false,
+         "listing-date": "2022-04-08",
          "verified": false
       }      
    ]
