@@ -2,21 +2,21 @@
 
 <div class="exchange-page-header-container">
   <div class="exchange-page-header">
-    <img src="../static/img/{{ exchange['name'] | replace(' ', '') | lower }}.jpeg" alt="" class="exchange-page-logo">
+    <img src="../static/img/{{ item['name'] | replace(' ', '') | lower }}.jpeg" alt="" class="exchange-page-logo">
     <div class="exchange-page-header-title">
-      {{exchange['name']}}
+      {{item['name']}}
     </div>
 
     <div class="exchange-page-header-actions">
-      <a target="_blank" class="exchange-page-header-actions-button" href="{{exchange['url']}}">Website</a>
-      {% if exchange['referral'] %}
-        <a target="_blank" class="exchange-page-header-actions-button" href="{{exchange['url']}}{{exchange['referral']}}">Referral</a>
+      <a target="_blank" class="exchange-page-header-actions-button" href="{{item['url']}}">Website</a>
+      {% if item['referral'] %}
+        <a target="_blank" class="exchange-page-header-actions-button" href="{{item['url']}}{{item['referral']}}">Referral</a>
       {% endif %}
-      {% if exchange['tos-urls'][0] != -1%}
-      <a target="_blank" class="exchange-page-header-actions-button" href="{{exchange['tos-urls'][0]}}">ToS</a>
+      {% if item['tos-urls'][0] != -1%}
+      <a target="_blank" class="exchange-page-header-actions-button" href="{{item['tos-urls'][0]}}">ToS</a>
       {% endif %}
-      {% if exchange['tor'] and exchange['tor-onion'] %}
-        <a target="_blank" class="exchange-page-header-actions-button" href="{{exchange['tor-onion']}}">Tor</a>
+      {% if item['tor'] and item['tor-onion'] %}
+        <a target="_blank" class="exchange-page-header-actions-button" href="{{item['tor-onion']}}">Tor</a>
       {% endif %}
     </div>
   </div>
@@ -29,7 +29,7 @@
       <th>Quick Info</th>
     </tr>
    
-    {% if exchange['btc'] %}
+    {% if item['verified'] %}
       <tr>
         <td> 
           <i class="exchange-page-quick-info-icon fas fa-shield" aria-hidden="true"></i> 
@@ -44,7 +44,7 @@
         </td>
       </tr>
     {% endif %}
-    {% if exchange['btc'] %}
+    {% if item['btc'] %}
       <tr>
         <td> 
           <i class="exchange-page-quick-info-icon fab fa-bitcoin" aria-hidden="true"></i> 
@@ -60,7 +60,7 @@
       </tr>
     {% endif %}
 
-    {% if exchange['xmr'] %}
+    {% if item['xmr'] %}
       <tr>
         <td> 
           <i class="exchange-page-quick-info-icon fab fa-monero" aria-hidden="true"></i> 
@@ -76,9 +76,9 @@
       </tr>
     {% endif %}
 
-    {% if exchange['buy'] %}
+    {% if item['buy'] %}
       <tr>
-        {% if exchange['cash']%}
+        {% if item['cash']%}
         <td> 
           <i class="exchange-page-quick-info-icon fas fa-money-bill-wave" aria-hidden="true"></i> 
           <span class="exchange-page-quick-info-text">Cash accepted</span>
@@ -99,7 +99,7 @@
       </tr>
     {% endif %}
 
-    {% if exchange['exchange'] %}
+    {% if item['exchange'] %}
       <tr>
         <td> 
           <i class="exchange-page-quick-info-icon fas fa-random" aria-hidden="true"></i> 
@@ -115,14 +115,14 @@
       </tr>
     {% endif %}
 
-    {% if exchange['no-registration'] %}
+    {% if item['no-registration'] %}
       <tr>
         <td> 
           <i class="exchange-page-quick-info-icon fas fa-user-circle" aria-hidden="true"></i> 
           <span class="exchange-page-quick-info-text">No accounts</span>
         </td>
       </tr>
-      {% if exchange['personal-info'] %}
+      {% if item['personal-info'] %}
         <tr class="tr-is-red">
           <td> 
             <i class="exchange-page-quick-info-icon fas fa-mask" aria-hidden="true"></i> 
@@ -146,14 +146,14 @@
       </tr>
     {% endif %}
 
-    {% if exchange['custodial'] == true %}
+    {% if item['custodial'] == true %}
       <tr class="tr-is-red">
         <td> 
           <i class="exchange-page-quick-info-icon fa-solid fa-wallet" aria-hidden="true"></i> 
           <span class="exchange-page-quick-info-text">The wallet is custodial</span>
         </td>
       </tr>
-    {% elif exchange['custodial'] == false %}
+    {% elif item['custodial'] == false %}
     <tr>
       <td> 
         <i class="exchange-page-quick-info-icon fa-solid fa-wallet" aria-hidden="true"></i> 
@@ -170,7 +170,7 @@
     {% endif %}
 
 
-    {% if exchange['p2p'] %}
+    {% if item['p2p'] %}
       <tr>
         <td> 
           <i class="exchange-page-quick-info-icon fas fa-handshake" aria-hidden="true"></i> 
@@ -179,7 +179,7 @@
       </tr>
     {% endif %}
 
-    {% if exchange['open-source'] %}
+    {% if item['open-source'] %}
       <tr>
         <td> 
           <i class="exchange-page-quick-info-icon fas fa-code" aria-hidden="true"></i> 
@@ -195,7 +195,7 @@
       </tr>
       {% endif %}
 
-    {% if exchange['javascript'] %}
+    {% if item['javascript'] %}
       <tr class="tr-is-red">
         <td> 
           <i class="exchange-page-quick-info-icon fa-brands fa-js" aria-hidden="true"></i> 
@@ -211,7 +211,7 @@
       </tr>
       {% endif %}
 
-      {% if exchange['tor'] %}
+      {% if item['tor'] %}
       <tr>
         <td> 
           <i class="exchange-page-quick-info-icon fas fa-bullseye" aria-hidden="true"></i> 
@@ -230,9 +230,9 @@
   
   <table class="exchange-page-quick-info-kyctype-table">
     <tr>
-      <th>KYC Level: {{exchange['kyc-type']}}</th>
+      <th>KYC Level: {{item['kyc-type']}}</th>
     </tr>
-              {% if exchange['kyc-type'] == 0 %} 
+              {% if item['kyc-type'] == 0 %} 
               <tr class="tr-is-green">
                 <td> 
                   <div class="comment">
@@ -240,7 +240,7 @@
                   </div>
                 </td>
               </tr>
-              {% elif exchange['kyc-type'] == 1 %} 
+              {% elif item['kyc-type'] == 1 %} 
               <tr class="tr-is-green">
                 <td> 
                   <div class="comment">
@@ -248,7 +248,7 @@
                   </div>
                 </td>
               </tr>
-              {% elif exchange['kyc-type'] == 2 %}
+              {% elif item['kyc-type'] == 2 %}
               <tr class="tr-is-yellow">
                 <td> 
                   <div class="comment">
@@ -256,7 +256,7 @@
                   </div>
                 </td>
               </tr>
-              {% elif exchange['kyc-type'] == 3 %}
+              {% elif item['kyc-type'] == 3 %}
               <tr class="tr-is-red">
                 <td> 
                   <div class="comment">
@@ -267,12 +267,12 @@
               {% endif %}
     </table>
   
-  {% if exchange['comments'] %}
+  {% if item['comments'] %}
   <table class="exchange-page-quick-info-comments-table">
     <tr>
       <th>Comments</th>
     </tr>
-      {% for comment in exchange['comments'] %}
+      {% for comment in item['comments'] %}
         <tr class="tr-is-info">
           <td> 
             <div class="comment-container">
@@ -286,12 +286,12 @@
     </table>
     {% endif %}
 
-    {% if exchange['suspicious-tos'] %}
+    {% if item['suspicious-tos'] %}
   <table class="exchange-page-quick-info-comments-table">
     <tr>
       <th>Suspicious ToS</th>
     </tr>
-      {% for comment in exchange['suspicious-tos'] %}
+      {% for comment in item['suspicious-tos'] %}
         <tr class="tr-is-yellow">
           <td> 
             <div class="comment-container">
