@@ -54,7 +54,7 @@ async def index(request):
     if(request.args):
         args = list(request.args.keys())
         template = env.get_template('index.html')
-        f = open(f'{data_dir}/exchanges.json')
+        f = open(f'{data_dir}/exchanges_test.json')
         data = json.load(f)
         exchanges = []
         for exchange in data['exchanges']:
@@ -73,7 +73,7 @@ async def index(request):
                                 subtitle="Find best <strong>NON-KYC</strong> online services."))
     else:
         template = env.get_template('index.html')
-        f = open(f'{data_dir}/exchanges.json')
+        f = open(f'{data_dir}/exchanges_test.json')
         data = json.load(f)
         data['exchanges'] = sorted(data['exchanges'], key=lambda k: k['score'], reverse=True)
         for e in data['exchanges']:
@@ -96,7 +96,7 @@ async def services(request):
             _type = False
 
         template = env.get_template('index.html')
-        f = open(f'{data_dir}/services.json')
+        f = open(f'{data_dir}/services_test.json')
         data = json.load(f)
 
         services = []
@@ -141,9 +141,9 @@ async def services(request):
                                 subtitle="Find best <strong>NON-KYC</strong> online services."))
 
     template = env.get_template('index.html')
-    f = open(f'{data_dir}/services.json')
+    f = open(f'{data_dir}/services_test.json')
     data = json.load(f)
-    #data['services'] = sorted(data['services'], key=lambda k: k['category'], reverse=False)
+    data['services'] = sorted(data['services'], key=lambda k: k['name'], reverse=False)
     for s in data['services']:
         s['listing-date'] = parser.parse(s['listing-date'])
     return html(template.render(date=date, data=data['services'],
@@ -200,7 +200,7 @@ async def exchange(request, name=None):
                 if isinstance(exchange['url'], list):
                     exchange['url'] = exchange['url'][randint(0, len(exchange['url'])-1)]
 
-                return html(template.render(date=date, status=200, exchange=exchange, title="KYC? Not me!", color=color, active=0))
+                return html(template.render(date=date, status=200, item=exchange, title="KYC? Not me!", color=color, active=0))
     return(f"{name} does not exist")
 
 
@@ -219,7 +219,7 @@ async def service(request, name=None):
                         "score": False
                     }
                 template = env.get_template('service.html')
-                return html(template.render(date=date, service=service, tpinfo=tpinfo, active=1))
+                return html(template.render(date=date, item=service, tpinfo=tpinfo, active=1))
     return(f"{name} does not exist")
 
 
