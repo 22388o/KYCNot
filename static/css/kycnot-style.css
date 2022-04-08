@@ -258,6 +258,7 @@ a {
 .card-header {
   align-items: center;
   display: flex;
+  flex-direction: row;
   position: relative;
 }
 
@@ -296,7 +297,7 @@ a {
   letter-spacing: 0.08em;
 }
 
-.card-header-text-score {
+.card-info-text-score {
   margin-left: 1em;
   border: 1px solid #137206;
   background: #137206;
@@ -359,7 +360,7 @@ a {
   font-weight: 400;
   justify-content: space-between;
   line-height: 100%;
-  margin: 0.25em;
+  margin: 0.5em;
 }
 
 .card-info-value-title {
@@ -497,6 +498,14 @@ tr.tr-is-info {
 .comment-container {
   display: flex;
   flex-direction: row;
+}
+
+.is-info{
+  color: #2685c4;
+}
+
+.bg-is-grey{
+  background: gray !important;
 }
 
 @media screen and (max-width: 700px) {
