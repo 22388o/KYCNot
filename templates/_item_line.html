@@ -13,7 +13,15 @@
           {%if item['listing-date'] > date%}
             <svg alt="New listing" width="20" height="26" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg> 
           {%endif%}
-          {{item['name']}}
+
+          {% if item['verified'] %}
+            <span class="card-header-text-name-verified">
+              {{item['name']}} 
+              <i class="is-info fa-solid fa-check-double" alt="verified"></i>
+            </span>
+          {% else %}
+            {{item['name']}}
+          {% endif %}
         </h5>
         
         <div class="card-header-text-icons">
@@ -51,21 +59,43 @@
         </div>
       </div>
 
+      {%if item['score']%}
       <div class="card-info-value">
         <span class="card-info-value-title">Score</span>
         <span class="class-info-value-value">
           {%if item['score'] < 5 %}
-            <span class="card-header-text-score is-red">
+            <span class="card-info-text-score is-red">
               {{item['score']}} / 10
             </span>
           {%else%}
-          <span class="card-header-text-score">
+          <span class="card-info-text-score">
             <p class="score">{{item['score']}}</p> / 10
           </span>
-          {%endif%}
-          
+          {%endif%}          
         </span>
       </div>
+      {% endif %}
+
+      {%if item['status']%}
+      <div class="card-info-value">
+        <span class="card-info-value-title">Status</span>
+        <span class="class-info-value-value">
+          {%if item['status'] == 200 %}
+            <span class="card-info-text-score">
+              Online
+            </span>
+          {%elif item['status'] == 503 %}
+            <span class="card-info-text-score is-red">
+              Offline
+            </span>
+          {%else%}
+          <span class="card-info-text-score bg-is-grey">
+            Unknown
+          </span>
+          {%endif%}          
+        </span>
+      </div>
+      {% endif %}
       
       {% if item['tags'] %}
       <div class="card-info-tags-container">
