@@ -1,28 +1,28 @@
 {% extends "base.html" %} {% block content %}
 
-<div class="exchange-page-header-container">
-  <div class="exchange-page-header">
-    <img src="../static/img/{{ item['name'] | replace(' ', '') | lower }}.jpeg" alt="" class="exchange-page-logo">
-    <div class="exchange-page-header-title">
+<div class="item-page-header-container">
+  <div class="item-page-header">
+    <img src="../static/img/{{ item['name'] | replace(' ', '') | lower }}.jpeg" alt="" class="item-page-logo">
+    <div class="item-page-header-title">
       {{item['name']}}
     </div>
 
-    <div class="exchange-page-header-actions">
-      <a target="_blank" class="exchange-page-header-actions-button" href="{{item['url']}}">Website</a>
+    <div class="item-page-header-actions">
+      <a target="_blank" class="item-page-header-actions-button" href="{{item['url']}}">Website</a>
       {% if item['referral'] %}
-        <a target="_blank" class="exchange-page-header-actions-button" href="{{item['url']}}{{item['referral']}}">Referral</a>
+        <a target="_blank" class="item-page-header-actions-button" href="{{item['url']}}{{item['referral']}}">Referral</a>
       {% endif %}
       {% if item['tos-urls'][0] != -1%}
-      <a target="_blank" class="exchange-page-header-actions-button" href="{{item['tos-urls'][0]}}">ToS</a>
+      <a target="_blank" class="item-page-header-actions-button" href="{{item['tos-urls'][0]}}">ToS</a>
       {% endif %}
       {% if item['tor'] and item['tor-onion'] %}
-        <a target="_blank" class="exchange-page-header-actions-button" href="{{item['tor-onion']}}">Tor</a>
+        <a target="_blank" class="item-page-header-actions-button" href="{{item['tor-onion']}}">Tor</a>
       {% endif %}
     </div>
   </div>
 </div>
 
-<div class="exchange-page-quick-info">
+<div class="item-page-quick-info">
   <table>
  
     <tr>
@@ -32,30 +32,30 @@
     {% if item['verified'] %}
       <tr>
         <td> 
-          <i class="exchange-page-quick-info-icon fas fa-shield" aria-hidden="true"></i> 
-          <span class="exchange-page-quick-info-text">Verified</span>
+          <i class="item-page-quick-info-icon fas fa-shield" aria-hidden="true"></i> 
+          <span class="item-page-quick-info-text">Verified</span>
         </td>
       </tr>
       {% else %}
       <tr class="tr-is-red">
         <td> 
-          <i class="exchange-page-quick-info-icon fas fa-shield" aria-hidden="true"></i> 
-          <span class="exchange-page-quick-info-text">Not verified</span>
+          <i class="item-page-quick-info-icon fas fa-shield" aria-hidden="true"></i> 
+          <span class="item-page-quick-info-text">Not verified</span>
         </td>
       </tr>
     {% endif %}
     {% if item['btc'] %}
       <tr>
         <td> 
-          <i class="exchange-page-quick-info-icon fab fa-bitcoin" aria-hidden="true"></i> 
-          <span class="exchange-page-quick-info-text">Bitcoin is available</span>
+          <i class="item-page-quick-info-icon fab fa-bitcoin" aria-hidden="true"></i> 
+          <span class="item-page-quick-info-text">Bitcoin is available</span>
         </td>
       </tr>
       {% else %}
       <tr class="tr-is-red">
         <td> 
-          <i class="exchange-page-quick-info-icon fab fa-bitcoin" aria-hidden="true"></i> 
-          <span class="exchange-page-quick-info-text">Bitcoin is not available</span>
+          <i class="item-page-quick-info-icon fab fa-bitcoin" aria-hidden="true"></i> 
+          <span class="item-page-quick-info-text">Bitcoin is not available</span>
         </td>
       </tr>
     {% endif %}
@@ -63,15 +63,15 @@
     {% if item['xmr'] %}
       <tr>
         <td> 
-          <i class="exchange-page-quick-info-icon fab fa-monero" aria-hidden="true"></i> 
-          <span class="exchange-page-quick-info-text">Monero is available</span>
+          <i class="item-page-quick-info-icon fab fa-monero" aria-hidden="true"></i> 
+          <span class="item-page-quick-info-text">Monero is available</span>
         </td>
       </tr>
       {% else %}
       <tr class="tr-is-red">
         <td> 
-          <i class="exchange-page-quick-info-icon fab fa-monero" aria-hidden="true"></i> 
-          <span class="exchange-page-quick-info-text">Monero is not available</span>
+          <i class="item-page-quick-info-icon fab fa-monero" aria-hidden="true"></i> 
+          <span class="item-page-quick-info-text">Monero is not available</span>
         </td>
       </tr>
     {% endif %}
@@ -80,37 +80,37 @@
       <tr>
         {% if item['cash']%}
         <td> 
-          <i class="exchange-page-quick-info-icon fas fa-money-bill-wave" aria-hidden="true"></i> 
-          <span class="exchange-page-quick-info-text">Cash accepted</span>
+          <i class="item-page-quick-info-icon fas fa-money-bill-wave" aria-hidden="true"></i> 
+          <span class="item-page-quick-info-text">Cash accepted</span>
         </td>
         {% else %}
         <td> 
-          <i class="exchange-page-quick-info-icon fas fa-dollar-sign" aria-hidden="true"></i> 
-          <span class="exchange-page-quick-info-text">You can pay with FIAT</span>
+          <i class="item-page-quick-info-icon fas fa-dollar-sign" aria-hidden="true"></i> 
+          <span class="item-page-quick-info-text">You can pay with FIAT</span>
         </td>
         {% endif %}
       </tr>
       {% else %}
       <tr class="tr-is-red">
         <td> 
-          <i class="exchange-page-quick-info-icon fas fa-dollar-sign" aria-hidden="true"></i> 
-          <span class="exchange-page-quick-info-text">You can't pay with FIAT</span>
+          <i class="item-page-quick-info-icon fas fa-dollar-sign" aria-hidden="true"></i> 
+          <span class="item-page-quick-info-text">You can't pay with FIAT</span>
         </td>
       </tr>
     {% endif %}
 
-    {% if item['exchange'] %}
+    {% if item['item'] %}
       <tr>
         <td> 
-          <i class="exchange-page-quick-info-icon fas fa-random" aria-hidden="true"></i> 
-          <span class="exchange-page-quick-info-text">You can swap coins</span>
+          <i class="item-page-quick-info-icon fas fa-random" aria-hidden="true"></i> 
+          <span class="item-page-quick-info-text">You can swap coins</span>
         </td>
       </tr>
       {% else %}
       <tr class="tr-is-red">
         <td> 
-          <i class="exchange-page-quick-info-icon fas fa-random" aria-hidden="true"></i> 
-          <span class="exchange-page-quick-info-text">You can not swap coins</span>
+          <i class="item-page-quick-info-icon fas fa-random" aria-hidden="true"></i> 
+          <span class="item-page-quick-info-text">You can not swap coins</span>
         </td>
       </tr>
     {% endif %}
@@ -118,30 +118,30 @@
     {% if item['no-registration'] %}
       <tr>
         <td> 
-          <i class="exchange-page-quick-info-icon fas fa-user-circle" aria-hidden="true"></i> 
-          <span class="exchange-page-quick-info-text">No accounts</span>
+          <i class="item-page-quick-info-icon fas fa-user-circle" aria-hidden="true"></i> 
+          <span class="item-page-quick-info-text">No accounts</span>
         </td>
       </tr>
       {% if item['personal-info'] %}
         <tr class="tr-is-red">
           <td> 
-            <i class="exchange-page-quick-info-icon fas fa-mask" aria-hidden="true"></i> 
-            <span class="exchange-page-quick-info-text">Personal information</span>
+            <i class="item-page-quick-info-icon fas fa-mask" aria-hidden="true"></i> 
+            <span class="item-page-quick-info-text">Personal information</span>
           </td>
         </tr>
       {% else %}
         <tr>
           <td> 
-            <i class="exchange-page-quick-info-icon fas fa-mask" aria-hidden="true"></i> 
-            <span class="exchange-page-quick-info-text">No personal information</span>
+            <i class="item-page-quick-info-icon fas fa-mask" aria-hidden="true"></i> 
+            <span class="item-page-quick-info-text">No personal information</span>
           </td>
         </tr>
         {% endif %}
       {% else %}
       <tr class="tr-is-red">
         <td> 
-          <i class="exchange-page-quick-info-icon fas fa-user-circle" aria-hidden="true"></i> 
-          <span class="exchange-page-quick-info-text">Account needed</span>
+          <i class="item-page-quick-info-icon fas fa-user-circle" aria-hidden="true"></i> 
+          <span class="item-page-quick-info-text">Account needed</span>
         </td>
       </tr>
     {% endif %}
@@ -149,22 +149,22 @@
     {% if item['custodial'] == true %}
       <tr class="tr-is-red">
         <td> 
-          <i class="exchange-page-quick-info-icon fa-solid fa-wallet" aria-hidden="true"></i> 
-          <span class="exchange-page-quick-info-text">The wallet is custodial</span>
+          <i class="item-page-quick-info-icon fa-solid fa-wallet" aria-hidden="true"></i> 
+          <span class="item-page-quick-info-text">The wallet is custodial</span>
         </td>
       </tr>
     {% elif item['custodial'] == false %}
     <tr>
       <td> 
-        <i class="exchange-page-quick-info-icon fa-solid fa-wallet" aria-hidden="true"></i> 
-        <span class="exchange-page-quick-info-text">The wallet is not custodial</span>
+        <i class="item-page-quick-info-icon fa-solid fa-wallet" aria-hidden="true"></i> 
+        <span class="item-page-quick-info-text">The wallet is not custodial</span>
       </td>
     </tr>
     {% else %}
     <tr class="tr-is-yellow">
       <td> 
-        <i class="exchange-page-quick-info-icon fa-solid fa-wallet" aria-hidden="true"></i> 
-        <span class="exchange-page-quick-info-text">The wallet is semi custodial</span>
+        <i class="item-page-quick-info-icon fa-solid fa-wallet" aria-hidden="true"></i> 
+        <span class="item-page-quick-info-text">The wallet is semi custodial</span>
       </td>
     </tr>
     {% endif %}
@@ -173,8 +173,8 @@
     {% if item['p2p'] %}
       <tr>
         <td> 
-          <i class="exchange-page-quick-info-icon fas fa-handshake" aria-hidden="true"></i> 
-          <span class="exchange-page-quick-info-text">P2P</span>
+          <i class="item-page-quick-info-icon fas fa-handshake" aria-hidden="true"></i> 
+          <span class="item-page-quick-info-text">P2P</span>
         </td>
       </tr>
     {% endif %}
@@ -182,15 +182,15 @@
     {% if item['open-source'] %}
       <tr>
         <td> 
-          <i class="exchange-page-quick-info-icon fas fa-code" aria-hidden="true"></i> 
-          <span class="exchange-page-quick-info-text">The source code is public</span>
+          <i class="item-page-quick-info-icon fas fa-code" aria-hidden="true"></i> 
+          <span class="item-page-quick-info-text">The source code is public</span>
         </td>
       </tr>
       {% else %}
       <tr class="tr-is-red">
         <td> 
-          <i class="exchange-page-quick-info-icon fas fa-code" aria-hidden="true"></i> 
-          <span class="exchange-page-quick-info-text">The source code is private</span>
+          <i class="item-page-quick-info-icon fas fa-code" aria-hidden="true"></i> 
+          <span class="item-page-quick-info-text">The source code is private</span>
         </td>
       </tr>
       {% endif %}
@@ -198,15 +198,15 @@
     {% if item['javascript'] %}
       <tr class="tr-is-red">
         <td> 
-          <i class="exchange-page-quick-info-icon fa-brands fa-js" aria-hidden="true"></i> 
-          <span class="exchange-page-quick-info-text">JavaScript is needed</span>
+          <i class="item-page-quick-info-icon fa-brands fa-js" aria-hidden="true"></i> 
+          <span class="item-page-quick-info-text">JavaScript is needed</span>
         </td>
       </tr>
       {% else %}
       <tr>
         <td> 
-          <i class="exchange-page-quick-info-icon fa-brands fa-js" aria-hidden="true"></i> 
-          <span class="exchange-page-quick-info-text">No JavaScript</span>
+          <i class="item-page-quick-info-icon fa-brands fa-js" aria-hidden="true"></i> 
+          <span class="item-page-quick-info-text">No JavaScript</span>
         </td>
       </tr>
       {% endif %}
@@ -214,21 +214,21 @@
       {% if item['tor'] %}
       <tr>
         <td> 
-          <i class="exchange-page-quick-info-icon fas fa-bullseye" aria-hidden="true"></i> 
-          <span class="exchange-page-quick-info-text">Tor available</span>
+          <i class="item-page-quick-info-icon fas fa-bullseye" aria-hidden="true"></i> 
+          <span class="item-page-quick-info-text">Tor available</span>
         </td>
       </tr>
       {% else %}
       <tr class="tr-is-red">
         <td> 
-          <i class="exchange-page-quick-info-icon fas fa-bullseye" aria-hidden="true"></i> 
-          <span class="exchange-page-quick-info-text">No Tor service available</span>
+          <i class="item-page-quick-info-icon fas fa-bullseye" aria-hidden="true"></i> 
+          <span class="item-page-quick-info-text">No Tor service available</span>
         </td>
       </tr>
     {% endif %}
   </table>
   
-  <table class="exchange-page-quick-info-kyctype-table">
+  <table class="item-page-quick-info-kyctype-table">
     <tr>
       <th>KYC Level: {{item['kyc-type']}}</th>
     </tr>
@@ -236,7 +236,7 @@
               <tr class="tr-is-green">
                 <td> 
                   <div class="comment">
-                    No KYC. The exchange ToS do not mention that it will ever request the user for a KYC verification.
+                    No KYC. The item ToS do not mention that it will ever request the user for a KYC verification.
                   </div>
                 </td>
               </tr>
@@ -252,7 +252,7 @@
               <tr class="tr-is-yellow">
                 <td> 
                   <div class="comment">
-                    The exchange may request KYC. Although KYC is not mandatory, the exchange reserves the right to require KYC for a certain user at a certain moment and may block funds. May be that a transaction is detected as suspicious or any other reason.
+                    The item may request KYC. Although KYC is not mandatory, the item reserves the right to require KYC for a certain user at a certain moment and may block funds. May be that a transaction is detected as suspicious or any other reason.
                   </div>
                 </td>
               </tr>
@@ -268,7 +268,7 @@
     </table>
   
   {% if item['comments'] %}
-  <table class="exchange-page-quick-info-comments-table">
+  <table class="item-page-quick-info-comments-table">
     <tr>
       <th>Comments</th>
     </tr>
@@ -287,7 +287,7 @@
     {% endif %}
 
     {% if item['suspicious-tos'] %}
-  <table class="exchange-page-quick-info-comments-table">
+  <table class="item-page-quick-info-comments-table">
     <tr>
       <th>Suspicious ToS</th>
     </tr>
