@@ -311,8 +311,9 @@ async def generator(request):
                 return(text(str(exchange_json)))
             else:
                 name = args['name'][0].replace(" ", "_")
-                rurl = request.url
-                shurl = s.shorten(f"{str(rurl)}&generate=True", custom_url = f"{randint(0,999999)}_{name}_kycnot")[0]
+                rurl = request.url.split('/')[3]
+                baseurl = "https://dev.kycnot.me/"
+                shurl = s.shorten(f"{baseurl}{str(rurl)}&generate=True", custom_url = f"{randint(0,999999)}_{name}_kycnot")[0]
                 return(html(f"Copy the following URL to fill the request: <b><pre>{shurl}</pre></b>"))
         else:
             _type = args['type'][0]
