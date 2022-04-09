@@ -4,7 +4,7 @@ from datetime import timedelta, datetime
 from urllib.parse import unquote
 
 from sanic.response import redirect
-from sanic.response import text
+from sanic.response import json as sjson, text
 from sanic.response import html
 from sanic import Sanic
 
@@ -16,6 +16,7 @@ import os.path
 import qrcode
 import httpx
 import os
+import gdshortener
 import re
 
 #import git
@@ -263,6 +264,66 @@ async def gne(request):
     if(request.json):
         return text('POST request - {}'.format(request.json))
     return(html(template.render()))
+
+def set_default(obj):
+    if isinstance(obj, set):
+        return list(obj)
+    raise TypeError
+
+@app.route("/generator", name="generator", methods=['POST', 'GET'])
+async def generator(request):
+    if(request.args):
+        s = gdshortener.ISGDShortener()
+        args = request.args
+        if len(args) > 1:
+            print(str(request.url.replace("http://127.0.0.1:8000", "https://dev.kycnot.me")))
+            print(f"{randint(0,999999)}_{args['name'][0]}_kycnot")
+            if 'generate' in args:
+                exchange_json = {
+                        "name": args['name'][0],
+                        "verified": False,
+                        "btc": {args['btc'][0]},
+                        "xmr": {args['xmr'][0]},
+                        "lnn": {args['lnn'][0]},
+                        "cash": {args['cash'][0]},
+                        "p2p": {args['p2p'][0]},
+                        "tor": {args['tor'][0]},
+                        "refunds": False,
+                        "open-source": {args['open-source'][0]},
+                        "custodial": {args['custodial'][0]},
+                        "javascript": {args['javascript'][0]},
+                        "no-registration": {args['registration'][0]},
+                        "personal-info": {args['personal-info'][0]},
+                        "buy": {args['buy'][0]},
+                        "exchange": {args['exchange'][0]},
+                        "short-description": args['short-d'][0],
+                        "long-description": args['large-d'][0],
+                        "comments": False,
+                        "kyc-check": False,
+                        "kyc-type": {args['kyc-type'][0]},
+                        "score": None,
+                        "suspicious-tos": False,
+                        "tor-onion": args['tor-url'][0],
+                        "url": args['url'][0],
+                        "tos-urls": [
+                            args['tos-url'][0]
+                        ],
+                        "score-boost": 0
+                    }
+                return(text(str(exchange_json)))
+            else:
+                name = args['name'][0].replace(" ", "_")
+                rurl = request.url.replace("http://127.0.0.1:8000", "https://dev.kycnot.me")
+                shurl = s.shorten(f"{str(rurl)}&generate=True", custom_url = f"{randint(0,999999)}_{name}_kycnot")[0]
+                return(html(f"Copy the following URL to fill the request: <b><pre>{shurl}</pre></b>"))
+        else:
+            _type = args['type'][0]
+    else:
+        _type='Service'
+    template = env.get_template('generator.html')
+    if(request.json):
+        return json(request.json, dumps=dumps, indent=2)
+    return(html(template.render(_type=_type)))
 
 
 @app.route("/generate-new-service", name="new-service", methods=['POST', 'GET'])
