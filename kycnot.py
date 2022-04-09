@@ -209,7 +209,7 @@ async def exchange(request, name=None):
 async def service(request, name=None):
     if(name):        
         template = env.get_template('services.html')
-        f = open(f'{data_dir}/services.json')
+        f = open(f'{data_dir}/services_test.json')
         data = json.load(f)
         for service in data['services']:
             if service['name'].replace(' ', '').lower() == name:
