@@ -348,9 +348,9 @@ async def generator(request):
                 rurl = request.url.split('/')[3]
                 baseurl = "https://dev.kycnot.me/"
                 if "Exchange" in args['type']:
-                    shurl = s.shorten(f"{baseurl}{str(rurl)}&type=Exchange&generate=True", custom_url = f"{randint(0,9999999999)}_{name}_kycnot")[0]
+                    shurl = s.shorten(f"{baseurl}{str(rurl)}&type=Exchange&generate=True", custom_url = f"{randint(0,999999999999)}_kycnot")[0]
                 else:
-                    shurl = s.shorten(f"{baseurl}{str(rurl)}&type=Service&generate=True", custom_url = f"{randint(0,9999999999)}_{name}_kycnot")[0]
+                    shurl = s.shorten(f"{baseurl}{str(rurl)}&type=Service&generate=True", custom_url = f"{randint(0,999999999999)}_kycnot")[0]
                 return(html(f"Copy the following URL to fill the request: <b><pre>{shurl}</pre></b>"))
         else:
             _type = args['type'][0]
