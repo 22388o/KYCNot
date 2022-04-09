@@ -418,8 +418,28 @@ a {
   margin: 0.3em;
 }
 
+.item-page-header-actions-button:hover {
+  border: 2px solid rgb(255, 255, 255);
+}
+
 .item-page-header-actions {
   margin: 1.2em;
+  font-weight: bold;
+}
+
+.item-page-header-description{
+  width: 40vw;
+  color: white;
+  text-align:justify;
+  padding: 1em;
+  margin: 0.5em;
+  border: 2px solid white;
+  border-radius: 1em;
+  font-size: 1.2em;
+}
+
+.item-page-header-description a{
+  color: rgb(199, 76, 221);
 }
 
 .item-page-quick-info {
@@ -427,6 +447,11 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.item-page-quick-info a{
+  color: rgb(217, 139, 248);
+  font-weight: bold;
 }
 
 .item-page-quick-info-icon {
@@ -441,6 +466,10 @@ a {
 
 .item-page-quick-info-comments-table {
   margin-top: 1em;
+}
+
+.item-page-quick-info-comments-table a {
+  color: rgb(199, 76, 221);
 }
 
 .item-page-quick-info-kyctype-table {
@@ -549,7 +578,7 @@ tr.tr-is-info {
 }
 
 .spacer{
-  padding: 10em;
+  padding: 7em;
 }
 
 .donation-button{
@@ -639,6 +668,12 @@ small{
 }
 
 @media screen and (max-width: 700px) {
+
+  .item-page-header-description{
+    width: 80vw !important;
+    font-size: 0.9em;
+  }
+
   .contactpre{
     background: rgb(51, 48, 48);
     padding: 1em;

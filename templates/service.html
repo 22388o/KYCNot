@@ -16,6 +16,9 @@
         <a target="_blank" class="item-page-header-actions-button" href="{{item['tor-onion']}}">Tor</a>
       {% endif %}
     </div>
+    <div class="item-page-header-description">
+      {{item['long-description'] | safe}}
+    </div>
   </div>
 </div>
 
@@ -207,5 +210,7 @@
     </table>
     {% endif %}
 </div>
+
+<div class="spacer"></div>
   
 {% endblock %}
