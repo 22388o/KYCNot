@@ -430,5 +430,48 @@
 		"listing-date": "2022-03-30",
 		"score-boost": 1,
 		"verified": false
-	}]
+	},
+	{
+		"name": "PacketPoint",
+		"short-description": "Anonymous canadian hosting.",
+		"long-description": "A privacy focused virtual server host that offers completely anonymous vps hosting at an affordable price. Get your server payed in Bitcoin or Monero.",
+		"btc": true,
+		"xmr": true,
+		"lnn": false,
+		"cash": false,
+		"no-registration": true,
+		"personal-info": false,
+		"open-source": false,
+		"tor": false,
+		"tor-url": false,
+		"tos-url": "https://packetpoint.ca/#faq",
+		"url": "https://packetpoint.ca/",
+		"referral_url": false,
+		"tags": ["VPS", "HOSTING"],
+		"javascript": false,
+		"listing-date": "2022-04-08",
+		"verified": false
+	 },
+	 {
+		"name": "IncogNET",
+		"short-description": "Privacy focused hosting, server and domain names.",
+		"long-description": "<p>IncogNET offers solutions to accessing and publishing content safely. This includes CloudLinux shared web hosting, KVM Virtual Servers in Netherlands and Finland with new locations coming soon, domain registration and more.</p> <p>No service requires any PII. The order process only requests an email address, of which any can be used. No email verification is required but a working email is suggested simply for delivery of invoice and service information (domain expiration reminders, service renewal, support requests, etc).</p> <p>The preferred payments are Monero, Litecoin and Bitcoin however Bitcoin Lightening Network, Ethereum, and many more are also accepted. Cash payments are also accepted on a per need basis, depending on the size of the order.</p>",
+		"btc": true,
+		"xmr": true,
+		"lnn": true,
+		"cash": true,
+		"no-registration": true,
+		"personal-info": false,
+		"open-source": false,
+		"tor": true,
+		"tor-url": "http://incoghostm2dytlqdiaj3lmtn7x2l5gb76jhabb6ywbqhjfzcoqq6aad.onion/",
+		"tos-url": "https://incognet.io/legalstuff",
+		"url": "https://incognet.io/",
+		"referral_url": false,
+		"tags": ["VPS", "HOSTING", "DOMAINS"],
+		"javascript": false,
+		"listing-date": "2022-04-09",
+		"verified": false
+	 }  
+]
 }
