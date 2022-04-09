@@ -276,8 +276,6 @@ async def generator(request):
         s = gdshortener.ISGDShortener()
         args = request.args
         if len(args) > 1:
-            print(str(request.url.replace("http://127.0.0.1:8000", "https://dev.kycnot.me")))
-            print(f"{randint(0,999999)}_{args['name'][0]}_kycnot")
             if 'generate' in args:
                 exchange_json = {
                         "name": args['name'][0],
@@ -313,7 +311,7 @@ async def generator(request):
                 return(text(str(exchange_json)))
             else:
                 name = args['name'][0].replace(" ", "_")
-                rurl = request.url.replace("http://127.0.0.1:8000", "https://dev.kycnot.me")
+                rurl = request.url
                 shurl = s.shorten(f"{str(rurl)}&generate=True", custom_url = f"{randint(0,999999)}_{name}_kycnot")[0]
                 return(html(f"Copy the following URL to fill the request: <b><pre>{shurl}</pre></b>"))
         else:
