@@ -17,7 +17,7 @@
 
 {% if _type == 'Exchange' %}
 <div class="form">
-    <form style="color: white !important;" action="/generator" method="get">
+    <form style="color: white !important;" action="/generator?type=Exchange" method="get">
         <div class="field">
           <div class="control">
             <label class="checkbox">
@@ -258,10 +258,223 @@
   
         <div class="field is-grouped">
           <div class="control">
-            <button type="submit" class="button is-link">Get the JSON</button>
+            <button type="submit" class="button is-link">Get URL</button>
           </div>
         </div>
+
+        <input
+              name="type"
+              required
+              class="input"
+              type="text"
+              value="Exchange"
+              hidden
+            />
       </form>
+      {% else %}
+      <div class="form">
+        <form style="color: white !important;" action="/generator?type=Exchange" method="get">
+          <div class="field">
+            <label class="label"
+              >Service Name (Please write it with corresponding capital and
+              lowercase letters)</label
+            >
+            <div class="control">
+              <input
+                name="name"
+                id="name"
+                required
+                class="input"
+                type="text"
+                placeholder="Service NameExample"
+              />
+            </div>
+          </div>
+    
+          <div class="field">
+            <label class="label"></label>
+              Service tags (comma separated):
+            </label>
+            <div class="control">
+              <input
+                name="tags"
+                id="tags"
+                required
+                class="input"
+                type="text"
+                placeholder="VPS, HOSTING, DOMAINS"
+              />
+            </div>
+          </div>
+    
+          <div class="field">
+            <label class="checkbox">
+              <input name="btc" id="btc" value="True" type="checkbox" /> Bitcoin is
+              accepted.
+              <input type="hidden" name="btc" value="False" />
+            </label>
+          </div>
+    
+          <div class="field">
+            <label class="checkbox">
+              <input name="xmr" value="True" type="checkbox" /> Monero is accepted.
+              <input type="hidden" name="xmr" value="False" />
+            </label>
+          </div>
+    
+          <div class="field">
+            <label class="checkbox">
+              <input name="lnn" value="True" type="checkbox" /> Lightning network is
+              available.
+              <input type="hidden" name="lnn" value="False" />
+            </label>
+          </div>
+          
+          <div class="field">
+            <label class="checkbox">
+              <input name="cash" value="True" type="checkbox" /> You can pay with
+              cash.
+              <input type="hidden" name="cash" value="False" />
+            </label>
+          </div>
+    
+          <div class="field">
+            <label class="checkbox">
+              <input name="no-registration" value="True" type="checkbox" /> You DON'T need to
+              register an account to use this service.
+              <input type="hidden" name="no-registration" value="False" />
+            </label>
+          </div>
+    
+          <div class="field">
+            <label class="checkbox">
+              <input name="personal-info" value="True" type="checkbox" />
+              Registration requires personal information.
+              <input type="hidden" name="personal-info" value="False" />
+            </label>
+          </div>    
+    
+          <div class="field">
+            <label class="checkbox">
+              <input name="open-source" value="True" type="checkbox" /> The service
+              code is available for study (Open Source).
+              <input type="hidden" name="open-source" value="False" />
+            </label>
+          </div>
+
+          <div class="field">
+            <label class="checkbox">
+              <input name="javascript" value="True" type="checkbox" /> 
+              Javascript is required
+              <input type="hidden" name="javascript" value="False" />
+            </label>
+          </div>
+    
+          <div class="field">
+            <label class="checkbox">
+              <input name="tor" value="True" type="checkbox" /> It has a Tor onion
+              available.
+              <input type="hidden" name="tor" value="False" />
+            </label>
+          </div>
+    
+          <div class="field">
+            <label class="label"
+              >If it has a Tor link available, provide it in this field</label
+            >
+            <div class="control">
+              <input
+                name="tor-url"
+                class="input"
+                type="text"
+                value="false"
+                placeholder="http://ewerxamowkdople.onion/"
+              />
+            </div>
+          </div>
+    
+          <div class="field">
+            <label class="label"
+              >Provide a short description of the Service (40 characters
+              max).</label
+            >
+            <div class="control">
+              <textarea
+                name="short-d"
+                maxlength="40"
+                required
+                class="textarea"
+                placeholder="Textarea"
+              ></textarea>
+            </div>
+          </div>
+    
+          <div class="field">
+            <label class="label"
+              >Provide a detailed description of the Exchange.</label
+            >
+            <div class="control">
+              <textarea
+                name="large-d"
+                required
+                class="textarea"
+                placeholder="Textarea"
+              ></textarea>
+            </div>
+          </div>
+    
+          <div class="field">
+            <label class="label">Website</label>
+            <div class="control">
+              <input
+                name="url"
+                required
+                class="input"
+                type="text"
+                placeholder="https://exchange.tld/"
+              />
+            </div>
+          </div>
+    
+          <div class="field">
+            <label class="label">Link to the ToS.</label>
+            <div class="control">
+              <input
+                name="tos-url"
+                required
+                class="input"
+                type="text"
+                placeholder="https://exchange.tld/terms"
+              />
+            </div>
+          </div>
+    
+          <div class="field">
+            <div class="control">
+              <label class="checkbox">
+                <input required value="True" type="checkbox" />
+                <input type="hidden" name="" value="False" />
+                I am sure the exchange passes the
+                <a href="#">basic listing rules</a>
+              </label>
+            </div>
+          </div>
+    
+          <div class="field is-grouped">
+            <div class="control">
+              <button type="submit" class="button is-link">Get URL</button>
+            </div>
+          </div>
+
+          <input
+              name="type"
+              required
+              class="input"
+              type="text"
+              value="Service"
+              hidden
+            />
+        </form>
       {% endif %}
     </div>
 

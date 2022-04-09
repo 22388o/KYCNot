@@ -273,55 +273,93 @@ def set_default(obj):
 @app.route("/generator", name="generator", methods=['POST', 'GET'])
 async def generator(request):
     if(request.args):
-        s = gdshortener.ISGDShortener()
+        print("received")
         args = request.args
         if len(args) > 1:
             if 'generate' in args:
-                exchange_json = {
-                        "name": args['name'][0],
-                        "verified": False,
-                        "btc": {args['btc'][0]},
-                        "xmr": {args['xmr'][0]},
-                        "lnn": {args['lnn'][0]},
-                        "cash": {args['cash'][0]},
-                        "p2p": {args['p2p'][0]},
-                        "tor": {args['tor'][0]},
-                        "refunds": False,
-                        "open-source": {args['open-source'][0]},
-                        "custodial": {args['custodial'][0]},
-                        "javascript": {args['javascript'][0]},
-                        "no-registration": {args['registration'][0]},
-                        "personal-info": {args['personal-info'][0]},
-                        "buy": {args['buy'][0]},
-                        "exchange": {args['exchange'][0]},
-                        "short-description": args['short-d'][0],
-                        "long-description": args['large-d'][0],
-                        "comments": False,
-                        "kyc-check": False,
-                        "kyc-type": {args['kyc-type'][0]},
-                        "score": None,
-                        "suspicious-tos": False,
-                        "tor-onion": args['tor-url'][0],
-                        "url": args['url'][0],
-                        "tos-urls": [
-                            args['tos-url'][0]
-                        ],
-                        "score-boost": 0
+                if 'Exchange' in args['type']:
+                    item_json = {
+                            "name": args['name'][0],
+                            "verified": False,
+                            "btc": {args['btc'][0]},
+                            "xmr": {args['xmr'][0]},
+                            "lnn": {args['lnn'][0]},
+                            "cash": {args['cash'][0]},
+                            "p2p": {args['p2p'][0]},
+                            "tor": {args['tor'][0]},
+                            "refunds": False,
+                            "open-source": {args['open-source'][0]},
+                            "custodial": {args['custodial'][0]},
+                            "javascript": {args['javascript'][0]},
+                            "no-registration": {args['registration'][0]},
+                            "personal-info": {args['personal-info'][0]},
+                            "buy": {args['buy'][0]},
+                            "exchange": {args['exchange'][0]},
+                            "short-description": args['short-d'][0],
+                            "long-description": args['large-d'][0],
+                            "meta-description": "",
+                            "comments": False,
+                            "kyc-check": False,
+                            "kyc-type": {args['kyc-type'][0]},
+                            "score": None,
+                            "suspicious-tos": False,
+                            "tor-onion": args['tor-url'][0],
+                            "url": args['url'][0],
+                            "referral": False,
+                            "tos-urls": [
+                                args['tos-url'][0]
+                            ],
+                            "third-party-connections": False,
+                            "score-boost": 0,
+                            "listing-date": str(datetime.today().strftime("%Y-%m-%d")),
+                            "api": {args['api'][0]},
+                            "status": 200
+                        }
+                else:
+                    item_json = {
+                            "name": args['name'][0],
+                            "url": args['url'][0],
+                            "referral_url": False,
+                            "tos-url": args['tos-url'][0],
+                            "short-description": args['short-d'][0],
+                            "long-description": args['large-d'][0],
+                            "meta-description": "",
+                            "btc": {args['btc'][0]},
+                            "xmr": {args['xmr'][0]},
+                            "lnn": {args['lnn'][0]},
+                            "cash": {args['cash'][0]},
+                            "comments": False,
+                            "verified": False,
+                            "no-registration": {args['no-registration'][0]},
+                            "personal-info": {args['personal-info'][0]},
+                            "tor": {args['tor'][0]},
+                            "tor-onion": args['tor-url'][0],
+                            "open-source": {args['open-source'][0]},
+                            "tags": args['tags'],
+                            "javascript": {args['javascript'][0]},
+                            "listing-date": str(datetime.today().strftime("%Y-%m-%d")),
+                            "score-boost": 0,
+                            "api": False
                     }
-                return(text(str(exchange_json)))
+                return(text(str(item_json)))
             else:
+                s = gdshortener.ISGDShortener()
                 name = args['name'][0].replace(" ", "_")
                 rurl = request.url.split('/')[3]
                 baseurl = "https://dev.kycnot.me/"
-                shurl = s.shorten(f"{baseurl}{str(rurl)}&generate=True", custom_url = f"{randint(0,999999)}_{name}_kycnot")[0]
+                if "Exchange" in args['type']:
+                    shurl = s.shorten(f"{baseurl}{str(rurl)}&type=Exchange&generate=True", custom_url = f"{randint(0,9999999999)}_{name}_kycnot")[0]
+                else:
+                    shurl = s.shorten(f"{baseurl}{str(rurl)}&type=Service&generate=True", custom_url = f"{randint(0,9999999999)}_{name}_kycnot")[0]
                 return(html(f"Copy the following URL to fill the request: <b><pre>{shurl}</pre></b>"))
         else:
             _type = args['type'][0]
     else:
         _type='Service'
     template = env.get_template('generator.html')
-    if(request.json):
-        return json(request.json, dumps=dumps, indent=2)
+    #if(request.json):
+    #    print("here")
+    #    return json(request.json, dumps=dumps, indent=2)
     return(html(template.render(_type=_type)))
 
 
