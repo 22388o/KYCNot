@@ -29,4 +29,3 @@ RUN apk --no-cache add libxml2 libxslt musl-dev zlib-dev jpeg-dev gcc
 RUN pip install pillow
 EXPOSE 1337
 CMD sanic kycnot.app --host=0.0.0.0 --port=1337 --workers=4
-#CMD gunicorn kycnot:app --bind 0.0.0.0:1337 --worker-class sanic.worker.GunicornWorker

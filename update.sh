@@ -5,6 +5,4 @@ git pull
 docker stop kycnot-newui
 docker rm kycnot-newui
 docker build -t pluja/kycnot-newui .
-docker run -p 1338:1338 --name kycnot-newui pluja/kycnot-newui
-#docker exec -it kycnot apk add zlib-dev jpeg-dev gcc musl-dev
-#docker exec -it kycnot pip install pillow
+docker run -d -p 1338:1337 --name kycnot-newui pluja/kycnot-newui
