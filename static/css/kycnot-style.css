@@ -416,6 +416,14 @@ a {
   font-weight: bold;
 }
 
+.item-page-header-status{
+  border-radius: 0.5em;
+  padding: 0.5em;
+  margin: 0.3em;
+  font-size: small;
+  border: 2px solid rgb(161, 172, 166);
+}
+
 .item-page-header-actions-button {
   border: 2px solid rgb(109, 22, 124);
   border-radius: 0.5em;
@@ -536,6 +544,10 @@ tr.tr-is-info {
 
 .is-info{
   color: #2685c4;
+}
+
+.is-green{
+  color:#357e2b;
 }
 
 .bg-is-grey{

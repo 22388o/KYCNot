@@ -8,6 +8,12 @@
     </div>
 
     <div class="item-page-header-actions">
+      {% if item['status'] == 200 %}
+        <span class="item-page-header-status is-green"><i class="fa-solid fa-circle"></i> Online</span>
+      {% endif %}
+    </div>
+
+    <div class="item-page-header-actions">
       <a target="_blank" class="item-page-header-actions-button" href="{{item['url']}}">Website</a>
       {% if item['referral'] %}
         <a target="_blank" class="item-page-header-actions-button" href="{{item['url']}}{{item['referral']}}">Referral</a>
