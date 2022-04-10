@@ -81,6 +81,7 @@ async def index(request):
             e['listing-date'] = parser.parse(e['listing-date'])
             if isinstance(e['url'], list):
                 e['url'] = e['url'][randint(0, len(e['url'])-1)]
+
         return html(template.render(date=date, data=data['exchanges'],
                                 title="exchange",
                                 active=0,
@@ -187,7 +188,7 @@ async def about(request):
 @app.route("/exchange/<name>")
 async def exchange(request, name=None):
     if(name):
-        f = open(f'{data_dir}/exchanges.json')
+        f = open(f'{data_dir}/exchanges_test.json')
         data = json.load(f)
         for exchange in data['exchanges']:
             if ''.join(exchange['name'].split()).lower() == name:
