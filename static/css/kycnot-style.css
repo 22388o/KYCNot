@@ -232,12 +232,12 @@ a {
 .item-card {
   background: linear-gradient(115.27deg, #1a191ab6, #201f20b0);
   border: 2px solid transparent !important;
-  border-radius: 20px;
+  border-radius: 15px;
   color: #fff;
   cursor: pointer;
   display: block;
   padding: 15px;
-  width: 350px;
+  width: 380px;
   margin: 0.5em;
 }
 
@@ -250,16 +250,15 @@ a {
 }
 
 .card-content {
-  grid-row-gap: 15px;
-  display: grid;
-  grid-template-columns: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-header {
   align-items: center;
   display: flex;
   flex-direction: row;
-  position: relative;
+  flex-wrap: nowrap;
 }
 
 .card-header-logo {
@@ -297,13 +296,20 @@ a {
   letter-spacing: 0.08em;
 }
 
+.card-header-score{
+  margin-top: 1em;
+  margin-left: 300px;
+  margin-bottom: 50px;
+  position: absolute;
+  z-index: 999;
+}
+
 .card-info-text-score {
-  margin-left: 1em;
   border: 1px solid #137206;
   background: #137206;
   border-radius: 0.7em;
   padding: 0.3em;
-  font-size: 0.7em;
+  font-size: 0.8em;
 }
 
 .card-info-tags-container {
@@ -311,6 +317,7 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-top: 1em;
 }
 
 .card-info-tag {
@@ -360,7 +367,7 @@ a {
   font-weight: 400;
   justify-content: space-between;
   line-height: 100%;
-  margin: 0.5em;
+  margin-top: 0.5em;
 }
 
 .card-info-value-title {
@@ -369,9 +376,7 @@ a {
 
 .card-info-value-description {
   margin-top: 0.5em;
-  margin-bottom: 0.5em;
   font-size: 0.7em;
-  min-height: 3em;
   opacity: 70%;
 }
 
