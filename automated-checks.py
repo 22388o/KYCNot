@@ -92,7 +92,7 @@ def site_check():
               'KYC requirements', 'AML requirements', 'AML/KYC', 'KYC/AML', 'anti-money laundering', 'U.S. Bank Secrecy Act', 'BSA', '4th AML Directive', 'verify your identity', 'passport', "dirver's license", 'identity card', 'verify your identity', 'identity checks', 'mandatory identification', 'complete our ID verification process',
               'anti-money laundering', 'financing of terrorism', 'know your customer compliance', 'require identity verification']
   
-  dom_generated_tos_POTKYC_exchanges = ['Kucoin']  
+  dom_generated_tos_POTKYC_exchanges = ['KuCoin']  
   kycnotme_cewt = ['TradeOgre', 'RoboSats']
   cfdos_protected = ['TradeOgre']
   
@@ -101,7 +101,7 @@ def site_check():
       print("EDITING LAST CHECK")
       
       for exchange in data['exchanges']:
-          if exchange['name'] not in kycnotme_cewt and exchange['tos-urls'] and exchange['tos-urls'][0] and exchange['tos-urls'][0] != -1:
+          if exchange['name'] not in kycnotme_cewt and exchange['name'] not in dom_generated_tos_POTKYC_exchanges and exchange['tos-urls'] and exchange['tos-urls'][0] and exchange['tos-urls'][0] != -1:
               print(f"Exchange: {exchange['name']}")
               for url in exchange['tos-urls']:
                   r = httpx.get(url)                                
@@ -115,9 +115,10 @@ def site_check():
                       for kw in keywords:
                           if kw in ptag_string:
                               found_words.append(kw)
-                      if len(found_words) >= 2:
-                          suspicious_ptags.append(str(ptag))
-                          potential_kyc = True
+                              if ptag_string not in suspicious_ptags:
+                                suspicious_ptags.append(str(ptag))
+                          if len(found_words) >= 2:
+                              potential_kyc = True
           else:
               if exchange['tos-urls'] and exchange['tos-urls'][0] == -1 or ".onion" in exchange['url'] or exchange['name'] in kycnotme_cewt:
                   potential_kyc = False
