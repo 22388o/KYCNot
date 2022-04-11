@@ -274,7 +274,6 @@ def set_default(obj):
 @app.route("/generator", name="generator", methods=['POST', 'GET'])
 async def generator(request):
     if(request.args):
-        print("received")
         args = request.args
         if len(args) > 1:
             if 'generate' in args:
@@ -282,26 +281,26 @@ async def generator(request):
                     item_json = {
                             "name": args['name'][0],
                             "verified": False,
-                            "btc": {args['btc'][0]},
-                            "xmr": {args['xmr'][0]},
-                            "lnn": {args['lnn'][0]},
-                            "cash": {args['cash'][0]},
-                            "p2p": {args['p2p'][0]},
-                            "tor": {args['tor'][0]},
+                            "btc": args['btc'][0],
+                            "xmr": args['xmr'][0],
+                            "lnn": args['lnn'][0],
+                            "cash": args['cash'][0],
+                            "p2p": args['p2p'][0],
+                            "tor": args['tor'][0],
                             "refunds": False,
-                            "open-source": {args['open-source'][0]},
-                            "custodial": {args['custodial'][0]},
-                            "javascript": {args['javascript'][0]},
-                            "no-registration": {args['registration'][0]},
-                            "personal-info": {args['personal-info'][0]},
-                            "buy": {args['buy'][0]},
-                            "exchange": {args['exchange'][0]},
+                            "open-source": args['open-source'][0],
+                            "custodial": args['custodial'][0],
+                            "javascript": args['javascript'][0],
+                            "no-registration": args['registration'][0],
+                            "personal-info": args['personal-info'][0],
+                            "buy": args['buy'][0],
+                            "exchange": args['exchange'][0],
                             "short-description": args['short-d'][0],
                             "long-description": args['large-d'][0],
                             "meta-description": "",
                             "comments": False,
                             "kyc-check": False,
-                            "kyc-type": {args['kyc-type'][0]},
+                            "kyc-type": args['kyc-type'][0],
                             "score": None,
                             "suspicious-tos": False,
                             "tor-onion": args['tor-url'][0],
@@ -313,7 +312,7 @@ async def generator(request):
                             "third-party-connections": False,
                             "score-boost": 0,
                             "listing-date": str(datetime.today().strftime("%Y-%m-%d")),
-                            "api": {args['api'][0]},
+                            "api": args['api'][0],
                             "status": 200
                         }
                 else:
@@ -325,24 +324,24 @@ async def generator(request):
                             "short-description": args['short-d'][0],
                             "long-description": args['large-d'][0],
                             "meta-description": "",
-                            "btc": {args['btc'][0]},
-                            "xmr": {args['xmr'][0]},
-                            "lnn": {args['lnn'][0]},
-                            "cash": {args['cash'][0]},
+                            "btc": args['btc'][0],
+                            "xmr": args['xmr'][0],
+                            "lnn": args['lnn'][0],
+                            "cash": args['cash'][0],
                             "comments": False,
                             "verified": False,
-                            "no-registration": {args['no-registration'][0]},
-                            "personal-info": {args['personal-info'][0]},
-                            "tor": {args['tor'][0]},
+                            "no-registration": args['no-registration'][0],
+                            "personal-info": args['personal-info'][0],
+                            "tor": args['tor'][0],
                             "tor-onion": args['tor-url'][0],
-                            "open-source": {args['open-source'][0]},
+                            "open-source": args['open-source'][0],
                             "tags": args['tags'],
-                            "javascript": {args['javascript'][0]},
+                            "javascript": args['javascript'][0],
                             "listing-date": str(datetime.today().strftime("%Y-%m-%d")),
                             "score-boost": 0,
                             "api": False
                     }
-                return(text(str(item_json)))
+                return(text(str(json.dumps(item_json).replace('"False"', 'false').replace('"True"', "true"))))
             else:
                 s = gdshortener.ISGDShortener()
                 name = args['name'][0].replace(" ", "_")
