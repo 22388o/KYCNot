@@ -104,6 +104,7 @@ def site_check():
           if exchange['name'] not in kycnotme_cewt and exchange['name'] not in dom_generated_tos_POTKYC_exchanges and exchange['tos-urls'] and exchange['tos-urls'][0] and exchange['tos-urls'][0] != -1:
               print(f"Exchange: {exchange['name']}")
               for url in exchange['tos-urls']:
+                try:
                   r = httpx.get(url)                                
                   soup = BeautifulSoup(r.content, features="html.parser")
                   found_words = []
@@ -119,6 +120,8 @@ def site_check():
                                 suspicious_ptags.append(str(ptag))
                           if len(found_words) >= 2:
                               potential_kyc = True
+                except:
+                  continue
           else:
               if exchange['tos-urls'] and exchange['tos-urls'][0] == -1 or ".onion" in exchange['url'] or exchange['name'] in kycnotme_cewt:
                   potential_kyc = False
