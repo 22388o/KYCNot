@@ -152,7 +152,7 @@
       "score-boost": 0,
       "listing-date": "2022-01-01",
       "api": true,
-      "status": 200,
+      "status": 404,
       "api-url": "https://majesticbank.sc/api"
     },
     {
@@ -477,6 +477,43 @@
       "api-url": "https://exolix.com/developers"
     },
     {
+      "name": "Swapuz",
+      "verified": false,
+      "btc": true,
+      "xmr": true,
+      "lnn": false,
+      "cash": false,
+      "p2p": false,
+      "tor": false,
+      "refunds": true,
+      "open-source": false,
+      "custodial": false,
+      "javascript": true,
+      "no-registration": true,
+      "personal-info": false,
+      "buy": false,
+      "exchange": true,
+      "short-description": "Exchange cryptocurrencies easily",
+      "long-description": "Swapuz is a fast, limitless and anonymous cryptocurrency exchange with a convenient and intuitive interface, a huge number of coins that you can change in a couple of minutes, as well as a support service.",
+      "meta-description": "",
+      "comments": false,
+      "kyc-check": true,
+      "kyc-type": 0,
+      "score": 8.2,
+      "suspicious-tos": false,
+      "tor-onion": false,
+      "url": "https://swapuz.com/",
+      "referral": false,
+      "tos-urls": [
+        "https://swapuz.com/terms-of-use/"
+      ],
+      "third-party-connections": false,
+      "score-boost": 0,
+      "listing-date": "2022-04-11",
+      "api": false,
+      "status": 200
+    },
+    {
       "name": "HodlHodl",
       "verified": true,
       "btc": true,
@@ -788,5 +825,5 @@
       "api-url": "https://trade.mandala.exchange/apidocs/"
     }
   ],
-  "last_check": "2022-04-10 17:54:56.437073"
+  "last_check": "2022-04-11 10:19:19.967021"
 }
