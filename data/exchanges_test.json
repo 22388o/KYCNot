@@ -19,7 +19,7 @@
       "exchange": true,
       "meta-description": "Bisq is an open-source desktop application that allows you to buy and sell bitcoin in exchange for national currencies, or alternative cryptocurrencies.",
       "short-description": "P2P exchange. Full privacy.",
-      "long-description": "Buy and sell bitcoin for fiat (or other cryptocurrencies) privately and securely using Bisq's peer-to-peer network and open-source desktop software. No registration required. Bisq is a peer-to-peer trading network, not a website or \"app\" or other centralized service. It's software you run on your own hardware, which connects to other people running the Bisq software to facilitate trades. It's open-source and community-driven.<br><br><a href='https://bisq.wiki/Table_of_penalties'>Bisq penalizes sellers that ask for any additional information.</a>",
+      "long-description": "Buy and sell bitcoin for fiat (or other cryptocurrencies) privately and securely using Bisq's peer-to-peer network and open-source desktop software. No registration required. Bisq is a peer-to-peer trading network, not a website or \"app\" or other centralized service. It's software you run on your own hardware, which connects to other people running the Bisq software to facilitate trades. It's open-source and community-driven.<br><br><a target='_blank' href='https://bisq.wiki/Table_of_penalties'>Bisq penalizes sellers that ask for any additional information.</a>",
       "comments": false,
       "kyc-check": true,
       "kyc-type": 0,
@@ -96,8 +96,8 @@
       "long-description": "RoboSats is a simple and private way to exchange bitcoin for national currencies. Robosats simplifies the peer-to-peer user experience and uses lightning hold invoices to minimize custody and trust requirements. The deterministically generated avatars help users stick to best privacy practices.",
       "comments": [
         "The service is currently in a Beta state.",
-        "Clearnet site can be visited at <a href='https://unsafe.robosats.com'>unsafe.robosats.com</a>. NOT RECOMMENDED FOR TRADING, use Tor onion instead.",
-        "<a href='https://github.com/Reckless-Satoshi/robosats/blob/main/docs/how-to-use.md'> How to use RoboSats guide </a>"
+        "Clearnet site can be visited at <a target='_blank' href='https://unsafe.robosats.com'>unsafe.robosats.com</a>. NOT RECOMMENDED FOR TRADING, use Tor onion instead.",
+        "<a target='_blank' href='https://github.com/Reckless-Satoshi/robosats/blob/main/docs/how-to-use.md'> How to use RoboSats guide </a>"
       ],
       "kyc-check": true,
       "kyc-type": 0,
@@ -176,7 +176,7 @@
       "short-description": "Tor based full privacy exchange.",
       "long-description": "This coin swap service is only available with Tor and guarantees\nfull anonimity to users.",
       "comments": [
-        "Only available over Tor network. This is improves privacy but makes the service less accessible to non-tech users: Visit <a href='https://www.torproject.org/download/'>tor project's websie</a> and use it."
+        "Only available over Tor network. This is improves privacy but makes the service less accessible to non-tech users: Visit <a target='_blank' href='https://www.torproject.org/download/'>tor project's websie</a> and use it."
       ],
       "kyc-check": true,
       "kyc-type": 0,
@@ -295,7 +295,7 @@
       "long-description": "A marketplace where users can buy and sell Monero to and from\neach other. Localmonero provides you with a custodial web-wallet but you can withdraw\nyour funds to any wallet of your choice with no limits. A tor service is available.",
       "comments": [
         "Some sellers may require ID verification or KYC. Avoid these sellers.",
-        "Good to read issue: <a href='https://codeberg.org/pluja/kycnot.me/issues/9#issuecomment-380431'> issue 9</a>"
+        "Good to read issue: <a target='_blank' href='https://codeberg.org/pluja/kycnot.me/issues/9#issuecomment-380431'> issue 9</a>"
       ],
       "kyc-check": true,
       "kyc-type": 1,
