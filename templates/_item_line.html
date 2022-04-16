@@ -8,12 +8,7 @@
     <div class="card-header">
       <img class="card-header-logo" src="../static/img/{{ item['name'] | replace(' ', '') | lower }}.jpeg" alt="{{item['name']}} logo" loading="lazy">
       <div class="card-header-text">
-
         <h5 class="card-header-text-name">
-          {%if item['listing-date'] > date%}      
-            🆕
-          {%endif%}
-
           {% if item['verified'] %}
             <span class="card-header-text-name-verified">
               {{item['name']}} 
@@ -46,6 +41,18 @@
               <i style="font-size: 15px; color:rgb(99, 160, 0);" class="fa-solid fa-money-bill-1-wave"></i>
             </span>
             {% endif %} 
+            {%if item['listing-date'] > date%}      
+            <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100" width="50" height="30">
+              <defs>
+                <image  width="96" height="28" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAAAcCAMAAACppkqwAAAAAXNSR0IB2cksfwAAAohQTFRF////////////AAAA//////////////////////////////////////////////////////////////////////////7///////////////7////////////////////////////////////+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////7////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+/////////////////////////////v////////////////7////////////////////////+///////////////////////////////////+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////v/////////////////////////////////////////////////////+/////////////////////////////////////////////////////////v//////SoF+VwAAANh0Uk5TlM9XAJvHMCCrYsrOakucBBm0tROg/74Uv9//QuD+ooEkK+q1BfZ/F8MNxOdPY/xy2hADmfAWH973B/09cHQ2sRnT6Qwhj0PuiwB23C/AJcWt+1ZJmiPi7/WWhQbrWO2IAmX0PlisGK81quRBPHijLezSJta5EdHLQBLyvQtrU3ODSv+AvB684YR8zMK/ezo7YOUJd13/RFulARzBGiKSjEx5+vLICLZfevjd2ZPoNCrU2CydZ31RXE7m0duzjSdsRqiepDPXyTCfl9UPkCk4bwqG8a4xuAaHD4qLBAAAA35JREFUeJyVlgdbE0EQhoMDBkWsnBElChpAQREQVFAsIPZCE1RUQrEAdgVRsRcQe0XFih3F3it2xd7/jjuzu3dHuAiZ58nufN/c3pstd4nJ5MajBchwJ+3RkoTZ061RYKVVa8y82shB3rzUtp3Q7TuQ7tjJ5KPw6GyR13Yh7SsAbqKudJWJgpVufphZu8tBPXjJzV/ogJ6ke9lUQGBQEwAtsBLcm1IvMaZPCC+F9hVGvzDS/UEFKOERrgAiB1AaFc3HDBzES4ODYsQ6k4wdogMoQ10BQBzPvfmYYVGiNnwE6ciRpOIT9AC/Uf8BJOqC1nn0GPLHjqPLxsubTJhI2p+rSaAHWIP+AwDHmNya/CkJpJLoG7JPcgrpVH7HtAYAJWyqC4CItuSn05iEDJZOm47GDNSZ/FDNnKUBZmOTldB8gD2b/JxcFC0x9crDkzMnk+m586gYPl8D5MeypqCw+QBYwAsLMU/BbNHiJaxduozpgOVUW1GkAbyLsV0Z4wxQooWZA1atpsIalpbi4kxba8GjE79OAhVlPWgA8wbqNjoDbNK2arOYwha+RqUAW7expGy0PR93uZyVtvMrc/WAZRXY7WBHdacRQBcSsIvL3QB7cAdDimAvrQuAjW/Bvv16QOYB7AYfFDM41DTgcCDJSoBKK+uPHIXFqMMBjtGXVTxADwBLKPZVx5t8kiXgRBnJk6VwCvsDzPJlfZgZTu9DIzatIQDOVLP+bJwxwFcL+UqJOEeVLubzHXHup5l1AY2LcOky9hnZDoCtNZhcsTXzFIH9KlVqr12/wbqbt5iVhU/CbcinQs0CBwDcoexulRGg8XMAcI+X4u7jHnvie/XBQ5Y9KnpMftUqR8B5KtTUNBfQPodKT57iQzo+kjnP8El4WJJMvmmcIwCen9W2UgfY5AQA/LDk0JTr0Gj3gmXJL/kd+M9pA0B0B0OAsxnAKyvV4tmnmu9MEGr+4zOzsDEAXse6BBiao17+xk5OXrLqvJ1sAABPqwp41wDgw+M9NmslIHeQersP3AmoVx33j0aAunQnM1B0fysS1V32kFZYpXCGq5dn240A8Mk5QA0VACZp1X7mhm1hoLS+gCFgj68rgK/Sqg8WTmqBcKIsxoBv310BHP4hrJ824fgXC6dKTjKxgmKgHPOL64rf3LEkVTSKchVwfJ6w5P8t+HNSOH+F8Q9anCZ58FbmZgAAAABJRU5ErkJggg=="/>
+              </defs>
+              <style>
+                .s0 { fill: #278bd0 } 
+              </style>
+              <use id="NEW" href="#img1" x="82" y="34"/>
+              <path id="Layer" fill-rule="evenodd" class="s0" d="m19.1 14.6q0.8 0 1.6 0.3 0.8 0.3 1.4 0.9 0.6 0.6 0.9 1.4 0.3 0.7 0.3 1.6v4.1h4.2c1.1 0 2.1 0.5 2.9 1.3 0.8 0.7 1.2 1.8 1.2 2.9 0 1.1-0.4 2.2-1.2 3-0.8 0.8-1.8 1.2-2.9 1.2h-4.2v4.2c0 1.1-0.4 2.1-1.2 2.9-0.8 0.8-1.9 1.2-3 1.2-1.1 0-2.2-0.4-2.9-1.2-0.8-0.8-1.3-1.8-1.3-2.9v-4.2h-4.1c-1.1 0-2.2-0.4-3-1.2-0.8-0.8-1.2-1.9-1.2-3 0-1.1 0.4-2.2 1.2-2.9 0.8-0.8 1.9-1.3 3-1.3h4.1v-4.1q0-0.9 0.4-1.6 0.3-0.8 0.9-1.4 0.5-0.6 1.3-0.9 0.8-0.3 1.6-0.3zm-1.6 42.1q-0.8 0.3-1.3 0.9-0.6 0.6-0.9 1.3-0.4 0.8-0.4 1.6v4.2h-4.1c-1.1 0-2.2 0.4-3 1.2-0.8 0.8-1.2 1.9-1.2 3 0 1.1 0.4 2.2 1.2 2.9 0.8 0.8 1.9 1.3 3 1.3h4.1v4.1c0 1.1 0.5 2.2 1.3 3 0.7 0.8 1.8 1.2 2.9 1.2 1.1 0 2.2-0.4 3-1.2 0.8-0.8 1.2-1.9 1.2-3v-4.1h4.2c1.1 0 2.1-0.5 2.9-1.3 0.8-0.7 1.2-1.8 1.2-2.9 0-1.1-0.4-2.2-1.2-3-0.8-0.8-1.8-1.2-2.9-1.2h-4.2v-4.2q0-0.8-0.3-1.6-0.3-0.7-0.9-1.3-0.6-0.6-1.4-0.9-0.8-0.3-1.6-0.3-0.8 0-1.6 0.3zm29.5-41.9q-0.6 0.2-1.2 0.7-0.5 0.4-0.9 0.9-0.4 0.6-0.6 1.3l-4.9 18.6-14 8.1c-0.7 0.3-1.2 0.9-1.5 1.5-0.4 0.6-0.6 1.4-0.6 2.1 0 0.7 0.2 1.5 0.6 2.1 0.3 0.6 0.8 1.2 1.5 1.5l14 8.1 4.9 18.6c0.3 0.9 0.8 1.7 1.5 2.2 0.7 0.6 1.6 0.9 2.6 0.9 0.9 0 1.8-0.3 2.5-0.9 0.7-0.5 1.3-1.3 1.5-2.2l4.9-18.6 14-8.1c0.7-0.3 1.2-0.9 1.6-1.5 0.3-0.6 0.5-1.4 0.5-2.1 0-0.7-0.2-1.5-0.5-2.1-0.4-0.6-0.9-1.2-1.6-1.5l-14-8.1-4.9-18.6q-0.2-0.7-0.6-1.3-0.3-0.5-0.9-1-0.5-0.4-1.2-0.6-0.7-0.2-1.3-0.2-0.7 0-1.4 0.2z"/>
+            </svg>
+            {%endif%}
           </div>
         </div>        
       </div>
