@@ -55,7 +55,7 @@ async def index(request):
     if(request.args):
         args = list(request.args.keys())
         template = env.get_template('index.html')
-        f = open(f'{data_dir}/exchanges_test.json')
+        f = open(f'{data_dir}/exchanges.json')
         data = json.load(f)
         exchanges = []
         for exchange in data['exchanges']:
@@ -74,7 +74,7 @@ async def index(request):
                                 subtitle="Find best <strong>NON-KYC</strong> online services."))
     else:
         template = env.get_template('index.html')
-        f = open(f'{data_dir}/exchanges_test.json')
+        f = open(f'{data_dir}/exchanges.json')
         data = json.load(f)
         data['exchanges'] = sorted(data['exchanges'], key=lambda k: k['score'], reverse=True)
         for e in data['exchanges']:
@@ -98,7 +98,7 @@ async def services(request):
             _type = False
 
         template = env.get_template('index.html')
-        f = open(f'{data_dir}/services_test.json')
+        f = open(f'{data_dir}/services.json')
         data = json.load(f)
 
         services = []
@@ -143,7 +143,7 @@ async def services(request):
                                 subtitle="Find best <strong>NON-KYC</strong> online services."))
 
     template = env.get_template('index.html')
-    f = open(f'{data_dir}/services_test.json')
+    f = open(f'{data_dir}/services.json')
     data = json.load(f)
     data['services'] = sorted(data['services'], key=lambda k: k['name'], reverse=False)
     for s in data['services']:
@@ -188,7 +188,7 @@ async def about(request):
 @app.route("/exchange/<name>")
 async def exchange(request, name=None):
     if(name):
-        f = open(f'{data_dir}/exchanges_test.json')
+        f = open(f'{data_dir}/exchanges.json')
         data = json.load(f)
         for exchange in data['exchanges']:
             if ''.join(exchange['name'].split()).lower() == name:
@@ -210,7 +210,7 @@ async def exchange(request, name=None):
 async def service(request, name=None):
     if(name):        
         template = env.get_template('services.html')
-        f = open(f'{data_dir}/services_test.json')
+        f = open(f'{data_dir}/services.json')
         data = json.load(f)
         for service in data['services']:
             if service['name'].replace(' ', '').lower() == name:

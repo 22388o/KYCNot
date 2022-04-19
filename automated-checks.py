@@ -17,7 +17,7 @@ def main():
   
 
 def compute_exchanges_score():
-  f = open(f'{data_dir}/exchanges_test.json', "r+")
+  f = open(f'{data_dir}/exchanges.json', "r+")
   data = json.load(f)
   for exchange in data['exchanges']:
       score = 0
@@ -66,7 +66,7 @@ def compute_exchanges_score():
   f.truncate()
 
 def update_meta_descriptions():
-    with open(f"{data_dir}/exchanges_test.json", "r+") as exchanges:
+    with open(f"{data_dir}/exchanges.json", "r+") as exchanges:
         data = json.load(exchanges)
         for exchange in data['exchanges']:
             print(f"Requesting {exchange['url']}")
@@ -96,7 +96,7 @@ def site_check():
   kycnotme_cewt = ['TradeOgre', 'RoboSats']
   cfdos_protected = ['TradeOgre']
   
-  with open(f"{data_dir}/exchanges_test.json", "r+") as exchanges:
+  with open(f"{data_dir}/exchanges.json", "r+") as exchanges:
       data = json.load(exchanges)
       print("EDITING LAST CHECK")
       
