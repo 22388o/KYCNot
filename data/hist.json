@@ -30,6 +30,45 @@
         "third-party-connections": true,
         "score-boost": 0,
         "reason": "See https://libreddit.kavin.rocks/r/Monero/comments/t1gyoo/fixedfloat_scammed_me_for_6000_usd/ and https://xmrguide.org/exchanges for more info"
-     }
+     },
+     {
+      "name": "XCHANGE.ME",
+      "verified": false,
+      "btc": true,
+      "xmr": true,
+      "lnn": false,
+      "cash": false,
+      "p2p": false,
+      "tor": true,
+      "refunds": false,
+      "open-source": false,
+      "custodial": false,
+      "javascript": true,
+      "no-registration": true,
+      "personal-info": false,
+      "buy": false,
+      "exchange": true,
+      "meta-description": "Anonymous cryptocurrency exchanger, no KYC/AML, accountless.",
+      "short-description": "Exchange cryptocurrency. Anonymously.",
+      "long-description": "Modern cryptocurrency exchange service that allows you to exchange\ncryptocurrency through a fast, secure, and cheap process without registration.\nTor available.",
+      "comments": false,
+      "kyc-check": true,
+      "kyc-type": 0,
+      "score": 8.5,
+      "suspicious-tos": false,
+      "tor-onion": "http://aa7oyok6dxgyedeteldaumqjernm5ai7dnpqayy3p4q7solc6dxi5vad.onion/",
+      "url": "https://xchange.me/",
+      "referral": false,
+      "tos-urls": [
+        "https://xchange.me/terms-of-service"
+      ],
+      "third-party-connections": true,
+      "score-boost": 0,
+      "listing-date": "2022-01-01",
+      "api": true,
+      "status": 503,
+      "api-url": "https://api.xchange.me",
+      "reason": "Suspeded operations (April 2022)"
+    }
     ]
 }
