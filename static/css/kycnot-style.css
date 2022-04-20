@@ -685,7 +685,7 @@ small{
 }
 
 a[target=_blank]:after {
-  content: ' ↗';
+  content: ' ⤤';
 }
 
 @media screen and (max-width: 700px) {
