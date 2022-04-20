@@ -324,7 +324,7 @@
 		"javascript": true,
 		"listing-date": "2022-01-01",
 		"score-boost": 0,
-		"verified": false
+		"verified": true
 	}, {
 		"name": "ProxyStore",
 		"short-description": "Like a proxy but for buying digital goods.",
