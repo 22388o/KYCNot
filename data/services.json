@@ -429,7 +429,7 @@
 		"javascript": true,
 		"listing-date": "2022-03-30",
 		"score-boost": 1,
-		"verified": false
+		"verified": true
 	},
 	{
 		"name": "PacketPoint",
