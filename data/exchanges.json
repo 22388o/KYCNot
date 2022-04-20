@@ -547,7 +547,7 @@
       ],
       "tor-onion": "false",
       "url": "https://stealthex.io/",
-      "referral": false,
+      "referral": "https://stealthex.io/?ref=te8zmw9a8",
       "tos-urls": [
         "https://stealthex.io/terms"
       ],
