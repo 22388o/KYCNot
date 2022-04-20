@@ -383,8 +383,10 @@
       "suspicious-tos": false,
       "tor-onion": false,
       "url": "https://sideshift.ai/",
-      "referral": false,
-      "tos-urls": false,
+      "referral": "https://sideshift.ai/a/kycnotme",
+      "tos-urls": [
+        "https://learn.sideshift.ai/legal"
+      ],
       "third-party-connections": true,
       "score-boost": 0,
       "listing-date": "2022-01-01",
@@ -517,6 +519,44 @@
       "api": true,
       "status": 200,
       "api-url": "https://hodlhodl.com/api/docs"
+    },
+    {
+      "name": "FixedFloat",
+      "verified": false,
+      "btc": true,
+      "xmr": true,
+      "lnn": true,
+      "cash": false,
+      "p2p": false,
+      "tor": false,
+      "refunds": false,
+      "open-source": false,
+      "custodial": false,
+      "javascript": true,
+      "no-registration": true,
+      "personal-info": false,
+      "buy": false,
+      "exchange": true,
+      "short-description": "Lightning cryptocurrency exchange.",
+      "long-description": "FixedFloat.com is an instant, fully automated digital asset exchange with lightning network, swift processing, favorable rates, and transparent fees. No accounts, just scan the QR code in your wallet or enter it manually, and you are set for all of your future deals. Say no to account holds on your assets and get rid of the third parties that can compromise your trust.",
+      "meta-description": "Instant cryptocurrency exchange with Lightning Network! Best rates and large volumes of currencies. Try now!",
+      "comments": false,
+      "kyc-check": true,
+      "kyc-type": 1,
+      "score": 7.3,
+      "suspicious-tos": false,
+      "tor-onion": false,
+      "url": "https://fixedfloat.com/",
+      "referral": "https://fixedfloat.com/?ref=fzpmutsa",
+      "tos-urls": [
+        "https://fixedfloat.com/terms-of-service"
+      ],
+      "third-party-connections": false,
+      "score-boost": 0,
+      "listing-date": "2022-04-20",
+      "api": true,
+      "api-url": "https://fixedfloat.com/api",
+      "status": 200
     },
     {
       "name": "StealthEX",
@@ -727,44 +767,6 @@
       "api-url": "https://changenow.io/api/docs"
     },
     {
-      "name": "FixedFloat",
-      "verified": false,
-      "btc": true,
-      "xmr": true,
-      "lnn": true,
-      "cash": false,
-      "p2p": false,
-      "tor": false,
-      "refunds": false,
-      "open-source": false,
-      "custodial": false,
-      "javascript": true,
-      "no-registration": true,
-      "personal-info": false,
-      "buy": false,
-      "exchange": true,
-      "short-description": "Lightning cryptocurrency exchange.",
-      "long-description": "FixedFloat.com is an instant, fully automated digital asset exchange with lightning network, swift processing, favorable rates, and transparent fees. No accounts, just scan the QR code in your wallet or enter it manually, and you are set for all of your future deals. Say no to account holds on your assets and get rid of the third parties that can compromise your trust.",
-      "meta-description": "",
-      "comments": false,
-      "kyc-check": true,
-      "kyc-type": 1,
-      "score": 7.3,
-      "suspicious-tos": false,
-      "tor-onion": false,
-      "url": "https://fixedfloat.com/",
-      "referral": "https://fixedfloat.com/?ref=fzpmutsa",
-      "tos-urls": [
-        "https://fixedfloat.com/terms-of-service"
-      ],
-      "third-party-connections": false,
-      "score-boost": 0,
-      "listing-date": "2022-04-20",
-      "api": true,
-      "api-url": "https://fixedfloat.com/api",
-      "status": 200
-    },
-    {
       "name": "KuCoin",
       "verified": true,
       "btc": true,
@@ -865,5 +867,5 @@
       "api-url": "https://trade.mandala.exchange/apidocs/"
     }
   ],
-  "last_check": "2022-04-20 21:36:02.426081"
+  "last_check": "2022-04-20 22:33:27.965805"
 }
