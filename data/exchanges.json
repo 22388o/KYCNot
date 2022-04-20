@@ -152,7 +152,7 @@
       "score-boost": 0,
       "listing-date": "2022-01-01",
       "api": true,
-      "status": 200,
+      "status": 502,
       "api-url": "https://majesticbank.sc/api"
     },
     {
@@ -519,6 +519,46 @@
       "api-url": "https://hodlhodl.com/api/docs"
     },
     {
+      "name": "StealthEX",
+      "verified": false,
+      "btc": true,
+      "xmr": true,
+      "lnn": false,
+      "cash": false,
+      "p2p": false,
+      "tor": false,
+      "refunds": false,
+      "open-source": false,
+      "custodial": false,
+      "javascript": true,
+      "no-registration": true,
+      "personal-info": false,
+      "buy": false,
+      "exchange": true,
+      "short-description": "Instant cryptocurrency exchange.",
+      "long-description": "StealthEX is an instant cryptocurrency exchange for limitless swaps.Free from registration and non-custodial.",
+      "meta-description": "Find best crypto exchange rates. Bitcoin, Ethereum, Litecoin, XRP, Chainlink, and over 400 cryptocurrencies are available for instant non-custodial exchange.",
+      "comments": false,
+      "kyc-check": true,
+      "kyc-type": 1,
+      "score": 7.2,
+      "suspicious-tos": [
+        "<p>User hereby agree and acknowledge that in case of Third Parties\u2019 Services, the latter will be provided by the third parties, to the platform of which the User is transferred from our website. In this case any and all compliance procedures including but not limited to KYC, as well as actual deposit of funds and transaction shall be that third party liability.</p>"
+      ],
+      "tor-onion": "false",
+      "url": "https://stealthex.io/",
+      "referral": false,
+      "tos-urls": [
+        "https://stealthex.io/terms"
+      ],
+      "third-party-connections": false,
+      "score-boost": 0,
+      "listing-date": "2022-04-20",
+      "api": true,
+      "api-url": "https://documenter.getpostman.com/view/11320959/T17J8mzw?version=latest",
+      "status": 200
+    },
+    {
       "name": "Morphtoken",
       "verified": true,
       "btc": true,
@@ -687,6 +727,44 @@
       "api-url": "https://changenow.io/api/docs"
     },
     {
+      "name": "FixedFloat",
+      "verified": false,
+      "btc": true,
+      "xmr": true,
+      "lnn": true,
+      "cash": false,
+      "p2p": false,
+      "tor": false,
+      "refunds": false,
+      "open-source": false,
+      "custodial": false,
+      "javascript": true,
+      "no-registration": true,
+      "personal-info": false,
+      "buy": false,
+      "exchange": true,
+      "short-description": "Lightning cryptocurrency exchange.",
+      "long-description": "FixedFloat.com is an instant, fully automated digital asset exchange with lightning network, swift processing, favorable rates, and transparent fees. No accounts, just scan the QR code in your wallet or enter it manually, and you are set for all of your future deals. Say no to account holds on your assets and get rid of the third parties that can compromise your trust.",
+      "meta-description": "",
+      "comments": false,
+      "kyc-check": true,
+      "kyc-type": 1,
+      "score": 7.3,
+      "suspicious-tos": false,
+      "tor-onion": false,
+      "url": "https://fixedfloat.com/",
+      "referral": false,
+      "tos-urls": [
+        "https://fixedfloat.com/terms-of-service"
+      ],
+      "third-party-connections": false,
+      "score-boost": 0,
+      "listing-date": "2022-04-20",
+      "api": true,
+      "api-url": "https://fixedfloat.com/api",
+      "status": 200
+    },
+    {
       "name": "KuCoin",
       "verified": true,
       "btc": true,
@@ -787,5 +865,5 @@
       "api-url": "https://trade.mandala.exchange/apidocs/"
     }
   ],
-  "last_check": "2022-04-19 22:24:43.965731"
+  "last_check": "2022-04-20 21:36:02.426081"
 }
