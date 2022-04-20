@@ -472,6 +472,31 @@
 		"javascript": false,
 		"listing-date": "2022-04-09",
 		"verified": false
-	 }  
+	 },
+	 {
+		"name": "AnyCOLO",
+		"url": "https://anycolo.net",
+		"referral_url": false,
+		"tos-url": "https://anycolo.net/portal/index.php?rp=/knowledgebase/1/Terms-of-Usage.html",
+		"short-description": "Buy VPS with cryptocurrency.",
+		"long-description": "A private VPS hoster where you can buy with anonymous cryptocurrency.",
+		"meta-description": "",
+		"btc": true,
+		"xmr": true,
+		"lnn": true,
+		"cash": false,
+		"comments": false,
+		"verified": false,
+		"no-registration": false,
+		"personal-info": false,
+		"tor": false,
+		"tor-onion": false,
+		"open-source": false,
+		"tags": ["VPS", "HOSTING"],
+		"javascript": false,
+		"listing-date": "2022-04-20",
+		"score-boost": 0,
+		"api": false
+	}
 ]
 }
