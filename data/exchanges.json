@@ -143,7 +143,7 @@
       "score": 8.8,
       "suspicious-tos": false,
       "tor-onion": "http://majestictfvnfjgo5hqvmuzynak4kjl5tjs3j5zdabawe6n2aaebldad.onion/",
-      "url": "https://majesticbank.su",
+      "url": ["https://majesticbank.su/", "https://majesticbank.sc/", "https://majesticbank.ru/", "https://majesticbank.so/", "https://majesticbank.is/"],
       "referral": "?ref=ZIFOYl",
       "tos-urls": [
         "https://majesticbank.sc/privacy-policy"
@@ -383,7 +383,7 @@
       "suspicious-tos": false,
       "tor-onion": false,
       "url": "https://sideshift.ai/",
-      "referral": "https://sideshift.ai/a/kycnotme",
+      "referral": "a/kycnotme",
       "tos-urls": [
         "https://learn.sideshift.ai/legal"
       ],
@@ -547,7 +547,7 @@
       "suspicious-tos": false,
       "tor-onion": false,
       "url": "https://fixedfloat.com/",
-      "referral": "https://fixedfloat.com/?ref=fzpmutsa",
+      "referral": "?ref=fzpmutsa",
       "tos-urls": [
         "https://fixedfloat.com/terms-of-service"
       ],
@@ -587,7 +587,7 @@
       ],
       "tor-onion": "false",
       "url": "https://stealthex.io/",
-      "referral": "https://stealthex.io/?ref=te8zmw9a8",
+      "referral": "?ref=te8zmw9a8",
       "tos-urls": [
         "https://stealthex.io/terms"
       ],
