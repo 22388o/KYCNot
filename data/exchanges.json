@@ -395,52 +395,6 @@
       "api-url": "https://documenter.getpostman.com/view/6895769/TWDZGvjd"
     },
     {
-      "name": "Exolix",
-      "verified": false,
-      "btc": true,
-      "xmr": true,
-      "lnn": false,
-      "cash": false,
-      "p2p": false,
-      "tor": false,
-      "refunds": false,
-      "open-source": false,
-      "custodial": false,
-      "javascript": true,
-      "no-registration": true,
-      "personal-info": false,
-      "buy": false,
-      "exchange": true,
-      "meta-description": "Best cryptocurrency coin exchange.",
-      "short-description": "Instant, secure and anonymous crypto exchange",
-      "long-description": "Exolix is a secure and anonymous crypto exchange service with\nfixed rates which is free of registration and any limits. Launched in 2018, Exolix\ngained recognition as a fast and secure exchange. Exolix provides its customers\nwith the highest standards of confidentiality, as you do not have to register\nto make a transaction. Exolix does not require KYC. The system also fixes the\nexchange rate at the beginning of the transaction, thus, users are protected from\nmarket volatility. In addition, Exolix does not have maximum limits, which allows\neveryone to exchange any amount of cryptocurrencies. The main mission of Exolix\nis to make an exchange process fast, easy and secure.",
-      "comments": [
-        "May reject large transactions at any time for any reason and ask for provenance\nof funds."
-      ],
-      "kyc-check": [
-        "money laundering",
-        "anti-money laundering",
-        "anti-money laundering"
-      ],
-      "kyc-type": 0,
-      "score": 8.2,
-      "suspicious-tos": [
-        "<p>1.18. Exolix may, in its discretion, prevent you from immediately dealing with large amounts of digital currency that appear in Exolix. Should this occur, Exolix will also contact you to confirm the provenance of, and your entitlement to, the digital currency. Exolix will immediately release the currency to you on satisfaction that the currency has not been received in breach of any applicable laws, including laws relating to anti-money laundering and counter-terrorism financing, and that you are otherwise entitled to the currency;</p>"
-      ],
-      "tor-onion": false,
-      "url": "https://exolix.com/",
-      "referral": false,
-      "tos-urls": [
-        "https://exolix.com/terms"
-      ],
-      "third-party-connections": true,
-      "score-boost": 0,
-      "listing-date": "2022-01-01",
-      "api": true,
-      "status": 200,
-      "api-url": "https://exolix.com/developers"
-    },
-    {
       "name": "Swapuz",
       "verified": false,
       "btc": true,
