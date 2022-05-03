@@ -8,7 +8,7 @@
 		"long-description": "No logs, no registration fully anonymous VPN.",
 		"btc": true,
 		"lnn": false,
-		"xmr": false,
+		"xmr": true,
 		"comments": null,
 		"verified": true,
 		"no-registration": true,
