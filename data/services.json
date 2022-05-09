@@ -409,27 +409,6 @@
 		"listing-date": "2022-01-01",
 		"score-boost": 0,
 		"verified": false
-	}, {
-		"name": "CriptoDebit",
-		"short-description": "Buy Virtual Mastercard Debit Cards.",
-		"long-description": "CriptoDebit.com lets you buy virtual Mastercard Debit Cards without KYC with over 80+ cryptocurrencies and PerfectMoney. All cards are instantly delivered and ready to use online worldwide where Mastercards are accepted. ",
-		"btc": true,
-		"xmr": false,
-		"lnn": true,
-		"cash": false,
-		"no-registration": true,
-		"personal-info": false,
-		"open-source": false,
-		"tor": false,
-		"tor-onion": false,
-		"tos-url": "https://criptodebit.com/terms-comments.html",
-		"url": "https://criptodebit.com/",
-		"referral_url": "https://criptodebit.com/referral/PfnMBN",
-		"tags": ["CARDS"],
-		"javascript": true,
-		"listing-date": "2022-03-30",
-		"score-boost": 1,
-		"verified": true
 	},
 	{
 		"name": "PacketPoint",
