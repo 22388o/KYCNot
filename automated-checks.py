@@ -152,15 +152,18 @@ def site_check():
             url = exchange['url'][randint(0, len(exchange['url'])-1)]
           else:
             url= exchange['url']
-          r = httpx.get(url)
-          exchange['status'] = r.status_code
-          if exchange['name'] in cfdos_protected:
-            exchange['status'] = 200
-          soup = BeautifulSoup(r.content, features="html.parser")
-          metas = soup.find_all('meta')
-          meta_description = [ meta.attrs['content'] for meta in metas if 'name' in meta.attrs and meta.attrs['name'] == 'description' ]
-          if meta_description and meta_description != exchange['meta-description']:
-              exchange['meta-description'] = meta_description[0]
+          try:
+            r = httpx.get(url)
+            exchange['status'] = r.status_code
+            if exchange['name'] in cfdos_protected:
+              exchange['status'] = 200
+            soup = BeautifulSoup(r.content, features="html.parser")
+            metas = soup.find_all('meta')
+            meta_description = [ meta.attrs['content'] for meta in metas if 'name' in meta.attrs and meta.attrs['name'] == 'description' ]
+            if meta_description and meta_description != exchange['meta-description']:
+                exchange['meta-description'] = meta_description[0]
+          except:
+            continue
               
       data['last_check'] = str(datetime.datetime.today())
       data['exchanges'] = sorted(data['exchanges'], key=lambda k: k['score'], reverse=True)
