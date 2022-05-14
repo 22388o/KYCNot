@@ -420,7 +420,7 @@
       "short-description": "Exchange cryptocurrencies easily",
       "long-description": "Swapuz is a fast, limitless and anonymous cryptocurrency exchange with a convenient and intuitive interface, a huge number of coins that you can change in a couple of minutes, as well as a support service.",
       "meta-description": "",
-      "comments": false,
+      "comments": ["<p>Swapuz seems to be the exact same service as <a href='https://exolix.com/'>Exolix</a> and <a href='https://switcheroo.to/'>Switcheroo</a>.</p> If your read their terms as of May 2022, you can find the word 'Exolix' in all of them (<a href='https://i.bcow.xyz/a/10zuqp6'>proof</a>)."],
       "kyc-check": true,
       "kyc-type": 0,
       "score": 8.2,
