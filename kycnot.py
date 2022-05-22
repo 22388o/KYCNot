@@ -346,7 +346,7 @@ async def generator(request):
                 s = gdshortener.ISGDShortener()
                 name = args['name'][0].replace(" ", "_")
                 rurl = request.url.split('/')[3]
-                baseurl = "https://dev.kycnot.me/"
+                baseurl = "https://kycnot.me/"
                 if "Exchange" in args['type']:
                     shurl = s.shorten(f"{baseurl}{str(rurl)}&type=Exchange&generate=True", custom_url = f"{randint(0,999999999999)}_kycnot")[0]
                 else:
