@@ -6,7 +6,7 @@
 {% endif %}
   <div class="card-content">
     <div class="card-header">
-      <img class="card-header-logo" src="../static/img/{{ item['name'] | replace(' ', '') | lower }}.jpeg" alt="{{item['name']}} logo" loading="lazy">
+      <img class="card-header-logo" src="../static/img/{{ item['name'] | replace(' ', '') | lower }}.webp" alt="{{item['name']}} logo" loading="lazy">
       <div class="card-header-text">
         <h5 class="card-header-text-name">
           {% if item['verified'] %}
@@ -98,7 +98,7 @@
   <article class="leaderboard__profile">
   {%endif%}
     <img
-      src="../static/img/{{ item['name'] | replace(' ', '') | lower }}.jpeg"
+      src="../static/img/{{ item['name'] | replace(' ', '') | lower }}.webp"
       alt="{{item['name']}}"
       class="leaderboard__picture"
     />
