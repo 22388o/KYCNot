@@ -546,7 +546,7 @@
       "meta-description": "Trade Monero with Nano, the fast and feeless cryptocurrency.",
       "comments": false,
       "kyc-check": true,
-      "kyc-type": "0",
+      "kyc-type": 0,
       "score": 7.5,
       "suspicious-tos": false,
       "tor-onion": false,
