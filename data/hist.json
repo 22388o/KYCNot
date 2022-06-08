@@ -86,6 +86,30 @@
       "api-url": "https://exolix.com/developers",
       "reason": ["<p>See: <a href='https://libredd.it/r/Monero/comments/j428i2/warning_exolixcom_has_been_advertising_here_and/g7i3yu2/'>reddit</a>.</p>",
                  "<p> A user contacted kycnot.me with evidences of the case, where Exolix demanded source of funds verification for 1XMR. The user was not able to provide the evidence as it was XMR from a long time ago and the exchange kept funds.</p>"]
-    }
+    },
+
+	{
+		"name": "CriptoDebit",
+		"short-description": "Buy Virtual Mastercard Debit Cards.",
+		"long-description": "CriptoDebit.com lets you buy virtual Mastercard Debit Cards without KYC with over 80+ cryptocurrencies and PerfectMoney. All cards are instantly delivered and ready to use online worldwide where Mastercards are accepted. ",
+		"btc": true,
+		"xmr": false,
+		"lnn": true,
+		"cash": false,
+		"no-registration": true,
+		"personal-info": false,
+		"open-source": false,
+		"tor": false,
+		"tor-onion": false,
+		"tos-url": "https://criptodebit.com/terms-comments.html",
+		"url": "https://criptodebit.com/",
+		"referral_url": "https://criptodebit.com/referral/PfnMBN",
+		"tags": ["CARDS", "DEBIT"],
+		"javascript": true,
+		"listing-date": "2022-03-30",
+		"score-boost": 1,
+		"verified": true,
+    "reason": "Service owners requested a temporary delisting."
+	  }
     ]
 }
