@@ -110,6 +110,32 @@
 		"score-boost": 1,
 		"verified": true,
     "reason": "Service owners requested a temporary delisting."
-	  }
+	  },
+	{
+		"name": "SATOS CARD",
+		"url": "https://satoscard.com",
+		"referral_url": false,
+		"tos-url": "https://satoscard.com/privacy-policy.html",
+		"short-description": "Buy Virtual Debit Mastercard Cards.",
+		"long-description": "Buy a SATOS Virtual Debit Mastercard with over 85+ cryptocurrencies, in seconds. And pay online worldwide.",
+		"meta-description": "",
+		"btc": true,
+		"xmr": false,
+		"lnn": true,
+		"cash": false,
+		"comments": false,
+		"verified": false,
+		"no-registration": true,
+		"personal-info": false,
+		"tor": false,
+		"tor-onion": false,
+		"open-source": false,
+		"tags": ["CARDS", "DEBIT"],
+		"javascript": true,
+		"listing-date": "2022-06-06",
+		"score-boost": 0,
+		"api": false,
+    "reason": "bitcointalk.org/index.php?action=printpage;topic=5401252.0"
+	}
     ]
 }
