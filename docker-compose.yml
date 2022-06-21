@@ -7,3 +7,4 @@ services:
           - './data:/app/data'
       container_name: kycnot
       image: pluja/kycnot
+      restart: unless-stopped
