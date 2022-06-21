@@ -501,6 +501,31 @@
 		"listing-date": "2022-05-22",
 		"score-boost": 0,
 		"api": false
+	},
+	{
+		"name": "Fiatrefill",
+		"url": "https://www.fiatrefill.com/",
+		"referral_url": false,
+		"tos-url": "https://www.fiatrefill.com/terms-and-conditions/",
+		"short-description": "Spend BTC/XMR anywhere",
+		"long-description": "Fiatrefill is an online platform that allows you to spend your crypto in ANY online store!",
+		"meta-description": "",
+		"btc": true,
+		"xmr": true,
+		"lnn": false,
+		"cash": false,
+		"comments": false,
+		"verified": false,
+		"no-registration": true,
+		"personal-info": false,
+		"tor": false,
+		"tor-onion": false,
+		"open-source": false,
+		"tags": ["GOODS", "GIFTCARDS"],
+		"javascript": true,
+		"listing-date": "2022-06-21",
+		"score-boost": 0,
+		"api": false
 	}
 ]
 }
