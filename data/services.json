@@ -526,6 +526,31 @@
 		"listing-date": "2022-06-21",
 		"score-boost": 0,
 		"api": false
+	},
+	{
+		"name": "Hostiko",
+		"url": "https://hostiko.com.ua/en/",
+		"referral_url": false,
+		"tos-url": "https://hostiko.com.ua/en/terms",
+		"short-description": "VPS/dedicated server provider.",
+		"long-description": "No-KYC VPS servers provider from Ukraine. Pay with XMR and BTC via Plisio.",
+		"meta-description": "",
+		"btc": true,
+		"xmr": true,
+		"lnn": false,
+		"cash": false,
+		"comments": false,
+		"verified": false,
+		"no-registration": false,
+		"personal-info": false,
+		"tor": false,
+		"tor-onion": false,
+		"open-source": false,
+		"tags": ["VPS"],
+		"javascript": true,
+		"listing-date": "2022-06-29",
+		"score-boost": 0,
+		"api": false
 	}
 ]
 }
