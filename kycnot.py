@@ -157,7 +157,13 @@ async def services(request):
 @app.route("/about", name="about")
 async def about(request):
     template = env.get_template('about.html')
-    #donations = json.loads(r.content)
+    r = """{
+        "xmr": "83czvTQL5cHXZZpRM6bvcqVZSbNRqsX1tMwWnx1HjKBUD8swxUm9fFiTHUZbfYg8qPLM4nLwSdGCM1JmAXUp886KG93Pccr",
+        "nano": "nano_3txph9t1dwr778143me6ifaeo4ddyjcwfs4wymca5dtfdwdqjmff8nfhixgj",
+        "ltc": "MMSW3AnzHbxnmVeXzGjnNgHf6h62qpR9VA",
+        "btc": "bc1qeqdv6xaprqs6z9rzy2vx0csur5w2rf0jk996sh"
+        }"""
+    donations = json.loads(r)
     #addresses = [
     #            {'name': 'btc',
     #            'address': donations['btc']},
