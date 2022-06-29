@@ -790,7 +790,7 @@
       "long-description": "FixedFloat.com is an instant, fully automated digital asset exchange with lightning network, swift processing, favorable rates, and transparent fees. No accounts, just scan the QR code in your wallet or enter it manually, and you are set for all of your future deals. Say no to account holds on your assets and get rid of the third parties that can compromise your trust.",
       "meta-description": "Instant cryptocurrency exchange with Lightning Network! Best rates and large volumes of currencies. Try now!",
       "comments": [
-        "<p> Some users have reported that FixedFload blocked their funds without giving any answers back. Be aware when using this service that this may happen to you.</p>"
+        "<p> Some users have reported that FixedFload <b>blocked their funds without giving any answers back</b>. Be aware when using this service that this may happen to you.</p>"
       ],
       "kyc-check": true,
       "kyc-type": 2,
