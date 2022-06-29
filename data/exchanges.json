@@ -811,7 +811,7 @@
     },
     {
       "name": "Infinity Exchanger",
-      "verified": false,
+      "verified": true,
       "btc": true,
       "xmr": true,
       "lnn": false,
@@ -832,7 +832,7 @@
       "comments": false,
       "kyc-check": true,
       "kyc-type": 0,
-      "score": 8.5,
+      "score": 8.8,
       "suspicious-tos": false,
       "tor-onion": "http://exchanger.infinityjs5qob5euyao745kp5x2hh4xquh7qs5cze3kcxv63xdwxlad.onion/",
       "url": "http://exchanger.infinityjs5qob5euyao745kp5x2hh4xquh7qs5cze3kcxv63xdwxlad.onion/",
