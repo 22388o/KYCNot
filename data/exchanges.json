@@ -820,7 +820,7 @@
       "tor": true,
       "refunds": false,
       "open-source": false,
-      "custodial": true,
+      "custodial": false,
       "javascript": false,
       "no-registration": true,
       "personal-info": false,
