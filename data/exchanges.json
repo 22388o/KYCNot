@@ -821,7 +821,7 @@
       "refunds": false,
       "open-source": false,
       "custodial": true,
-      "javascript": true,
+      "javascript": false,
       "no-registration": true,
       "personal-info": false,
       "buy": false,
