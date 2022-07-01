@@ -136,6 +136,47 @@
 		"score-boost": 0,
 		"api": false,
     "reason": "bitcointalk.org/index.php?action=printpage;topic=5401252.0"
-	}
+	},
+
+  {
+    "name": "Swapuz",
+    "verified": false,
+    "btc": true,
+    "xmr": true,
+    "lnn": false,
+    "cash": false,
+    "p2p": false,
+    "tor": false,
+    "refunds": true,
+    "open-source": false,
+    "custodial": false,
+    "javascript": true,
+    "no-registration": true,
+    "personal-info": false,
+    "buy": false,
+    "exchange": true,
+    "short-description": "Exchange cryptocurrencies easily",
+    "long-description": "Swapuz is a fast, limitless and anonymous cryptocurrency exchange with a convenient and intuitive interface, a huge number of coins that you can change in a couple of minutes, as well as a support service.",
+    "meta-description": "",
+    "comments": [
+      "<p>Swapuz seems to be the exact same service as <a href='https://exolix.com/'>Exolix</a> and <a href='https://switcheroo.to/'>Switcheroo</a>.</p> If your read their terms as of May 2022, you can find the word 'Exolix' in all of them (<a href='https://i.bcow.xyz/a/10zuqp6'>proof</a>)."
+    ],
+    "kyc-check": true,
+    "kyc-type": 0,
+    "score": 8.2,
+    "suspicious-tos": false,
+    "tor-onion": false,
+    "url": "https://swapuz.com/",
+    "referral": false,
+    "tos-urls": [
+      "https://swapuz.com/terms-of-use/"
+    ],
+    "third-party-connections": false,
+    "score-boost": 0,
+    "listing-date": "2022-04-11",
+    "api": false,
+    "status": 200,
+    "reason": "Multiple scam reports by users and Trustpilot."
+  }
     ]
 }
