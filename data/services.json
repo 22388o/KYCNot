@@ -551,6 +551,31 @@
 		"listing-date": "2022-06-29",
 		"score-boost": 0,
 		"api": false
+	},
+	{
+		"name": "Donate4Fun",
+		"url": "https://donate4.fun",
+		"referral_url": false,
+		"tos-url": "https://donate4.fun/terms",
+		"short-description": "Donate to any YouTuber using BTC LN",
+		"long-description": "Donate to any YouTube channel using Bitcoin Lightning. All donations can be withdrawn by channel owner after confirming channel ownership.",
+		"meta-description": "",
+		"btc": true,
+		"xmr": false,
+		"lnn": true,
+		"cash": false,
+		"comments": false,
+		"verified": false,
+		"no-registration": true,
+		"personal-info": false,
+		"tor": false,
+		"tor-onion": false,
+		"open-source": true,
+		"tags": ["donations"],
+		"javascript": true,
+		"listing-date": "2022-07-21",
+		"score-boost": 0,
+		"api": false
 	}
 ]
 }
