@@ -228,11 +228,11 @@
       "kyc-type": 0,
       "score": 8.8,
       "suspicious-tos": false,
-      "tor-onion": "http://exchanger.infinityjs5qob5euyao745kp5x2hh4xquh7qs5cze3kcxv63xdwxlad.onion/",
-      "url": "http://exchanger.infinityjs5qob5euyao745kp5x2hh4xquh7qs5cze3kcxv63xdwxlad.onion/",
+      "tor-onion": "https://exchanger.infinity.taxi/",
+      "url": "https://exchanger.infinity.taxi/",
       "referral": false,
       "tos-urls": [
-        "http://exchanger.infinityjs5qob5euyao745kp5x2hh4xquh7qs5cze3kcxv63xdwxlad.onion/faq"
+        "https://exchanger.infinity.taxi/faq"
       ],
       "third-party-connections": false,
       "score-boost": 0,
