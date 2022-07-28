@@ -576,6 +576,60 @@
 		"listing-date": "2022-07-21",
 		"score-boost": 0,
 		"api": false
-	}
+	},
+	{
+		"name": "Virtualsim",
+		"url": "https://virtualsim.co",
+		"referral_url": false,
+		"tos-url": "https://virtualsim.co",
+		"short-description": "Recieve cheap one time SMS",
+		"long-description": "Cheap sms service for hundreds of services and many countries supported registration requires no verification and crypto payments only",
+		"meta-description": "",
+		"btc": true,
+		"xmr": false,
+		"lnn": false,
+		"cash": false,
+		"comments": false,
+		"verified": false,
+		"no-registration": false,
+		"personal-info": false,
+		"tor": false,
+		"tor-onion": false,
+		"open-source": false,
+		"tags": [
+		  "SMS"
+		],
+		"javascript": false,
+		"listing-date": "2022-07-28",
+		"score-boost": 0,
+		"api": false
+	  },
+	  {
+		"name": "Bitcoin VPS list",
+		"url": "https://bitcoin-vps.com/",
+		"referral_url": false,
+		"tos-url": "https://bitcoin-vps.com/",
+		"short-description": "Bitcoin-friendly hosting services",
+		"long-description": "Regularly updated list of Bitcoin-friendly VPS, dedicated server, VDS, VPN, and email providers.",
+		"meta-description": "",
+		"btc": true,
+		"xmr": false,
+		"lnn": true,
+		"cash": false,
+		"comments": false,
+		"verified": false,
+		"no-registration": true,
+		"personal-info": false,
+		"tor": false,
+		"tor-onion": false,
+		"open-source": false,
+		"tags": [
+		  "VPS", "HOSTING", "VPN", "MAIL"
+		],
+		"javascript": false,
+		"listing-date": "2022-07-28",
+		"score-boost": 0,
+		"api": false
+	  }
 ]
 }
